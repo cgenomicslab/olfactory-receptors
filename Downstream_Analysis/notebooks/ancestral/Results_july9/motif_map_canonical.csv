@@ -1,0 +1,6 @@
+motif,aln_cols,consensus,matched_full_motif,conserved_all_nodes,n_nodes_match_canonical,per_node
+TM1 GN,44-45,GN,True,False,9,node_1:GN | node_2:GN | node_3:GN | node_4:GN | node_5:AN | node_6:GN | node_12:GN | node_21:GN | node_32:GN | node_44:GN
+IC1 LHTPMY,58-63,LHTPMY,True,False,5,node_1:LHKPMY | node_2:LHEPMY | node_3:LHKPMY | node_4:LHEPMY | node_5:LHQPMY | node_6:LHTPMY | node_12:LHTPMY | node_21:LHTPMY | node_32:LHTPMY | node_44:LHTPMY
+TM3/IC2 MAYDRYVAIC,121-130,MAYDRYVAIC,True,False,10,node_1:MAYDRYVAIC | node_2:MAFDRYVAIC | node_3:MAYDRYVAIC | node_4:MAFDRYVAIC | node_5:MAYDRYVAIC | node_6:MAYDRYVAIC | node_12:MAYDRYVAIC | node_21:MAYDRYVAIC | node_32:MAYDRYVAIC | node_44:MAYDRYVAIC
+TM6/IC3 KAFSTCxSH,239-247,KAFSTCASH,True,False,6,node_1:KAFSTCASH | node_2:KAFSTCGSH | node_3:KAFSTCASH | node_4:KAFSTCGSH | node_5:KALSTCGSH | node_6:KAFSTCASH | node_12:KAFSTCASH | node_21:KAFSTCASH | node_32:KAFSTCASH | node_44:KAFSTCGSH
+TM7 PMLNPFIY,291-295,NPIIY,False,False,9,node_1:NPIIY | node_2:NPIIY | node_3:NPIIY | node_4:NPIIY | node_5:NPIVY | node_6:NPIIY | node_12:NPLIY | node_21:NPLIY | node_32:NPLIY | node_44:NPLIY
