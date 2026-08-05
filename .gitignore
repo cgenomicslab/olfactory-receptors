@@ -205,3 +205,23 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-generated data and model artifacts
+# These files are reproducible outputs or large reference downloads. Keep their
+# creation/download instructions in the README rather than committing them.
+/Model/Embeddings/molecules/
+/Model/Embeddings/proteins/
+/Chemicals/chembl/
+/Chemicals/embeddings/
+/Chemicals/odor_datasets/*embeddings*.npy
+/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/
+/Downstream_Analysis/predictions/archive/
+/Downstream_Analysis/predictions/aggregated/*/*_run_summary_long.csv
+
+# Common phylogenetic inference and checkpoint outputs
+*.ckp.gz
+*.iqtree
+*.state
+*.treefile
+*.contree
+*.mldist

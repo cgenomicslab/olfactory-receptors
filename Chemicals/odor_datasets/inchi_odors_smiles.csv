@@ -1,0 +1,755 @@
+InChIKey,SMILES,Odors,Molecule Name,odors_leff,odors_gs,coverage,match_type
+XMGQYMWWDOXHJM-SNVBAGLBSA-N,CC1=CC[C@H](CC1)C(=C)C,"herbal, orange, peppery, terpenic, pine",(-)-limonene,"herbal, orange","peppery, herbal, terpenic, pine",both,exact
+ULDHMXUKGWMISQ-VIFPVBQESA-N,CC1=CC[C@@H](CC1=O)C(=C)C,"mint, bready, spicy, caraway",(+)-carvone,,"mint, bready, spicy, caraway",gs_only,exact
+NOOLISFMXDJSKH-AEJSXWLSSA-N,C[C@H]1CC[C@@H]([C@H](C1)O)C(C)C,mentholic,(+)-menthol,,mentholic,gs_only,exact
+LRHPLDYGYMQRHN-UHFFFAOYSA-N,CCCCO,"alcoholic, solvent, winey, sweet, fermented, oily, whiskey, fusel, balsamic",1-butanol,"alcoholic, solvent, winey","sweet, fermented, oily, whiskey, fusel, balsamic",both,exact
+RWNUSVWFHDHRCJ-UHFFFAOYSA-N,CCCCOCC(C)O,,1-butoxy-2-propanol,,,none,unmatched
+LQZZUXJYWNFBMV-UHFFFAOYSA-N,CCCCCCCCCCCCO,"citrus, fatty, floral, oily, waxy, honey, coconut, earthy, soapy",1-dodecanol,"citrus, fatty, floral, oily, waxy","fatty, honey, coconut, earthy, soapy, waxy",both,exact
+BDERNNFJNOPAEC-UHFFFAOYSA-N,CCCO,"alcoholic, fermented, sweet, musty, yeasty, fruity, tequila, apple, pear, fusel",1-propanol,"alcoholic, fermented, sweet","sweet, fermented, musty, yeasty, fruity, tequila, apple, pear, fusel, alcoholic",both,exact
+FJPGAMCQJNLTJC-UHFFFAOYSA-N,CCCCC(=O)C(=O)C,"buttery, cheesy, fatty, sweet, oily","2,3-heptanedione","buttery, cheesy, fatty, sweet","oily, cheesy, buttery",both,exact
+LCZUOKDVTBMCMX-UHFFFAOYSA-N,CC1=CN=C(C=N1)C,"chocolate, earthy, roasted, musty, medicinal, cocoa, nutty, grassy, peanut, powdery, beefy, woody","2,5-dimethylpyrazine","chocolate, earthy, roasted","musty, medicinal, cocoa, nutty, grassy, peanut, powdery, beefy, roasted, woody, earthy, chocolate",both,exact
+QPRQEDXDYOZYLA-UHFFFAOYSA-N,CCC(C)CO,"alcoholic, ethereal, fermented, solvent, winey, greasy, fatty, cocoa, whiskey, fusel, leathery",2-methyl-1-butanol,"alcoholic, ethereal, fermented, solvent, winey","greasy, fatty, cocoa, winey, whiskey, fusel, ethereal, alcoholic, leathery",both,exact
+PFCHFHIRKBAQGU-UHFFFAOYSA-N,CCCC(=O)CC,"ethereal, grape, winey, sweet, rum, fruity, waxy",3-hexanone,"ethereal, grape, winey","sweet, rum, grape, fruity, waxy",both,exact
+AQIXEPGDORPWBJ-UHFFFAOYSA-N,CCC(CC)O,"ethereal, fermented, fruity, sweet, herbal, nutty, oily",3-pentanol,"ethereal, fermented, fruity","sweet, herbal, nutty, oily",both,exact
+GRWFGVWFFZKLTI-UHFFFAOYSA-N,CC1=CCC2CC1C2(C)C,"pine, sweet, herbal, terpenic, camphoreous, cooling, fresh, woody, earthy",alpha-pinene,pine,"sweet, herbal, terpenic, camphoreous, cooling, fresh, woody, earthy, pine",both,exact
+LNIMMWYNSBZESE-UHFFFAOYSA-N,CCC1=NC=CN=C1C,"burnt, earthy, green, hazelnut, nutty, potato, roasted, musty, bready, peanut, raw, corn",2-Ethyl-3-methylpyrazine,"burnt, earthy, green, hazelnut, nutty, potato, roasted","musty, nutty, bready, peanut, earthy, raw, corn",both,exact
+WTARULDDTDQWMU-UHFFFAOYSA-N,CC1(C2CCC(=C)C1C2)C,"dry, pine, woody, resinous, spicy, nutmeg, peppery, herbal, eucalyptus, terpenic, camphoreous, cooling, fresh, green, mint, hay",beta-pinene,"dry, pine, woody","dry, resinous, spicy, nutmeg, peppery, herbal, eucalyptus, terpenic, camphoreous, cooling, fresh, green, woody, mint, hay, pine",both,exact
+QTBSBXVTEAMEQO-UHFFFAOYSA-N,CC(=O)O,"pungent, sour, acidic, vinegar, sharp",acetic acid,"pungent, sour","sour, acidic, vinegar, pungent, sharp",both,exact
+FERIUCNNQQJTOY-UHFFFAOYSA-N,CCCC(=O)O,"buttery, cheesy, sour, acetic, fruity, dairy, sharp",butyric acid,"buttery, cheesy, sour","acetic, fruity, dairy, cheesy, buttery, sharp",both,exact
+ZYGHJZDHTFUPRJ-UHFFFAOYSA-N,C1=CC=C2C(=C1)C=CC(=O)O2,"sweet, hay, tonka",coumarin,,"sweet, hay, tonka",gs_only,exact
+POULHZVOKOAJMA-UHFFFAOYSA-N,CCCCCCCCCCCC(=O)O,"fatty, fresh, waxy, bay, coconut",dodecanoic acid,"fatty, fresh, waxy","bay, coconut, fatty",both,exact
+RGXWDWUGBIJHDO-UHFFFAOYSA-N,CCCCCCCCCC(=O)OCC,"cognac, fatty, nutty, sweet, winey, grape, brandy, fruity, oily, apple, waxy",ethyl decanoate,"cognac, fatty, nutty, sweet, winey","sweet, grape, brandy, fruity, oily, apple, waxy",both,exact
+MMXKVMNBHPAILY-UHFFFAOYSA-N,CCCCCCCCCCCC(=O)OCC,"fatty, floral, fruity, oily, waxy, sweet, clean, soapy",ethyl dodecanoate,"fatty, floral, fruity, oily, waxy","sweet, clean, floral, soapy, waxy",both,exact
+XIRNKXNNONJFQO-UHFFFAOYSA-N,CCCCCCCCCCCCCCCC(=O)OCC,"sweet, waxy, greasy, fruity, oily, creamy, balsamic, milky",ethyl hexadecanoate,"sweet, waxy","greasy, fruity, oily, creamy, balsamic, milky, waxy",both,exact
+MVLVMROFTAUDAG-UHFFFAOYSA-N,CCCCCCCCCCCCCCCCCC(=O)OCC,"odorless, waxy",ethyl octadecanoate,"odorless, waxy",waxy,both,exact
+YYZUSRORWSJGET-UHFFFAOYSA-N,CCCCCCCC(=O)OCC,"fruity, sweet, winey, musty, banana, brandy, apricot, pineapple, pear, creamy, dairy, waxy",ethyl octanoate,"fruity, sweet, winey","sweet, musty, banana, brandy, fruity, winey, apricot, pineapple, pear, creamy, dairy, waxy",both,exact
+MMKRHZKQPFCLLS-UHFFFAOYSA-N,CCCCCCCCCCCCCC(=O)OCC,"fatty, sweet, waxy, orris, violet",ethyl tetradecanoate,"fatty, sweet, waxy","sweet, orris, violet, waxy",both,exact
+RRAFCDWBNXTKKO-UHFFFAOYSA-N,COC1=C(C=CC(=C1)CC=C)O,"dry, pungent, smoky, spicy, sweet, bacon, cinnamon, savory, allspice, phenolic, ham, woody, clove",eugenol,"dry, pungent, smoky, spicy","sweet, spicy, bacon, cinnamon, savory, allspice, phenolic, ham, woody, clove",both,exact
+CRDAMVZIKSXKFV-YFVJMOTDSA-N,CC(=CCC/C(=C/CC/C(=C/CO)/C)/C)C,"floral, oily, sweet, muguet, lily, waxy",farnesol,"floral, oily, sweet","sweet, floral, muguet, lily, waxy",both,exact
+GLZPCOQZEFWAFX-JXMROGBWSA-N,CC(=CCC/C(=C/CO)/C)C,"floral, rose, sweet, fruity, citrus, waxy",geraniol,"floral, rose, sweet","sweet, floral, rose, fruity, citrus, waxy",both,exact
+HJFZAYHYIWGLNL-UHFFFAOYSA-N,CC1=CN=CC(=N1)C,"chocolate, potato, roasted, cocoa, buttermilk, nutty, coffee, beefy, brown, ethereal, meaty","2,6-Dimethylpyrazine","chocolate, potato, roasted","cocoa, buttermilk, nutty, coffee, beefy, brown, ethereal, roasted, chocolate, meaty",both,exact
+GWYFCOCPABKNJV-UHFFFAOYSA-N,CC(C)CC(=O)O,"cheesy, fruity, sour, sweaty, pungent, ripe, fatty, acidic, tropical, dairy",isovaleric acid,"cheesy, fruity, sour","sweaty, sour, pungent, ripe, fatty, fruity, acidic, tropical, dairy, cheesy",both,exact
+JVTAAEKCZFNVCJ-UHFFFAOYSA-N,CC(C(=O)O)O,"buttery, sour, odorless",lactic acid,"buttery, sour",odorless,both,exact
+SDQFDHOLCGWZPU-UHFFFAOYSA-N,CC(CC1=CC=C(C=C1)C(C)(C)C)C=O,"floral, fresh, green",lilial,"floral, fresh, green",,leff_only,exact
+CDOSHBSSFJOMGT-UHFFFAOYSA-N,CC(=CCCC(C)(C=C)O)C,"citrus, floral, woody, sweet, blueberry, rose, green",linalool,"citrus, floral, woody","sweet, blueberry, floral, rose, green, woody, citrus",both,exact
+ORMHZBNNECIKOH-UHFFFAOYSA-N,CC(C)(CCCC1=CCC(CC1)C=O)O,"aldehydic, floral, woody, cyclamen, rhubarb, muguet",lyral,"aldehydic, floral, woody","cyclamen, rhubarb, floral, muguet, woody",both,exact
+DRLFMBDRBRZALE-UHFFFAOYSA-N,CC(=O)NCCC1=CNC2=C1C=C(C=C2)OC,,melatonin,,,none,unmatched
+UQDUPQYQJKYHQI-UHFFFAOYSA-N,CCCCCCCCCCCC(=O)OC,"mushroom, coconut, creamy, soapy, waxy",methyl dodecanoate,,"mushroom, coconut, creamy, soapy, waxy",gs_only,exact
+FLIACVVOZYBSBS-UHFFFAOYSA-N,CCCCCCCCCCCCCCCC(=O)OC,"sweet, waxy, orris, fatty, oily",methyl hexadecanoate,"sweet, waxy","orris, fatty, oily, waxy",both,exact
+HPEUJPJOZXNMSJ-UHFFFAOYSA-N,CCCCCCCCCCCCCCCCCC(=O)OC,"odorless, oily, waxy",methyl octadecanoate,odorless,"oily, waxy",both,exact
+JGHZJRVDZXSNKQ-UHFFFAOYSA-N,CCCCCCCC(=O)OC,"fruity, orange, winey, sweet, vegetable, aldehydic, herbal, green, waxy",methyl octanoate,"fruity, orange, winey","sweet, vegetable, aldehydic, herbal, orange, green, waxy",both,exact
+ZAZKJZBWRNNLDS-UHFFFAOYSA-N,CCCCCCCCCCCCCC(=O)OC,"cognac, fatty, oily, orris, floral, waxy",methyl tetradecanoate,"cognac, fatty, oily, orris","floral, fatty, waxy",both,exact
+IVSZLXZYQVIEFR-UHFFFAOYSA-N,CC1=CC(=CC=C1)C,plastic,m-xylene,,plastic,gs_only,exact
+GYHFUZHODSMOHU-UHFFFAOYSA-N,CCCCCCCCC=O,"fatty, floral, rose, waxy, aldehydic, cucumber, orange, peely, fresh, green, lemon, orris, citrus",nonanal,"fatty, floral, rose, waxy","aldehydic, fatty, rose, cucumber, orange, peely, fresh, green, lemon, orris, citrus, waxy",both,exact
+ALHUZKCOMYUFRB-UHFFFAOYSA-N,CC1CCCCCCCCCCCCC(=O)C1,"musk, sweet, natural, animal, fatty, floral, powdery, soapy",(+/-)-Muscone,"musk, sweet","sweet, natural, animal, fatty, floral, powdery, soapy, musk",both,exact
+QIQXTHQIDYTFRH-UHFFFAOYSA-N,CCCCCCCCCCCCCCCCCC(=O)O,odorless,octadecanoic acid,odorless,odorless,both,exact
+NUJGJRNETVAIRJ-UHFFFAOYSA-N,CCCCCCCC=O,"fatty, fruity, aldehydic, herbal, orange, peely, fresh, green, citrus, waxy",octanal,"fatty, fruity","aldehydic, fatty, herbal, orange, peely, fresh, green, citrus, waxy",both,exact
+IPCSVZSSVZVIGE-UHFFFAOYSA-N,CCCCCCCCCCCCCCCC(=O)O,"odorless, creamy, fatty, waxy",palmitic acid,odorless,"creamy, fatty, waxy",both,exact
+ZRSNZINYAWTAHE-UHFFFAOYSA-N,COC1=CC=C(C=C1)C=O,"anisic, floral, fruity, hay, herbal, sweet, vanilla, powdery, mimosa, hawthorn, balsam",p-anisaldehyde,"anisic, floral, fruity, hay, herbal, sweet, vanilla","sweet, floral, powdery, mimosa, hawthorn, balsam",both,exact
+HFPZCAJZSCWRBC-UHFFFAOYSA-N,CC1=CC=C(C=C1)C(C)C,"citrus, terpenic, spicy, fresh, woody",p-cymene,citrus,"terpenic, spicy, fresh, woody, citrus",both,exact
+WQEPLUUGTLDZJY-UHFFFAOYSA-N,CCCCCCCCCCCCCCC(=O)O,"fatty, waxy",pentadecanoic acid,"fatty, waxy",waxy,both,exact
+XBDQKXXYIPTUBI-UHFFFAOYSA-N,CCC(=O)O,"milky, pungent, sour, acidic, dairy, vinegar, cheesy",propionic acid,"milky, pungent, sour","acidic, dairy, vinegar, pungent, cheesy",both,exact
+UNYNVICDCJHOPO-UHFFFAOYSA-N,CC1C(=C(C(=O)O1)O)C,"caramellic, sweet, maple, coffee",sotolon,caramellic,"sweet, caramellic, maple, coffee",both,exact
+TUNFSRHWOTWDNC-UHFFFAOYSA-N,CCCCCCCCCCCCCC(=O)O,"odorless, oily, waxy, fatty, pineapple, coconut, citrus, soapy",tetradecanoic acid,"odorless, oily, waxy","fatty, pineapple, coconut, citrus, soapy, waxy",both,exact
+KMPQYAYAQWNLME-UHFFFAOYSA-N,CCCCCCCCCCC=O,"citrus, fatty, floral, sweet, waxy, aldehydic, watermelon, pineapple, cilantro, orange, green, soapy, clean",undecanal,"citrus, fatty, floral, sweet, waxy","aldehydic, fatty, floral, watermelon, pineapple, cilantro, orange, green, soapy, clean, citrus, waxy",both,exact
+MWOOGOJBHIARFG-UHFFFAOYSA-N,COC1=C(C=CC(=C1)C=O)O,"creamy, vanilla, sweet, chocolate",vanillin,"creamy, vanilla","sweet, vanilla, creamy, chocolate",both,exact
+FYGHSUNMUKGBRK-UHFFFAOYSA-N,CC1=C(C(=CC=C1)C)C,,"1,2,3-trimethylbenzene",,,none,unmatched
+KBPLFHHGFOOTCA-UHFFFAOYSA-N,CCCCCCCCO,"orange, rose, sweet, waxy, aldehydic, mushroom, fatty, floral, coconut, green, citrus",1-octanol,"orange, rose, sweet, waxy","sweet, aldehydic, mushroom, fatty, rose, floral, coconut, orange, green, citrus, waxy",both,exact
+YZEFQPIMXZVPKP-UHFFFAOYSA-N,CC1CCC2=NC=CN=C12,"sweet, meaty, potato, nutty, grain, savory, coffee, toasted, roasted, earthy, peanut, corn","5H-5-Methyl-6,7-dihydrocyclopenta-[b]pyrazine",,"sweet, meaty, potato, nutty, grain, savory, coffee, toasted, roasted, earthy, peanut, corn",gs_only,skeleton
+MNWFXJYAOYHMED-UHFFFAOYSA-N,CCCCCCC(=O)O,"fatty, sour, fermented, rancid, sweaty, fruity, pineapple, cheesy, waxy",heptanoic acid,"fatty, sour","fermented, rancid, sweaty, sour, fruity, pineapple, cheesy, waxy",both,exact
+FUZZWVXGSFPDMH-UHFFFAOYSA-N,CCCCCC(=O)O,"cheesy, fatty, sweaty, sour",hexanoic acid,"cheesy, fatty","sweaty, cheesy, fatty, sour",both,exact
+KANZWHBYRHQMKZ-UHFFFAOYSA-N,C=CC1=NC=CN=C1,"burnt, green, nutty",2-Vinylpyrazine,"burnt, green",nutty,both,exact
+YRHYCMZPEVDGFQ-UHFFFAOYSA-N,CCCCCCCCCC(=O)OC,"cognac, fatty, fruity, oily, winey, fermented, floral",methyl decanoate,"cognac, fatty, fruity, oily, winey","fermented, floral, winey, fruity, oily",both,exact
+WWZKQHOCKIZLMA-UHFFFAOYSA-N,CCCCCCCC(=O)O,"animal, fatty, vegetable, rancid, oily, cheesy, waxy",octanoic acid,"animal, fatty","vegetable, rancid, fatty, oily, cheesy, waxy",both,exact
+OXQOBQJCDNLAPO-UHFFFAOYSA-N,CC1=NC=CN=C1C,"caramellic, cocoa, coffee, green, meaty, nutty, potato, musty, peanut, walnut, powdery, roasted","2,3-Dimethylpyrazine","caramellic, cocoa, coffee, green, meaty, nutty, potato","musty, cocoa, caramellic, nutty, potato, peanut, walnut, coffee, powdery, roasted",both,exact
+WKSXRWSOSLGSTN-UHFFFAOYSA-N,COC1=NC=CN=C1,"cocoa, earthy, green, nutty, roasted, sweet, winey, chocolate",2-Methoxypyrazine,"cocoa, earthy, green, nutty, roasted, sweet, winey","sweet, nutty, chocolate, cocoa",both,exact
+DBZAKQWXICEWNW-UHFFFAOYSA-N,CC(=O)C1=NC=CN=C1,"bread, nutty, popcorn, musty, potato, corn, coffee, roasted, hazelnut, chocolate",2-Acetylpyrazine,"bread, nutty, popcorn","musty, potato, nutty, corn, coffee, bread, roasted, hazelnut, popcorn, chocolate",both,exact
+CAWHJQAVHZEVTJ-UHFFFAOYSA-N,CC1=NC=CN=C1,"cocoa, fishy, green, musty, nutty, potato, brown, peanut, roasted, earthy, chocolate",2-Methylpyrazine,"cocoa, fishy, green, musty, nutty, potato","musty, cocoa, nutty, brown, green, peanut, roasted, earthy, chocolate",both,exact
+QMQDJVIJVPEQHE-UHFFFAOYSA-N,CCC(C)C1=NC=CN=C1OC,"green, musty, vegetable, peppery, potato, nutty, galbanum",2-(Butan-2-yl)-3-methoxypyrazine,green,"musty, vegetable, peppery, potato, nutty, galbanum, green",both,exact
+CIBKSMZEVHTQLG-UHFFFAOYSA-N,CCC1=CN=C(C(=N1)C)C,"almond, burnt, chocolate, cocoa, nutty, roasted, popcorn","5-Ethyl-2,3-dimethylpyrazine","almond, burnt, chocolate, cocoa, nutty","roasted, burnt, popcorn, cocoa",both,exact
+PSINWXIDJYEXLO-UHFFFAOYSA-N,CCC1=NC=C(N=C1CC)C,"chocolate, hazelnut, meaty, nutty, roasted, musty, vegetable, foliage, potato, dusty, green, toasted, earthy","2,3-Diethyl-5-methylpyrazine","chocolate, hazelnut, meaty, nutty, roasted","hazelnut, musty, vegetable, meaty, foliage, potato, dusty, green, toasted, earthy, nutty",both,exact
+ZYEMGPIYFIJGTP-UHFFFAOYSA-N,COC1=C(C=C(C=C1)CC=C)OC,"herbal, musty, spicy, tea, sweet, vegetable, warm, cinnamon, peppery, phenolic, fresh, carnation, clove, waxy",Methyl eugenol,"herbal, musty, spicy, tea","sweet, musty, vegetable, spicy, warm, cinnamon, peppery, phenolic, fresh, carnation, clove, waxy",both,exact
+GZXXANJCCWGCSV-UHFFFAOYSA-N,CCC1=NC=CN=C1CC,"earthy, nutty, potato, roasted, raw, vegetable","2,3-Diethylpyrazine","earthy, nutty, potato, roasted","nutty, raw, vegetable",both,exact
+DPCILIMHENXHQX-UHFFFAOYSA-N,CCC1=NC=CN=C1OC,"earthy, green, musty, nutty, vegetable, potato",2-Ethyl-3-methoxypyrazine,"earthy, green, musty, nutty, vegetable","nutty, green, potato, earthy, vegetable",both,exact
+YTZKOQUCBOVLHL-UHFFFAOYSA-N,CC(C)(C)C1=CC=CC=C1,,tert-butylbenzene,,,none,unmatched
+MYHGOWDLVRDUFA-UHFFFAOYSA-N,CC(CC=O)C1=CC=CC=C1,"herbal, hyacinth, foliage, green",3-Phenylbutyraldehyde,,"herbal, hyacinth, foliage, green",gs_only,exact
+GLZPCOQZEFWAFX-YFHOEESVSA-N,CC(=CCC/C(=C\CO)/C)C,"fresh, rose, sweet, natural, magnolia, neroli, citrus",nerol,"fresh, rose, sweet","sweet, natural, magnolia, neroli, citrus",both,exact
+FKUPPRZPSYCDRS-UHFFFAOYSA-N,C1CCCCCCCOC(=O)CCCCCC1,"musk, pear, sweet, natural, animal, fruity, powdery, tobacco, coumarinic, licorice, brown, heliotrope",exaltolide,"musk, pear, sweet","natural, animal, fruity, powdery, tobacco, coumarinic, licorice, brown, heliotrope, musk",both,exact
+KHLFMZDGADSQGR-ACCUITESSA-N,C1CCCCCCOC(=O)/C=C/CCCCC1,"sweet, musk, waxy",habanolide,,"sweet, musk, waxy",gs_only,exact
+PGMYKACGEOXYJE-UHFFFAOYSA-N,CCCCCOC(=O)C,"banana, ethereal, fruity, apple, pear",n-amyl acetate,"banana, ethereal, fruity","banana, fruity, apple, pear, ethereal",both,exact
+JHIVVAPYMSGYDF-UHFFFAOYSA-N,C1CCC(=O)CC1,"camphoreous, ketonic, mint, solvent, sweet, acetone",Cyclohexanone,"camphoreous, ketonic, mint, solvent, sweet","acetone, mint",both,exact
+CATSNJVOTSVZJV-UHFFFAOYSA-N,CCCCCC(=O)C,"cheesy, cinnamon, coconut, fruity, sweet, spicy, banana, herbal, creamy, green, woody, ketonic",2-heptanone,"cheesy, cinnamon, coconut, fruity","sweet, spicy, banana, herbal, fruity, coconut, creamy, green, woody, cheesy, ketonic",both,exact
+KWOLFJPFCHCOCG-UHFFFAOYSA-N,CC(=O)C1=CC=CC=C1,"cherry, pungent, sweet, vanilla, floral, nutty, acacia, marzipan, mimosa, coumarinic, hawthorn, almond, chemical, heliotrope",acetophenone,"cherry, pungent, sweet","sweet, cherry, vanilla, floral, nutty, acacia, marzipan, mimosa, coumarinic, hawthorn, almond, chemical, heliotrope, pungent",both,exact
+AIVVNNYXOSPRCW-UHFFFAOYSA-N,CC1C(=NC(S1)C)C,,"2,4,5-trimethyl-2,5-dihydro-1,3-thiazole",,,none,unmatched
+XMWRWTSZNLOZFN-UHFFFAOYSA-N,CC1=C(C(=C(C(=C1[N+](=O)[O-])C(C)(C)C)[N+](=O)[O-])C)[N+](=O)[O-],"dry, sweet, fatty, soapy, musk",musk xylol,,"dry, sweet, fatty, soapy, musk",gs_only,exact
+NOOLISFMXDJSKH-KXUCPTDWSA-N,C[C@@H]1CC[C@H]([C@@H](C1)O)C(C)C,"mint, mentholic, peppermint, cooling",(-)-menthol,mint,"mentholic, peppermint, cooling, mint",both,exact
+ZWEHNKRNPOVVGH-UHFFFAOYSA-N,CCC(=O)C,"camphoreous, fruity, ketonic, solvent, sweet, acetone, ethereal",2-butanone,"camphoreous, fruity, ketonic, solvent, sweet","camphoreous, acetone, fruity, ethereal",both,exact
+MMFCJPPRCYDLLZ-CMDGGOBGSA-N,CCCCCCC/C=C/C=O,"chicken, earthy, fatty, green, mushroom, waxy, aldehydic, fried, coriander, pork, cilantro, tallow",2-decenal,"chicken, earthy, fatty, green, mushroom, waxy","aldehydic, fried, mushroom, fatty, chicken, coriander, pork, cilantro, tallow, green, earthy, waxy",both,exact
+KIPCKEJKGCXRGA-UHFFFAOYSA-N,CCC1(C(C2CCC1(C2)C)(C)C)O,"earthy, musty, dirty, rooty, camphoreous, patchouli, humus",2-ethylfenchol,"earthy, musty","musty, dirty, rooty, camphoreous, patchouli, earthy, humus",both,exact
+PETRWTHZSKVLRE-UHFFFAOYSA-N,CC1=CC(=C(C=C1)O)OC,"phenolic, smoky, spicy, sweet, vanilla, medicinal, burnt, candy, woody, clove, leathery",2-methoxy-4-methylphenol,"phenolic, smoky, spicy, sweet, vanilla","sweet, vanilla, spicy, medicinal, smoky, burnt, phenolic, candy, woody, clove, leathery",both,exact
+FGKJLKRYENPLQH-UHFFFAOYSA-N,CC(C)CCC(=O)O,"cheesy, pungent, sour",4-methylvaleric acid,"cheesy, pungent, sour","pungent, cheesy",both,exact
+HFVMLYAGWXSTQI-QYXZOKGRSA-N,C[C@]12CC[C@H]3[C@H]([C@@H]1CC=C2)CC[C@@H]4[C@@]3(CCC(=O)C4)C,,androstenone,,,none,unmatched
+FZJUFJKVIYFBSY-UHFFFAOYSA-N,CC(C)(C)C1=CC=C(C=C1)CCC=O,"sweet, cyclamen, floral, fresh, watery",bourgeonal,,"sweet, cyclamen, floral, fresh, watery",gs_only,exact
+DKPFZGUDAPQIHT-UHFFFAOYSA-N,CCCCOC(=O)C,"banana, fruity, pear, pineapple, sweet, solvent, ethereal, sharp",butyl acetate,"banana, fruity, pear, pineapple, sweet","solvent, banana, fruity, ethereal, sharp",both,exact
+WEEGYLXZBRQIMU-UHFFFAOYSA-N,CC1(C2CCC(O1)(CC2)C)C,"camphoreous, fresh, herbal, eucalyptus, medicinal",cineole,"camphoreous, fresh","camphoreous, herbal, eucalyptus, medicinal",both,exact
+UFLHIIWVXFIJGU-ARJAWSKDSA-N,CC/C=C\CCO,"fresh, grassy, green, vegetable, foliage, herbal, melon, oily, pungent",cis-3-hexen-1-ol,"fresh, grassy, green","vegetable, foliage, herbal, melon, oily, grassy, fresh, green, pungent",both,exact
+WTEVQBCEXWBHNA-JXMROGBWSA-N,CC(=CCC/C(=C/C=O)/C)C,"citrus, fresh, fruity, lemon",citral,"citrus, fresh, fruity, lemon","lemon, citrus",both,exact
+KSMVZQYAVGTKIV-UHFFFAOYSA-N,CCCCCCCCCC=O,"orange, sweet, waxy, aldehydic, floral, citrus",decyl aldehyde,"orange, sweet, waxy","sweet, aldehydic, floral, orange, citrus, waxy",both,exact
+QSJXEFYPDANLFS-UHFFFAOYSA-N,CC(=O)C(=O)C,"buttery, sweet, caramellic, creamy, pungent",diacetyl,buttery,"sweet, caramellic, creamy, pungent, buttery",both,exact
+UBJVUCKUDDKUJF-UHFFFAOYSA-N,C=CCSCC=C,"garlic, horseradish, pungent, sweet, metallic, sulfurous, onion",diallyl sulfide,"garlic, horseradish, pungent, sweet","metallic, sulfurous, garlic, horseradish, onion, pungent",both,exact
+USIUVYZYUHIAEV-UHFFFAOYSA-N,C1=CC=C(C=C1)OC2=CC=CC=C2,"floral, green, metallic, geranium, phenolic, leafy",diphenyl ether,"floral, green, metallic","geranium, phenolic, leafy, green",both,exact
+XRHCAGNSDHCHFJ-UHFFFAOYSA-N,C1CCCCCC(=O)OCCOC(=O)CCCCC1,"fatty, musk, oily, sweet, floral, ambrette, powdery, woody",ethylene brassylate,"fatty, musk, oily, sweet","sweet, floral, ambrette, powdery, woody, musk",both,exact
+SCCDQYPEOIRVGX-UHFFFAOYSA-N,CC(=O)OC1=C(C=C(C=C1)CC=C)OC,"balsamic, fruity, spicy, sweet, malty, floral, fresh, carnation, woody, clove",eugenol acetate,"balsamic, fruity, spicy, sweet","sweet, malty, spicy, floral, fresh, carnation, woody, clove",both,exact
+LHXDLQBQYFFVNW-OIBJUYFYSA-N,C[C@@]12CC[C@@H](C1)C(C2=O)(C)C,"camphoreous, pine, sweet, herbal, earthy, woody",(-)-Fenchone,"camphoreous, pine, sweet","herbal, earthy, woody, camphoreous",both,exact
+HNDHDMOSWUAEAW-VMXHOPILSA-N,C[C@]12CC[C@H]3[C@H]([C@@H]1CC=C2)CCC4=CC(=O)CC[C@]34C,,androstadienone,,,none,unmatched
+HIGQPQRQIQDZMP-DHZHZOJOSA-N,CC(=CCC/C(=C/COC(=O)C)/C)C,"floral, fruity, green, rose, sweet, lavender, waxy",geranyl acetate,"floral, fruity, green, rose, sweet","floral, rose, lavender, green, waxy",both,exact
+LHGVFZTZFXWLCP-UHFFFAOYSA-N,COC1=CC=CC=C1O,"medicinal, phenolic, smoky, sweet, vanilla, meaty, spicy, savory, woody",guaiacol,"medicinal, phenolic, smoky, sweet, vanilla","vanilla, meaty, spicy, medicinal, smoky, savory, phenolic, woody",both,exact
+ZCZSIDMEHXZRLG-UHFFFAOYSA-N,CCCCCCCOC(=O)C,"fatty, floral, fruity, aldehydic, rum, winey, apricot, pear, fresh, green, woody, ripe, citrus, waxy",heptyl acetate,"fatty, floral, fruity","aldehydic, rum, fatty, winey, apricot, pear, fresh, green, woody, ripe, citrus, waxy",both,exact
+XAPCMTMQBXLDBB-UHFFFAOYSA-N,CCCCCCOC(=O)CCC,"fruity, sweet, vegetable, estery, apple, green, soapy, waxy",hexyl butyrate,fruity,"sweet, vegetable, estery, fruity, apple, green, soapy, waxy",both,exact
+KGEKLUUHTZCSIP-JFGNBEQYSA-N,CC(=O)O[C@H]1C[C@H]2CC[C@]1(C2(C)C)C,"camphoreous, earthy, fruity, herbal, pine, woody",isobornyl acetate,"camphoreous, earthy, fruity, herbal, pine, woody",,leff_only,exact
+AMIMRNSIRUDHCM-UHFFFAOYSA-N,CC(C)C=O,"banana, cheesy, chocolate, fruity, green, floral, aldehydic, fresh, pungent",isobutyraldehyde,"banana, cheesy, chocolate, fruity, green","floral, aldehydic, fresh, pungent",both,exact
+KQNPFQTWMSNSAP-UHFFFAOYSA-N,CC(C)C(=O)O,"cheesy, fruity, sour, rancid, acidic, dairy, buttery",isobutyric acid,"cheesy, fruity, sour","rancid, sour, acidic, dairy, cheesy, buttery",both,exact
+BJIOGJUNALELMI-ONEGZZNKSA-N,C/C=C/C1=CC(=C(C=C1)O)OC,"sweet, spicy, floral, phenolic, carnation",isoeugenol,,"sweet, spicy, floral, phenolic, carnation",gs_only,exact
+LSDPWZHWYPCBBB-UHFFFAOYSA-N,CS,"cabbage, vegetable, sulfurous, eggy, garlic, savory, alliaceous, oily, creamy",methanethiol,cabbage,"vegetable, sulfurous, eggy, garlic, savory, alliaceous, oily, cabbage, creamy",both,exact
+OSWPMRLSEDHDFF-UHFFFAOYSA-N,COC(=O)C1=CC=CC=C1O,"sweet, warm, sassafras, camphoreous, phenolic, mint, wintergreen, aromatic",methyl salicylate,"sweet, warm","sweet, sassafras, camphoreous, phenolic, mint, wintergreen, aromatic",both,exact
+YLYBTZIQSIBWLI-UHFFFAOYSA-N,CCCCCCCCOC(=O)C,"citrus, floral, fruity, green, jasmine, orange, peach, mushroom, herbal, earthy, waxy",octyl acetate,"citrus, floral, fruity, green, jasmine, orange, peach","mushroom, herbal, green, earthy, waxy",both,exact
+DTUQWGWMVIHBKE-UHFFFAOYSA-N,C1=CC=C(C=C1)CC=O,"floral, green, honey, rose, sweet, fermented, clover, cocoa, powdery, earthy, hyacinth, chocolate",phenyl acetaldehyde,"floral, green, honey, rose","sweet, fermented, floral, honey, rose, clover, cocoa, powdery, green, earthy, hyacinth, chocolate",both,exact
+KYQCOXFCLRTKLS-UHFFFAOYSA-N,C1=CN=CC=N1,"musty, nutty, roasted, sweet, hazelnut, malty, pungent, corn",pyrazine,"musty, nutty, roasted","sweet, hazelnut, nutty, malty, roasted, pungent, corn",both,exact
+WUOACPNHFRMFPN-UHFFFAOYSA-N,CC1=CCC(CC1)C(C)(C)O,"floral, sweet, lime, clean, herbal, fresh, woody, pine, terpenic, lilac, citrus",terpineol,"floral, sweet","lime, clean, floral, herbal, fresh, woody, pine, terpenic, lilac, citrus",both,exact
+IGODOXYLBBXFDW-UHFFFAOYSA-N,CC1=CCC(CC1)C(C)(C)OC(=O)C,"herbal, spicy, sweet, lime, lavender, bergamot, citrus",terpinyl acetate,"herbal, spicy, sweet","lime, herbal, lavender, bergamot, citrus",both,exact
+QPJVMBTYPHYUOC-UHFFFAOYSA-N,COC(=O)C1=CC=CC=C1,"floral, fruity, sweet, cananga, phenolic, almond, wintergreen",methyl benzoate,"floral, fruity, sweet","floral, cananga, phenolic, almond, wintergreen",both,exact
+RMBFBMJGBANMMK-UHFFFAOYSA-N,CC1=C(C=C(C=C1)[N+](=O)[O-])[N+](=O)[O-],,"2,4-DNT",,,none,unmatched
+ONKNPOPIGWHAQC-UHFFFAOYSA-N,CC1COCC2=CC3=C(C=C12)C(C(C3(C)C)C)(C)C,"sweet, floral, musk",galaxolide,,"sweet, floral, musk",gs_only,exact
+CIEKNJJOENYFQL-UHFFFAOYSA-N,CC1C(SC(=N1)C)C,,"2,4,5-trimethyl-4,5-dihydrothiazole",,,none,unmatched
+IAEGWXHKWJGQAZ-UHFFFAOYSA-N,CC1=CN=C(C(=N1)C)C,"burnt, cocoa, coffee, nutty, potato, roasted, musty, powdery, hazelnut, earthy, peanut","2,3,5-Trimethylpyrazine","burnt, cocoa, coffee, nutty, potato, roasted","musty, cocoa, potato, nutty, powdery, hazelnut, earthy, peanut",both,exact
+NTOPKICPEQUPPH-UHFFFAOYSA-N,CC(C)C1=NC=CN=C1OC,"earthy, potato, vegetable, nutty, beany, chocolate, galbanum",2-Isopropyl-3-methoxypyrazine,"earthy, potato, vegetable","nutty, vegetable, beany, earthy, chocolate, galbanum, potato",both,exact
+UXFSPRAGHGMRSQ-UHFFFAOYSA-N,CC(C)CC1=NC=CN=C1OC,"green, galbanum, vegetable",2-Isobutyl-3-methoxypyrazine,green,"galbanum, vegetable, green",both,exact
+NQPDZGIKBAWPEJ-UHFFFAOYSA-N,CCCCC(=O)O,"cheesy, rancid, sweaty, sour, fruity, acidic, tobacco, milky, sharp",Pentanoic Acid,cheesy,"rancid, sweaty, sour, fruity, acidic, tobacco, milky, cheesy, sharp",both,exact
+BSAIUMLZVGUGKX-BQYQJAHWSA-N,CCCCCC/C=C/C=O,"cucumber, fatty, melon, orris, waxy, aldehydic, green, citrus",trans-2-Nonenal,"cucumber, fatty, melon, orris, waxy","aldehydic, fatty, cucumber, green, citrus",both,exact
+JLIDVCMBCGBIEY-UHFFFAOYSA-N,CCC(=O)C=C,"alliaceous, pungent, radish, mustard, spicy, peppery, garlic, onion, ethereal",1-penten-3-one,"alliaceous, pungent, radish","mustard, spicy, peppery, garlic, onion, ethereal, pungent",both,exact
+INAXVXBDKKUCGI-UHFFFAOYSA-N,CC1C(=O)C(=C(O1)C)O,"caramellic, fruity, pineapple, roasted, strawberry, sweet, candy, savory, burnt, brown",furaneol,"caramellic, fruity, pineapple, roasted, strawberry","sweet, candy, caramellic, strawberry, savory, burnt, brown",both,exact
+CLUWOWRTHNNBBU-UHFFFAOYSA-N,CSCCC=O,"meaty, onion, potato, tomato, vegetable, musty, yeasty, savory, oily, brothy, creamy, bready, cheesy, earthy",Methional,"meaty, onion, potato, tomato","vegetable, musty, yeasty, meaty, potato, savory, oily, brothy, creamy, bready, tomato, cheesy, earthy",both,exact
+GETQZCLCWQTVFV-UHFFFAOYSA-N,CN(C)C,"fishy, pungent, rancid, sweaty, fruity, oily",trimethylamine,"fishy, pungent","rancid, sweaty, fruity, oily, fishy",both,exact
+WXCMHFPAUCOJIG-UHFFFAOYSA-N,CC1=C(C(=C(C(=C1[N+](=O)[O-])C(C)(C)C)[N+](=O)[O-])C)C(=O)C,"dry, fatty, floral, powdery, soapy, musk",musk ketone,,"dry, fatty, floral, powdery, soapy, musk",gs_only,exact
+SIMKGHMLPVDSJE-UHFFFAOYSA-N,CC1C(=O)C(=C(O1)C)OC,"caramellic, fruity, sweet, winey, vegetable, musty, meaty, mushroom, potato, cocoa, wasabi, coffee, moldy, beany, nutty, brandy","(2R/2S)-4-methoxy-2,5-dimethylfuran-3(2H)-one","caramellic, fruity, sweet, winey","sweet, vegetable, musty, meaty, caramellic, mushroom, potato, cocoa, fruity, wasabi, coffee, moldy, beany, nutty, brandy",both,exact
+PPJSYGVFDJEMRP-UHFFFAOYSA-N,CCC1=NC=CN=C1C(=O)C,"earthy, hazelnut, meaty, nutty, popcorn, potato, musty, corn",2-Acetyl-3-ethylpyrazine,"earthy, hazelnut, meaty, nutty, popcorn, potato","musty, earthy, potato, nutty, popcorn, corn",both,exact
+KVFIJIWMDBAGDP-UHFFFAOYSA-N,CCC1=NC=CN=C1,"buttery, musty, nutty, fermented, meaty, cocoa, peanut, coffee, roasted, woody",2-ethylpyrazine,"buttery, musty, nutty","musty, fermented, meaty, cocoa, nutty, peanut, coffee, roasted, woody",both,exact
+WTOYNNBCKUYIKC-JMSVASOKSA-N,C[C@@H]1CC(=O)C=C2[C@]1(C[C@@H](CC2)C(=C)C)C,"sweet, grapefruit, peely, orange, citrus, woody, gardenia",Nootkatone,,"sweet, grapefruit, peely, orange, citrus, woody, gardenia",gs_only,exact
+BOPPSUHPZARXTH-UHFFFAOYSA-N,CC(CC1=CC2=C(C=C1)OCO2)C=O,"floral, green, hay, melon, cyclamen, ozone, fresh, watery",helional,"floral, green, hay, melon","cyclamen, floral, ozone, fresh, green, watery, hay",both,exact
+BAVONGHXFVOKBV-UHFFFAOYSA-N,CC1=CCC(CC1O)C(=C)C,"sweet, spicy, spearmint, herbal, cooling, green, mint, caraway",CARVEOL,sweet,"spicy, spearmint, herbal, cooling, green, mint, caraway",both,exact
+GJWSUKYXUMVMGX-UHFFFAOYSA-N,CC(CCC=C(C)C)CC(=O)O,"fatty, floral, green, waxy, vegetable, citronella, smoky, grassy, tobacco","3,7-dimethyl-6-octenoic acid","fatty, floral, green, waxy","vegetable, fatty, floral, citronella, smoky, grassy, tobacco, green, waxy",both,exact
+NFLGAXVYCFJBMK-BDAKNGLRSA-N,C[C@@H]1CC[C@H](C(=O)C1)C(C)C,"sweet, anise, mentholic, herbal, camphoreous, cooling, fresh, green, peppermint, mint",menthone,,"sweet, anise, mentholic, herbal, camphoreous, cooling, fresh, green, peppermint, mint",gs_only,exact
+ZWRUINPWMLAQRD-UHFFFAOYSA-N,CCCCCCCCCO,"fatty, floral, orange, rose, clean, dusty, oily, fresh, wet",nonanol,"fatty, floral, orange, rose","clean, fatty, floral, rose, dusty, oily, fresh, orange, wet",both,exact
+YTHRBOFHFYZBRJ-JHJMLUEUSA-N,CC1=CC[C@H](CC1OC(=O)C)C(=C)C,"fruity, green, herbal, sour, sweet, rum, spicy, nasturtium, spearmint, grape, pear, mint",(-)carvyl acetate,"fruity, green, herbal, sour, sweet","sweet, rum, spicy, nasturtium, spearmint, grape, herbal, fruity, pear, green, mint",both,skeleton
+FBUKVWPVBMHYJY-UHFFFAOYSA-N,CCCCCCCCC(=O)O,"cheesy, dairy, fatty, nutty, dirty, waxy",Nonanoic acid,"cheesy, dairy, fatty, nutty","dirty, dairy, cheesy, waxy",both,exact
+VSMOENVRRABVKN-UHFFFAOYSA-N,CCCCCC(C=C)O,"earthy, mushroom, sweet, vegetable, chicken, oily, green, fungal, raw",1-octen-3-ol,"earthy, mushroom, sweet","vegetable, mushroom, chicken, oily, green, fungal, earthy, raw",both,exact
+CZUGFKJYCPYHHV-UHFFFAOYSA-N,CSCCCO,"meaty, mushroom, sweet, vegetable, sulfurous, savory, soup, onion, cooked",methionol,"meaty, mushroom","sweet, vegetable, meaty, sulfurous, savory, soup, onion, cooked",both,exact
+KFUSEUYYWQURPO-UHFFFAOYSA-N,C(=CCl)Cl,,"1,2-Dichloroethylene",,,none,unmatched
+WPFVBOQKRVRMJB-UHFFFAOYSA-N,CC(CCCC(C)(C)O)CC=O,"floral, sweet, melon, green, lily, tropical, waxy",Hydroxy-citronellal,"floral, sweet","sweet, floral, melon, green, lily, tropical, waxy",both,exact
+DNRJTBAOUJJKDY-UHFFFAOYSA-N,CC1CC(C2=C(C1(C)C)C=C(C(=C2)C(=O)C)C)(C)C,"strong, sweet, fruity, amber, powdery, musk",tonalide,,"strong, sweet, fruity, amber, powdery, musk",gs_only,exact
+IKTHMQYJOWTSJO-UHFFFAOYSA-N,CC(=O)C1=C2CCC(C2=CC(=C1)C(C)(C)C)(C)C,"ambergris, animal, cedar, woody, musk",celestolide,,"ambergris, animal, cedar, woody, musk",gs_only,exact
+MIZGSAALSYARKU-UHFFFAOYSA-N,CC1C(C2=C(C1(C)C)C(=O)CCC2)(C)C,"spicy, rich, clean, woody, musk",cashmeran,,"spicy, rich, clean, woody, musk",gs_only,exact
+WTEVQBCEXWBHNA-UHFFFAOYSA-N,CC(=CCCC(=CC=O)C)C,"lemon, sweet, sharp","3,7-Dimethyl-2,6-octadienal",,"lemon, sweet, sharp",gs_only,exact
+QMVPMAAFGQKVCJ-SNVBAGLBSA-N,C[C@H](CCC=C(C)C)CCO,"rose, leafy, floral, citronella, oily",(R)-(+)-citronellol,rose,"leafy, floral, citronella, rose, oily",both,exact
+HLCSDJLATUNSSI-JXMROGBWSA-N,CC(=CCC/C(=C/C#N)/C)C,"fruity, green, lemon, sweet, metallic, sharp",Citralva,"fruity, green, lemon, sweet","lemon, metallic, sharp",both,exact
+QUNOTZOHYZZWKQ-UHFFFAOYSA-N,CC1=NC=CN=C1C(=O)C,"cocoa, coffee, hazelnut, nutty, popcorn, roasted, vegetable, caramellic, corn, malty",2-Acetyl-3-methylpyrazine,"cocoa, coffee, hazelnut, nutty, popcorn, roasted","hazelnut, vegetable, caramellic, nutty, corn, malty",both,exact
+WNLRTRBMVRJNCN-UHFFFAOYSA-N,C(CCC(=O)O)CC(=O)O,odorless,adipic acid,odorless,odorless,both,exact
+KDYFGRWQOYBRFD-UHFFFAOYSA-N,C(CC(=O)O)C(=O)O,odorless,Succinic acid,odorless,odorless,both,exact
+NJGBTKGETPDVIK-UHFFFAOYSA-N,CC(=O)CCC1=CC=C(C=C1)O,"fruity, sweet, seedy, ripe, berry, floral, jammy, raspberry, woody",Raspberry ketone,"fruity, sweet","sweet, seedy, ripe, berry, floral, jammy, raspberry, woody",both,exact
+WQAQPCDUOCURKW-UHFFFAOYSA-N,CCCCS,"beefy, cheesy, garlic, meaty, onion, roasted, savory, sulfurous, fatty, coffee, eggy",butanethiol,"beefy, cheesy, garlic, meaty, onion, roasted, savory, sulfurous","sulfurous, fatty, garlic, coffee, onion, beefy, eggy",both,exact
+ZSIAUFGUXNUGDI-UHFFFAOYSA-N,CCCCCCO,"fatty, fruity, winey, sweet, pungent, herbal, oily, fusel, green, ethereal, alcoholic",hexanol,"fatty, fruity, winey","sweet, pungent, herbal, fruity, oily, fusel, green, ethereal, alcoholic",both,exact
+BBMCTIGTTCKYKF-UHFFFAOYSA-N,CCCCCCCO,"fatty, fresh, green, sweet, musty, vegetable, leafy, banana, herbal, fruity, violet, apple, peony, woody, pungent",heptanol,"fatty, fresh, green","sweet, musty, vegetable, leafy, banana, herbal, fruity, violet, apple, green, peony, woody, pungent",both,exact
+AMQJEAYHLZJPGS-UHFFFAOYSA-N,CCCCCO,"alcoholic, solvent, sweet, fermented, yeasty, winey, oily, fusel, bready, balsamic, pungent",pentanol,"alcoholic, solvent","sweet, fermented, yeasty, solvent, winey, oily, fusel, bready, balsamic, pungent",both,exact
+GTGTXZRPJHDASG-UHFFFAOYSA-N,CCCCCCC(C(=O)O)Br,,2-bromo-octanoic acid,,,none,unmatched
+HZTPKMIMXLTOSK-UHFFFAOYSA-N,CCCCC(C(=O)O)Br,,2-bromo-hexanoic acid,,,none,unmatched
+JARKCYVAAOWBJS-UHFFFAOYSA-N,CCCCCC=O,"fatty, fruity, grassy, green, vegetable, aldehydic, clean, leafy, sweaty, fresh, woody",hexanal,"fatty, fruity, grassy, green","vegetable, aldehydic, clean, fatty, leafy, sweaty, fruity, grassy, fresh, green, woody",both,exact
+WLJVXDMOQOGPHL-UHFFFAOYSA-M,C1=CC=C(C=C1)CC(=O)[O-],"animal, honey, sweet, sour, floral, rose, civet, powdery, tobacco, honeysuckle, chocolate, waxy",phenylacetate,"animal, honey, sweet","sweet, animal, sour, floral, honey, rose, civet, powdery, tobacco, honeysuckle, chocolate, waxy",both,skeleton
+RFFOTVCVTJUTAD-UHFFFAOYSA-N,CC(C)C12CCC(O1)(CC2)C,"camphoreous, fresh, pine, herbal, terpenic, eucalyptus, cooling, green, mint","1,4-cineole","camphoreous, fresh, pine","herbal, terpenic, eucalyptus, cooling, camphoreous, green, mint, pine",both,exact
+FTZILAQGHINQQR-UHFFFAOYSA-N,CCCC(C)C=O,"cheesy, cocoa, fruity, green, vegetable, ethereal",Methyl-pentanal,"cheesy, cocoa, fruity, green","vegetable, fruity, green, ethereal",both,exact
+WMFATTFQNRPXBQ-UHFFFAOYSA-N,CCCC(C(=O)O)Br,,2-bromovaleric acid,,,none,unmatched
+ULDHMXUKGWMISQ-SECBINFHSA-N,CC1=CC[C@H](CC1=O)C(=C)C,"sweet, herbal, mint, spearmint",(R)-Carvone,,"sweet, herbal, mint, spearmint",gs_only,exact
+ZSKAJFSSXURRGL-PKNBQFBNSA-N,CC(=CCC/C(=C/C(OC)OC)/C)C,"citrus, lemon",Citral dimethylacetal,"citrus, lemon",,leff_only,exact
+RDOXTESZEPMUJZ-UHFFFAOYSA-N,COC1=CC=CC=C1,"anisic, sweet, gasoline, anise, phenolic, ethereal",anisole,"anisic, sweet","gasoline, anise, phenolic, ethereal",both,exact
+MLFHJEHSLIIPHL-UHFFFAOYSA-N,CC(C)CCOC(=O)C,"banana, fruity, pear, sweet, solvent, estery, ripe",Isoamyl acetate,"banana, fruity, pear, sweet","sweet, solvent, estery, ripe, banana, fruity",both,exact
+QMVPMAAFGQKVCJ-JTQLQIEISA-N,C[C@@H](CCC=C(C)C)CCO,"citrus, floral, fruity, green, rose, sweet, powdery, geranium, waxy",(S)-(-)-citronellol,"citrus, floral, fruity, green, rose, sweet","floral, rose, powdery, geranium, waxy",both,exact
+RWRDLPDLKQPQOW-UHFFFAOYSA-N,C1CCNC1,"animal, shellfish, eggy, fishy, seaweed, ammoniacal",pyrrolidine,,"animal, shellfish, eggy, fishy, seaweed, ammoniacal",gs_only,exact
+NEHNMFOYXAPHSD-SNVBAGLBSA-N,C[C@H](CCC=C(C)C)CC=O,"citrus, fresh, green, lemon, woody, herbal",(R)-(+)-citronellal,"citrus, fresh, green, lemon, woody","herbal, fresh, citrus",both,exact
+YAQLSKVCTLCIIE-UHFFFAOYSA-N,CCC(C(=O)O)Br,,Bromobutyric acid,,,none,unmatched
+WLAMNBDJUVNPJU-UHFFFAOYSA-N,CCC(C)C(=O)O,"cheesy, fruity, pungent, fermented, dirty, acidic",2-methyl-butyric acid,"cheesy, fruity, pungent","fermented, dirty, cheesy, fruity, acidic, pungent",both,exact
+POIARNZEYGURDG-FNORWQNLSA-N,C/C=C/C(=O)C1=C(C=CCC1(C)C)C,"apple, floral, fruity, plum, rose, tea, tobacco, sweet, natural, grape, raspberry, sugar, green, woody, earthy, honey",damascenone,"apple, floral, fruity, plum, rose, tea, tobacco","sweet, natural, plum, floral, rose, grape, fruity, raspberry, sugar, green, woody, earthy, honey, apple, tobacco",both,exact
+JZQKTMZYLHNFPL-BLHCBFLLSA-N,CCCCC/C=C/C=C/C=O,"citrus, fatty, fried, chicken, melon, cucumber, nutty, oily, coriander, brothy, pumpkin","E,E-2,4-decadienal","citrus, fatty","fried, fatty, chicken, melon, cucumber, nutty, oily, coriander, brothy, pumpkin, citrus",both,exact
+HZYHMHHBBBSGHB-ODYTWBPASA-N,CC/C=C\CC/C=C/C=O,"cucumber, green, leafy, melon, violet, dry, vegetable, fatty","E,Z-2,6-nonadienal","cucumber, green, leafy, melon, violet","dry, vegetable, fatty, melon, cucumber, leafy, green",both,exact
+UZFLPKAIBPNNCA-BQYQJAHWSA-N,CC1=CCCC(C1/C=C/C(=O)C)(C)C,"balsamic, violet, woody, sweet, floral, fruity, tropical, orris",(E)-alpha-Ionone,"balsamic, violet, woody","sweet, floral, fruity, violet, woody, tropical, orris",both,exact
+HZYHMHHBBBSGHB-KPDBFRNYSA-N,CC/C=C\CC/C=C\C=O,"cucumber, fatty, green, leafy, vegetable, violet, melon, fresh, citrus, dry","E,E-2,6-nonadienal","cucumber, fatty, green, leafy, vegetable, violet, melon","vegetable, fatty, melon, cucumber, fresh, green, citrus, dry, leafy",both,skeleton
+CWRKZMLUDFBPAO-SREVYHEPSA-N,CCCCC/C=C\CCC=O,"aldehydic, cardamom, orange, watery, citrus",Z-4-decenal,,"aldehydic, cardamom, orange, watery, citrus",gs_only,exact
+UZFFFFWQKMPLAC-ARJAWSKDSA-N,CC/C=C\CCCCCC=O,"aldehydic, citrus, cucumber",Z-7-Decenal,"aldehydic, citrus, cucumber","aldehydic, cucumber, citrus",both,exact
+BGTBFNDXYDYBEY-FNORWQNLSA-N,C/C=C/C(=O)C1=C(CCCC1(C)C)C,"black currant, honey, plum, rose, tobacco, berry, floral, fruity, woody, mint",E-beta-damascone,"black currant, honey, plum, rose, tobacco","plum, berry, floral, honey, rose, fruity, tobacco, woody, mint, black currant",both,exact
+KMRMUZKLFIEVAO-IUCAKERBSA-N,CC1([C@H]2CC=C([C@@H]1C2)C=O)C,"cinnamon, herbal, spicy, sweet, terpenic, camphoreous, cooling, jammy, green, woody, mint, tonka",(-)-Myrtenal,"cinnamon, herbal, spicy","sweet, spicy, cinnamon, terpenic, camphoreous, cooling, jammy, green, woody, mint, tonka",both,skeleton
+FQTLCLSUCSAZDY-SDNWHVSQSA-N,CC(=CCC/C(=C/CCC(C)(C=C)O)/C)C,"floral, green, woody, citrus, waxy",nerolidol,"floral, green, woody","floral, green, woody, citrus, waxy",both,exact
+PSQYTAPXSHCGMF-BQYQJAHWSA-N,CC1=C(C(CCC1)(C)C)/C=C/C(=O)C,"fruity, violet, woody, sweet, beeswax, berry, floral, tropical",(E)-beta-Ionone,"fruity, violet, woody","sweet, beeswax, berry, floral, fruity, woody, tropical",both,exact
+HIGQPQRQIQDZMP-UHFFFAOYSA-N,CC(=CCCC(=CCOC(=O)C)C)C,"floral, fruity, green, rose, sweet, lavender, waxy, grapefruit, pear, dewy, tropical, soapy, citrus",nerylacetate,"floral, fruity, green, rose, sweet","floral, rose, lavender, green, waxy, sweet, grapefruit, fruity, pear, dewy, tropical, soapy, citrus",both,skeleton
+CWRKZMLUDFBPAO-VOTSOKGWSA-N,CCCCC/C=C/CCC=O,"citrus, fresh, fruity, orange, mandarin, aldehydic, fatty, tangerine, green",E-4-Decenal,"citrus, fresh, fruity, orange","mandarin, aldehydic, fatty, tangerine, fresh, orange, green, citrus",both,exact
+QKTZBZWNADPFOL-BNFZFUHLSA-N,CCCCCCC/C=C/C=C/C=O,"fatty, grapefruit, meaty, orange, citrus","E,E-2,4-dodecadienal","fatty, grapefruit, meaty, orange","orange, grapefruit, fatty, citrus",both,exact
+ZHHYXNZJDGDGPJ-BSWSSELBSA-N,CCCC/C=C/C=C/C=O,"chicken, fatty, nutty, melon, leafy, cucumber, green, tropical, waxy","trans,trans-2,4-Nonadienal","chicken, fatty, nutty","fatty, melon, leafy, cucumber, green, tropical, chicken, waxy",both,exact
+CXENHBSYCFFKJS-VDQVFBMKSA-N,CC(=CCC/C(=C/C/C=C(\C)/C=C)/C)C,"apple, berry, citrus, green, herbal, vegetable, floral, lavender, neroli, bergamot, woody, myrrh",farnesene,"apple, berry, citrus, green, herbal, vegetable","vegetable, floral, herbal, lavender, neroli, green, bergamot, woody, myrrh, citrus",both,exact
+GHVNFZFCNZKVNT-UHFFFAOYSA-N,CCCCCCCCCC(=O)O,"cheesy, dairy, fatty, waxy, rancid, citrus, sour",Decanoic Acid,"cheesy, dairy, fatty, waxy","rancid, citrus, fatty, sour",both,exact
+BDJRBEYXGGNYIS-UHFFFAOYSA-N,C(CCCC(=O)O)CCCC(=O)O,odorless,Nonanedioic Acid,odorless,,leff_only,exact
+KLTVSWGXIAYTHO-UHFFFAOYSA-N,CCCCCC(=O)C=C,"metallic, mushroom, vegetable, musty, dirty, broccoli, chicken, herbal, savory, cabbage, fishy, earthy",1-octen-3-one,"metallic, mushroom","metallic, vegetable, musty, dirty, mushroom, broccoli, chicken, herbal, savory, cabbage, fishy, earthy",both,exact
+FXHGMKSSBGDXIY-UHFFFAOYSA-N,CCCCCCC=O,"citrus, cognac, fatty, green, nutty, sweet, aldehydic, herbal, ozone, fresh",heptanal,"citrus, cognac, fatty, green, nutty, sweet","aldehydic, fatty, herbal, cognac, ozone, fresh, green",both,exact
+XUPYJHCZDLZNFP-UHFFFAOYSA-N,CCCCOC(=O)CCC,"apple, banana, fruity, pear, pineapple, sweet, ripe, fresh, green, cherry, tropical",Butyl Butyrate,"apple, banana, fruity, pear, pineapple, sweet","sweet, ripe, banana, fruity, pineapple, fresh, green, cherry, tropical",both,exact
+XNLICIUVMPYHGG-UHFFFAOYSA-N,CCCC(=O)C,"banana, dairy, ethereal, fruity, ketonic, rum, sweet, fermented, winey, woody",2-Pentanone,"banana, dairy, ethereal, fruity, ketonic, rum","sweet, fermented, banana, fruity, winey, ethereal, woody",both,exact
+HGBOYTHUEUWSSQ-UHFFFAOYSA-N,CCCCC=O,"chocolate, nutty, pungent, fermented, berry, fruity, bready",Pentanal,"chocolate, nutty, pungent","fermented, berry, nutty, fruity, bready",both,exact
+LSTSBZKIQFOPHA-UHFFFAOYSA-N,CCC(=O)OCC(C)(C)OC(C)C1CCCC(C1)(C)C,"floral, fruity, ambrette, pear, woody, musk","1-Propanol, 2-[1-(3,3-dimethylcyclohexyl)ethoxy]-2-methyl-, 1-propanoate",,"floral, fruity, ambrette, pear, woody, musk",gs_only,exact
+SRONXYPFSAKOGH-UHFFFAOYSA-N,C1CCCCCCCCCCCCCC1,,cyclopentadecane,,,none,unmatched
+FFVHXGZXDRXFLQ-UHFFFAOYSA-N,C1CCCCCCCC(CCCCCC1)O,,cyclopentadecanol,,,none,unmatched
+BKWHDPNQDGBHET-UHFFFAOYSA-N,CCCCCC(C(C)CO)S,,3-Mercapto-2-methyloctan-1-ol,,,none,unmatched
+SXOZDDAFVJANJP-UHFFFAOYSA-N,C1CCCCC(=O)CCCC1,,cyclodecanone,,,none,unmatched
+UPOSSYJVWXLPTA-UHFFFAOYSA-N,C1CCCCCC(=O)CCCC1,,cycloundecanone,,,none,unmatched
+CJPNOLIZCWDHJK-UHFFFAOYSA-N,CCCCCCCCCCCCCC(=O)C,"dairy, fatty, fruity, waxy, floral, oily, burnt, fresh, jasmine, celery",2-pentadecanone,"dairy, fatty, fruity, waxy","fatty, floral, oily, burnt, fresh, jasmine, celery, waxy",both,exact
+PQYGSSYFJIJDFK-UHFFFAOYSA-N,CCCCCCCC(=O)CCCCCCC,,8-pentadecanone,,,none,unmatched
+HABNNYNSJFKZFE-UHFFFAOYSA-N,CCC(C(C)CO)S,"onion, sulfurous",3-mercapto-2-methylpentan-1-ol,,"onion, sulfurous",gs_only,exact
+ALHUZKCOMYUFRB-OAHLLOKOSA-N,C[C@@H]1CCCCCCCCCCCCC(=O)C1,"powdery, animal, musk",L-Muscone,,"powdery, animal, musk",gs_only,exact
+ALHUZKCOMYUFRB-HNNXBMFYSA-N,C[C@H]1CCCCCCCCCCCCC(=O)C1,"musk, sweet, natural, animal, fatty, floral, powdery, soapy",D-Muscone,"musk, sweet","sweet, natural, animal, fatty, floral, powdery, soapy, musk",both,skeleton
+HUIYGGQINIVDNW-UHFFFAOYSA-N,CCCCOC(=O)C1=CC=CC=C1N,"berry, fruity, grape, sweet, winey, petitgrain, plum, floral, powdery",butyl anthranilate,"berry, fruity, grape, sweet, winey","sweet, petitgrain, plum, berry, grape, floral, fruity, winey, powdery",both,exact
+KJPRLNWUNMBNBZ-QPJJXVBHSA-N,C1=CC=C(C=C1)/C=C/C=O,"cinnamon, spicy, sweet, warm, candy",cinnamaldehyde,"cinnamon, spicy","sweet, spicy, cinnamon, warm, candy",both,exact
+CFNJLPHOBMVMNS-UHFFFAOYSA-N,CCCCCOC(=O)CCC,"sweet, banana, fruity, pineapple, cherry, tropical",amyl butyrate,,"sweet, banana, fruity, pineapple, cherry, tropical",gs_only,exact
+ZCDYAMJXVAUTIM-UHFFFAOYSA-N,C=CCOC(=O)CC1=CC=CC=C1,"fruity, honey, pineapple, sweet, rum",allyl phenylacetate,"fruity, honey, pineapple, sweet","honey, fruity, rum",both,exact
+GTNCESCYZPMXCJ-UHFFFAOYSA-N,CCC(=O)OCCCC1=CC=CC=C1,"balsamic, floral, fruity, mimosa, hyacinth",3-phenyl propyl propionate,"balsamic, floral","floral, fruity, mimosa, balsamic, hyacinth",both,exact
+BADXJIPKFRBFOT-UHFFFAOYSA-N,CC1(CC(=O)CC(=O)C1)C,,"5,5-Dimethyl-1,3-cyclohexanedione",,,none,unmatched
+BDFAOUQQXJIZDG-UHFFFAOYSA-N,CC(C)CS,"garlic, onion, vegetable, mustard, sulfurous, cooked",2-methyl-1-propanethiol,"garlic, onion, vegetable","mustard, vegetable, sulfurous, cooked",both,exact
+FEWLNYSYJNLUOO-UHFFFAOYSA-N,C1CCN(CC1)C=O,,1-formylpiperidine,,,none,unmatched
+CBJPZHSWLMJQRI-UHFFFAOYSA-N,C1=COC(=C1)CSSCC2=CC=CO2,"coffee, meaty, roasted, sulfurous, chicken, potato, cabbage, onion",coffee difuran,"coffee, meaty, roasted, sulfurous","coffee, meaty, sulfurous, chicken, potato, cabbage, onion, roasted",both,exact
+CWERGRDVMFNCDR-UHFFFAOYSA-N,C(C(=O)O)S,sulfurous,thioglycolic acid,sulfurous,,leff_only,exact
+KZCOBXFFBQJQHH-UHFFFAOYSA-N,CCCCCCCCS,"meaty, roasted, sulfurous, vegetable",1-octanethiol,"meaty, roasted, sulfurous, vegetable",sulfurous,both,exact
+YCIXWYOBMVNGTB-UHFFFAOYSA-N,CCCCCC1=C(CCC1=O)C,"floral, fruity, herbal, jasmine, spicy, sweet, woody, fresh, powdery, myrrh",dihydrojasmone,"floral, fruity, herbal, jasmine, spicy","sweet, spicy, floral, woody, herbal, fruity, fresh, powdery, jasmine, myrrh",both,exact
+PBGWNXWNCSSXCO-UHFFFAOYSA-N,CCCCCCCC(=O)OCCCCCC,"fatty, fruity, green, herbal, estery, berry, apple, waxy",hexyl octanoate,"fatty, fruity, green, herbal","estery, berry, fruity, apple, green, waxy",both,exact
+UHOVQNZJYSORNB-UHFFFAOYSA-N,C1=CC=CC=C1,,benzene,,,none,unmatched
+AZOCECCLWFDTAP-RKDXNWHRSA-N,C[C@@H]1CC[C@H](CC1=O)C(=C)C,"mentholic, herbal, mint, warm",(+)-dihydrocarvone,,"mentholic, herbal, mint, warm",gs_only,exact
+NTWSIWWJPQHFTO-UHFFFAOYSA-N,CCCC(=CC(=O)O)C,,3-methylhex-2-enoic acid,,,none,unmatched
+SMWDFEZZVXVKRB-UHFFFAOYSA-N,C1=CC=C2C(=C1)C=CC=N2,"animal, musty, sweet, tobacco, rubbery, medicinal, earthy, leathery",quinoline,"animal, musty, sweet, tobacco","musty, rubbery, medicinal, tobacco, earthy, leathery",both,exact
+ODHAQPXNQDBHSH-UHFFFAOYSA-N,C1CCC(CC1)SSC2CCCCC2,"berry, cocoa, coffee, green, meaty, musty, onion, eggy, alliaceous, clam, seafood, nutty",dicyclohexyl disulfide,"berry, cocoa, coffee, green, meaty, musty, onion","eggy, alliaceous, clam, coffee, seafood, onion, nutty",both,exact
+JUJWROOIHBZHMG-UHFFFAOYSA-N,C1=CC=NC=C1,"burnt, fishy, ammoniacal, sour",pyridine,"burnt, fishy","fishy, ammoniacal, sour",both,exact
+NDVASEGYNIMXJL-NXEZZACHSA-N,CC(C)[C@]12CCC(=C)[C@H]1C2,"citrus, spicy, terpenic, oily, camphoreous, green, woody, pine",(+)-Sabinene,"citrus, spicy","spicy, terpenic, oily, camphoreous, green, woody, pine, citrus",both,skeleton
+LHXDLQBQYFFVNW-UHFFFAOYSA-N,CC1(C2CCC(C2)(C1=O)C)C,"camphoreous, pine, sweet",Fenchone,"camphoreous, pine, sweet",,leff_only,exact
+ARJWAURHQDJJAC-GQCTYLIASA-N,CCC(C)C(=O)/C=C/C,"hazelnut, metallic, nutty",5-methylhept-2-en-4-one,"hazelnut, metallic","hazelnut, nutty",both,exact
+AMXYRHBJZOVHOL-ODYTWBPASA-N,CC/C=C\CC/C=C/CO,"cucumber, green, herbal, violet, leafy, fatty, nutty, oily","(2E,6Z)-Nona-2,6-dien-1-ol","cucumber, green, herbal, violet","leafy, fatty, nutty, cucumber, oily, green",both,exact
+DIVCBWJKVSFZKJ-UHFFFAOYSA-M,CCC(C)CCC(=O)[O-],"cheesy, fatty, fruity, sour, caprylic","(2R/2S)-2-Methylbutylacetate, sum of isomers","cheesy, fatty, fruity, sour","cheesy, sour, caprylic, fatty",both,skeleton
+TWOGJUHCCNLYPC-UHFFFAOYSA-N,CCC(=O)C(C)S,"catty, grapefruit, onion, roasted, sulfurous, meaty",2-sulfanylpentan-3-one,"catty, grapefruit, onion, roasted, sulfurous","roasted, meaty",both,exact
+CZCBTSFUTPZVKJ-UHFFFAOYSA-N,CC1CCOC(C1)C=C(C)C,"earthy, green, rose, vegetable, spicy, floral, herbal, camphoreous, fresh, geranium",Rose oxide,"earthy, green, rose","vegetable, spicy, rose, floral, herbal, camphoreous, fresh, green, geranium",both,exact
+ROWKJAVDOGWPAT-UHFFFAOYSA-N,CC(C(=O)C)O,"buttery, creamy, sweet, fatty, milky, dairy","(3R/3S)-3-Hydroxybutan-2-one, sum of isomers","buttery, creamy","sweet, fatty, creamy, milky, dairy, buttery",both,exact
+SZECUQRKLXRGSJ-UHFFFAOYSA-N,CCC(C(=O)C)S,"catty, meaty, savory","(3R/3S)-3-Sulfanylpentan-2-one, sum of isomers","catty, meaty, savory",,leff_only,exact
+LEGGANXCVQPIAI-UHFFFAOYSA-N,CCCCC(C)CCC(=O)O,"musty, fatty, plastic, creamy, lactonic, milky, dairy, waxy",4-Methyloctanoic acid,,"musty, fatty, plastic, creamy, lactonic, milky, dairy, waxy",gs_only,exact
+IFYYFLINQYPWGJ-UHFFFAOYSA-N,CCCCCCC1CCC(=O)O1,"coconut, peach, sweet, buttery, fatty, fruity, oily, creamy, fresh, waxy","(4R/4S)-γ-Decalactone, sum of isomers","coconut, peach","sweet, buttery, fatty, fruity, oily, coconut, creamy, fresh, peach, waxy",both,exact
+WGPCZPLRVAWXPW-UHFFFAOYSA-N,CCCCCCCCC1CCC(=O)O1,"fatty, fruity, peach, sweet, metallic","(4R/4S)-γ-Dodecalactone, sum of isomers","fatty, fruity, peach","sweet, metallic, fatty, fruity, peach",both,exact
+OALYTRUKMRCXNH-UHFFFAOYSA-N,CCCCCC1CCC(=O)O1,"sweet, fatty, coconut, oily, creamy, buttery, waxy",(4R/4S)-γ-Nonalactone,,"sweet, fatty, coconut, oily, creamy, buttery, waxy",gs_only,exact
+IPBFYZQJXZJBFQ-UHFFFAOYSA-N,CCCCC1CCC(=O)O1,"coconut, coumarinic, sweet, fatty, creamy, waxy, dairy, tonka","(4R/4S)-γ-Octalactone, sum of isomers","coconut, coumarinic, sweet","sweet, fatty, coconut, creamy, waxy, dairy, tonka",both,exact
+PHXATPHONSXBIL-UHFFFAOYSA-N,CCCCCCCC1CCC(=O)O1,"ketonic, fatty, fruity, apricot, coconut, creamy, peach, lactonic","(4R/4S)-γ-Undecalactone, sum of isomers",,"ketonic, fatty, fruity, apricot, coconut, creamy, peach, lactonic",gs_only,exact
+WNVCMFHPRIBNCW-YUMQZZPRSA-N,CCCC[C@H]1[C@H](CC(=O)O1)C,coconut,(-)-cis-Whiskey lactone,,coconut,gs_only,exact
+IUFQZPBIRYFPFD-UHFFFAOYSA-N,CCC1C(=C(C(=O)O1)O)C,"caramellic, sweet, butterscotch, fenugreek, nutty, fruity, maple, praline, chicory",Abhexone,caramellic,"sweet, butterscotch, fenugreek, caramellic, nutty, fruity, maple, praline, chicory",both,exact
+QRPLZGZHJABGRS-UHFFFAOYSA-N,CCCCCCCC1CCCC(=O)O1,"buttery, fatty, fruity, peach, sweet, metallic, apricot, oily, coconut, creamy, fresh, milky, tropical, dairy","(5R/5S)-δ-Dodecalactone, sum of isomers","buttery, fatty, fruity, peach","sweet, metallic, buttery, fatty, fruity, apricot, oily, coconut, creamy, fresh, milky, tropical, dairy, peach",both,exact
+FYTRVXSHONWYNE-UHFFFAOYSA-N,CCCC1CCCC(=O)O1,"coconut, coumarinic, sweet, fatty, creamy, lactonic, green, tropical, dairy, tonka","(5R/5S)-δ-Octalactone, sum of isomers","coconut, coumarinic","sweet, fatty, coconut, creamy, coumarinic, lactonic, green, tropical, dairy, tonka",both,exact
+NDFKTBCGKNOHPJ-AATRIKPKSA-N,CCCC/C=C/C=O,"apple, fatty, fresh, fruity, green, pungent, sweet, vegetable, oily",(E)-2-Heptenal,"apple, fatty, fresh, fruity, green, pungent, sweet, vegetable","vegetable, fatty, fruity, oily, fresh, green, pungent",both,exact
+PANBRUWVURLWGY-MDZDMXLPSA-N,CCCCCCCC/C=C/C=O,"citrus, fresh, lemon, orange, sweet, aldehydic, fatty, fruity, green, waxy",(E)-2-Undecenal,"citrus, fresh, lemon, orange, sweet","aldehydic, fatty, fruity, orange, fresh, green, citrus, waxy",both,exact
+OGLDWXZKYODSOB-SNVBAGLBSA-N,CC1=CC[C@@H](C=C1)C(C)C,"citrus, fresh, spicy, terpenic, medicinal",(R)-α-Phellandrene,"citrus, fresh, spicy","terpenic, spicy, medicinal",both,exact
+XMGQYMWWDOXHJM-UHFFFAOYSA-N,CC1=CCC(CC1)C(=C)C,"citrus, gasoline, camphoreous, herbal, terpenic, resinous, petroleum, painty, phenolic, woody, aromatic","(R/S)-Limonene, sum of isomers","citrus, gasoline","camphoreous, herbal, terpenic, citrus, resinous, petroleum, painty, phenolic, woody, aromatic",both,exact
+BSAIUMLZVGUGKX-FPLPWBNLSA-N,CCCCCC/C=C\C=O,"cucumber, fatty, melon, orris, waxy",(Z)-2-Nonenal,"cucumber, fatty, melon, orris, waxy","cucumber, orris, fatty, waxy",both,exact
+LVBXEMGDVWVTGY-SREVYHEPSA-N,CCCCC/C=C\C=O,"leafy, fatty, fruity, walnut, green",(Z)-2-Octenal,,"leafy, fatty, fruity, walnut, green",gs_only,exact
+NPFVOOAXDOBMCE-PLNGDYQASA-N,CC/C=C\CCOC(=O)C,"banana, fruity, grassy, green, sweet, melon, apple, pear, fresh",(Z)-3-Hexen-1-yl acetate,"banana, fruity, grassy, green","sweet, banana, melon, fruity, grassy, apple, pear, fresh, green",both,exact
+GXANMBISFKBPEX-ARJAWSKDSA-N,CC/C=C\CC=O,"fresh, grassy, green, leafy, pungent, fatty, weedy, fruity, apple",(Z)-3-Hexenal,"fresh, grassy, green, leafy, pungent","fatty, weedy, fruity, grassy, apple, green",both,exact
+VVGOCOMZRGWHPI-ARJAWSKDSA-N,CC/C=C\CCC=O,"creamy, green, vegetable, fatty, oily, milky, dairy",(Z)-4-Heptenal,"creamy, green, vegetable","fatty, oily, creamy, green, milky, dairy",both,exact
+VWYBQOFZVSNDAW-WAYWQWQTSA-N,CC/C=C\CC(=O)C=C,"geranium, metallic, green","(Z)-Octa-1,5-dien-3-one",,"geranium, metallic, green",gs_only,exact
+DHKHKXVYLBGOIT-UHFFFAOYSA-N,CCOC(C)OCC,"alcoholic, fruity, green, sweet, vegetable, nutty, ethereal, earthy","1,1-Diethoxyethane","alcoholic, fruity, green","sweet, vegetable, nutty, green, ethereal, earthy",both,exact
+SATCULPHIDQDRE-UHFFFAOYSA-N,C1OC2=C(O1)C=C(C=C2)C=O,"cherry, floral, sweet, vanilla, almond, custard, spicy, cinnamyl, creamy, tropical",piperonal,"cherry, floral, sweet","sweet, vanilla, almond, custard, spicy, floral, cherry, cinnamyl, creamy, tropical",both,exact
+OQWNKUAZQSLNSR-UHFFFAOYSA-N,CC(C)CCCCCCCCCCC=O,"beefy, meaty, sweet, animal, fatty, sweaty, fruity, savory, brothy, tallow, cilantro, citrus, cooked, waxy",12-Methyltridecanal,"beefy, meaty","sweet, meaty, animal, fatty, sweaty, fruity, savory, brothy, tallow, cilantro, citrus, cooked, waxy",both,exact
+ZFMSMUAANRJZFM-UHFFFAOYSA-N,COC1=CC=C(C=C1)CC=C,"anisic, herbal, sweet, anise, spicy, sassafras, phenolic, green, mint, fennel",Estragole,"anisic, herbal, sweet","sweet, anise, spicy, herbal, sassafras, anisic, phenolic, green, mint, fennel",both,exact
+RUVINXPYWBROJD-ONEGZZNKSA-N,C/C=C/C1=CC=C(C=C1)OC,"anisic, herbal, sweet, anise, medicinal, licorice, mimosa",p-Anethole,"anisic, herbal, sweet","sweet, anise, medicinal, licorice, mimosa",both,exact
+MMSLOZQEMPDGPI-UHFFFAOYSA-N,CC1=CC=C(C=C1)C(=C)C,"citrus, lemon, phenolic, pine, spicy, musty, nutty, guaiacol, styrene, coffee, clove",1-Methyl-4-(prop-1-en-2-yl)benzene,"citrus, lemon, phenolic, pine, spicy","musty, spicy, nutty, guaiacol, styrene, coffee, phenolic, clove",both,exact
+KUFFULVDNCHOFZ-UHFFFAOYSA-N,CC1=CC(=C(C=C1)O)C,"burnt, phenolic, sharp, roasted, smoky","2,4-Dimethylphenol","burnt, phenolic, sharp","roasted, smoky",both,exact
+KLIDCXVFHGNTTM-UHFFFAOYSA-N,COC1=C(C(=CC=C1)OC)O,"medicinal, phenolic, smoky, woody, sweet, bacon, powdery, balsamic","2,6-Dimethoxyphenol","medicinal, phenolic, smoky, woody","sweet, bacon, medicinal, smoky, powdery, phenolic, balsamic, woody",both,exact
+NXXYKOUNUYWIHA-UHFFFAOYSA-N,CC1=C(C(=CC=C1)C)O,"phenolic, sharp, smoky, sweet, medicinal, rooty, coffee","2,6-Dimethylphenol","phenolic, sharp, smoky, sweet","sweet, medicinal, rooty, coffee, phenolic",both,exact
+ZQPCOAKGRYBBMR-UHFFFAOYSA-N,CC1=CCC(CC1)C(C)(C)S,"naphthyl, resinous, sulfurous, garlic, alliaceous, onion, citrus, woody, tropical, grapefruit, aromatic",p-Menthene-8-thiol,,"naphthyl, resinous, sulfurous, garlic, alliaceous, onion, citrus, woody, tropical, grapefruit, aromatic",gs_only,exact
+FZOZFDAMVVEZSJ-UHFFFAOYSA-N,CC(=O)C1=NCCS1,"green, onion, popcorn, chicken, roasted, nutty, herbal, corn, grassy, taco, bready, toasted, malty, potato",2-Acetyl-2-thiazoline,"green, onion, popcorn","chicken, roasted, nutty, herbal, corn, grassy, taco, bready, toasted, malty, potato, onion",both,exact
+HEQOJEGTZCTHCF-UHFFFAOYSA-N,C1=CC=C(C=C1)C(=O)CN,,2-Aminoacetophenone,,,none,unmatched
+IFNDEOYXGHGERA-UHFFFAOYSA-N,CC1=CC(=C(C=C1)OC)O,"medicinal, phenolic, smoky, sweet, vanilla",2-Methoxy-5-methylphenol,"medicinal, phenolic, smoky, sweet, vanilla",,leff_only,exact
+SRUTWBWLFKSTIS-UHFFFAOYSA-N,CC1=C(C=CO1)SSC,"brothy, coffee, meaty, roasted, sulfurous, vegetable, onion, beefy, chemical",2-Methyl-3-(methyldisulfanyl)furan,"brothy, coffee, meaty, roasted, sulfurous","vegetable, meaty, sulfurous, onion, beefy, chemical",both,exact
+BYGQBDHUGHBGMD-UHFFFAOYSA-N,CCC(C)C=O,"cocoa, fermented, fruity, green, malty, musty, fatty, nutty, coffee, phenolic, alcoholic, chocolate",2-Methylbutanal,"cocoa, fermented, fruity, green, malty","malty, musty, fermented, fatty, cocoa, nutty, coffee, phenolic, alcoholic, chocolate",both,exact
+RUYNUXHHUVUINQ-UHFFFAOYSA-N,CC1=C(C=CO1)S,"beefy, brothy, fishy, meaty, roasted, sweet, metallic, sulfurous, chicken",2-Methylfuran-3-thiol,"beefy, brothy, fishy, meaty, roasted, sweet","metallic, meaty, sulfurous, fishy, chicken",both,exact
+QWVGKYWNOKOFNN-UHFFFAOYSA-N,CC1=CC=CC=C1O,"medicinal, phenolic, musty, plastic, herbal, leathery",2-Methylphenol,"medicinal, phenolic","musty, medicinal, plastic, herbal, phenolic, leathery",both,exact
+HSDXVAOHEOSTFZ-UHFFFAOYSA-N,CCCCCC1=CC=CC=N1,"fatty, green, meaty, vegetable, mushroom, herbal, tallow",2-Pentylpyridine,"fatty, green, meaty, vegetable","mushroom, fatty, herbal, tallow, green, vegetable",both,exact
+ZMRFRBHYXOQLDK-UHFFFAOYSA-N,C1=CC=C(C=C1)CCS,"roasted, sulfurous, tropical, rubbery",2-Phenylethanethiol,"roasted, sulfurous, tropical","rubbery, sulfurous",both,exact
+WRMNZCZEMHIOCP-UHFFFAOYSA-N,C1=CC=C(C=C1)CCO,"floral, rose, sweet, honey, bready, fresh",2-Phenylethanol,"floral, rose","sweet, rose, floral, honey, bready, fresh",both,exact
+MDHYEMXUFSJLGV-UHFFFAOYSA-N,CC(=O)OCCC1=CC=CC=C1,"fruity, honey, rose, sweet, yeasty, floral, cocoa, balsamic, tropical",2-Phenylethyl acetate,"fruity, honey, rose, sweet","sweet, yeasty, floral, honey, rose, fruity, cocoa, balsamic, tropical",both,exact
+OVNCGQSYSSYBPO-UHFFFAOYSA-N,CCC(=O)C1=NCCC1,"roasted, fishy",2-Propionyl-1-pyrroline,,"roasted, fishy",gs_only,exact
+HMNKTRSOROOSPP-UHFFFAOYSA-N,CCC1=CC(=CC=C1)O,"phenolic, musty",3-Ethylphenol,phenolic,musty,both,exact
+XPCTZQVDEJYUGT-UHFFFAOYSA-N,CC1=C(C(=O)C=CO1)O,"berry, caramellic, fruity, strawberry, sweet, candy, burnt, jammy, bread, bready",maltol,"berry, caramellic, fruity, strawberry, sweet","sweet, candy, caramellic, fruity, burnt, jammy, bread, bready",both,exact
+ZFRKQXVRDFCRJG-UHFFFAOYSA-N,CC1=CNC2=CC=CC=C12,"animal, floral, fruity, naphthyl, fecal, civet",Skatole,"animal, floral, fruity","naphthyl, animal, fecal, civet",both,exact
+VTAPYUYITKYXJB-UHFFFAOYSA-N,CC(C)(CCOC=O)S,"catty, coffee, meaty, roasted, sulfurous, caramellic, onion, tropical",3-Methyl-3-sulfanylbutyl formate,"catty, coffee, meaty, roasted, sulfurous","coffee, sulfurous, caramellic, catty, onion, tropical, meaty",both,exact
+PHTQWCKDNZKARW-UHFFFAOYSA-N,CC(C)CCO,"alcoholic, fermented, molasses, banana, pungent, cognac, fruity, whiskey, fusel, ethereal",3-Methylbutan-1-ol,alcoholic,"fermented, molasses, banana, pungent, cognac, fruity, whiskey, fusel, ethereal, alcoholic",both,exact
+YGHRJJRRZDOVPD-UHFFFAOYSA-N,CC(C)CC=O,"cheesy, cocoa, fruity, green, pungent, aldehydic, fatty, ethereal, chocolate, peach",3-Methylbutanal,"cheesy, cocoa, fruity, green, pungent","aldehydic, fatty, ethereal, chocolate, peach",both,exact
+NHIMSNHOEAVUKE-UHFFFAOYSA-N,CCCC(=O)C(C)CC,,3-Methylheptan-4-one,,,none,unmatched
+RLSSMJSEOOYNOY-UHFFFAOYSA-N,CC1=CC(=CC=C1)O,"dry, leathery, medicinal, phenolic, woody",3-Methylphenol,"dry, leathery, medicinal, phenolic","woody, phenolic, medicinal, leathery",both,exact
+XMIIGOLPHOKFCH-UHFFFAOYSA-N,C1=CC=C(C=C1)CCC(=O)O,"balsamic, sweet, fatty, cinnamon, floral, rose, musk",3-Phenyl propionic acid,"balsamic, sweet","sweet, fatty, cinnamon, floral, rose, musk",both,exact
+TYZFMFVWHZKYSE-UHFFFAOYSA-N,CCCC(CCO)S,"alliaceous, fruity, grapefruit, meaty, tropical, coffee, sulfurous, chicken, savory",3-Sulfanyl-1hexanol,"alliaceous, fruity, grapefruit, meaty, tropical","coffee, meaty, sulfurous, chicken, savory, fruity, tropical",both,exact
+JUCARGIKESIVLB-UHFFFAOYSA-N,CCCC(CCOC(=O)C)S,"black currant, fruity, grapefruit, sulfurous, tropical, blackberry, floral, pear, raspberry",3-Sulfanylhexyl acetate,"black currant, fruity, grapefruit, sulfurous, tropical","black currant, blackberry, floral, fruity, pear, raspberry, tropical",both,exact
+WTWBUQJHJGUZCY-UHFFFAOYSA-N,CC(C)C1=CC=C(C=C1)C=O,"green, herbal, pungent, spicy, cumin",cuminaldehyde,"green, herbal, pungent","herbal, spicy, cumin, green",both,exact
+YOMSJEATGXXYPX-UHFFFAOYSA-N,COC1=C(C=CC(=C1)C=C)O,"smoky, spicy, sweet, peppery, powdery, phenolic, carnation, woody, clove",4-Ethenyl-2-methoxyphenol,"smoky, spicy, sweet","spicy, peppery, smoky, powdery, phenolic, carnation, woody, clove",both,exact
+FUGYGGDSWSUORM-UHFFFAOYSA-N,C=CC1=CC=C(C=C1)O,"medicinal, phenolic, spicy, sweet, musty, meaty, chemical",4-Ethenylphenol,"medicinal, phenolic, spicy","sweet, musty, meaty, medicinal, phenolic, chemical",both,exact
+PWKJMPFEQOHBAC-UHFFFAOYSA-N,CCCCC(CC)CCC(=O)O,"goaty, mutton, lamb, fatty",4-Ethyloctanoic acid,,"goaty, mutton, lamb, fatty",gs_only,exact
+HXDOZKJGKXYMEW-UHFFFAOYSA-N,CCC1=CC=C(C=C1)O,"animal, phenolic, woody, smoky, savory, guaiacol, castoreum",4-Ethylphenol,"animal, phenolic, woody","smoky, savory, guaiacol, phenolic, castoreum",both,exact
+CBOQJANXLMLOSS-UHFFFAOYSA-N,CCOC1=C(C=CC(=C1)C=O)O,"sweet, vanilla, creamy, caramel",Ethylvanillin,"sweet, vanilla","sweet, vanilla, creamy, caramel",both,exact
+XVHGKKGBUDMTIQ-UHFFFAOYSA-N,CC(C)(CCOC)S,"black currant, catty, sulfurous, sweet, mango, skunk, tropical, mint, grapefruit, peach",4-Methoxy-2-methylbutane-2-thiol,"black currant, catty, sulfurous","sweet, sulfurous, mango, catty, skunk, tropical, mint, black currant, grapefruit, peach",both,exact
+GNKZMNRKLCTJAY-UHFFFAOYSA-N,CC1=CC=C(C=C1)C(=O)C,"floral, fruity, hay, sweet, vanilla, naphthyl, acacia, powdery, mimosa, coumarinic, hawthorn, cherry",4-Methylacetophenone,"floral, fruity, hay, sweet","sweet, vanilla, naphthyl, floral, acacia, powdery, mimosa, coumarinic, hawthorn, cherry",both,exact
+IWDCLRJOBJJRNH-UHFFFAOYSA-N,CC1=CC=C(C=C1)O,"animal, medicinal, phenolic, smoky, narcissus, mimosa",4-Methylphenol,"animal, medicinal, phenolic, smoky","narcissus, animal, phenolic, mimosa",both,exact
+PXIKRTCSSLJURC-UHFFFAOYSA-N,CCCC1=CC(=C(C=C1)O)OC,"balsamic, spicy, sweet, allspice, powdery, phenolic, clove, sharp",4-Propyl-2-methoxyphenol,"balsamic, spicy, sweet","sweet, spicy, allspice, powdery, phenolic, clove, sharp",both,exact
+GWCRPYGYVRXVLI-UHFFFAOYSA-N,CCC1C(=O)C(=C(O1)C)O,"caramellic, butterscotch, sweet, candy",homofuraneol,,"caramellic, butterscotch, sweet, candy",gs_only,exact
+LIIALPBMIOVAHH-UHFFFAOYSA-N,COC1=CC2=C(C=C1)C=CC(=O)O2,"sweet, balsamic, tonka",7-Methoxycoumarin,,"sweet, balsamic, tonka",gs_only,exact
+NVLPQIPTCCLBEU-UHFFFAOYSA-N,CSCC=C,"garlic, onion, sulfurous, alliaceous",Allyl methyl sulfide,"garlic, onion, sulfurous","garlic, onion, sulfurous, alliaceous",both,exact
+LOCDPORVFVOGCR-UHFFFAOYSA-N,CSCSC,"alliaceous, meaty, mushroom, onion, mustard, metallic, spicy, sulfurous, garlic, horseradish, green, pungent",Bis (methylsulfanyl)methane,"alliaceous, meaty, mushroom, onion","mustard, metallic, spicy, sulfurous, mushroom, garlic, horseradish, alliaceous, green, pungent",both,exact
+WJSDHUCWMSHDCR-VMPITWQZSA-N,CC(=O)OC/C=C/C1=CC=CC=C1,"balsamic, cinnamon, floral, fruity, spicy, sweet",Cinnamyl acetate,"balsamic, cinnamon, floral, fruity, spicy, sweet","sweet, floral, spicy, balsamic",both,exact
+OOCCDEMITAIZTP-QPJJXVBHSA-N,C1=CC=C(C=C1)/C=C/CO,"sweet, spicy, powdery, cinnamyl, balsamic, green, hyacinth",Cinnamyl alcohol,,"sweet, spicy, powdery, cinnamyl, balsamic, green, hyacinth",gs_only,exact
+PFRGXCVKLLPLIP-UHFFFAOYSA-N,C=CCSSCC=C,"garlic, pungent, metallic, onion, alliaceous",Diallyl disulfide,"garlic, pungent","garlic, metallic, onion, alliaceous",both,exact
+QMMFVYPAHWMCMS-UHFFFAOYSA-N,CSC,"cabbage, pungent, vegetable, sweet, sulfurous, berry, fruity, onion, creamy, fishy, tomato, green, radish, seafood, corn",Dimethyl sulfide,"cabbage, pungent, vegetable","sweet, vegetable, sulfurous, berry, fruity, cabbage, onion, creamy, fishy, tomato, green, radish, seafood, corn",both,exact
+YWHLKYXPLRWGSE-UHFFFAOYSA-N,CSSSC,"cabbage, garlic, onion, vegetable, meaty, sulfurous, eggy, savory, alliaceous, fresh, cooked",Dimethyl trisulfide,"cabbage, garlic, onion","vegetable, meaty, sulfurous, eggy, savory, alliaceous, fresh, onion, cooked",both,exact
+WQOXQRCZOLPYPM-UHFFFAOYSA-N,CSSC,"cabbage, onion, vegetable, sulfurous",Dimethyl disulfide,"cabbage, onion","vegetable, onion, cabbage, sulfurous",both,exact
+ALVPFGSHPUPROW-UHFFFAOYSA-N,CCCSSCCC,"alliaceous, garlic, green, onion, metallic, sulfurous, tropical, burnt, fresh, earthy, scallion",Dipropyl disulfide,"alliaceous, garlic, green, onion","metallic, sulfurous, tropical, alliaceous, burnt, fresh, earthy, scallion, onion",both,exact
+GAZXPZNJTZIGBO-UHFFFAOYSA-N,CCCSSSCCC,"green, onion, vegetable, sulfurous, garlic, alliaceous, tropical, pungent",Dipropyl trisulfide,"green, onion","vegetable, sulfurous, garlic, alliaceous, onion, green, tropical, pungent",both,exact
+MBDOYVRWFFCFHM-SNAWJCMRSA-N,CCC/C=C/C=O,"apple, fresh, fruity, grassy, green, leafy, pungent, vegetable, aldehydic, clean, spicy, fatty, banana, herbal, cheesy, sharp",E-2-Hexenal,"apple, fresh, fruity, grassy, green, leafy, pungent, vegetable","aldehydic, clean, spicy, leafy, fatty, banana, herbal, fruity, fresh, green, cheesy, sharp",both,exact
+LFQSCWFLJHTTHZ-UHFFFAOYSA-N,CCO,"alcoholic, ethereal, sweet, medicinal",Ethanol,"alcoholic, ethereal, sweet","alcoholic, medicinal, ethereal",both,exact
+LYRIITRHDCNUHV-SSDOTTSWSA-N,CCC[C@H](CC(=O)OCC)O,"citrus, fresh, fruity, grape, green, winey, sweet, spicy, cranberry, pineapple, dusty, woody, hay",Ethyl (3R)-3-hydroxyhexanoate,"citrus, fresh, fruity, grape, green, winey","sweet, spicy, grape, cranberry, fruity, pineapple, dusty, green, woody, hay, citrus",both,skeleton
+HCRBXQFHJMCTLF-UHFFFAOYSA-N,CCC(C)C(=O)OCC,"apple, fruity, green, strawberry, sweet, estery, berry, fresh, tropical, sharp",Ethyl 2-methylbutanoate,"apple, fruity, green, strawberry","sweet, estery, berry, fruity, apple, fresh, green, tropical, sharp",both,exact
+YSNWHRKJEKWJNY-UHFFFAOYSA-N,CCOC(=O)CCSC,"caramellic, fruity, pineapple, metallic, sulfurous, ripe, pulpy, tomato",Ethyl 3-(methylsulfanyl)propanoate,"caramellic, fruity, pineapple","metallic, sulfurous, ripe, pulpy, fruity, pineapple, tomato",both,exact
+PPXUHEORWJQRHJ-UHFFFAOYSA-N,CCOC(=O)CC(C)C,"apple, banana, buttery, fruity, winey, sweet, estery, pineapple, orange, green, sharp",Ethyl 3-methylbutanoate,"apple, banana, buttery, fruity, winey","sweet, estery, fruity, pineapple, apple, orange, green, sharp",both,exact
+OFQRUTMGVBMTFQ-UHFFFAOYSA-N,CCOC(=O)CCC(C)C,"apple, fruity, pineapple",Ethyl 4-methylpentanoate,"apple, fruity, pineapple",fruity,both,exact
+XEKOWRVHYACXOJ-UHFFFAOYSA-N,CCOC(=O)C,"brandy, ethereal, sharp, winey, sweet, rum, grape, weedy, fruity, green",Ethyl acetate,"brandy, ethereal, sharp, winey","sweet, rum, grape, weedy, fruity, green, ethereal",both,exact
+MTZQAGJQAFMTAQ-UHFFFAOYSA-N,CCOC(=O)C1=CC=CC=C1,"floral, fruity, dry, musty, sweet, medicinal, grape, cherry, mint, wintergreen",Ethyl benzoate,"floral, fruity","dry, musty, sweet, medicinal, grape, fruity, cherry, mint, wintergreen",both,exact
+OBNCKNCVKJNDBV-UHFFFAOYSA-N,CCCC(=O)OCC,"banana, buttery, ethereal, fruity, pineapple, ripe, juicy, cognac",Ethyl butanoate,"banana, buttery, ethereal, fruity, pineapple, ripe","juicy, fruity, cognac, pineapple",both,exact
+KBEBGUQPQBELIU-CMDGGOBGSA-N,CCOC(=O)/C=C/C1=CC=CC=C1,"balsamic, cinnamon, honey, plum, floral",Ethyl cinnamate,"balsamic, cinnamon, honey, plum","floral, honey, balsamic",both,exact
+SHZIWNPUGXLXDT-UHFFFAOYSA-N,CCCCCC(=O)OCC,"banana, fruity, pear, pineapple, strawberry, tropical, sweet, estery, fatty, green, waxy",Ethyl hexanoate,"banana, fruity, pear, pineapple, strawberry, tropical","sweet, estery, fatty, banana, fruity, pineapple, green, waxy",both,exact
+ICMAFTSLXCXHRK-UHFFFAOYSA-N,CCCCC(=O)OCC,"apple, fruity, pineapple, tropical, sweet, berry, acidic, green",Ethyl pentanoate,"apple, fruity, pineapple, tropical","sweet, berry, fruity, pineapple, acidic, apple, green, tropical",both,exact
+DULCUDSUACXJJC-UHFFFAOYSA-N,CCOC(=O)CC1=CC=CC=C1,"honey, sweet, chocolate, floral, rose, cocoa, anisic, balsamic, licorice",Ethyl phenylacetate,"honey, sweet","sweet, chocolate, floral, honey, rose, cocoa, anisic, balsamic, licorice",both,exact
+JJOYCHKVKWDMEA-UHFFFAOYSA-N,CCOC(=O)C1CCCCC1,"apple, berry, brandy, cheesy, fermented, fruity, winey",Ethylcyclohexanecarboxylate,"apple, berry, brandy, cheesy, fermented, fruity","fruity, cheesy, winey",both,exact
+ZFFTZDQKIXPDAF-UHFFFAOYSA-N,C1=COC(=C1)CS,"alliaceous, burnt, caramellic, coffee, meaty, sulfurous, fatty, chicken, smoky, savory, oily, onion",2-Furfurylthiol,"alliaceous, burnt, caramellic, coffee","coffee, meaty, sulfurous, fatty, chicken, smoky, savory, oily, burnt, onion",both,exact
+CETWDUZRCINIHU-UHFFFAOYSA-N,CCCCCC(C)O,"green, herbal, lemon, sweet, floral, fruity, fresh, lemongrass, citrus",Heptan-2-ol,"green, herbal, lemon","sweet, floral, herbal, fruity, fresh, lemongrass, green, citrus",both,exact
+AOGQPLXWSUTHQB-UHFFFAOYSA-N,CCCCCCOC(=O)C,"apple, fruity, pear, sweet, fatty, banana, fresh, green",Hexyl acetate,"apple, fruity, pear, sweet","sweet, fatty, banana, fruity, apple, pear, fresh, green",both,exact
+BHIWKHZACMWKOJ-UHFFFAOYSA-N,CC(C)C(=O)OC,"apple, apricot, fruity, pineapple, rum, sweet, floral, ethereal",Methyl 2-methylpropanoate,"apple, apricot, fruity, pineapple, rum","sweet, floral, fruity, pineapple, apple, ethereal",both,exact
+UUIQMZJEGPQKFD-UHFFFAOYSA-N,CCCC(=O)OC,"apple, buttery, ethereal, fermented, fruity, sweet, banana, pineapple, fusel, creamy, pungent",Methyl butanoate,"apple, buttery, ethereal, fermented, fruity","sweet, fermented, banana, fruity, pineapple, apple, fusel, creamy, ethereal, pungent",both,exact
+ZOYASYRPGHCQHW-UHFFFAOYSA-N,CCCSSSC,"garlic, green, onion, sweet, metallic, clean, sulfurous, scallion, cooked",Methyl propyl trisulfide,"garlic, green, onion, sweet","metallic, clean, sulfurous, garlic, onion, green, scallion, cooked",both,exact
+UAHWPYUMFXYFJY-UHFFFAOYSA-N,CC(=CCCC(=C)C=C)C,"spicy, peppery, plastic, terpenic, herbal, rose, carrot, balsamic, woody, celery",Myrcene,,"spicy, peppery, plastic, terpenic, herbal, rose, carrot, balsamic, woody, celery",gs_only,exact
+VKCYHJWLYTUGCC-UHFFFAOYSA-N,CCCCCCCC(=O)C,"cheesy, coconut, fatty, fruity, herbal, sweet, weedy, fresh, green, earthy, soapy, waxy",Nonan-2-one,"cheesy, coconut, fatty, fruity, herbal","sweet, weedy, herbal, fruity, coconut, fresh, green, earthy, soapy, cheesy, waxy",both,exact
+TZMFJUDUGYTVRY-UHFFFAOYSA-N,CCC(=O)C(=O)C,"buttery, fatty, oily, sweet, caramellic, nutty, creamy, toasted, pungent, cheesy","Pentan-2,3-dione","buttery, fatty, oily","sweet, caramellic, nutty, creamy, toasted, pungent, cheesy, buttery",both,exact
+NBBJYMSMWIIQGU-UHFFFAOYSA-N,CCC=O,"green, meaty, cocoa, pungent, nutty, winey, cognac, grape, whiskey, ethereal, earthy, alcoholic, brandy",Propanal,green,"meaty, cocoa, pungent, nutty, winey, cognac, grape, whiskey, ethereal, earthy, alcoholic, brandy",both,exact
+GCZQHDFWKVMZOE-UHFFFAOYSA-N,C1=CSC(=C1)CS,"coffee, meaty, sulfurous, fishy",Thiophen-2-ylmethanethiol,"coffee, meaty, sulfurous","coffee, fishy",both,exact
+CCRCUPLGCSFEDV-BQYQJAHWSA-N,COC(=O)/C=C/C1=CC=CC=C1,"balsamic, fruity, sweet, strawberry, cherry",methyl cinnamate,"balsamic, fruity","sweet, strawberry, balsamic, cherry",both,exact
+UYLKDZXJEKFFHJ-UHFFFAOYSA-N,C1=COC(=C1)CSCC2=CC=CO2,"burnt, coffee, earthy, meaty, mushroom, roasted, savory, sulfurous, cocoa, nutty, fungal",Furfuryl Sulfide,"burnt, coffee, earthy, meaty, mushroom, roasted, savory","meaty, sulfurous, mushroom, cocoa, nutty, coffee, fungal, earthy",both,exact
+NWYGPVZOBBHKLI-UHFFFAOYSA-N,CSSCC1=CC=CC=C1,"cabbage, green, metallic, onion, sulfurous, vegetable",Benzyl methyl disulfide,"cabbage, green, metallic, onion, sulfurous, vegetable","metallic, vegetable, sulfurous, cabbage, green",both,exact
+CLSLQQCDHOZMDT-UHFFFAOYSA-N,CSSCC1=CC=CO1,"bread, coffee, meaty, onion, roasted, sulfurous, eggy, garlic, alliaceous, liver",Furfuryl methyl disulfide,"bread, coffee, meaty, onion, roasted","coffee, meaty, sulfurous, eggy, garlic, alliaceous, onion, roasted, liver",both,exact
+OFQPKKGMNWASPN-UHFFFAOYSA-N,CSCC1=CC=CC=C1,"burnt, horseradish, meaty, roasted, savory, sulfurous, lamb, chicken, pork, beefy",Benzyl methyl sulfide,"burnt, horseradish, meaty, roasted, savory, sulfurous","lamb, chicken, pork, burnt, beefy, roasted",both,exact
+QZZBJCFNHPYNKO-UHFFFAOYSA-N,CC(C1=CC=CC=C1)S,"floral, meaty, sulfurous, tropical",1-Phenylethanethiol,"floral, meaty, sulfurous, tropical","floral, tropical, meaty, sulfurous",both,exact
+UENWRTRMUIOCKN-UHFFFAOYSA-N,C1=CC=C(C=C1)CS,"garlic, onion, sulfurous, horseradish, alliaceous, coffee, mint, sharp",Benzyl mercaptan,"garlic, onion","sulfurous, garlic, horseradish, alliaceous, coffee, onion, mint, sharp",both,exact
+SKSFHXVDHVKIBN-UHFFFAOYSA-N,CSCC1=CC=CO1,"garlic, onion, radish, vegetable, sulfurous, horseradish, alliaceous, pungent",Furfuryl methyl sulfide,"garlic, onion, radish","vegetable, sulfurous, garlic, horseradish, alliaceous, onion, pungent",both,exact
+VAJVDSVGBWFCLW-UHFFFAOYSA-N,C1=CC=C(C=C1)CCCO,"balsamic, floral, sweet, spicy, mignonette, cinnamyl, hyacinth, balsam",3-Phenylpropanol,"balsamic, floral","sweet, spicy, mignonette, cinnamyl, hyacinth, balsam",both,exact
+XPFVYQJUAUNWIW-UHFFFAOYSA-N,C1=COC(=C1)CO,"sweet, musty, estery, sulfurous, caramellic, coffee, bready, brown, chemical, alcoholic",Furfuryl alcohol,,"sweet, musty, estery, sulfurous, caramellic, coffee, bready, brown, chemical, alcoholic",gs_only,exact
+WVDDGKGOMKODPV-UHFFFAOYSA-N,C1=CC=C(C=C1)CO,"almond, fruity, sweet, floral, rose, phenolic, balsamic, chemical",Benzyl alcohol,"almond, fruity, sweet","sweet, floral, rose, fruity, phenolic, balsamic, chemical",both,exact
+HYBBIBNJHNGZAN-UHFFFAOYSA-N,C1=COC(=C1)C=O,"almond, bread, caramellic, spicy, sweet, bready, brown, phenolic, woody",Furfural,"almond, bread, caramellic, spicy, sweet","sweet, caramellic, bready, bread, brown, phenolic, almond, woody",both,exact
+XHIUFYZDQBSEMF-UHFFFAOYSA-N,CCC(C)COC(=O)C,"apple, banana, ethereal, fruity, sweet, estery, ripe, tropical",2-Methylbutyl acetate,"apple, banana, ethereal, fruity","sweet, estery, ripe, banana, fruity, tropical",both,exact
+WDAXFOBOLVPGLV-UHFFFAOYSA-N,CCOC(=O)C(C)C,"apple, ethereal, fruity, rum, sweet, pungent, fusel, alcoholic",Ethyl 2-methyl-propanoate,"apple, ethereal, fruity, rum, sweet","sweet, rum, pungent, fruity, fusel, ethereal, alcoholic",both,exact
+WNVCMFHPRIBNCW-UHFFFAOYSA-N,CCCCC1C(CC(=O)O1)C,"coconut, coumarinic, woody, nutty, lovage, maple, burnt, lactonic, toasted, celery, tonka",Whiskey lactone,"coconut, coumarinic, woody","nutty, lovage, coconut, maple, burnt, coumarinic, lactonic, toasted, woody, celery, tonka",both,exact
+AMXYRHBJZOVHOL-DYWGDJMRSA-N,CC/C=C/CC/C=C/CO,green,"(E,Z)-2,6-Nonadienol",,green,gs_only,exact
+BGVBGAIWXAXBLP-UHFFFAOYSA-N,CCCCCC(=O)C(C)C(=O)C,"caramellic, burnt, fruity, hay","3-Methyl-2,4-nonanedione",,"caramellic, burnt, fruity, hay",gs_only,exact
+XMGQYMWWDOXHJM-JTQLQIEISA-N,CC1=CC[C@@H](CC1)C(=C)C,"citrus, fresh, gasoline, orange, sweet, peely",(R)-Limonene,"citrus, fresh, gasoline, orange, sweet","sweet, peely, fresh, orange, citrus",both,exact
+OGLDWXZKYODSOB-UHFFFAOYSA-N,CC1=CCC(C=C1)C(C)C,"citrus, fresh, mint, spicy, woody, herbal, terpenic, peppery, green",α-Phellandrene,"citrus, fresh, mint, spicy, woody","mint, herbal, terpenic, peppery, green, woody, citrus",both,exact
+HVNICCSXGONRCB-UHFFFAOYSA-N,CC1(C(=O)C=CO1)C,,"2,2-dimethyl-3(2H)-furanone",,,none,unmatched
+VGHBEMPMIVEGJP-UHFFFAOYSA-N,CC1=CCOC1=O,,3-methyl-2(5H)-furanone,,,none,unmatched
+ASOSVCXGWPDUGN-UHFFFAOYSA-N,CC1C(=O)C=C(O1)C,"bread, burnt, buttery, caramellic, coffee, roasted, sweet, fruity, estery","2,5-dimethylfuran-3-one","bread, burnt, buttery, caramellic, coffee, roasted, sweet","caramellic, fruity, estery",both,exact
+NEHNMFOYXAPHSD-JTQLQIEISA-N,C[C@@H](CCC=C(C)C)CC=O,"herbal, clean, citrus",(S)-(-)-citronellal,,"herbal, clean, citrus",gs_only,exact
+FCIVYWQHILCTLI-UHFFFAOYSA-N,CC(CO)CS,,2-methyl-3-sulfanylpropan-1-ol,,,none,unmatched
+OCZSUTGSYBERRF-UHFFFAOYSA-N,CCCCC(C(C)CO)S,,2-Methyl-3-sulfanylheptan-1-ol,,,none,unmatched
+RFMHFOPFUZZBAD-UHFFFAOYSA-N,CC(CO)C(C)S,"green, meaty, onion, sulfurous",2-methyl-3-sulfanylbutan-1-ol,"green, meaty, onion",sulfurous,both,exact
+XVFIAOJQUHTZSV-UHFFFAOYSA-N,CCCC(C(C)CO)S,,2-methyl-3-sulfanylhexan-1-ol,,,none,unmatched
+WUOACPNHFRMFPN-SECBINFHSA-N,CC1=CC[C@H](CC1)C(C)(C)O,"floral, terpenic, lilac",2-[(1S)-4-methylcyclohex-3-en-1-yl]propan-2-ol,,"floral, terpenic, lilac",gs_only,exact
+GRWFGVWFFZKLTI-IUCAKERBSA-N,CC1=CC[C@H]2C[C@@H]1C2(C)C,"resinous, warm, herbal, terpenic, fresh, woody, earthy, pine, sharp","(1S,5S)-2,6,6-Trimethylbicyclo[3.1.1]hept-2-ene",,"resinous, warm, herbal, terpenic, fresh, woody, earthy, pine, sharp",gs_only,exact
+GRWFGVWFFZKLTI-RKDXNWHRSA-N,CC1=CC[C@@H]2C[C@H]1C2(C)C,"herbal, terpenic, mint, aromatic","(1R,5R)-2,6,6-Trimethylbicyclo[3.1.1]hept-2-ene",,"herbal, terpenic, mint, aromatic",gs_only,exact
+WTARULDDTDQWMU-IUCAKERBSA-N,CC1([C@H]2CCC(=C)[C@@H]1C2)C,"dry, resinous, herbal, fresh, green, woody, hay, pine","(1S,5S)-6,6-Dimethyl-2-methylenebicyclo[3.1.1]heptane",,"dry, resinous, herbal, fresh, green, woody, hay, pine",gs_only,exact
+WTARULDDTDQWMU-RKDXNWHRSA-N,CC1([C@@H]2CCC(=C)[C@H]1C2)C,"sweet, terpenic, fresh, green, woody, hay, pine","(1R,5R)-6,6-Dimethyl-2-methylenebicyclo[3.1.1]heptane",,"sweet, terpenic, fresh, green, woody, hay, pine",gs_only,exact
+NDVASEGYNIMXJL-UHFFFAOYSA-N,CC(C)C12CCC(=C)C1C2,"citrus, spicy, terpenic, oily, camphoreous, green, woody, pine",Sabinene,"citrus, spicy","spicy, terpenic, oily, camphoreous, green, woody, pine, citrus",both,exact
+POIARNZEYGURDG-UHFFFAOYSA-N,CC=CC(=O)C1=C(C=CCC1(C)C)C,"apple, floral, fruity, plum, rose, tea, tobacco, sweet, natural, grape, raspberry, sugar, green, woody, earthy, honey","1-(2,6,6-Trimethylcyclohexa-1,3-dien-1-yl)-2-buten-1-one","apple, floral, fruity, plum, rose, tea, tobacco","sweet, natural, plum, floral, rose, grape, fruity, raspberry, sugar, green, woody, earthy, honey, apple, tobacco",both,skeleton
+CHWNEIVBYREQRF-UHFFFAOYSA-N,CCC1=CC(=C(C=C1)O)OC,"phenolic, smoky, spicy, vanilla, sweet, bacon, medicinal, woody, clove",4-Ethyl-2-methoxyphenol,"phenolic, smoky, spicy, vanilla","sweet, vanilla, spicy, bacon, medicinal, smoky, phenolic, woody, clove",both,exact
+QRNZMFDCKKEPSX-UHFFFAOYSA-N,CC(=O)CC(C)(C)S,"black currant, catty, fruity, meaty, savory, tropical, sulfurous, green",4-Methyl-4-sulfanylpentan-2-one,"black currant, catty, fruity, meaty, savory, tropical","black currant, meaty, sulfurous, catty, fruity, green",both,exact
+ZHHYXNZJDGDGPJ-IGTJQSIKSA-N,CCCC/C=C\C=C\C=O,"geranium, pungent, green","(E,Z)-2,4-Nonadienal",,"geranium, pungent, green",gs_only,exact
+IKHGUXGNUITLKF-UHFFFAOYSA-N,CC=O,"alcoholic, nutty, pungent, musty, aldehydic, fruity, fresh, ethereal",Ethanal,"alcoholic, nutty, pungent","musty, aldehydic, fruity, fresh, ethereal, pungent",both,exact
+OCWLYWIFNDCWRZ-UHFFFAOYSA-N,CCC(C)C(=O)OC,"apple, berry, fruity, ripe, sweet, tropical, estery, muguet, fatty, powdery, green, ethereal",Methyl 2-methylbutanoate,"apple, berry, fruity, ripe, sweet, tropical","estery, muguet, fatty, ripe, fruity, powdery, apple, green, ethereal",both,exact
+ZXEKIIBDNHEJCQ-UHFFFAOYSA-N,CC(C)CO,"fermented, sweet, winey, ethereal",2-Methylpropan-1-ol,"fermented, sweet","winey, ethereal",both,exact
+NGSWKAQJJWESNS-ZZXKWVIFSA-N,C1=CC(=CC=C1/C=C/C(=O)O)O,balsamic,(E)-3-(4-Hydroxyphenyl)prop-2-enoic acid,,balsamic,gs_only,exact
+WLJVXDMOQOGPHL-UHFFFAOYSA-N,C1=CC=C(C=C1)CC(=O)O,"animal, honey, sweet, sour, floral, rose, civet, powdery, tobacco, honeysuckle, chocolate, waxy",2-Phenylacetic acid,"animal, honey, sweet","sweet, animal, sour, floral, honey, rose, civet, powdery, tobacco, honeysuckle, chocolate, waxy",both,exact
+GHBSPIPJMLAMEP-UHFFFAOYSA-N,CCCCCC1CCCC(=O)O1,"buttery, creamy, milky, nutty, peach, sweet, fatty, fruity, oily, coconut, fresh, dairy, lactonic",6-Pentyloxan-2-one,"buttery, creamy, milky, nutty, peach, sweet","sweet, fatty, fruity, oily, coconut, creamy, fresh, milky, dairy, peach, lactonic",both,exact
+GTDQGKWDWVUKTI-UHFFFAOYSA-N,CC(=O)C1=CC=CC=C1N,"grape, sweet",1-(2-Aminophenyl)ethanone,grape,"grape, sweet",both,exact
+OSOIQJGOYGSIMF-UHFFFAOYSA-N,C1CCCCCCCC(=O)CCCCCC1,"natural, animal, greasy, powdery, musk",cyclopentadecanone,,"natural, animal, greasy, powdery, musk",gs_only,exact
+ABRIMXGLNHCLIP-UHFFFAOYSA-N,C1CCCCCC(=O)CCCC=CCCCC1,"dry, civet, amber, powdery, musk",5-Cyclohexadecen-1-one,,"dry, civet, amber, powdery, musk",gs_only,skeleton
+NKMKFQCVDZVEJR-UHFFFAOYSA-N,CC1CC=CCCCCCCCCCC(=O)C1,"animal, musk, soapy",3-methylcyclopentadec-5-en-1-one,,"animal, musk, soapy",gs_only,skeleton
+ZGEHHVDYDNXYMW-OWOJBTEDSA-N,C1CCC/C=C/CCCCCCC(=O)CCC1,"dry, animal, floral, tobacco, balsamic, clean, musk, waxy",(8E)-cyclohexadec-8-en-1-one,,"dry, animal, floral, tobacco, balsamic, clean, musk, waxy",gs_only,skeleton
+ZFGBKXBPHOUSJX-VQHVLOKHSA-N,CC1C/C=C/CCCCCCCCC(=O)C1,"musk, ambergris, animal, fatty, powdery, anisic, woody, clean",(E)-3-Methylcyclotetradeca-5-ene-1-one,,"musk, ambergris, animal, fatty, powdery, anisic, woody, clean",gs_only,skeleton
+VPQWBNWSLZYYFH-UHFFFAOYSA-N,CC1CCCCCCCCCCCC(=O)C1,,3-methylcyclotetradecan-1-one,,,none,unmatched
+NVIPUOMWGQAOIT-RQOWECAXSA-N,C1CCCCOC(=O)CCCCC/C=C\CCC1,"musk, musty, ambrette, animal",ambrettolide,musk,"musty, ambrette, animal, musk",both,exact
+RWCCWEUUXYIKHB-UHFFFAOYSA-N,C1=CC=C(C=C1)C(=O)C2=CC=CC=C2,"rose, metallic, herbal, powdery, balsamic, geranium",Benzophenone,rose,"metallic, rose, herbal, powdery, balsamic, geranium",both,exact
+CAERSDJFKGMKLY-UHFFFAOYSA-N,CCOC(=O)CC1=CC(=CC=C1)Br,,ethyl 2-(3-bromophenyl)acetate,,,none,unmatched
+BLEMRRXGTKTJGT-UHFFFAOYSA-N,CC1=CC=CC=C1CC(=O)OC,,methyl 2-(2-methylphenyl)acetate,,,none,unmatched
+DGEZNRSVGBDHLK-UHFFFAOYSA-N,C1=CC2=C(C3=C(C=CC=N3)C=C2)N=C1,,"1,10-phenanthroline",,,none,unmatched
+GUMOJENFFHZAFP-UHFFFAOYSA-N,CCOC1=CC2=CC=CC=C2C=C1,"floral, naphtha, grape, powdery, orange",2-Ethoxynaphthalene,floral,"floral, naphtha, grape, powdery, orange",both,exact
+RAPXVKLHABTPOM-UHFFFAOYSA-N,C=CC1=CC=C(C=C1)OCCCCOC2=CC=C(C=C2)C=C,,"1,4-bis(4-Vinylphenoxy)butane",,,none,unmatched
+ULDHMXUKGWMISQ-UHFFFAOYSA-N,CC1=CCC(CC1=O)C(=C)C,"mint, licorice",Carvone,,"mint, licorice",gs_only,exact
+KJIOQYGWTQBHNH-UHFFFAOYSA-N,CCCCCCCCCCCO,"citrus, floral, fruity, oily",Undecanol,"citrus, floral, fruity, oily",,leff_only,exact
+HFJRKMMYBMWEAD-UHFFFAOYSA-N,CCCCCCCCCCCC=O,"floral, sweet, waxy, aldehydic, orange, green, soapy, citrus",Dodecanal,"floral, sweet, waxy","aldehydic, floral, orange, green, soapy, citrus, waxy",both,exact
+LWBHHRRTOZQPDM-UHFFFAOYSA-N,C(CCCCC(=O)O)CCCCC(=O)O,,Undecanedioic acid,,,none,unmatched
+PGVRSPIEZYGOAD-UHFFFAOYSA-N,C(CCCCC(=O)O)CCCCBr,,10-Bromo-decanoic acid,,,none,unmatched
+IUDGNRWYNOEIKF-UHFFFAOYSA-N,C(CCCCCBr)CCCCC(=O)O,,11-Bromo-undecanoic acid,,,none,unmatched
+YYKBWYBUCFHYPR-UHFFFAOYSA-N,C(CCCCCC(=O)O)CCCCCBr,,12-Bromo-dodecanoic acid,,,none,unmatched
+ZDPHROOEEOARMN-UHFFFAOYSA-N,CCCCCCCCCCC(=O)O,"fatty, coconut, creamy, cheesy, waxy",Undecanoic acid,fatty,"fatty, coconut, creamy, cheesy, waxy",both,exact
+NVRVNSHHLPQGCU-UHFFFAOYSA-N,C(CCC(=O)O)CCBr,,6-Bromo-hexanoic acid,,,none,unmatched
+BKJFDZSBZWHRNH-UHFFFAOYSA-N,C(CCCC(=O)O)CCCBr,,8-Bromo-octanoic acid,,,none,unmatched
+MWKFXSUHUHTGQN-UHFFFAOYSA-N,CCCCCCCCCCO,"fatty, floral, oily, sweet, waxy, clean, orange, watery",Decanol,"fatty, floral, oily, sweet, waxy","sweet, clean, fatty, floral, orange, watery, waxy",both,exact
+JFCQEDHGNNZCLN-UHFFFAOYSA-N,C(CC(=O)O)CC(=O)O,odorless,Pentanedioic acid,,odorless,gs_only,exact
+WLJVNTCWHIRURA-UHFFFAOYSA-N,C(CCC(=O)O)CCC(=O)O,,Heptanedioic acid,,,none,unmatched
+TYFQFVWCELRYAO-UHFFFAOYSA-N,C(CCCC(=O)O)CCC(=O)O,,Octanedioic acid,,,none,unmatched
+CXMXRPHRNRROMY-UHFFFAOYSA-N,C(CCCCC(=O)O)CCCC(=O)O,,Decanedioic acid,,,none,unmatched
+TVIDDXQYHWJXFK-UHFFFAOYSA-N,C(CCCCCC(=O)O)CCCCC(=O)O,,Dodecanedioic acid,,,none,unmatched
+LODLFUCEWWWXPR-UHFFFAOYSA-N,CCCC(C)C1OCC(CO1)(C)CCC,"spicy, herbal, oily, fresh, green, jasmine, privetblossom","5-Methyl-5-propyl-2-(1-methylbutyl)-1,3-dioxane",,"spicy, herbal, oily, fresh, green, jasmine, privetblossom",gs_only,exact
+WVYKHQRCBWWGFK-UHFFFAOYSA-N,CC(C)C1C(COC(O1)(C)C)(C)C,"sawdust, herbal, fruity, woody, green, earthy","2,2,5,5-tetramethyl-4-propan-2-yl-1,3-dioxane",,"sawdust, herbal, fruity, woody, green, earthy",gs_only,exact
+YIWUKEYIRIRTPP-UHFFFAOYSA-N,CCCCC(CC)CO,"fermented, oily, rose, sweet, floral, fresh, citrus",2-ethyl-hexanol,"fermented, oily, rose, sweet","sweet, floral, oily, fresh, citrus",both,exact
+SJWFXCIHNDVPSH-UHFFFAOYSA-N,CCCCCCC(C)O,"earthy, floral, green, leafy, musty, spicy, herbal, fresh, woody",2-octanol,"earthy, floral, green, leafy, musty","spicy, herbal, fresh, green, woody, earthy",both,exact
+NMRPBPVERJPACX-UHFFFAOYSA-N,CCCCCC(CC)O,"earthy, herbal, mushroom, nutty, oily, musty, fermented, spicy, mint, melon, creamy, green, woody, dairy, citrus, waxy",3-octanol,"earthy, herbal, mushroom, nutty, oily","musty, fermented, spicy, mushroom, mint, herbal, melon, creamy, green, woody, earthy, dairy, citrus, waxy",both,exact
+WOFPPJOZXUTRAU-UHFFFAOYSA-N,CCCCC(CCC)O,,4-octanol,,,none,unmatched
+NGDNVOAEIVQRFH-UHFFFAOYSA-N,CCCCCCCC(C)O,"dairy, fruity, green, musty, waxy, cheesy, creamy, orange, citrus",2-nonanol,"dairy, fruity, green, musty, waxy","fruity, cheesy, creamy, orange, green, citrus, waxy",both,exact
+NOOLISFMXDJSKH-UHFFFAOYSA-N,CC1CCC(C(C1)O)C(C)C,"mint, musty, mentholic, cooling, peppermint, woody",menthol,"mint, musty","mentholic, cooling, mint, peppermint, woody",both,exact
+MGSRCZKZVOBKFT-UHFFFAOYSA-N,CC1=CC(=C(C=C1)C(C)C)O,"herbal, medicinal, phenolic, spicy, sweet, chemical, camphoreous, thyme",thymol,"herbal, medicinal, phenolic, spicy, sweet","chemical, spicy, medicinal, herbal, camphoreous, phenolic, thyme",both,exact
+WBYWAXJHAXSJNI-VOTSOKGWSA-N,C1=CC=C(C=C1)/C=C/C(=O)O,"balsamic, sweet, storax",Trans-cinnamic acid,balsamic,"sweet, balsamic, storax",both,exact
+ZPVFWPFBNIEHGJ-UHFFFAOYSA-N,CCCCCCC(=O)C,"apple, cheesy, fatty, fruity, green, musty, natural, weedy, herbal, woody, earthy, dairy, ketonic",2-octanone,"apple, cheesy, fatty, fruity, green","cheesy, musty, natural, weedy, herbal, woody, earthy, dairy, ketonic",both,exact
+RHLVCLIPMVJYKS-UHFFFAOYSA-N,CCCCCC(=O)CC,"cheesy, earthy, fruity, herbal, sweet, musty, fermented, vegetable, mushroom, lavender, fresh, green, moldy, ketonic",3-octanone,"cheesy, earthy, fruity, herbal","sweet, musty, fermented, vegetable, mushroom, herbal, lavender, fresh, green, moldy, cheesy, ketonic",both,exact
+IYTXKIXETAELAV-UHFFFAOYSA-N,CCCCCCC(=O)CC,"fruity, grassy, green, herbal, sweet, spicy, leafy, floral, fresh, jasmine",3-nonanone,"fruity, grassy, green, herbal","sweet, spicy, leafy, floral, herbal, fruity, fresh, jasmine",both,exact
+ZAJNGDIORYACQU-UHFFFAOYSA-N,CCCCCCCCC(=O)C,"floral, orange, peach, fatty",2-decanone,"floral, orange","floral, peach, orange, fatty",both,exact
+LSKONYYRONEBKA-UHFFFAOYSA-N,CCCCCCCCCCC(=O)C,"citrus, floral, fruity, orange",2-dodecanone,"citrus, floral, fruity","floral, fruity, orange, citrus",both,exact
+UHEPJGULSIKKTP-UHFFFAOYSA-N,CC(=CCCC(=O)C)C,"green, herbal, oily, musty, banana, fruity, cheesy, apple, creamy, lemongrass, citrus, ketonic, nutty, coffee, filbert, roasted, hazelnut",Sulcatone,"green, herbal, oily","musty, banana, fruity, cheesy, apple, creamy, lemongrass, green, citrus, ketonic, nutty, coffee, filbert, roasted, hazelnut",both,exact
+TZJLGGWGVLADDN-UHFFFAOYSA-N,CC(=O)CCC1=CC2=C(C=C1)OCO2,"berry, cherry, floral, sweet, woody, candy, fruity, powdery, jammy, raspberry, heliotrope",piperonyl acetone,"berry, cherry, floral, sweet, woody","sweet, candy, berry, floral, fruity, powdery, jammy, raspberry, heliotrope",both,exact
+DSSYKIVIOFKYAU-UHFFFAOYSA-N,CC1(C2CCC1(C(=O)C2)C)C,"camphoreous, fresh, mint",camphor,"camphoreous, fresh, mint",camphoreous,both,exact
+TVQGDYNRXLTQAP-UHFFFAOYSA-N,CCCCCCC(=O)OCC,"cognac, fruity, winey, sweet, rum, estery, seedy, berry, banana, pineapple, green",ethyl heptanoate,"cognac, fruity, winey","sweet, rum, estery, seedy, berry, banana, cognac, fruity, pineapple, winey, green",both,exact
+BYEVBITUADOIGY-UHFFFAOYSA-N,CCCCCCCCC(=O)OCC,"cognac, fatty, grape, nutty, oily, waxy, natural, winey, rose, fruity, tropical, rum",ethyl nonanoate,"cognac, fatty, grape, nutty, oily, waxy","natural, winey, rose, fruity, tropical, waxy, rum",both,exact
+NUKZAGXMHTUAFE-UHFFFAOYSA-N,CCCCCC(=O)OC,"apple, ethereal, fruity, pineapple, bacon, banana, strawberry, apricot, tropical",methyl hexanoate,"apple, ethereal, fruity, pineapple","bacon, banana, strawberry, fruity, pineapple, apricot, ethereal, tropical",both,exact
+XNCNNDVCAUWAIT-UHFFFAOYSA-N,CCCCCCC(=O)OC,"apple, berry, fruity, green, orris, waxy, sweet, floral",methyl heptanoate,"apple, berry, fruity, green, orris, waxy","sweet, berry, floral, fruity, apple, green, orris, waxy",both,exact
+IJXHLVMUNBOGRR-UHFFFAOYSA-N,CCCCCCCCC(=O)OC,"coconut, fruity, green, nutty, winey, sweet, pear, tropical, waxy",methyl nonanoate,"coconut, fruity, green, nutty, winey","sweet, fruity, winey, pear, tropical, waxy",both,exact
+GRLJIIJNZJVMGP-UHFFFAOYSA-N,CCCC(=O)SC,"cheesy, cocoa, fruity, milky, sweet, sulfurous, eggy, garlic, cabbage, tomato, tropical",S-methyl thiobutanoate,"cheesy, cocoa, fruity, milky, sweet","sulfurous, eggy, garlic, cabbage, tomato, tropical, cheesy",both,exact
+FZWLAAWBMGSTSO-UHFFFAOYSA-N,C1=CSC=N1,"meaty, nutty, fishy",thiazol,"meaty, nutty","nutty, fishy, meaty",both,exact
+IOJUPLGTWVMSFF-UHFFFAOYSA-N,C1=CC=C2C(=C1)N=CS2,"beefy, burnt, coffee, sulfurous, vegetable, meaty, rubbery, nutty, brown, cooked",benzothiazol,"beefy, burnt, coffee, sulfurous, vegetable","vegetable, meaty, rubbery, sulfurous, nutty, coffee, brown, cooked",both,exact
+SIKJAQJRHWYJAI-UHFFFAOYSA-N,C1=CC=C2C(=C1)C=CN2,"animal, cheesy, floral, musty, naphthyl, fecal, pungent",indol,"animal, cheesy, floral","musty, naphthyl, animal, floral, fecal, pungent",both,exact
+ZMQAAUBTXCXRIC-UHFFFAOYSA-N,C=CCC1=CC2=C(C=C1)OCO2,"aromatic, spicy, sweet, anise, warm, floral, sassafras, woody",safrol,"aromatic, spicy","sweet, anise, spicy, warm, floral, sassafras, woody",both,exact
+HUMNYLRZRPPJDN-UHFFFAOYSA-N,C1=CC=C(C=C1)C=O,"almond, sweet, cherry, nutty, fruity, powdery, bitter, sharp",benzaldehyde,almond,"sweet, cherry, nutty, fruity, powdery, almond, bitter, sharp",both,exact
+NEHNMFOYXAPHSD-UHFFFAOYSA-N,CC(CCC=C(C)C)CC=O,"sweet, dry, aldehydic, floral, herbal, rose, green, citrus, waxy",(+/-)-citronellal,,"sweet, dry, aldehydic, floral, herbal, rose, green, citrus, waxy",gs_only,exact
+KVWWIYGFBYDJQC-UHFFFAOYSA-N,CCCCCC1C(CCC1=O)CC(=O)OC,"floral, fruity, jasmine, natural, oily, green, tropical, lactonic",hedione,"floral, fruity, jasmine","natural, floral, oily, green, jasmine, tropical, lactonic",both,exact
+LVBXEMGDVWVTGY-VOTSOKGWSA-N,CCCCC/C=C/C=O,"fatty, green, vegetable, leafy, banana, herbal, cucumber, fresh, waxy",Trans-2-octenal,"fatty, green, vegetable","fatty, leafy, banana, herbal, cucumber, fresh, green, waxy",both,exact
+DVVATNQISMINCX-YTXTXJHMSA-N,CCC/C=C/C=C/C=O,"citrus, fatty, fruity, green, melon, pear, peely","trans,trans-2,4-octadienal","citrus, fatty, fruity, green, melon","fatty, melon, pear, peely, green",both,exact
+LCLLDHVSJPTTSF-UHFFFAOYSA-N,CC(C)CC(C)CC=C(C)C=O,,"2,5,7-trimethyloct-2-enal",,,none,unmatched
+LHXDLQBQYFFVNW-XCBNKYQSSA-N,C[C@]12CC[C@H](C1)C(C2=O)(C)C,"camphoreous, mint, sweet, thujonic, mentholic, herbal, terpenic, pine, cooling, fresh, balsamic, cedar, earthy, woody",(+)-fenchone,"camphoreous, mint, sweet","thujonic, mentholic, herbal, terpenic, pine, camphoreous, cooling, fresh, balsamic, cedar, earthy, woody",both,exact
+CZCBTSFUTPZVKJ-ZJUUUORDSA-N,C[C@@H]1CCO[C@H](C1)C=C(C)C,floral,(-)-rose oxide,,floral,gs_only,exact
+DSSYKIVIOFKYAU-OIBJUYFYSA-N,C[C@]12CC[C@H](C1(C)C)CC2=O,"camphoreous, fresh, mint, medicinal, mentholic, herbal, cooling, phenolic, green, woody",(-)-camphor,"camphoreous, fresh, mint","camphoreous, medicinal, mentholic, herbal, cooling, phenolic, green, woody, mint",both,skeleton
+WAPNOHKVXSQRPX-SSDOTTSWSA-N,C[C@H](C1=CC=CC=C1)O,"floral, earthy, honeysuckle, green",(R)-(+)-1-phenylethanol,,"floral, earthy, honeysuckle, green",gs_only,exact
+OFJWFSNDPCAWDK-VIFPVBQESA-N,CC[C@@H](C1=CC=CC=C1)C(=O)O,,(S)-(+)-2-phenylbutyric acid,,,none,unmatched
+OFJWFSNDPCAWDK-SECBINFHSA-N,CC[C@H](C1=CC=CC=C1)C(=O)O,,(R)-(-)-2-phenylbutyric acid,,,none,unmatched
+QQZOPKMRPOGIEB-UHFFFAOYSA-N,CCCCC(=O)C,"cheesy, dairy, fruity, ketonic, fungal, buttery, meaty",2-hexanone,"cheesy, dairy, fruity, ketonic","fungal, buttery, fruity, meaty",both,exact
+BTANRVKWQNVYAZ-UHFFFAOYSA-N,CCC(C)O,"alcoholic, fermented, oily, solvent, winey, sweet, fruity, apricot",2-butanol,"alcoholic, fermented, oily, solvent, winey","sweet, fruity, apricot",both,exact
+CETWDUZRCINIHU-SSDOTTSWSA-N,CCCCC[C@@H](C)O,"sweet, fruity, fatty, oily",(R)-(-)-2-heptanol,,"sweet, fruity, fatty, oily",gs_only,exact
+ACBMYYVZWKYLIP-UHFFFAOYSA-N,CCCCCC(C)(C)O,,2-methyl-2-heptanol,,,none,unmatched
+SJWFXCIHNDVPSH-QMMMGPOBSA-N,CCCCCC[C@H](C)O,"mushroom, fatty, grape, oily, creamy",(S)-(+)-2-octanol,,"mushroom, fatty, grape, oily, creamy",gs_only,exact
+BTANRVKWQNVYAZ-BYPYZUCNSA-N,CC[C@H](C)O,"winey, oily",(S)-(+)-2-butanol,,"winey, oily",gs_only,exact
+CETWDUZRCINIHU-ZETCQYMHSA-N,CCCCC[C@H](C)O,"mushroom, fatty, cheesy, oily, moldy",(S)-(+)-2-heptanol,,"mushroom, fatty, cheesy, oily, moldy",gs_only,exact
+WAPNOHKVXSQRPX-ZETCQYMHSA-N,C[C@@H](C1=CC=CC=C1)O,"floral, strawberry, hyacinth, gardenia",(S)-(-)-1-phenylethanol,,"floral, strawberry, hyacinth, gardenia",gs_only,exact
+RJUFJBKOKNCXHH-UHFFFAOYSA-N,CCC(=O)OC,"ethereal, fruity, rum, strawberry, apple, fresh",methyl propionate,"ethereal, fruity, rum","rum, strawberry, fruity, apple, fresh",both,exact
+JAELLLITIZHOGQ-UHFFFAOYSA-N,CCC(=O)OC(C)(C)C,"brandy, fruity, rum",tert-butyl propionate,"brandy, fruity, rum",,leff_only,exact
+HUAZGNHGCJGYNP-UHFFFAOYSA-N,CCCC(=O)OCCC,"fruity, sweet, rancid, sweaty, candy, pineapple, apricot, ethereal",propyl butyrate,"fruity, sweet","sweet, rancid, sweaty, candy, fruity, pineapple, apricot, ethereal",both,exact
+KDSNLYIMUZNERS-UHFFFAOYSA-N,CC(C)CN,"cheesy, fishy, malty, ripe",isobutylamine,"cheesy, fishy, malty, ripe","fishy, cheesy",both,exact
+DLRJIFUOBPOJNS-UHFFFAOYSA-N,CCOC1=CC=CC=C1,"anisic, sweet",phenetole,"anisic, sweet",,leff_only,exact
+CXBDYQVECUFKRK-UHFFFAOYSA-N,CCCCOC,,butyl methyl ether,,,none,unmatched
+NZGWDASTMWDZIW-MRVPVSSYSA-N,C[C@@H]1CCC(=C(C)C)C(=O)C1,"herbal, mint, sweet, metallic, sulfurous, buchu, camphoreous, fresh, peppermint",(R)-(+)-pulegone,"herbal, mint","sweet, metallic, sulfurous, herbal, buchu, camphoreous, fresh, peppermint, mint",both,exact
+BMFVGAAISNGQNM-UHFFFAOYSA-N,CC(C)CCN,"cheesy, ammoniacal",isopentylamine,cheesy,ammoniacal,both,exact
+JBFHTYHTHYHCDJ-UHFFFAOYSA-N,CCC1CCC(=O)O1,"coumarinic, creamy, sweet, herbal, coconut, tobacco, coumarin",Gamma-Caprolactone,"coumarinic, creamy, sweet","sweet, herbal, coconut, tobacco, coumarin",both,exact
+KWKAKUADMBZCLK-UHFFFAOYSA-N,CCCCCCC=C,gasoline,octene,gasoline,gasoline,both,exact
+SJWKGDGUQTWDRV-UHFFFAOYSA-N,CCCCCCC(=O)OCC=C,"apple, banana, fruity, pineapple, sweet, fermented, ripe, cognac, fusel, waxy",allyl heptanoate,"apple, banana, fruity, pineapple, sweet","sweet, fermented, ripe, banana, cognac, fruity, pineapple, fusel, waxy",both,exact
+HMKKIXGYKWDQSV-SDNWHVSQSA-N,CCCCC/C(=C\C1=CC=CC=C1)/C=O,floral,a-amylcinnamaldehyde,,floral,gs_only,exact
+WRFZKAGPPQGDDQ-UHFFFAOYSA-N,CCCCCC(=O)OCCCCC,"apple, fruity, green, pear, pineapple, waxy, sweet, estery, fatty, cognac",amyl hexanoate,"apple, fruity, green, pear, pineapple, waxy","sweet, estery, fatty, cognac, fruity, pineapple, apple, pear, green, waxy",both,exact
+QUKGYYKBILRGFE-UHFFFAOYSA-N,CC(=O)OCC1=CC=CC=C1,"floral, fruity, jasmine, sweet, fresh",benzyl acetate,"floral, fruity, jasmine, sweet","sweet, floral, fruity, fresh, jasmine",both,exact
+ZCTQGTTXIYCGGC-UHFFFAOYSA-N,C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O,"balsamic, sweet, clean, herbal, oily, balsam",benzyl salicylate,"balsamic, sweet","sweet, clean, herbal, oily, balsam",both,exact
+YPQSPODHFDGVAC-UHFFFAOYSA-N,CCCCCCC(=O)OCCCC,"apple, fruity, green, herbal, winey, oily, grassy, pear, licorice, starfruit, tropical",butyl heptanoate,"apple, fruity, green, herbal","fruity, winey, oily, grassy, pear, licorice, green, starfruit, tropical",both,exact
+DSSYKIVIOFKYAU-XCBNKYQSSA-N,C[C@@]12CC[C@@H](C1(C)C)CC2=O,"medicinal, mentholic, herbal, camphoreous, cooling, phenolic, green, woody, mint",(+)-camphor,,"medicinal, mentholic, herbal, camphoreous, cooling, phenolic, green, woody, mint",gs_only,exact
+HQKQRXZEXPXXIG-DTWJZALFSA-N,C[C@@H]1CC[C@@H]2[C@]13CC[C@@]([C@H](C3)C2(C)C)(C)OC(=O)C,"earthy, leathery, woody, dry, powdery, cedar",cedryl acetate,"earthy, leathery, woody","dry, woody, powdery, cedar",both,skeleton
+QMVPMAAFGQKVCJ-UHFFFAOYSA-N,CC(CCC=C(C)C)CCO,"sweet, mandarin, lime, rose, spicy, fatty, floral, citronella, geranium, powdery, fresh, lemon, citrus, waxy, leather",citronellol,,"sweet, mandarin, lime, rose, spicy, fatty, floral, citronella, geranium, powdery, fresh, lemon, citrus, waxy, leather",gs_only,exact
+RFDUMBPGZUIKOG-UHFFFAOYSA-N,CCCCCCCOC(=O)C(C)C,"fruity, herbal, tropical, sweet, estery, warm, floral, pineapple, apricot, apple, green, cherry, peach",heptyl isobutyrate,"fruity, herbal, tropical","sweet, estery, warm, floral, fruity, pineapple, apricot, apple, green, cherry, peach",both,exact
+GUUHFMWKWLOQMM-NTCAYCPXSA-N,CCCCCC/C(=C\C1=CC=CC=C1)/C=O,"floral, jasmine, sweet",Alpha-Hexylcinnamaldehyde,"floral, jasmine, sweet",,leff_only,exact
+KGEKLUUHTZCSIP-FOGDFJRCSA-N,CC(=O)O[C@@H]1C[C@H]2CC[C@@]1(C2(C)C)C,"herbal, pine, sweet, balsamic, camphoreous, earthy, fruity, woody, cedar, spicy, mentholic, balsam, needle, fresh",isobornyl acetate,"herbal, pine, sweet, balsamic, camphoreous, earthy, fruity, woody","cedar, spicy, mentholic, herbal, camphoreous, balsamic, woody, pine, sweet, balsam, needle, fresh",both,skeleton
+UPPSFGGDKACIKP-UHFFFAOYSA-N,CC1=CC=C(C=C1)OC(=O)C(C)C,"animal, fruity, warm, floral, green, narcissus, lily",p-tolyl isobutyrate,"animal, fruity, warm","animal, floral, fruity, green, narcissus, lily",both,exact
+FDJBDZVTTXWIQM-UHFFFAOYSA-N,CC1=CC=CC=C1OC(=O)C(C)C,"berry, fruity, medicinal, phenolic",o-tolyl isobutyrate,"berry, fruity, medicinal, phenolic","phenolic, medicinal, berry",both,exact
+OJEQSSJFSNLMLB-UHFFFAOYSA-N,CC1=CC=C(C=C1)OC(=O)CC2=CC=CC=C2,"animal, rose, honey, narcissus, lily, hyacinth",p-tolyl phenylacetate,animal,"animal, rose, honey, narcissus, lily, hyacinth",both,exact
+VKJIAEQRKBQLLA-UHFFFAOYSA-N,CC1=NC=CN=C1OC,"hazelnut, nutty, roasted, chocolate, almond, peanut",2-methoxy-3-methyl-pyrazine,"hazelnut, nutty, roasted","hazelnut, chocolate, almond, peanut",both,exact
+XXIKYCPRDXIMQM-UHFFFAOYSA-N,CC(=CCOC(=O)C)C,"apple, banana, fruity, green, sweet, ripe, fresh, balsamic, jasmine, heliotrope",prenyl acetate,"apple, banana, fruity, green","sweet, ripe, banana, fruity, fresh, balsamic, jasmine, heliotrope",both,exact
+ZMANZCXQSJIPKH-UHFFFAOYSA-N,CCN(CC)CC,"cheesy, fishy, ripe, ammoniacal",triethylamine,"cheesy, fishy, ripe","fishy, ammoniacal",both,exact
+ZTQSAGDEMFDKMZ-UHFFFAOYSA-N,CCCC=O,"cocoa, fruity, green, malty, musty, bready, pungent, chocolate",butyraldehyde,"cocoa, fruity, green, malty","malty, musty, cocoa, bready, green, pungent, chocolate",both,exact
+HGEVGSTXQGZPCL-UHFFFAOYSA-N,C(CCCC(=O)Cl)CCCC(=O)Cl,,azelaic acid dichloride,,,none,unmatched
+WKOLLVMJNQIZCI-UHFFFAOYSA-N,COC1=C(C=CC(=C1)C(=O)O)O,"odorless, sweet, vanilla, custard, powdery, creamy, phenolic, brown, milky, beany, dairy",vanillic acid,odorless,"sweet, vanilla, custard, powdery, creamy, phenolic, brown, milky, beany, dairy",both,exact
+IXQGCWUGDFDQMF-UHFFFAOYSA-N,CCC1=CC=CC=C1O,"phenolic, sweet",2-ethylphenol,"phenolic, sweet",,leff_only,exact
+BHUIUXNAPJIDOG-UHFFFAOYSA-N,C1OC2=C(O1)C=C(C=C2)CO,"sweet, vanilla, powdery",Piperonyl alcohol,"sweet, vanilla","sweet, vanilla, powdery",both,exact
+VXIXUWQIVKSKSA-UHFFFAOYSA-N,C1=CC=C2C(=C1)C(=CC(=O)O2)O,,4-Hydroxycoumarin,,,none,unmatched
+AZOCECCLWFDTAP-UHFFFAOYSA-N,CC1CCC(CC1=O)C(=C)C,"mint, warm, spearmint, herbal, terpenic, cooling, camphoreous, bread, woody, hay",(+)-Dihydrocarvone,mint,"warm, spearmint, herbal, terpenic, cooling, camphoreous, bread, woody, mint, hay",both,exact
+ACZGCWSMSTYWDQ-UHFFFAOYSA-N,C1C2=CC=CC=C2OC1=O,,2-Coumaranone,,,none,unmatched
+MWVFCEVNXHTDNF-UHFFFAOYSA-N,CCCC(=O)C(=O)C,"buttery, creamy, sweet, dry, fatty, caramellic, fruity, oily, jammy, phenolic","2,3-Hexanedione","buttery, creamy, sweet","dry, sweet, fatty, caramellic, fruity, oily, jammy, creamy, phenolic, buttery",both,exact
+NGAZZOYFWWSOGK-UHFFFAOYSA-N,CCCCC(=O)CC,"banana, fatty, fruity, green, sweet, musty, cheesy, ketonic",3-Heptanone,"banana, fatty, fruity, green","sweet, musty, fatty, fruity, green, cheesy, ketonic",both,exact
+KVFQMAZOBTXCAZ-UHFFFAOYSA-N,CCC(=O)C(=O)CC,"buttery, caramellic, nutty, almond","3,4-Hexanedione","buttery, caramellic, nutty","caramellic, nutty, almond, buttery",both,exact
+MSTDXOZUKAQDRL-UHFFFAOYSA-N,C1COC2=CC=CC=C2C1=O,,4-Chromanone,,,none,unmatched
+HJWLCRVIBGQPNF-UHFFFAOYSA-N,C=CCC1=CC=CC=C1,,Allyl benzene,,,none,unmatched
+NORZZKKLCYMBBF-UHFFFAOYSA-N,CCCCOC(=O)C(C)OC(=O)CCC,"buttery, fruity, sour, sweet, fatty, sweaty, buttermilk, creamy, green, dairy, cheesy, waxy",Butyl butyryllactate,"buttery, fruity, sour, sweet","fatty, sweaty, buttermilk, creamy, green, dairy, cheesy, buttery, waxy",both,exact
+NMJJFJNHVMGPGM-UHFFFAOYSA-N,CCCCOC=O,"ethereal, plum, rum, fruity, brandy",Butyl formate,"ethereal, plum, rum","fruity, rum, plum, brandy",both,exact
+ZVEZMVFBMOOHAT-UHFFFAOYSA-N,CCCCCCCCCS,,Nonanethiol,,,none,unmatched
+IPBVNPXQWQGGJP-UHFFFAOYSA-N,CC(=O)OC1=CC=CC=C1,"jasmine, metallic, animal, resinous, medicinal, smoky, burnt, phenolic, castoreum, woody",Phenyl acetate,"jasmine, metallic","animal, resinous, medicinal, smoky, burnt, phenolic, castoreum, woody",both,exact
+MMFCJPPRCYDLLZ-UHFFFAOYSA-N,CCCCCCCC=CC=O,"aldehydic, fatty, rose, floral, orange, green",2-decenal,,"aldehydic, fatty, rose, floral, orange, green",gs_only,exact
+KGEKLUUHTZCSIP-UHFFFAOYSA-N,CC(=O)OC1CC2CCC1(C2(C)C)C,"herbal, pine, sweet, cedar, spicy, mentholic, camphoreous, balsamic, woody",isobornyl acetate,"herbal, pine, sweet","cedar, spicy, mentholic, herbal, camphoreous, balsamic, woody, pine",both,exact
+JRFITZGBELIFQM-UHFFFAOYSA-N,CC(=C)C1CCC2(OC(C1)OO2)C,,r-limonene,,,none,unmatched
+IGIDLTISMCAULB-UHFFFAOYSA-N,CCC(C)CC(=O)O,"cheesy, animal, sweaty, fruity, acidic, green, sharp",3-methyl-valeric acid,cheesy,"animal, sweaty, fruity, acidic, green, cheesy, sharp",both,exact
+OVBFMEVBMNZIBR-UHFFFAOYSA-N,CCCC(C)C(=O)O,"cheesy, creamy, dairy, pungent, sour",2-Methylvaleric acid,"cheesy, creamy, dairy, pungent, sour",,leff_only,exact
+KRKNYBCHXYNGOX-UHFFFAOYSA-N,C(C(=O)O)C(CC(=O)O)(C(=O)O)O,odorless,Citric acid,odorless,odorless,both,exact
+WPYMKLBDIGXBTP-UHFFFAOYSA-N,C1=CC=C(C=C1)C(=O)O,"balsamic, urine",Benzoic acid,balsamic,"urine, balsamic",both,exact
+XIYPXOFSURQTTJ-NSCUHMNNSA-N,CC(=O)/C=C/C1=CC2=C(C=C1)OCO2,,heliotropyl acetone,,,none,unmatched
+KCDXJAYRVLXPFO-UHFFFAOYSA-N,COC1=CC(=CC(=C1O)OC)C=O,"balsamic, floral, smoky, sweet, vanilla, plastic, green, woody, chocolate, tonka",Syringic aldehyde,"balsamic, floral, smoky, sweet, vanilla","plastic, green, woody, chocolate, tonka",both,exact
+OTMFQLIUPDESAI-UHFFFAOYSA-N,CCOC1=C(C=C(C=C1)CC=C)OC,"herbal, musty, spicy, sweet, tea, warm",Ethyleugenol,"herbal, musty, spicy, sweet, tea, warm",,leff_only,exact
+QGNDNDFXCNBMKI-FPLPWBNLSA-N,CCCCCC/C=C\CCC=O,"aldehydic, fatty, floral, herbal, citrus",(Z)-4-undecenal,,"aldehydic, fatty, floral, herbal, citrus",gs_only,skeleton
+YBBNUDDZOWRHOD-WAYWQWQTSA-N,CCCC/C=C\CCCCC=O,,(6Z)-6-undecenal,,,none,unmatched
+QPULDJYQYDGZEI-WAYWQWQTSA-N,CCCC/C=C\CCC=O,"fatty, fruity, green, melon, waxy",(Z)-4-nonenal,"fatty, fruity, green, melon, waxy",fruity,both,skeleton
+CRPUJAZIXJMDBK-BDAKNGLRSA-N,CC1([C@H]2CC[C@H](C2)C1=C)C,"woody, pine, fresh, terpenic",(-)-Camphene,,"woody, pine, fresh, terpenic",gs_only,exact
+KRCZYMFUWVJCLI-OPRDCNLKSA-N,C[C@@H]1CC[C@H](C[C@H]1O)C(=C)C,"floral, sweet, woody, herbal, mint, musty, spearmint, mentholic, terpenic, cooling, camphoreous, fresh, spicy",(-)-Dihydrocarveol,"floral, sweet, woody, herbal, mint, musty","sweet, spearmint, mentholic, herbal, terpenic, cooling, camphoreous, fresh, mint, woody, spicy",both,skeleton
+CCEFMUBVSUDRLG-IDKOKCKLSA-N,CC(=C)[C@H]1CCC2(C(C1)O2)C,"mint, cooling",(-)-limonene oxide,,"mint, cooling",gs_only,exact
+RUMOYJJNUMEFDD-SNVBAGLBSA-N,CC(=C)[C@H]1CCC(=CC1)C=O,"fatty, herbal, spicy, oily, grassy, fresh, green, cherry, mint",(-)-Perillaaldehyde,"fatty, herbal, spicy","fatty, herbal, oily, grassy, fresh, green, cherry, mint",both,exact
+CRPUJAZIXJMDBK-DTWKUNHWSA-N,CC1([C@@H]2CC[C@@H](C2)C1=C)C,"herbal, camphoreous, pine, fresh, woody",(+)-Camphene,,"herbal, camphoreous, pine, fresh, woody",gs_only,exact
+KRCZYMFUWVJCLI-GUBZILKMSA-N,C[C@H]1CC[C@@H](C[C@@H]1O)C(=C)C,"floral, sweet, woody, herbal, mint, musty, spearmint, mentholic, terpenic, cooling, camphoreous, fresh, spicy",(+)-Dihydrocarveol,"floral, sweet, woody, herbal, mint, musty","sweet, spearmint, mentholic, herbal, terpenic, cooling, camphoreous, fresh, mint, woody, spicy",both,skeleton
+CCEFMUBVSUDRLG-UHFFFAOYSA-N,CC(=C)C1CCC2(C(C1)O2)C,"citrus, fruity, herbal, sweet, clean, spearmint, fresh, mint","(+)-Limonene oxide,mixture of cis and trans","citrus, fruity, herbal, sweet","clean, spearmint, herbal, fresh, mint, citrus",both,exact
+RUMOYJJNUMEFDD-JTQLQIEISA-N,CC(=C)[C@@H]1CCC(=CC1)C=O,"fatty, herbal, spicy, sweet, lime, cinnamon, pungent, clove, grassy, fresh, orange, green, mint, cumin, citrus, oily, cherry",(+)-Perillaaldehyde,"fatty, herbal, spicy","sweet, lime, spicy, cinnamon, pungent, herbal, clove, grassy, fresh, orange, green, mint, cumin, citrus, fatty, oily, cherry",both,skeleton
+LJSQFQKUNVCTIA-UHFFFAOYSA-N,CCSCC,"garlic, meaty, savory, sulfurous, tomato, ethereal",Diethyl sulfide,"garlic, meaty, savory, sulfurous, tomato","sulfurous, ethereal",both,exact
+ALVZNPYWJMLXKV-UHFFFAOYSA-N,C(CCCCO)CCCCO,,"1,9-nonanediol",,,none,unmatched
+VADKRMSMGWJZCF-UHFFFAOYSA-N,C1=CC=C(C(=C1)O)Br,,2-bromophenol,,,none,unmatched
+DHXVGJBLRPWPCS-UHFFFAOYSA-N,C1CCOCC1,"sweet, pungent, ethereal",Tetrahydropyran,,"sweet, pungent, ethereal",gs_only,exact
+QCHZKUPVENJLAW-FYWRMAATSA-N,CCCCC/C(=C\C1=CC=CC=C1)/C(OC)OC,"floral, green, jasmine",alpha-Amylcinnamaldehyde dimethyl acetal,"floral, green, jasmine",,leff_only,exact
+HEVMDQBCAHEHDY-UHFFFAOYSA-N,COC(C1=CC=CC=C1)OC,"almond, green, nutty, sweet, vegetable, floral, potato, rooty, winey, fruity, spinach, fungal, earthy, sharp",Benzaldehyde dimethyl acetal,"almond, green, nutty, sweet","vegetable, floral, potato, nutty, rooty, winey, fruity, spinach, green, almond, fungal, earthy, sharp",both,exact
+RWOZGGOKRKSHKN-UHFFFAOYSA-N,CC1=C(C(=C(C(=C1C)C)C=O)C)C,,Pentamethylbenzaldehyde,,,none,unmatched
+BGTBFNDXYDYBEY-UHFFFAOYSA-N,CC=CC(=O)C1=C(CCCC1(C)C)C,"plum, floral, rose, honey, fruity, tobacco, black currant",beta-Damascone,,"plum, floral, rose, honey, fruity, tobacco, black currant",gs_only,exact
+OHDFENKFSKIFBJ-UHFFFAOYSA-N,CC1=C(C=CO1)SSC2=C(OC=C2)C,"meaty, sulfurous, chicken, savory, onion, roasted, scallion",Bis(2-methyl-3-furyl)disulphide),meaty,"meaty, sulfurous, chicken, savory, onion, roasted, scallion",both,exact
+SWUIQEBPZIHZQS-UHFFFAOYSA-N,CC1=CC2=C(C=C1)OCC(=O)CO2,"fresh, green, melon, clean, marine, ozone, phenolic, watery",calone,"fresh, green, melon","clean, marine, melon, ozone, phenolic, fresh, green, watery",both,exact
+HQKQRXZEXPXXIG-UHFFFAOYSA-N,CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC(=O)C,"earthy, leathery, woody, dry, powdery, cedar",Cedryl acetate,"earthy, leathery, woody","dry, woody, powdery, cedar",both,skeleton
+RTNPCOBSXBGDMO-ARJAWSKDSA-N,CC/C=C\CCCCC=O,"citrus, cucumber, fresh, vegetable, melon, leafy, honeydew, cantaloupe, green, woody, orris, waxy",cis-6-Nonenal,"citrus, cucumber, fresh","vegetable, melon, cucumber, leafy, honeydew, cantaloupe, green, woody, orris, waxy",both,exact
+TXWOGHSRPAYOML-UHFFFAOYSA-N,C1CC(C1)C(=O)O,,Cyclobutanecarboxylic acid,,,none,unmatched
+VOATZOQREKBJMT-UHFFFAOYSA-N,CCC(=C)CCCC(C)(C)O,,Dihydro Myrcenol,,,none,unmatched
+GVOWHGSUZUUUDR-UHFFFAOYSA-N,CNC1=CC=CC=C1C(=O)OC,"floral, musty, orange, sweet, winey, fruity, powdery, phenolic, neroli",Dimethyl anthranilate,"floral, musty, orange, sweet","sweet, musty, winey, fruity, powdery, phenolic, neroli",both,exact
+JSNRRGGBADWTMC-UHFFFAOYSA-N,CC(=CCCC(=CCCC(=C)C=C)C)C,"citrus, green, herbal, woody, sweet",(E)-beta-farnesene,"citrus, green, herbal, woody","sweet, woody, citrus, herbal, green",both,skeleton
+HZPKNSYIDSNZKW-UHFFFAOYSA-N,CCCC(C)C(=O)OCC,"fruity, green, melon, pear, pineapple, waxy, natural, fatty, fresh, apple",Ethyl 2-methylpentanoate,"fruity, green, melon, pear, pineapple, waxy","natural, fatty, melon, fruity, pineapple, fresh, green, apple, waxy",both,exact
+CETBSQOFQKLHHZ-UHFFFAOYSA-N,CCSSCC,"alliaceous, fruity, garlic, onion, sulfurous, tropical, vegetable, greasy, ripe, gassy",Ethyl disulfide,"alliaceous, fruity, garlic, onion, sulfurous, tropical, vegetable","greasy, ripe, garlic, alliaceous, onion, gassy",both,exact
+YIKYNHJUKRTCJL-UHFFFAOYSA-N,CCC1=C(C(=O)C=CO1)O,"caramellic, fruity, sweet, caramel, jam, strawberry, cotton, candy",ethyl maltol,"caramellic, fruity, sweet","sweet, caramel, jam, strawberry, cotton, candy",both,exact
+FVUGZKDGWGKCFE-UHFFFAOYSA-N,CC1CC2=C(CC1(C)C(=O)C)C(CCC2)(C)C,"dry, ambergris, cedar, woody, phenolic, ketonic",Iso E Super,,"dry, ambergris, cedar, woody, phenolic, ketonic",gs_only,exact
+NUPSHWCALHZGOV-UHFFFAOYSA-N,CCCCCCCCCCOC(=O)C,"fatty, fruity, orange, pineapple, rose, sweet, clean, creamy, fresh, soapy, citrus, waxy",n-Decyl acetate,"fatty, fruity, orange, pineapple, rose","sweet, clean, fatty, creamy, fresh, soapy, citrus, waxy",both,exact
+OGJYXQFXLSCKTP-LCYFTJDESA-N,CC(C)C(=O)OC/C=C(/C)\CCC=C(C)C,"floral, rose, sweet, strawberry, melon, fruity, pear, fresh, raspberry, green, citrus",Neryl isobutyrate,"floral, rose, sweet","sweet, floral, strawberry, melon, fruity, pear, fresh, raspberry, green, citrus",both,exact
+AVBRYQRTMPHARE-UHFFFAOYSA-N,CCCCCCCCOC=O,"citrus, fruity, green, orange, orris, rose, cucumber, waxy",Octyl formate,"citrus, fruity, green, orange, orris, rose","rose, cucumber, fruity, orange, waxy",both,exact
+TWSRVQVEYJNFKQ-UHFFFAOYSA-N,CCCCCOC(=O)CC,"apple, banana, fruity, pineapple, sweet, tropical, apricot",Pentyl propionate,"apple, banana, fruity, pineapple, sweet, tropical","sweet, banana, fruity, pineapple, apricot, tropical",both,exact
+PFWYHTORQZAGCA-UHFFFAOYSA-N,CC(=O)OCC1=CC2=C(C=C1)OCO2,"cherry, floral, sweet, metallic, strawberry, jammy, powdery, hawthorn, jasmine, soapy, aromatic",Piperonyl acetate,"cherry, floral, sweet","sweet, metallic, floral, strawberry, jammy, powdery, hawthorn, jasmine, soapy, aromatic",both,exact
+WYURNTSHIVDZCO-UHFFFAOYSA-N,C1CCOC1,,Tetrahydrofuran,,,none,unmatched
+SSNZFFBDIMUILS-ZHACJKMWSA-N,CCCCCCCCC/C=C/C=O,"orange, waxy, metallic, mandarin, aldehydic, herbal, citrus",trans-2-Dodecenal,"orange, waxy","metallic, mandarin, aldehydic, herbal, orange, citrus, waxy",both,exact
+ACWQBUSCFPJUPN-HWKANZROSA-N,C/C=C(\C)/C=O,"almond, fruity, green, herbal, strong",Tiglic aldehyde,"almond, fruity, green, herbal","strong, green, fruity",both,exact
+GRHQDJDRGZFIPO-UHFFFAOYSA-N,C(CC(=O)O)CBr,,4-Bromobutyric acid,,,none,unmatched
+WNXNUPJZWYOKMW-UHFFFAOYSA-N,C(CCBr)CC(=O)O,,5-Bromopentanoic acid,,,none,unmatched
+VLFBSPUPYFTTNF-UHFFFAOYSA-N,CC(CC1=CC=C(C=C1)OC)C=O,"sweet, anise, basil, anisic, raspberry, green, fennel",Canthoxal,,"sweet, anise, basil, anisic, raspberry, green, fennel",gs_only,exact
+MNRZECIRFMLTEY-UHFFFAOYSA-N,CC(C)(C)C1=CC=C(C=C1)OCC=O,,(4-tert-butylphenoxy)acetaldehyde,,,none,unmatched
+YGCZTXZTJXYWCO-UHFFFAOYSA-N,C1=CC=C(C=C1)CCC=O,"balsamic, floral, green, aldehydic, foliage, leafy, cortex, melon, fresh, storax",3-Phenylpropionaldehyde,"balsamic, floral, green","aldehydic, foliage, leafy, cortex, floral, melon, fresh, balsamic, green, storax",both,exact
+NHFRGTVSKOPUBK-UHFFFAOYSA-N,C1=CC=C(C=C1)CCCC=O,,4-phenylbutyraldehyde,,,none,unmatched
+SQGBBDFDRHDJCJ-UHFFFAOYSA-N,CC(CCO)C1=CC=CC=C1,,3-Phenyl-1-butanol,,,none,unmatched
+RWGFKTVRMDUZSP-UHFFFAOYSA-N,CC(C)C1=CC=CC=C1,,isopropylbenzene,,,none,unmatched
+FINOPSACFXSAKB-UHFFFAOYSA-N,C1=CC=C(C=C1)CCCCC=O,,Benzenepentanal,,,none,unmatched
+NFLGAXVYCFJBMK-DTWKUNHWSA-N,C[C@H]1CC[C@@H](C(=O)C1)C(C)C,"mint, mentholic",(+)-Menthone,mint,"mentholic, mint",both,exact
+BAVONGHXFVOKBV-YHMJZVADSA-N,CC1=CC[C@H](CC1O)C(=C)C,"sweet, spicy, spearmint, herbal, cooling, green, mint, caraway, solvent",(-)-Carveol,sweet,"spicy, spearmint, herbal, cooling, green, mint, caraway, solvent",both,skeleton
+GSOHKPVFCOWKPU-UHFFFAOYSA-N,CC(C(=O)C)C(=O)C,"burnt, fruity, ketonic","3-Methyl-2,4-pentanedione","burnt, fruity, ketonic",,leff_only,exact
+IGMOYJSFRIASIE-UHFFFAOYSA-N,CC(C)CC(=O)CC(=O)C,,"6-Methyl-2,4-heptanedione",,,none,unmatched
+GJYXGIIWJFZCLN-UHFFFAOYSA-N,CCCCC(=O)CC(=O)C,,"2,4-Octanedione",,,none,unmatched
+KFBXUKHERGLHLG-UHFFFAOYSA-N,CCCCCC(=O)CC(=O)C,,"2,4-Nonanedione",,,none,unmatched
+ZFNVDHOSLNRHNN-UHFFFAOYSA-N,CC(C)C1=CC=C(C=C1)CC(C)C=O,"cyclamen, musty, rhubarb, floral, fresh, green",Cyclamal,,"cyclamen, musty, rhubarb, floral, fresh, green",gs_only,exact
+JFTSYAALCNQOKO-UHFFFAOYSA-N,CCC1=CC=C(C=C1)CC(C)(C)C=O,"aldehydic, floral, clean, marine, ozone, fresh, green",Floralozone,"aldehydic, floral","clean, marine, ozone, fresh, green",both,exact
+DYUQAZSOFZSPHD-UHFFFAOYSA-N,CCC(C1=CC=CC=C1)O,"balsamic, floral, rose, sweet",Phenylpropanol,"balsamic, floral, rose","floral, sweet, balsamic",both,exact
+XPDORSROGAZEGY-UHFFFAOYSA-N,COC1=CC=C(C=C1)COC=O,"floral, green, spicy, sweet, vanilla, fruity, anisic, powdery, seaweed",4-Methoxybenzyl formate,"floral, green, spicy, sweet, vanilla","sweet, vanilla, spicy, floral, fruity, anisic, powdery, seaweed",both,exact
+NFAVNWJJYQAGNB-UHFFFAOYSA-N,CCCCCCCCCC(C)C=O,"dry, fatty, fruity, metallic, aldehydic, tuberose, amber, fresh, coumarinic, mossy, gassy, citrus, waxy",Aldehyde MNA,"dry, fatty, fruity","metallic, aldehydic, tuberose, amber, fresh, coumarinic, mossy, gassy, citrus, waxy",both,exact
+VLUMOWNVWOXZAU-UHFFFAOYSA-N,CC(=CC1=CC=CC=C1)C=O,"sweet, spicy, warm, cinnamon, cassia, balsamic",Methylcinnamaldehyde,,"sweet, spicy, warm, cinnamon, cassia, balsamic",gs_only,exact
+XHJJEWBMBSQVCJ-UHFFFAOYSA-N,CC1=CC(=O)CC(C1)C(C)C,,Homocamfin,,,none,unmatched
+DFJMIMVMOIFPQG-UHFFFAOYSA-N,CC(CCC1=CC=CC=C1)CC=O,"aldehydic, fresh, green, lily, woody, waxy",3-methyl-5-phenylpentanal,,"aldehydic, fresh, green, lily, woody, waxy",gs_only,exact
+HEPHYCJJLAUKSB-UHFFFAOYSA-N,CC(CC1=CC=CC=C1)C=O,,2-Methyl-3-phenylpropanal,,,none,unmatched
+SGVBCLGVIOFAFT-UHFFFAOYSA-N,CC1=CC=C(C=C1)CC(C)C=O,"almond, balsamic, cherry, citrus, floral, fruity, green, melon, sweet, dry, cyclamen, aldehydic, costus, amber, powdery, fresh, orange, woody",jasmorange,"almond, balsamic, cherry, citrus, floral, fruity, green, melon, sweet","dry, cyclamen, sweet, aldehydic, costus, floral, melon, fruity, amber, powdery, fresh, orange, green, woody, citrus",both,exact
+VSBHYRPUJHEOBE-UHFFFAOYSA-N,CC1=C(C(=O)C=CO1)OC(=O)C(C)C,"caramellic, strawberry, sweet, candy, berry, fruity, burnt, jammy, sugar, tropical",maltyl isobutyrate,"caramellic, strawberry, sweet","sweet, candy, berry, caramellic, strawberry, fruity, burnt, jammy, sugar, tropical",both,exact
+XWEOGMYZFCHQNT-UHFFFAOYSA-N,CCOC(=O)CC1(OCCO1)C,"apple, fruity, pine, sweet, woody, plum, green, tropical",fructone,"apple, fruity, pine, sweet, woody","sweet, plum, fruity, apple, green, woody, tropical",both,exact
+VSRVCSJJKWDZSH-UHFFFAOYSA-N,CCCCCC1COCCC1OC(=O)C,"floral, herbal, jasmine, sweet, tea, mushroom, oily, green, lactonic",jasmopyrane,"floral, herbal, jasmine, sweet, tea","mushroom, floral, herbal, oily, green, jasmine, lactonic",both,exact
+XCWPXUNHSPOFGV-UHFFFAOYSA-N,CC(C)CCOCC(=O)OCC=C,"apple, fruity, green, herbal, pineapple, galbanum, fusel",Isoamyl allylglycolate,"apple, fruity, green, herbal, pineapple","fruity, pineapple, galbanum, fusel, green",both,exact
+UWKAYLJWKGQEPM-UHFFFAOYSA-N,CC(=CCCC(C)(C=C)OC(=O)C)C,"citrus, floral, fruity, pear, sweet, lavender, green, bergamot, woody",linalyl acetate,"citrus, floral, fruity, pear, sweet","sweet, lavender, green, bergamot, woody, citrus",both,exact
+UOGMZEGKCNHMBF-UHFFFAOYSA-N,COC1CC2CC1C3C2CC(C3)C=O,"aldehydic, magnolia, marine, floral, seashore, ozone, fresh, mossy, watery, woody",scentenal,,"aldehydic, magnolia, marine, floral, seashore, ozone, fresh, mossy, watery, woody",gs_only,exact
+NKZPGPZCKPODMT-UHFFFAOYSA-N,CC(CC=O)C1=CC=C(C=C1)C(C)(C)C,"floral, powdery, muguet, green, watery, cumin",3-(4-tert-butylphenyl)butanal,,"floral, powdery, muguet, green, watery, cumin",gs_only,exact
+RECUKUPTGUEGMW-UHFFFAOYSA-N,CC1=C(C=C(C=C1)C(C)C)O,"herbal, medicinal, phenolic, smoky, spicy, camphoreous, cooling, woody, thyme",carvacrol,"herbal, medicinal, phenolic, smoky","spicy, herbal, smoky, camphoreous, cooling, woody, thyme",both,exact
+WSTQLNQRVZNEDV-CSKARUKUSA-N,CCCCCC(/C(=C/CC)/C)O,"seedy, fruity, violet, oily, kiwi, green, lily",undecavertol,,"seedy, fruity, violet, oily, kiwi, green, lily",gs_only,exact
+GFVWSUIPAJYAEG-UHFFFAOYSA-N,CC(C)(C)C1CCCCC1OCCCCO,,amber core,,,none,unmatched
+HGDVHRITTGWMJK-UHFFFAOYSA-N,CC(C)CCCC(C)(C)O,"citrus, floral, fresh, herbal, rose, woody",dimetol,"citrus, floral, fresh","floral, herbal, fresh, rose, woody, citrus",both,exact
+VPKMGDRERYMTJX-CMDGGOBGSA-N,CCC(=O)/C=C/C1C(=CCCC1(C)C)C,"floral, oily, orris, sweet, violet, woody, tea, fruity, powdery",Methyl ionone,"floral, oily, orris, sweet, violet, woody","sweet, tea, floral, fruity, violet, powdery, woody, orris",both,exact
+CRIGTVCBMUKRSL-FNORWQNLSA-N,C/C=C/C(=O)C1C(=CCCC1(C)C)C,"apple, black currant, mint, plum, rose, sweet, berry, floral, fruity, green, woody",alpha-damascone,"apple, black currant, mint, plum, rose","sweet, berry, floral, rose, fruity, apple, green, woody, black currant",both,exact
+ZALVGSSYVAPZDA-UHFFFAOYSA-N,CCCCCCCCC(OC(=O)C)OC(=O)C,,Jasmonyl,,,none,unmatched
+GPMLJOOQCIHFET-UHFFFAOYSA-N,CC1CC(CO1)(C)C2=CC=CC=C2,"aromatic, floral, fresh, herbal, rhubarb, eucalyptus, citrus, green, woody, grapefruit","2,4-dimethyl-4-phenyloxolane","aromatic, floral, fresh, herbal","rhubarb, herbal, eucalyptus, citrus, green, woody, grapefruit",both,exact
+CHLICZRVGGXEOD-UHFFFAOYSA-N,CC1=CC=C(C=C1)OC,"floral, green, leathery, nutty, phenolic, sharp, sweet, naphthyl, ylang, cresol, powdery",para-methyl anisole,"floral, green, leathery, nutty, phenolic, sharp, sweet","naphthyl, ylang, nutty, cresol, powdery",both,exact
+XMLSXPIVAXONDL-PLNGDYQASA-N,CC/C=C\CC1=C(CCC1=O)C,"floral, fruity, jasmine, spicy, herbal, woody, celery, citrus",Jasmone,"floral, fruity, jasmine","spicy, floral, herbal, woody, celery, citrus, jasmine",both,exact
+BVWTXUYLKBHMOX-UHFFFAOYSA-N,COC1=C(C=CC(=C1)C(=O)OC)O,"floral, fresh, green, spicy, sweet, vanilla, warm, guaiacol, phenolic, carnation",methyl vanillate,"floral, fresh, green, spicy, sweet, vanilla","vanilla, spicy, warm, guaiacol, phenolic, carnation",both,exact
+NNWHUJCUHAELCL-SNAWJCMRSA-N,C/C=C/C1=CC(=C(C=C1)OC)OC,"floral, spicy, sweet, tea, clove",methyl isoeugenol,"floral, spicy, sweet, tea","clove, spicy",both,exact
+ZGEHHVDYDNXYMW-UPHRSURJSA-N,C1CCC/C=C\CCCCCCC(=O)CCC1,"dry, animal, floral, tobacco, balsamic, clean, musk, waxy",(e)-8-Cyclohexadecen-1-one,,"dry, animal, floral, tobacco, balsamic, clean, musk, waxy",gs_only,exact
+KHQDWCKZXLWDNM-KPKJPENVSA-N,CC/C(=C\CC1CC=C(C1(C)C)C)/CO,"greasy, oily, sandalwood, woody, waxy",Sandranol,,"greasy, oily, sandalwood, woody, waxy",gs_only,skeleton
+NKMKFQCVDZVEJR-CSKARUKUSA-N,CC1C/C=C/CCCCCCCCCC(=O)C1,"animal, musk, soapy",(5E)-3-methylcyclopentadec-5-en-1-one,,"animal, musk, soapy",gs_only,exact
+DEFJQIDDEAULHB-QWWZWVQMSA-N,C[C@H](C(=O)N[C@H](C)C(=O)O)N,,D-alanyl-d-alanine,,,none,unmatched
+JYWNYMJKURVPFH-UHFFFAOYSA-N,CC(=O)NCCC(=O)C1=C(C=CC(=C1)OC)NC=O,,AFMK,,,none,unmatched
+VMJQLPNCUPGMNQ-UHFFFAOYSA-N,CC1=C(C=C2CCC(OC2=C1C)(C)CCC(=O)O)O,,Gamma-CEHC,,,none,unmatched
+HHDDCCUIIUWNGJ-UHFFFAOYSA-N,C(C(=O)C(=O)O)O,"burnt, buttery, creamy, cabbage, radish, sour",Hydroxypyruvic acid,"burnt, buttery, creamy","cabbage, radish, sour",both,exact
+KMYWVDDIPVNLME-KQYNXXCUSA-N,C1=NC(=C2C(=N1)N(C=N2)[C@H]3[C@H]4[C@@H]([C@H](O3)CO)OP(=O)(O4)O)N,,adenosine-2’-3’-c-phosphate,,,none,unmatched
+BZLYOWSSNHNYKW-UHFFFAOYSA-N,CC(C1CCCC(C1)(C)C)OC(C)(C)COC(=O)C2CC2,musk,Cyclopropanecarboxylic acid,,musk,gs_only,exact
+RBNPOMFGQQGHHO-REOHCLBHSA-N,C([C@@H](C(=O)O)O)O,,L-glyceric acid,,,none,unmatched
+XGUHPTGEXRHMQQ-BGJMDTOESA-N,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CCC4=CC(=O)CC[C@]34CO,,19-OH AD,,,none,unmatched
+RAJWOBJTTGJROA-WZNAKSSCSA-N,C[C@]12CCC(=O)C[C@@H]1CC[C@@H]3[C@@H]2CC[C@]4([C@H]3CCC4=O)C,,Androstanedione,,,none,unmatched
+RFMMMVDNIPUKGG-YFKPBYRVSA-N,CC(=O)N[C@@H](CCC(=O)O)C(=O)O,,N-Acetylglutamic acid,,,none,unmatched
+PZDOWFGHCNHPQD-OQPGPFOOSA-N,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@@H](C=O)[C@H]([C@@H]([C@@H](CO)O)O)O)O)O)O)O,,Kojibiose,,,none,unmatched
+QXZGBUJJYSLZLT-FDISYFBBSA-N,C1C[C@H](N(C1)C(=O)[C@@H]2CCCN2C(=O)[C@H](CCCN=C(N)N)N)C(=O)NCC(=O)N[C@@H](CC3=CC=CC=C3)C(=O)N[C@@H](CO)C(=O)N4CCC[C@H]4C(=O)N[C@@H](CC5=CC=CC=C5)C(=O)N[C@@H](CCCN=C(N)N)C(=O)O,,Bradykinin,,,none,unmatched
+MCSCIFLXNFLCDV-UHFFFAOYSA-N,CC1=CNC(=O)N1,,Imidazolone,,,none,unmatched
+XVFMGWDSJLBXDZ-UHFFFAOYSA-O,C1=CC(=CC=C1C2=[O+]C3=CC(=CC(=C3C=C2O)O)O)O,,Pelargonidin,,,none,unmatched
+DHMQDGOQFOQNFH-UHFFFAOYSA-N,C(C(=O)O)N,odorless,Glycine,,odorless,gs_only,exact
+KPGXRSRHYNQIFN-UHFFFAOYSA-N,C(CC(=O)O)C(=O)C(=O)O,odorless,2-Ketoglutaric acid,,odorless,gs_only,exact
+XSQUKJJJFZCRTK-UHFFFAOYSA-N,C(=O)(N)N,,Urea,,,none,unmatched
+ZQISRDCJNBUVMM-YFKPBYRVSA-N,C1=C(NC=N1)C[C@@H](CO)N,,L-Histidinol,,,none,unmatched
+CLGFIVUFZRGQRP-UHFFFAOYSA-N,C12=C(NC(=NC1=O)N)NC(=O)N2,,8-Hydroxyguanine,,,none,unmatched
+HNJBEVLQSNELDL-UHFFFAOYSA-N,C1CC(=O)NC1,,2-Pyrrolidinone,,,none,unmatched
+MUMGGOZAMZWBJJ-KZYORJDKSA-N,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@H]2O)CCC4=CC(=O)CC[C@]34C,,Epitestosterone,,,none,unmatched
+PROQIPRRNZUXQM-ZXXIGWHRSA-N,C[C@]12CC[C@H]3[C@H]([C@@H]1C[C@H]([C@@H]2O)O)CCC4=C3C=CC(=C4)O,,Estriol,,,none,unmatched
+LBTVHXHERHESKG-UHFFFAOYSA-N,COC1=C(C=CC(=C1)CCC(=O)CC(=O)CCC2=CC(=C(C=C2)O)OC)O,,Tetrahydrocurcumin,,,none,unmatched
+JFLIEFSWGNOPJJ-JTQLQIEISA-N,C1=CC=C(C=C1)CC(=O)N[C@@H](CCC(=O)N)C(=O)O,,Alpha-n-phenylacetyl-l-glutamine,,,none,unmatched
+MUMGGOZAMZWBJJ-DYKIIFRCSA-N,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@]34C,,Testosterone,,,none,unmatched
+OTGQIQQTPXJQRG-UHFFFAOYSA-N,CCCCCCCCCCCCCCCCCC(=O)NCCO,,Stearoylethanolamide,,,none,unmatched
+AEMFNILZOJDQLW-QAGGRKNESA-N,C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@H]2CC[C@]4([C@H]3CCC4=O)C,,Androstenedione,,,none,unmatched
+HXYVTAGFYLMHSO-UHFFFAOYSA-N,CCCCCCCCCCCCCCCC(=O)NCCO,,Palmitoylethanolamide,,,none,unmatched
+GUBGYTABKSRVRQ-QUYVBRFLSA-N,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@@H]2[C@H](O[C@H]([C@@H]([C@H]2O)O)O)CO)O)O)O)O,,D-maltose,,,none,unmatched
+FKCRAVPPBFWEJD-XVFCMESISA-N,C1=C(N(C(=O)NC1=O)[C@H]2[C@@H]([C@@H]([C@H](O2)CO)O)O)C(=O)O,,Orotidine,,,none,unmatched
+RZVAJINKPMORJF-UHFFFAOYSA-N,CC(=O)NC1=CC=C(C=C1)O,,Acetaminophen,,,none,unmatched
+YZXBAPSDXZZRGB-DOFZRALJSA-N,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,"fatty, fishy",Arachidonic acid,"fatty, fishy",,leff_only,skeleton
+CCPPLLJZDQAOHD-FLIBITNWSA-N,CCCCCC1C(O1)C/C=C\CCCCCCCC(=O)O,,"12,13-Epome",,,none,unmatched
+SHGAZHPCJJPHSC-XFYACQKRSA-N,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C\C(=O)O)/C)/C,,13-cis-Retinoic acid,,,none,unmatched
+UKDKTHYZLXZOSS-UHFFFAOYSA-N,CC(=O)NC(CC1=CC(=C(C=C1)O)OC)C(=O)O,,N-acetylvanilalanine,,,none,unmatched
+NPAGDVCDWIYMMC-IZPLOLCNSA-N,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@H]34,,19-Nortestosterone,,,none,unmatched
+MQTAVJHICJWXBR-UHFFFAOYSA-N,CC(=O)NCCCNCCCCN,,N1-Acetylspermidine,,,none,unmatched
+MNQZXJOMYWMBOU-UHFFFAOYSA-N,C(C(C=O)O)O,,Glyceraldehyde,,,none,unmatched
+QUOGESRFPZDMMT-YFKPBYRVSA-N,C(CCN=C(N)N)C[C@@H](C(=O)O)N,,Homo-l-arginine,,,none,unmatched
+FONIWJIDLJEJTL-UHFFFAOYSA-N,CC(=O)NCCCCNCCCN,,N8-Acetylspermidine,,,none,unmatched
+UZTFMUBKZQVKLK-UHFFFAOYSA-N,CC(=O)NCCCC(=O)O,,4-Acetamidobutanoic acid,,,none,unmatched
+PECYZEOJVXMISF-UHFFFAOYSA-N,C(C(C(=O)O)N)N,,"2,3-Diaminopropionic acid",,,none,unmatched
+YDGMGEXADBMOMJ-LURJTMIESA-N,CN(C)C(=NCCC[C@@H](C(=O)O)N)N,,Asymmetric dimethylarginine,,,none,unmatched
+JSJWCHRYRHKBBW-UHFFFAOYSA-N,C(CNC(=O)N)C(=O)O,,Ureidopropionic acid,,,none,unmatched
+PHENTZNALBMCQD-UHFFFAOYSA-N,CC(CNC(=O)N)C(=O)O,,Ureidoisobutyric acid,,,none,unmatched
+KLZGKIDSEJWEDW-UHFFFAOYSA-N,CC(=O)NCCCCN,,N-Acetylputrescine,,,none,unmatched
+FCCDDURTIIUXBY-UHFFFAOYSA-N,C1CSSC1CCCCC(=O)N,,Lipoamide,,,none,unmatched
+NTYJJOPFIAHURM-UHFFFAOYSA-N,C1=C(NC=N1)CCN,,Histamine,,,none,unmatched
+XLSMFKSTNGKWQX-UHFFFAOYSA-N,CC(=O)CO,"caramellic, green, sweet, winey, ethereal, pungent",Hydroxyacetone,"caramellic, green, sweet, winey","caramellic, ethereal, pungent, sweet",both,exact
+YNYAYWLBAHXHLL-UHFFFAOYSA-N,COC1=C(C=CC(=C1)C(CN)O)O,,Normetanephrine,,,none,unmatched
+UHWURQRPEIFIAK-UHFFFAOYSA-N,CC1=C(C=C2C(=C1[N+](=O)[O-])C(CC2(C)C)(C)C)[N+](=O)[O-],"sweet, dry, ambrette, powdery, musk",Moskene,,"sweet, dry, ambrette, powdery, musk",gs_only,exact
+SUAUILGSCPYJCS-UHFFFAOYSA-N,CC1=C(C=C(C(=C1[N+](=O)[O-])OC)C(C)(C)C)[N+](=O)[O-],"floral, musk, sweet, musty, seedy, ambrette",Musk ambrette,"floral, musk, sweet","sweet, musty, seedy, ambrette, musk",both,exact
+RWSDULKUTPNPMB-UHFFFAOYSA-N,CCC(=O)OCC(C)(C)CC1=C(CCC1C(=C)C)C,"sweet, animal, musk",cyclopentenyl propionate musk,,"sweet, animal, musk",gs_only,exact
+WRFXXJKURVTLSY-UHFFFAOYSA-N,CCC(C)CCCC(C)(C)O,"citrus, floral, sweet, lime, fresh, lily",Tetrahydromyrcenol,"citrus, floral","sweet, lime, floral, fresh, lily, citrus",both,exact
+ZYIJXTQXQNXPSH-FMIVXFBMSA-N,CC(C)/C=C(\C)/C(C)OC(C)(C)COC(=O)C1CC1,,sylkolide,,,none,unmatched
+VDBHOHJWUDKDRW-UHFFFAOYSA-N,CC1C(C2=C(C1(C)C)C=C(C(=C2)C)C(=O)C)(C)C,"sweet, dry, fruity, amber, powdery, musk",Phantolide,,"sweet, dry, fruity, amber, powdery, musk",gs_only,exact
+IMRYETFJNLKUHK-UHFFFAOYSA-N,CC1C(C2=C(C1(C)C)C=C(C(=C2)C(=O)C)C)C(C)C,"dry, sweet, herbal, amber, creamy, musk",Traseolide,,"dry, sweet, herbal, amber, creamy, musk",gs_only,exact
+OHHWFLWQMHUVFQ-YNZJMPHRSA-N,C[C@H]1CC(C2=C(C1(C)C)C[C@@]3([C@H](C2)O3)C)(C)C,,Moxalone,,,none,unmatched
+ZGXVZQZFVYSUDU-ULYHCOEVSA-N,CC(=C)C(=O)O[C@H]1C[C@]23[C@H](O2)CC/C(=C/[C@@H]4[C@@H]1C(=C)C(=O)O4)/CO[C@H]3O,,Vernolide,,,none,unmatched
+LOKPJYNMYCVCRM-UHFFFAOYSA-N,C1CCCCCCCC(=O)OCCCCCCC1,"animal, musk, sweet, amber, balsamic","1,16-hexadecalactone","animal, musk","sweet, animal, amber, balsamic, musk",both,exact
+JIYIHILAGIZIMD-UHFFFAOYSA-N,C1CCCCCC(=O)CCC=CCCCC1,"natural, animal, gourmand, fruity, powdery, musk",Exaltenone,,"natural, animal, gourmand, fruity, powdery, musk",gs_only,skeleton
+MKEIDVFLAWJKMY-UHFFFAOYSA-N,C1CCCCC(=O)OCCCCCOCCCC1,"sweet, animal, oily, amber, incense, musk","1,7-dioxacycloheptadecan-8-one",,"sweet, animal, oily, amber, incense, musk",gs_only,exact
+ABRIMXGLNHCLIP-VURMDHGXSA-N,C1CCCCCC(=O)CCC/C=C\CCCC1,"dry, civet, amber, powdery, musk",Velvione,,"dry, civet, amber, powdery, musk",gs_only,exact
+ZKVZSBSZTMPBQR-UPHRSURJSA-N,C1CCC/C=C\CCCCCCCC(=O)CCC1,"animal, musk, sweet, dry, clean",Civetone,"animal, musk, sweet","dry, sweet, animal, clean, musk",both,exact
+GJJSUPSPZIZYPM-UHFFFAOYSA-N,C1CCCCCC(=O)OCCOC(=O)CCCC1,"sweet, animal, clean, musk, waxy","1,4-dioxacyclohexadecane-5,16-dione",,"sweet, animal, clean, musk, waxy",gs_only,exact
+MRMOPGVGWFNHIN-UHFFFAOYSA-N,C1CCCCCOCCCCOC(=O)CCCC1,"sweet, fruity, woody, musk, waxy",Cervolide,,"sweet, fruity, woody, musk, waxy",gs_only,exact
+NUSRNVWNTPMBJA-VURMDHGXSA-N,CC1CCOC(=O)CCCCCCC/C=C\C1,,Nirvanolide,,,none,unmatched
+QILMAYXCYBTEDM-IWQZZHSRSA-N,C1CCC/C=C\CCCCCCOC(=O)CCC1,"fruity, musk, warm, sweet, fatty, ambrette, waxy",Isoambrettolide,"fruity, musk, warm","sweet, fatty, fruity, ambrette, musk, waxy",both,exact
+MZLRFHKWWCSGHB-UHFFFAOYSA-N,C1CCCCOCCCCCCOC(=O)CCC1,"sweet, animal, floral, fruity, oily, musk",Oxalide T,,"sweet, animal, floral, fruity, oily, musk",gs_only,exact
+XSNQECSCDATQEL-UHFFFAOYSA-N,CC(CCCC(C)(C)O)C=C,"citrus, floral, fresh, herbal, cologne, lime, clean, weedy","2,6-dimethyl-7-octen-2-ol","citrus, floral, fresh, herbal","cologne, lime, clean, floral, weedy, fresh, citrus",both,exact
+IPWBXORAIBJDDQ-UHFFFAOYSA-N,CCCCCCC1C(CCC1=O)C(=O)OC,"floral, herbal, oily, fresh, green, jasmine",Dihydroisojasmonate,,"floral, herbal, oily, fresh, green, jasmine",gs_only,exact
+DUNCVNHORHNONW-UHFFFAOYSA-N,CC(C)(CCCC(=C)C=C)O,"floral, woody, lavender, fresh, citrus",Myrcenol,"floral, woody","floral, lavender, fresh, citrus",both,exact
+KZZASWGRLOTITL-UHFFFAOYSA-N,CC(C)(CCC1CCCCC1)O,"floral, rose, coriander",Coranol,,"floral, rose, coriander",gs_only,exact
+FUNYLZYOEJSMTO-UHFFFAOYSA-N,CC1CCC(C(C1)C)C2=CC=CC=N2,,Zinarine,,,none,unmatched
+DRTBYQJIHFSKDT-UHFFFAOYSA-N,CC(CCCC1=CC=CC=C1)CO,,Rosaphen,,,none,unmatched
+AKGGYBADQZYZPD-UHFFFAOYSA-N,CC(=O)CCC1=CC=CC=C1,"floral, fresh, green, jasmine, balsamic",benzyl acetone,"floral, fresh, green, jasmine","floral, balsamic",both,exact
+DLHQZZUEERVIGQ-UHFFFAOYSA-N,CCC(C)(CCCC(C)C)O,"floral, sweet, lime, fresh, lily, citrus",Tetrahydrolinalool,"floral, sweet","sweet, lime, floral, fresh, lily, citrus",both,exact
+PRNCMAKCNVRZFX-UHFFFAOYSA-N,CC(C)CCCC(C)CCO,"rose, sweet, waxy, musty, aldehydic, green, soapy, citrus, leathery, floral, plastic",Tetrahydrogeraniol,"rose, sweet, waxy","musty, aldehydic, green, soapy, citrus, leathery, waxy, sweet, floral, rose, plastic",both,exact
+WPPOGHDFAVQKLN-UHFFFAOYSA-N,CCCCCCCCN1CCCC1=O,,1-octyl-2-pyrrolidone,,,none,unmatched
+DPVYDTACPLLHCF-UHFFFAOYSA-N,CC(C)(C)C(=O)OCCC1=CC=CC=C1,"rose, spicy, blueberry, floral, geranium",Pivarose,rose,"rose, spicy, blueberry, floral, geranium",both,exact
+QQLIGMASAVJVON-UHFFFAOYSA-N,CC(=O)C1=CC=CC2=CC=CC=C21,"orange, sweet, floral, powdery, neroli, orangeflower",Methyl naphthyl ketone,orange,"sweet, floral, powdery, neroli, orangeflower",both,exact
+OXYRENDGHPGWKV-UHFFFAOYSA-N,CC(CCC1=CC=CC=C1)CCO,"floral, rose, honey, fresh, muguet, green, geranium, lily, tropical",Mefrosol,,"floral, rose, honey, fresh, muguet, green, geranium, lily, tropical",gs_only,exact
+RPLWLQJSZFPHGM-NSCUHMNNSA-N,C/C=C/CCCCCCCC#N,"floral, fruity, fresh",Floridile,,"floral, fruity, fresh",gs_only,skeleton
+DSOXXQLCMAEPEZ-ODYTWBPASA-N,CC/C=C\CC/C=C/C#N,"floral, leafy, walnut, green",Violet nitrile,,"floral, leafy, walnut, green",gs_only,exact
+LLYJRIQMURUPPF-XQRVVYSFSA-N,CCC(C1CCCC/C=C\C1)O,,Florymoss,,,none,unmatched
+YZRXRLLRSPQHDK-UHFFFAOYSA-N,CCCCCCC1CCCC(=O)O1,"creamy, fatty, peach, fruity, coconut, waxy",delta-undecalactone,"creamy, fatty, peach","fatty, fruity, coconut, creamy, peach, waxy",both,exact
+SAPMLSXAXRULJB-UHFFFAOYSA-N,CC(C)CCCC(C)CC#N,"metallic, aldehydic, fatty, lemon, citrus",Hypo-lem,,"metallic, aldehydic, fatty, lemon, citrus",gs_only,exact
+VDHRTASWKDTLER-ARJAWSKDSA-N,CC/C=C\CCCCO,"fruity, green, melon, mushroom",cis-5-octen-1-ol,"fruity, green, melon, mushroom",,leff_only,exact
+XJHRZBIBSSVCEL-ARJAWSKDSA-N,CC/C=C\CCCCCO,"fruity, green, melon, waxy, juicy, vegetable, clean, fatty, cucumber, honeydew, fresh, cantaloupe",cis-6-nonen-1-ol,"fruity, green, melon, waxy","juicy, vegetable, clean, fatty, melon, cucumber, honeydew, fresh, cantaloupe, green, waxy",both,exact
+KRLBLPBPZSSIGH-CSKARUKUSA-N,CC/C(=C/CCC(C)(C=C)O)/C,"floral, herbal, lavender, rose, fresh, wet, green, bergamot",Ethyl linalool,,"floral, herbal, lavender, rose, fresh, wet, green, bergamot",gs_only,exact
+FMPXLXBVYDFXIC-UHFFFAOYSA-N,CC(C)OCCC1=CC=CC=C1,"metallic, spicy, foliage, rose, plastic, watercress, green",Petiole,,"metallic, spicy, foliage, rose, plastic, watercress, green",gs_only,exact
+MTDAKBBUYMYKAR-UHFFFAOYSA-N,CC(CCC=C(C)C)CC#N,"metallic, floral, fresh, lemon, citrus, waxy",Citronellyl nitrile,,"metallic, floral, fresh, lemon, citrus, waxy",gs_only,exact
+XPCSGXMQGQGBKU-UHFFFAOYSA-N,CCCCCCCCC(C)C#N,"floral, fruity, jasmine, peach, lactonic",Frutonile,,"floral, fruity, jasmine, peach, lactonic",gs_only,exact
+UIKJRDSCEYGECG-UHFFFAOYSA-N,CC(C)C(=O)OCC1=CC=CC=C1,"floral, fruity, sweet, juicy, rose, oily, powdery, jasmine, tropical, woody",benzyl isobutyrate,"floral, fruity","sweet, juicy, floral, rose, fruity, oily, powdery, jasmine, tropical, woody",both,exact
+JIMGVOCOYZFDKB-UHFFFAOYSA-N,CC(C)CC(=O)OCCC1=CC=CC=C1,"balsamic, fruity, rose, sweet, blueberry, ripe, floral, pineapple, apricot, apple, peach",Phenyl ethyl isovalerate,"balsamic, fruity, rose","sweet, blueberry, ripe, floral, rose, fruity, pineapple, apricot, apple, peach",both,exact
+WXPWPYISTQCNDP-UHFFFAOYSA-N,C=CCCCCCCO,,7-octen-1-ol,,,none,unmatched
+GVONPEQEUQYVNH-SNAWJCMRSA-N,CC/C=C/CC1=C(C(=O)CC1)C,"herbal, jasmine, sweet, spicy, fatty, floral, fruity, creamy, waxy, lactonic",Isojasmone,"herbal, jasmine, sweet","spicy, fatty, floral, fruity, creamy, waxy, lactonic",both,exact
+QGFSQVPRCWJZQK-UHFFFAOYSA-N,C=CCCCCCCCCO,"aldehydic, fresh, rose, waxy, clean, dewy",9-decen-1-ol,"aldehydic, fresh, rose, waxy","aldehydic, clean, rose, fresh, dewy, waxy",both,exact
+FHUODBDRWMIBQP-UHFFFAOYSA-N,CCOC(=O)C1=CC=C(C=C1)OC,"anisic, floral, sweet, spicy, fruity, powdery, licorice, cherry, tarragon",Ethyl p-anisate,"anisic, floral, sweet","sweet, spicy, floral, fruity, anisic, powdery, licorice, cherry, tarragon",both,exact
+PRNJXUQTUSFYLV-NTCAYCPXSA-N,CC(=CCC/C(=C/CCC(C)(C=C)OC(=O)C)/C)C,"sweet, floral, freesia, fresh, woody, citrus, waxy",Nerolidyl acetate,,"sweet, floral, freesia, fresh, woody, citrus, waxy",gs_only,exact
+YXVSKJDFNJFXAJ-UHFFFAOYSA-N,CC(C)(CCC1=CC=CC=C1)O,"floral, green, herbal, sweet, clean, rose, violet, fresh, lily",dimethyl ethyl phenyl carbinol,"floral, green, herbal, sweet","clean, floral, rose, violet, fresh, green, lily",both,exact
+TWXUTZNBHUWMKJ-UHFFFAOYSA-N,C=CCOC(=O)CCC1CCCCC1,"fruity, pineapple, sweet, candy, tropical, waxy",allyl cyclohexylpropionate,"fruity, pineapple, sweet","sweet, fruity, pineapple, candy, tropical, waxy",both,exact
+JTHVYOIHZNYRCC-UHFFFAOYSA-N,CCCCCCC1CCCC1=O,"floral, fruity, green, jasmine",Jasmatone,"floral, fruity, green, jasmine",,leff_only,exact
+VZBFPIMCUSPDLS-UHFFFAOYSA-N,CCCCCCC(C)(CC)O,,3-methyl-3-nonanol,,,none,unmatched
+VONGZNXBKCOUHB-UHFFFAOYSA-N,CCCC(=O)OCC1=CC=CC=C1,"apricot, floral, fruity, plum, sweet, loganberry, pineapple, apple, fresh, jasmine, tropical, waxy",benzyl butyrate,"apricot, floral, fruity, plum","sweet, loganberry, fruity, pineapple, apricot, apple, fresh, jasmine, tropical, waxy",both,exact
+MQBIZQLCHSZBOI-UHFFFAOYSA-N,CC(=CCCC1=CCC(CC1)C=O)C,"aldehydic, citrus, floral, marine, greasy",Empetal,"aldehydic, citrus, floral","aldehydic, marine, greasy, floral, citrus",both,exact
+VNWOJVJCRAHBJJ-UHFFFAOYSA-N,CCCCCC1CCCC1=O,"foliage, floral, rose, herbal, oily, coconut, green, jasmine",Quintone,,"foliage, floral, rose, herbal, oily, coconut, green, jasmine",gs_only,exact
+LOQFOBUZYRBURV-UHFFFAOYSA-N,CCCCCC1C(CC(=O)O1)C,"buttery, coconut, metallic, plum, floral, tuberose, waxy, lactonic",Methyl tuberate,"buttery, coconut","metallic, plum, floral, tuberose, waxy, lactonic",both,exact
+VHOMAPWVLKRQAZ-UHFFFAOYSA-N,CCC(=O)OCC1=CC=CC=C1,"floral, fruity, jasmine, sweet, banana, balsam",Benzyl propionate,"floral, fruity, jasmine","sweet, floral, banana, fruity, jasmine, balsam",both,exact
+AXORVIZLPOGIRG-UHFFFAOYSA-N,CC(CN)C1=CC=CC=C1,,beta-methylphenylethylamine,,,none,unmatched
+SKQYTJLYRIFFCO-UHFFFAOYSA-N,CCCCCCCCCC1CCCC(=O)O1,"buttery, creamy, fatty, milky, sweet, oily, dairy, cheesy, waxy",d-tetradecalactone,"buttery, creamy, fatty, milky, sweet","sweet, fatty, oily, creamy, milky, dairy, cheesy, buttery, waxy",both,exact
+XPTXKXKPWKNYKB-UHFFFAOYSA-N,CCCCCCCC1CC=CC(=O)O1,"buttery, coconut, creamy, dairy, waxy, fatty, lactonic",delta-2-decenolactone,"buttery, coconut, creamy, dairy, waxy","creamy, fatty, coconut, lactonic",both,exact
+HETFMJQWNWIBPN-UHFFFAOYSA-N,CCCCCCCCC=CC#N,,undecene-2-nitrile,,,none,unmatched
+STZUZYMKSMSTOU-UHFFFAOYSA-N,CCCCCC(CC)OC(=O)C,"citrus, floral, green, mint, rose, waxy, aldehydic, fatty, herbal, apple, anisic, fresh, bergamot, woody, grapefruit",3-Octyl acetate,"citrus, floral, green, mint, rose, waxy","aldehydic, fatty, rose, herbal, apple, anisic, fresh, green, citrus, bergamot, woody, mint, grapefruit, waxy",both,exact
+SZMNDOUFZGODBR-UHFFFAOYSA-N,CCCCCC(CCCC)O,,5-decanol,,,none,unmatched
+PJXHBTZLHITWFX-UHFFFAOYSA-N,CCCCCCCC1CCCC1=O,"fruity, oily, fresh, jasmine, tropical, peach",2-heptylcyclopentanone,,"fruity, oily, fresh, jasmine, tropical, peach",gs_only,exact
+LMETVDMCIJNNKH-UHFFFAOYSA-N,CC(CCC=C(C)C)CCOCC=O,"citrus, floral, melon, rose, sweet, aldehydic, fresh, muguet, green, honeysuckle, waxy",Citronellyl oxyacetaldehyde,"citrus, floral, melon, rose","sweet, aldehydic, floral, melon, fresh, muguet, citrus, green, honeysuckle, waxy",both,exact
+KGWPHCDTOLQQEP-UHFFFAOYSA-N,CC1=C2C(=CC=C1)C=CN2,,7-Methylindole,,,none,unmatched
+FTXUQEKXCJSWMO-UHFFFAOYSA-N,C1CCCCOC(=O)CCC1,,Nonalactone,,,none,unmatched
+ZWKNLRXFUTWSOY-QPJJXVBHSA-N,C1=CC=C(C=C1)/C=C/C#N,"spicy, cumin, cinnamon, cassia",Cinnamyl nitrile,,"spicy, cumin, cinnamon, cassia",gs_only,exact
+VXCUURYYWGCLIH-UHFFFAOYSA-N,CCCCCCCCCCCC#N,"dry, metallic, spicy, orange, citrus",Clonal,,"dry, metallic, spicy, orange, citrus",gs_only,exact
+MJTPMXWJHPOWGH-UHFFFAOYSA-N,CC(C)C(=O)OCCOC1=CC=CC=C1,"floral, fruity, honey, sweet, rose, apple, powdery, green, tropical, waxy",2-Phenoxyethyl isobutyrate,"floral, fruity, honey","sweet, rose, honey, floral, fruity, apple, powdery, green, tropical, waxy",both,exact
+YPKBCLZFIYBSHK-UHFFFAOYSA-N,CC1=CC2=C(C=C1)NC=C2,,5-Methylindole,,,none,unmatched
+GOMAKLPNAAZVCJ-UHFFFAOYSA-N,CCOC(=O)C1C(O1)C2=CC=CC=C2,"berry, caramellic, fruity, strawberry, sweet",Ethyl phenyl glycidate,"berry, caramellic, fruity, strawberry, sweet",,leff_only,exact
+HFNGYHHRRMSKEU-UHFFFAOYSA-N,CC(=O)OCC1=CC=C(C=C1)OC,"balsamic, cherry, coumarinic, floral, fruity, vanilla, sweet, plum, powdery, balsam, tonka",Anisyl acetate,"balsamic, cherry, coumarinic, floral, fruity, vanilla","sweet, vanilla, plum, fruity, powdery, cherry, balsam, tonka",both,exact
+FQMZVFJYMPNUCT-YRNVUSSQSA-N,CC(=CCC/C(=C/COC=O)/C)C,"fresh, fruity, green, leafy, rose, floral, apple, neroli, tropical, peach",Geranyl formate,"fresh, fruity, green, leafy, rose","floral, rose, fruity, apple, fresh, green, neroli, tropical, peach",both,exact
+HIGQPQRQIQDZMP-FLIBITNWSA-N,CC(=CCC/C(=C\COC(=O)C)/C)C,"floral, fruity, sweet, rose, grapefruit, pear, dewy, tropical, soapy, citrus",Neryl acetate,"floral, fruity, sweet","sweet, floral, rose, grapefruit, fruity, pear, dewy, tropical, soapy, citrus",both,exact
+PXRBWNLUQYZAAX-UHFFFAOYSA-N,CCCCC1CCCC(=O)O1,"coconut, fatty, oily, sweet, creamy, coumarinic, milky",delta-Nonalactone,"coconut, fatty, oily, sweet","sweet, fatty, coconut, oily, creamy, coumarinic, milky",both,exact
+RZZLMGATMUAJPX-UHFFFAOYSA-N,CCCCCCCCC1CCCC(=O)O1,"buttery, creamy, dairy, fatty, musty, oily, milky",delta-tridecalactone,"buttery, creamy, dairy, fatty","musty, oily, creamy, milky, dairy, buttery",both,exact
+BYCHQEILESTMQU-FMIVXFBMSA-N,CCC(=O)OC/C=C(\C)/CCC=C(C)C,"fruity, grape, rose, sweet, vegetable, floral, honey, powdery, geranium, tropical, citrus, waxy",Geranyl propionate,"fruity, grape, rose, sweet","vegetable, floral, rose, honey, fruity, powdery, geranium, tropical, citrus, waxy",both,exact
+NTPLXRHDUXRPNE-UHFFFAOYSA-N,CC(=O)C1=CC=C(C=C1)OC,"floral, hay, sweet, vanilla, cherry, powdery, anisic, balsamic, hawthorn, acacia",para-methoxyacetophenone,"floral, hay, sweet","sweet, vanilla, cherry, powdery, anisic, balsamic, hawthorn, acacia",both,exact
+UCSIFMPORANABL-UHFFFAOYSA-N,CC(C)CCCC(C)CC=O,"citrus, fresh, green, lemon, aldehydic",Tetrahydro citral,"citrus, fresh, green","lemon, aldehydic, citrus, green",both,exact
+ZSBOMYJPSRFZAL-JLHYYAGUSA-N,CCCC(=O)OC/C=C(\C)/CCC=C(C)C,"fruity, rose, sweet, apricot, fresh, raspberry, green, tropical, peach, waxy",Geranyl butyrate,"fruity, rose, sweet","sweet, rose, fruity, apricot, fresh, raspberry, green, tropical, peach, waxy",both,exact
+BLRHMMGNCXNXJL-UHFFFAOYSA-N,CN1C=CC2=CC=CC=C21,,1-Methylindole,,,none,unmatched
+YNBADRVTZLEFNH-UHFFFAOYSA-N,COC(=O)C1=CN=CC=C1,"herbal, sweet, tobacco, warm",Methyl nicotinate,"herbal, sweet, tobacco","herbal, tobacco, warm",both,exact
+MINYPECWDZURGR-UHFFFAOYSA-N,CC1=C(C(=C(C(=C1C)[N+](=O)[O-])C(C)(C)C)[N+](=O)[O-])C,"sweet, powdery, musk, fatty",musk tibetene,,"sweet, powdery, musk, fatty",gs_only,exact
+ZFGBKXBPHOUSJX-UHFFFAOYSA-N,CC1CC=CCCCCCCCCC(=O)C1,"ambergris, animal, fatty, powdery, anisic, woody, clean, musk",Cosmone,,"ambergris, animal, fatty, powdery, anisic, woody, clean, musk",gs_only,exact
+YWVSYRJWCROMKO-UHFFFAOYSA-N,CC(C1CCCC(C1)(C)C)OC(=O)C,"floral, rose, fruity, geranium, musk","1-(3,3-dimethylcyclohexyl)ethyl acetate",,"floral, rose, fruity, geranium, musk",gs_only,exact
+CVKMFSAVYPAZTQ-UHFFFAOYSA-N,CCCCC(C)C(=O)O,"lard, fatty, chicken, fruity, acidic, savory, oily, roasted, cheesy",2-methylhexanoic acid,,"lard, fatty, chicken, fruity, acidic, savory, oily, roasted, cheesy",gs_only,exact
+NZQMQVJXSRMTCJ-UHFFFAOYSA-N,CCCC(C)CC(=O)O,"cheesy, fruity, sour",3-methylhexanoic acid,"cheesy, fruity, sour",,leff_only,exact
+NTWSIWWJPQHFTO-AATRIKPKSA-N,CCC/C(=C/C(=O)O)/C,,(E)-3-methyl-2-hexenoic acid,,,none,unmatched
+RGRNSTGIHROKJB-UHFFFAOYSA-N,CCCC(C)(CC(=O)O)O,,3-hydroxy-3-methylhexanoic acid,,,none,unmatched
+NKBWMBRPILTCRD-UHFFFAOYSA-N,CCCCCC(C)C(=O)O,"cheesy, fatty, sour, sweaty, buttermilk, green, waxy",2-methylheptanoic acid,"cheesy, fatty, sour","sweaty, buttermilk, green, cheesy, waxy",both,exact
+JZBCTZLGKSYRSF-UHFFFAOYSA-N,CCC1=NC=C(N=C1C)C,"almond, burnt, chocolate, cocoa, hazelnut, nutty, musty, caramellic, peanut, coffee, roasted","2-Ethyl-3,5-dimethylpyrazine","almond, burnt, chocolate, cocoa, hazelnut, nutty","musty, caramellic, cocoa, nutty, peanut, coffee, burnt, almond, roasted",both,exact
+CHCKBDDEJDVRSJ-UHFFFAOYSA-N,CCC(C)C1=C(C=CC=N1)OC,,2-sec-Butyl-3-methoxypyridine,,,none,unmatched
+ZBYPSGBBPAPHDG-UHFFFAOYSA-N,CC(C)CC1=C(C=CC=N1)OC,,2-isobutyl-3-methoxypyridine,,,none,unmatched
+FYGUSUBEMUKACF-UHFFFAOYSA-N,C1C2CC(C1C=C2)C(=O)O,"fruity, green",5-norbornene-2-carboxylic acid,,"fruity, green",gs_only,exact
+LXXNWCFBZHKFPT-UHFFFAOYSA-N,CCOC(=O)C(C)S,"fruity, sulfurous, meaty, onion",Ethyl 2-mercaptopropionate,"fruity, sulfurous","meaty, sulfurous, onion",both,exact
+XSAYZAUNJMRRIR-UHFFFAOYSA-N,CC(=O)C1=CC2=CC=CC=C2C=C1,"orange, sweet, floral, honey, powdery, neroli, orangeflower",methyl beta-naphthyl ketone,"orange, sweet","sweet, floral, honey, powdery, neroli, orangeflower",both,exact
+JLPUXFOGCDVKGO-TUAOUCFPSA-N,C[C@H]1CCC[C@@]2([C@@]1(CCCC2)O)C,"earthy, green, herbal, musty, fresh, humus",(-)-geosmin,"earthy, green, herbal, musty","musty, earthy, fresh, humus",both,exact
+JDLKFOPOAOFWQN-UHFFFAOYSA-N,C=CCSS(=O)CC=C,,Diallyldisulfid,,,none,unmatched
+RTUMCNDCAVLXEP-UHFFFAOYSA-N,CC1=CC2=C(C=C1)C(CC=C2)(C)C,"gasoline, woody, licorice","1,1,6-Trimethyl-1,2-dihydronaphthalene","gasoline, woody",licorice,both,exact
