@@ -215,8 +215,15 @@ __marimo__/
 /Chemicals/embeddings/
 /Chemicals/odor_datasets/*embeddings*.npy
 /Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/
-/Downstream_Analysis/predictions/archive/
-/Downstream_Analysis/predictions/aggregated/*/*_run_summary_long.csv
+# Prediction data comes from Zenodo, not Git: see Downstream_Analysis/README.md.
+# ASR_Predictions_RefTree is re-included because it holds analysis code and small
+# reference tables rather than model output.
+/Downstream_Analysis/predictions/*
+!/Downstream_Analysis/predictions/aggregated/
+/Downstream_Analysis/predictions/aggregated/*
+!/Downstream_Analysis/predictions/aggregated/ASR_Predictions_RefTree/
+# Zenodo upload staging for the whole record (predictions + embeddings).
+/release/
 
 # Common phylogenetic inference and checkpoint outputs
 *.ckp.gz

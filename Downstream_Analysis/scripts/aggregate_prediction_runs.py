@@ -1,9 +1,9 @@
-# Aggregate model predictions across multiple runs for each prediction category
-# (ASR_Predictions, M2OR_Unseen_Pairs_Predictions, Reference_Tree_Predictions).
+# Aggregate model probabilities across multiple runs for each available category
+# category (ASR_Predictions, M2OR_Unseen_Pairs_Predictions, and/or
+# Reference_Tree_Predictions).
 
 # Input:
-# Prediction CSV files with columns:
-# protein_id, smiles_id, probability, prediction
+# Model-run CSV files with columns including protein_id, smiles_id, and probability.
 
 # Processing:
 # 1. find the folder with prediction files
@@ -12,20 +12,20 @@
 # 4. stack them together in one long table
 # 5. group by (protein_id, smiles_id)
 # 6. compute summary statistics across runs
-# 7. reshape into wide matrices
-# 8. save the outputs
+# 7. reshape median probabilities into a wide matrix
+# 8. save the probability matrix
 
 # Outputs:
 # For each category, the script exports:
-# - median prediction wide matrix  (binary: 1 if median_probability >= 0.5)
 # - median probability wide matrix
-# - one QC long-format summary file
-# Optionally, thresholded wide matrices can be produced by passing --thresholds.
+# Binary calls are deliberately not written here. Apply the analysis-specific
+# threshold in the relevant notebook; 01.model_behaviour derives the
+# calibrated value (0.915) from the measured pairs.
 
 # Usage examples:
 # python Downstream_Analysis/scripts/aggregate_prediction_runs.py --dry-run
 # python Downstream_Analysis/scripts/aggregate_prediction_runs.py
-# python Downstream_Analysis/scripts/aggregate_prediction_runs.py --category ASR_Predictions --thresholds 0.6 0.7 0.8
+# python Downstream_Analysis/scripts/aggregate_prediction_runs.py --category ASR_Predictions
 
 
 from __future__ import annotations
@@ -58,8 +58,8 @@ def parse_args() -> argparse.Namespace:
 
     parser = argparse.ArgumentParser(
         description=(
-            "Aggregate prediction runs across categories by exact "
-            "(protein_id, smiles_id) pair and export wide matrices."
+            "Aggregate model-run probabilities by exact (protein_id, smiles_id) "
+            "pair and export median-probability matrices."
         )
     )
 
@@ -96,14 +96,6 @@ def parse_args() -> argparse.Namespace:
         choices=list(CATEGORY_CONFIG.keys()) + ["all"],
         default="all",
         help="Process only one category or all categories.",
-    )
-
-    parser.add_argument(
-        "--thresholds",
-        type=float,
-        nargs="+",
-        default=None,
-        help="Thresholds to apply on median_probability. If omitted, no thresholded files are produced.",
     )
 
     parser.add_argument(
@@ -145,26 +137,49 @@ def detect_latest_archive_dir(archive_root: Path) -> Path:
     return latest
 
 
+def has_any_category(data_root: Path) -> bool:
+    """True if the directory holds at least one configured category subdirectory."""
+    return any((data_root / category).is_dir() for category in CATEGORY_CONFIG)
+
+
 def resolve_prediction_data_root(project_root: Path, archive_dir: Optional[Path]) -> Path:
     """
-    Return path to:
-    <archive-dir>/Predictions_M2OR/All_Data_No_Mixtures_Predictions
+    Locate the directory holding the per-category run files, trying in order:
+
+    1. <archive-dir>/Predictions_M2OR/All_Data_No_Mixtures_Predictions, when
+       --archive-dir is given explicitly.
+    2. Downstream_Analysis/predictions/runs, the layout produced by the Zenodo
+       release and unpacked by scripts/download_zenodo_data.py.
+    3. The latest Predictions_M2OR-* export under predictions/archive/, which is
+       the raw model output as exported locally.
     """
-    archive_root = project_root / "Downstream_Analysis" / "predictions" / "archive"
+    if archive_dir is not None:
+        data_root = archive_dir.resolve() / "Predictions_M2OR" / "All_Data_No_Mixtures_Predictions"
+        if not data_root.is_dir():
+            raise FileNotFoundError(f"Expected data root not found: {data_root}")
+        return data_root
 
-    if archive_dir is None:
-        archive_dir = detect_latest_archive_dir(archive_root)
-    else:
-        archive_dir = archive_dir.resolve()
+    predictions_root = project_root / "Downstream_Analysis" / "predictions"
 
-    data_root = archive_dir / "Predictions_M2OR" / "All_Data_No_Mixtures_Predictions"
+    runs_root = predictions_root / "runs"
+    if has_any_category(runs_root):
+        return runs_root
 
-    if not data_root.exists():
-        raise FileNotFoundError(
-            f"Expected data root not found: {data_root}"
+    archive_root = predictions_root / "archive"
+    if archive_root.is_dir():
+        data_root = (
+            detect_latest_archive_dir(archive_root)
+            / "Predictions_M2OR"
+            / "All_Data_No_Mixtures_Predictions"
         )
+        if has_any_category(data_root):
+            return data_root
 
-    return data_root
+    raise FileNotFoundError(
+        f"No prediction run files found under {runs_root} or {archive_root}.\n"
+        "Download the published dataset first:\n"
+        "  python scripts/download_zenodo_data.py"
+    )
 
 
 def find_run_files(category_dir: Path, pattern: str, category_name: str, limit_runs: Optional[int] = None) -> List[Path]:
@@ -193,7 +208,7 @@ def find_run_files(category_dir: Path, pattern: str, category_name: str, limit_r
 
 
 def load_and_combine_runs(run_files: List[Path]) -> pd.DataFrame:
-    expected_columns = {"protein_id", "smiles_id", "probability", "prediction"}
+    expected_columns = {"protein_id", "smiles_id", "probability"}
     dfs = []
 
     for fp in run_files:
@@ -209,7 +224,7 @@ def load_and_combine_runs(run_files: List[Path]) -> pd.DataFrame:
 
         run_num = int(run_match.group(1))
 
-        df = df[["protein_id", "smiles_id", "probability", "prediction"]].copy()
+        df = df[["protein_id", "smiles_id", "probability"]].copy()
         df["run"] = run_num
         dfs.append(df)
 
@@ -229,8 +244,6 @@ def aggregate_runs(combined_df: pd.DataFrame) -> pd.DataFrame:
             std_probability=("probability", "std"),
         )
     )
-
-    agg_df["median_prediction"] = (agg_df["median_probability"] >= 0.5).astype(int)
 
     return agg_df
 
@@ -259,7 +272,6 @@ def process_category(
     config: Dict[str, str],
     data_root: Path,
     output_root: Path,
-    thresholds: List[float],
     dry_run: bool = False,
     limit_runs: Optional[int] = None,
 ) -> None:
@@ -279,27 +291,9 @@ def process_category(
     out_dir = output_root / category_name
     prefix = config["prefix"]
 
-    qc_path = out_dir / f"{prefix}_run_summary_long.csv"
-    save_csv(agg_df, qc_path, dry_run=dry_run)
-
-    median_pred_wide = make_wide_matrix(agg_df, "median_prediction")
-    median_pred_path = out_dir / f"{prefix}_median_prediction_wide.csv"
-    save_csv(median_pred_wide, median_pred_path, dry_run=dry_run)
-
     median_prob_wide = make_wide_matrix(agg_df, "median_probability")
     median_prob_path = out_dir / f"{prefix}_median_probability_wide.csv"
     save_csv(median_prob_wide, median_prob_path, dry_run=dry_run)
-
-    for thr in (thresholds or []):
-        thr_label = str(thr)
-        thr_col = f"prediction_ge_{str(thr).replace('.', '_')}"
-
-        thr_df = agg_df.copy()
-        thr_df[thr_col] = (thr_df["median_probability"] >= thr).astype(int)
-
-        thr_wide = make_wide_matrix(thr_df, thr_col)
-        thr_path = out_dir / f"{prefix}_prediction_prob_ge_{thr_label}_wide.csv"
-        save_csv(thr_wide, thr_path, dry_run=dry_run)
 
 
 def main() -> None:
@@ -318,14 +312,21 @@ def main() -> None:
     print(f"Data root    : {data_root}")
     print(f"Output root  : {output_root}")
     print(f"Dry run      : {args.dry_run}")
-    print(f"Thresholds   : {args.thresholds}")
     print(f"Limit runs   : {args.limit_runs}")
 
-    categories = (
-        list(CATEGORY_CONFIG.keys())
-        if args.category == "all"
-        else [args.category]
-    )
+    if args.category == "all":
+        categories = [
+            category_name
+            for category_name in CATEGORY_CONFIG
+            if (data_root / category_name).is_dir()
+        ]
+        missing = set(CATEGORY_CONFIG) - set(categories)
+        if missing:
+            print(f"Skipping unavailable categories: {', '.join(sorted(missing))}")
+        if not categories:
+            raise FileNotFoundError(f"No configured prediction categories found under: {data_root}")
+    else:
+        categories = [args.category]
 
     for category_name in categories:
         process_category(
@@ -333,7 +334,6 @@ def main() -> None:
             config=CATEGORY_CONFIG[category_name],
             data_root=data_root,
             output_root=output_root,
-            thresholds=args.thresholds,
             dry_run=args.dry_run,
             limit_runs=args.limit_runs,
         )
