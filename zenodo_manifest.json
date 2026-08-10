@@ -1,0 +1,55 @@
+{
+  "record_title": "Olfactory receptor binding probabilities with ESM-C protein and MolFormer ligand embeddings",
+  "version": "v1",
+  "zenodo_record_id": null,
+  "_help": "After publishing, set zenodo_record_id to the NUMERIC id from the record URL (https://zenodo.org/records/<id>). Use the version-specific id, not the concept DOI, so the checksums below stay valid.",
+  "assets": {
+    "predictions": {
+      "filename": "olfactory_receptor_downstream_probabilities_v1.zip",
+      "sha256": "e4d1596a7aabef33c1a37f1042e9b3ef1d61d3a82e45b17a92da6f6c4782fb13",
+      "destination": "Downstream_Analysis/predictions",
+      "bytes": 34737875,
+      "description": "Per-run and median binding probabilities, ASR and reference tree."
+    },
+    "embeddings_molecules": {
+      "filename": "olfactory_receptor_molecule_embeddings_v1.zip",
+      "sha256": "f025118318cbce6d84e9a3fbc50a325ace803d9ddd3c976cbbf92283671688e4",
+      "destination": "Model/Embeddings",
+      "description": "MolFormer ligand embeddings, (754, 768), indexed by smiles_id to join the prediction matrices.",
+      "bytes": 4359430
+    },
+    "embeddings_pooled": {
+      "filename": "olfactory_receptor_protein_embeddings_pooled_v1.zip",
+      "sha256": "72169283d37ef402316ec20bfe0e3263ae4aba07278f4795cb9d71158ff119fc",
+      "destination": "Model/Embeddings/proteins",
+      "bytes": 9665801,
+      "description": "Mean-pooled (N, 960) ESM-C 300M matrices. This is what the model consumes."
+    },
+    "embeddings_gpcr": {
+      "filename": "olfactory_receptor_protein_embeddings_gpcr_v1.zip",
+      "sha256": "1557a0c02ce22763e478d94f760e78a515c6e80c301052bb50e225cf2e1d61e7",
+      "destination": "Model/Embeddings/proteins",
+      "description": "Per-residue (L, 960) ESM-C 300M arrays, 722 GPCRs. Large.",
+      "bytes": 901280958
+    },
+    "embeddings_m2or": {
+      "filename": "olfactory_receptor_protein_embeddings_m2or_v1.zip",
+      "sha256": "4bebe256759ac00860ac6ada08b5864419f21899ea79943cad50f12226e26842",
+      "destination": "Model/Embeddings/proteins",
+      "description": "Per-residue (L, 960) ESM-C 300M arrays, 1399 M2OR proteins. Large.",
+      "bytes": 1589342789
+    },
+    "embeddings_reference_tree": {
+      "filename": "olfactory_receptor_protein_embeddings_reference_tree_v1.zip",
+      "sha256": "bc4fc8378d58f24dff33f652cb629e098b094e3660da6de4e0a1f2c870667a0e",
+      "destination": "Model/Embeddings/proteins",
+      "description": "Per-residue (L, 960) ESM-C 300M arrays, 584 reference-tree proteins. Large.",
+      "bytes": 663192847
+    }
+  },
+  "default_assets": [
+    "predictions",
+    "embeddings_molecules",
+    "embeddings_pooled"
+  ]
+}
