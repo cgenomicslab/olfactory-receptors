@@ -8,7 +8,6 @@ notebooks/reference_tree/   extant human receptors
 notebooks/ancestral/        reconstructed ancestral nodes
 scripts/                    shared code the notebooks import
 predictions/                the probability matrices (from Zenodo, not Git)
-reports/                    written-up results
 ```
 
 Each notebooks folder has its own README with the detail. Start there.
