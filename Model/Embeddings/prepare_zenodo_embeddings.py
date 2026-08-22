@@ -145,7 +145,11 @@ def build_pooled_archive(
         with ZipFile(temporary_archive, "w", ZIP_DEFLATED, compresslevel=POOLED_COMPRESSLEVEL) as archive:
             for path in entries:
                 archive.write(path, f"pooled/{path.name}")
-            archive.write(manifest_path, "MANIFEST.json")
+            # Named per archive, not plain MANIFEST.json: every protein-embedding
+            # archive extracts into the same Model/Embeddings/proteins/ directory, so
+            # a shared name means each download silently overwrites the last one's
+            # checksum record.
+            archive.write(manifest_path, "MANIFEST_pooled.json")
         shutil.move(temporary_archive, archive_path)
 
     checksum = write_checksum(archive_path)
@@ -193,7 +197,9 @@ def build_per_residue_archive(
                 archive.write(path, f"{directory}/{path.name}")
                 if position % 250 == 0 or position == len(files):
                     print(f"  {position}/{len(files)}")
-            archive.write(manifest_path, "MANIFEST.json")
+            # Per-archive name -- see the note in build_pooled_archive. All the
+            # per-residue archives share the Model/Embeddings/proteins/ destination.
+            archive.write(manifest_path, f"MANIFEST_{name}.json")
         shutil.move(temporary_archive, archive_path)
 
     checksum = write_checksum(archive_path)
