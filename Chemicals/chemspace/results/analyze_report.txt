@@ -1,0 +1,100 @@
+universe 726407  odorants 5962  natural-product background 720445  base rate 0.0082
+
+========================================================================
+Q1  ARE ODORANTS NEAR EACH OTHER? (full 768-d cosine, k=50)
+========================================================================
+  odorant fraction among an odorant's 50 NN : 0.3848
+  base rate                                 : 0.0082
+  ENRICHMENT                                : 46.9x
+  odorants with >=50% odorant neighbours     : 33.7%
+  (The ChEMBL background gave 57x, but that background was drug chemistry.)
+
+========================================================================
+Q2  THE MATCHED CONTROL: is it odour chemistry, or just small and volatile?
+========================================================================
+  matched 5939 of 5962 odorants (99.9%) on Tb_joback, MolWt, LogP
+
+  covariate balance (standardised mean difference):
+    Tb_joback    before  -2.323   after -0.0035
+    MolWt        before  -1.765   after +0.0014
+    LogP         before  -0.437   after +0.0021
+    worst |SMD| after matching : 0.0035  (PASS, tolerance 0.01)
+
+  separability, 5-fold cross-validated ROC AUC:
+    features            unmatched   matched     drop
+    volatility_only         0.973     0.494    0.478
+    descriptors_22          0.981     0.667    0.314
+    molformer_768           0.983     0.795    0.188
+    (volatility alone should land near 0.50 once matched -- that is the
+     check that the matching removed what it was meant to remove.)
+
+  discriminant axis, ChEMBL background vs COCONUT background:
+    Pearson r over 22 descriptors : +0.714  (same orientation)
+    descriptors changing sign between backgrounds : 6  (LabuteASA, MolWt, NumStereo, nC, nHeteroatoms, nS)
+
+========================================================================
+Q3  BIOSYNTHETIC PATHWAY: odorants vs the natural-product background
+========================================================================
+  annotated: odorants 2604/5962, background 669278/720445
+    Fatty acids                         49.6% vs  12.2%   OR   7.08  [ 6.56,   7.65]   q <1e-300
+    Shikimates and Phenylpropanoids     14.8% vs  17.1%   OR   0.84  [ 0.75,   0.94]   q 1.57e-03
+    Carbohydrates                        0.8% vs   1.2%   OR   0.70  [ 0.47,   1.09]   q 1.04e-01
+    Terpenoids                          19.6% vs  31.1%   OR   0.54  [ 0.49,   0.60]   q 3.07e-39
+    Amino acids and Peptides             2.4% vs   4.4%   OR   0.53  [ 0.42,   0.69]   q 1.12e-07
+    Polyketides                          3.4% vs   9.0%   OR   0.35  [ 0.29,   0.44]   q 1.18e-29
+    Alkaloids                            9.4% vs  24.9%   OR   0.31  [ 0.27,   0.36]   q 6.12e-90
+
+========================================================================
+Q4  FUNCTIONAL GROUPS: odorants vs the natural-product background
+========================================================================
+    fg_thiol                 3.4% vs   0.1%   OR  23.90  [20.55,  27.91]   q 8.66e-187
+    fg_aldehyde              8.4% vs   2.5%   OR   3.62  [ 3.31,   3.98]   q 2.28e-118
+    fg_sulfide               8.6% vs   4.7%   OR   1.92  [ 1.76,   2.11]   q 5.03e-38
+    fg_nitrile               0.9% vs   0.8%   OR   1.22  [ 0.95,   1.60]   q 1.37e-01
+    fg_ester                33.7% vs  40.6%   OR   0.74  [ 0.70,   0.78]   q 7.50e-28
+    fg_lactone              32.2% vs  39.6%   OR   0.73  [ 0.69,   0.77]   q 1.24e-31
+    fg_ketone               13.9% vs  22.4%   OR   0.56  [ 0.52,   0.61]   q 3.00e-60
+    fg_carboxylic_acid       5.4% vs  12.3%   OR   0.41  [ 0.37,   0.46]   q 8.58e-71
+    fg_ether                49.3% vs  74.1%   OR   0.34  [ 0.32,   0.36]   q <1e-300
+    fg_benzene              20.4% vs  51.3%   OR   0.24  [ 0.23,   0.26]   q <1e-300
+    fg_terpene_isopropyl    52.2% vs  83.1%   OR   0.22  [ 0.21,   0.23]   q <1e-300
+    fg_alcohol              15.6% vs  47.4%   OR   0.20  [ 0.19,   0.22]   q <1e-300
+    fg_phenol                3.6% vs  20.3%   OR   0.15  [ 0.13,   0.17]   q <1e-300
+    fg_amine                 2.2% vs  18.5%   OR   0.10  [ 0.08,   0.12]   q <1e-300
+    fg_halogen               0.4% vs   6.2%   OR   0.06  [ 0.04,   0.09]   q 1.70e-125
+    fg_amide                 1.5% vs  23.4%   OR   0.05  [ 0.04,   0.06]   q <1e-300
+
+  against the matched control instead (volatility and size equalised):
+    group                    OR raw  OR matched   verdict
+    fg_thiol                  23.90        3.07   survives
+    fg_aldehyde                3.62        1.18   survives
+    fg_sulfide                 1.92        1.64   survives
+    fg_nitrile                 1.22        1.40   n.s. once matched
+    fg_ester                   0.74        1.68   REVERSES
+    fg_lactone                 0.73        1.64   REVERSES
+    fg_ketone                  0.56        1.02   REVERSES
+    fg_carboxylic_acid         0.41        1.14   REVERSES
+    fg_ether                   0.34        1.48   REVERSES
+    fg_benzene                 0.24        0.93   n.s. once matched
+    fg_terpene_isopropyl       0.22        0.81   survives
+    fg_alcohol                 0.20        1.14   REVERSES
+    fg_phenol                  0.15        0.86   n.s. once matched
+    fg_amine                   0.10        0.27   survives
+    fg_halogen                 0.06        0.08   survives
+    fg_amide                   0.05        0.51   survives
+
+    6 of 16 groups reverse direction between the two contrasts.
+    Those were reporting that odorants are small and volatile, not that
+    odour chemistry favours the group. Quote the matched column.
+
+  sugar content (COCONUT flag):
+    odorants (in COCONUT)  contains_sugar = 0.8%
+    NP background          contains_sugar = 13.0%
+
+========================================================================
+HOW TO READ THIS
+========================================================================
+  Q1's enrichment and Q2's matched AUC answer the same question and only
+  mean something together. Quote neither alone. Then run s06_robustness.py:
+  it repeats Q2 across matching seeds, re-estimates every AUC under a
+  scaffold split, and puts Q1's enrichment against the matched null.

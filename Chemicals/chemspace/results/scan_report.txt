@@ -1,0 +1,143 @@
+==========================================================================
+COCONUT DESCRIPTOR SWEEP: odorants against the rest
+==========================================================================
+  molecules joined to raw COCONUT columns: 727,582
+    odorants          2,973
+    natural products  724,609
+
+==========================================================================
+NUMERIC COLUMNS  (Cliff's delta: +1 = always higher in odorants, 0 = no difference)
+==========================================================================
+    column                                odorant     others   delta   q
+    molecular_weight                       156.27     433.44   -0.92   <1e-300
+    heavy_atom_count                        11.00      31.00   -0.92   <1e-300
+    total_atom_count                        26.00      60.00   -0.86   <1e-300
+    van_der_walls_volume                   162.84     366.18   -0.85   <1e-300
+    topological_polar_surface_area          26.30      85.59   -0.84   <1e-300
+    hydrogen_bond_acceptors_lipinski         2.00       6.00   -0.82   <1e-300
+    hydrogen_bond_acceptors                  2.00       6.00   -0.82   <1e-300
+    number_of_minimal_rings                  1.00       4.00   -0.75   <1e-300
+    hydrogen_bond_donors                     0.00       2.00   -0.59   <1e-300
+    hydrogen_bond_donors_lipinski            0.00       2.00   -0.59   <1e-300
+    lipinski_rule_of_five_violations         0.00       0.00   -0.45   <1e-300
+    aromatic_rings_count                     0.00       1.00   -0.35   1.7e-266
+    rotatable_bond_count                     3.00       5.00   -0.35   1.3e-233
+    alogp                                    2.32       3.30   -0.25   1.3e-124
+    qed_drug_likeliness                      0.52       0.41   +0.25   5.1e-122
+    np_likeness                              0.53       1.27   -0.20   4.7e-81
+    fractioncsp3                             0.64       0.58   +0.08   1.3e-13
+    formal_charge                            0.00       0.00   -0.01   1.5e-07
+
+==========================================================================
+YES / NO COLUMNS
+==========================================================================
+    contains_sugar                        0.8% vs   13.2%   OR   0.05  [ 0.04,   0.08]   7.8e-143
+    contains_ring_sugars                  0.4% vs   13.3%   OR   0.03  [ 0.02,   0.05]   1.0e-161
+    contains_linear_sugars                0.5% vs    0.4%   OR   1.23  [ 0.75,   2.03]   4.8e-01
+    np_classifier_is_glycoside            0.4% vs   16.0%   OR   0.02  [ 0.01,   0.04]   2.1e-199
+
+==========================================================================
+CATEGORICAL COLUMNS  (categories with >= 30 molecules)
+==========================================================================
+
+  annotation_level: 6 categories tested, 6 significant
+    + 5                                        27.6% vs    7.1%   OR    5.01   q 4.2e-252
+    + 0                                        20.2% vs   10.3%   OR    2.21   q 8.5e-57
+    + 4                                        14.3% vs    7.8%   OR    1.98   q 4.7e-33
+    + 3                                        31.1% vs   22.0%   OR    1.60   q 1.8e-30
+    + 2                                         6.5% vs   20.2%   OR    0.27   q 5.7e-98
+    + 1                                         0.4% vs   32.7%   OR    0.01   q <1e-300
+    - 1                                         0.4% vs   32.7%   OR    0.01   q <1e-300
+    - 2                                         6.5% vs   20.2%   OR    0.27   q 5.7e-98
+    - 3                                        31.1% vs   22.0%   OR    1.60   q 1.8e-30
+
+  chemical_super_class: 19 categories tested, 12 significant
+    + Organosulfur compounds                    4.4% vs    0.1%   OR   41.52   q 9.3e-152
+    + Organic salts                             0.2% vs    0.0%   OR   20.19   q 1.9e-05
+    + Hydrocarbons                              1.2% vs    0.2%   OR    6.64   q 2.6e-17
+    + Organic oxygen compounds                 12.5% vs    4.7%   OR    2.90   q 1.2e-62
+    + Organic nitrogen compounds                1.0% vs    0.4%   OR    2.77   q 3.5e-06
+    + Benzenoids                               14.2% vs    8.9%   OR    1.71   q 6.9e-21
+    - Lignans, neolignans and related compou    0.0% vs    1.0%   OR    0.02   q 4.2e-13
+    - Organic Polymers                          0.0% vs    0.6%   OR    0.03   q 4.6e-08
+    - Alkaloids and derivatives                 0.1% vs    2.8%   OR    0.04   q 2.8e-31
+
+  chemical_class: 273 categories tested, 78 significant
+    + Thiols                                    1.1% vs    0.0%   OR  203.82   q 3.7e-57
+    + Thiolactones                              0.3% vs    0.0%   OR  103.20   q 7.6e-14
+    + Isothiocyanates                           0.6% vs    0.0%   OR   78.69   q 4.5e-24
+    + Allyl sulfur compounds                    0.3% vs    0.0%   OR   68.09   q 3.8e-11
+    + Sulfenyl compounds                        0.6% vs    0.0%   OR   67.83   q 1.0e-25
+    + Organic disulfides                        0.6% vs    0.0%   OR   66.88   q 1.2e-25
+    - Isoflavonoids                             0.0% vs    1.4%   OR    0.01   q 3.4e-17
+    - Glycerophospholipids                      0.0% vs    0.9%   OR    0.02   q 2.0e-10
+    - Lupin alkaloids                           0.0% vs    0.8%   OR    0.02   q 2.6e-10
+
+  chemical_sub_class: 626 categories tested, 138 significant
+    + Alkylthiols                               1.0% vs    0.0%   OR  218.50   q 3.8e-54
+    + Thiolactones                              0.3% vs    0.0%   OR  103.20   q 1.3e-13
+    + Dialkyldisulfides                         0.6% vs    0.0%   OR   96.61   q 4.5e-28
+    + Isothiocyanates                           0.6% vs    0.0%   OR   78.69   q 6.5e-24
+    + Allyl sulfur compounds                    0.3% vs    0.0%   OR   68.09   q 6.4e-11
+    + Sulfenyl compounds                        0.6% vs    0.0%   OR   67.83   q 1.3e-25
+    - Triterpenoids                             0.0% vs    2.0%   OR    0.01   q 1.8e-24
+    - Hydroxysteroids                           0.0% vs    1.6%   OR    0.01   q 2.3e-20
+    - Terpene glycosides                        0.0% vs    1.3%   OR    0.01   q 3.7e-15
+
+  direct_parent_classification: 1087 categories tested, 167 significant
+    + Alkylthiols                               1.0% vs    0.0%   OR  218.50   q 9.3e-54
+    + Acetals                                   0.9% vs    0.0%   OR  214.68   q 8.0e-47
+    + Methoxypyrazines                          0.3% vs    0.0%   OR  114.10   q 3.3e-15
+    + Alkanes                                   0.6% vs    0.0%   OR  105.90   q 2.0e-25
+    + Thiolactones                              0.3% vs    0.0%   OR  103.20   q 2.3e-13
+    + Dialkyldisulfides                         0.6% vs    0.0%   OR   96.61   q 8.4e-28
+    - Hydroxysteroids                           0.0% vs    1.0%   OR    0.02   q 2.1e-12
+    - Flavonoid-3-O-glycosides                  0.0% vs    0.8%   OR    0.02   q 1.4e-09
+    - Triterpenoids                             0.0% vs    0.8%   OR    0.02   q 2.9e-09
+
+  np_classifier_superclass: 74 categories tested, 48 significant
+    + Fatty esters                             20.3% vs    0.5%   OR   52.48   q <1e-300
+    + Tetramate alkaloids                       2.0% vs    0.1%   OR   28.61   q 2.0e-61
+    + Fatty acyls                              16.2% vs    0.9%   OR   21.39   q <1e-300
+    + Serine alkaloids                          0.2% vs    0.0%   OR    8.89   q 2.5e-04
+    + Fatty Acids and Conjugates                4.5% vs    0.7%   OR    6.51   q 1.1e-59
+    + Apocarotenoids                            1.8% vs    0.3%   OR    6.46   q 4.9e-25
+    - Macrolides                                0.0% vs    1.5%   OR    0.01   q 8.5e-20
+    - Polycyclic aromatic polyketides           0.0% vs    1.1%   OR    0.02   q 1.5e-13
+    - Linear polyketides                        0.0% vs    0.9%   OR    0.02   q 3.4e-11
+
+  np_classifier_class: 578 categories tested, 121 significant
+    + Wax monoesters                           18.1% vs    0.3%   OR   79.13   q <1e-300
+    + Fatty aldehydes                           3.7% vs    0.1%   OR   63.60   q 6.4e-146
+    + Fenchane monoterpenoids                   0.2% vs    0.0%   OR   42.32   q 3.9e-07
+    + Pyrazine and Piperazine alkaloids         2.3% vs    0.1%   OR   37.84   q 5.3e-75
+    + Wax diesters                              0.4% vs    0.0%   OR   37.52   q 1.4e-13
+    + Oxygenated hydrocarbons                   4.2% vs    0.1%   OR   35.08   q 1.7e-134
+    - Carboline alkaloids                       0.0% vs    1.4%   OR    0.01   q 1.4e-16
+    - Flavonols                                 0.0% vs    1.2%   OR    0.01   q 8.2e-15
+    - Flavones                                  0.0% vs    1.2%   OR    0.01   q 5.0e-14
+
+  murcko_framework: 2615 categories tested, 35 significant
+    + n1ccncc1                                  2.2% vs    0.0%   OR  114.49   q 1.0e-98
+    + n1cscc1                                   1.4% vs    0.0%   OR   50.13   q 2.0e-49
+    + s1cccc1                                   0.9% vs    0.0%   OR   36.41   q 5.0e-30
+    + o1cccc1                                   2.7% vs    0.1%   OR   32.51   q 8.5e-85
+    + C12=C(CCC1)CCCCC2                         0.1% vs    0.0%   OR   26.27   q 3.1e-02
+    + n1cocc1                                   0.3% vs    0.0%   OR   23.81   q 1.5e-07
+    - C1=C2C3CCCCC3CCC2C4CCC5CCCCC5C4C1         0.0% vs    0.5%   OR    0.04   q 1.9e-04
+    - O1c2ccccc2CC=C1c3ccccc3                   0.0% vs    0.3%   OR    0.05   q 1.2e-02
+    - O1c2ccccc2CCC1c3ccccc3                    0.0% vs    0.3%   OR    0.06   q 2.4e-02
+
+  collections: 70 categories tested, 62 significant
+    + NPDBEjeCol                                3.0% vs    0.0%   OR  305.86   q 3.5e-166
+    + Exposome-explorer                         3.5% vs    0.0%   OR   98.49   q 5.6e-157
+    + ReSpect                                   2.1% vs    0.0%   OR   98.38   q 6.3e-92
+    + Watermelon                                4.4% vs    0.1%   OR   85.55   q 4.2e-187
+    + PeruNPDB                                  0.7% vs    0.0%   OR   84.33   q 8.5e-33
+    + NAPRORE-CR                                7.1% vs    0.1%   OR   76.21   q 1.8e-291
+    - CyanoMetNP                                0.0% vs    0.2%   OR    0.07   q 2.2e-03
+    - CMNPD                                     0.7% vs    4.2%   OR    0.18   q 1.8e-29
+    - Supernatural3                             7.5% vs   17.1%   OR    0.39   q 8.3e-53
+
+  A screen, not a hypothesis. Everything here is one comparison out of many,
+  and COCONUT records what people looked for as much as what exists.

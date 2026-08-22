@@ -1,0 +1,180 @@
+==========================================================================
+ORGANISM SOURCE: where odorants come from, against the rest of COCONUT
+==========================================================================
+  molecules with an organism recorded: 269,445
+    odorants          1,995
+    natural products  267,450
+
+resolving organism names against NCBI taxonomy
+  organism mentions: 1,248,873
+  using cached name -> taxid map (63,470 entries)
+
+  distinct taxa referenced: 38,659
+  lineages retrieved      : 38,659
+
+  organisms recorded per molecule (the reason for the method below):
+    odorants           median     5   mean   50.4
+    natural products   median     1   mean    4.3
+    Odorants are recorded from far more organisms, so a presence/absence test
+    would call every taxon enriched. Shares per molecule are used instead.
+
+==========================================================================
+SUPERKINGDOM
+==========================================================================
+  share of a molecule's sources in each taxon (3 taxa tested, 3 significant, 2 accounting for >= 0.5% of sources)
+    taxon                           odorants    others   ratio   q
+    Eukaryota                          96.7%     89.9%    1.08   1.8e-37
+    Bacteria                            3.3%      9.8%    0.34   1.7e-40
+
+  control: molecules with exactly one recorded organism (412 odorants vs 153,643 others)
+    + Eukaryota                        96.4% vs   89.6%   OR    3.06   q 1.8e-06
+    - Bacteria                          3.6% vs   10.0%   OR    0.34   q 3.1e-06
+
+==========================================================================
+KINGDOM
+==========================================================================
+  share of a molecule's sources in each taxon (8 taxa tested, 7 significant, 5 accounting for >= 0.5% of sources)
+    taxon                           odorants    others   ratio   q
+    Viridiplantae                      84.1%     62.0%    1.36   2.0e-18
+    Metazoa                             8.3%     12.0%    0.69   6.7e-116
+    Pseudomonadati                      1.1%      1.7%    0.65   5.8e-179
+    Bacillati                           2.2%      8.2%    0.27   9.3e-30
+    Fungi                               3.2%     13.4%    0.24   3.9e-10
+
+  control: molecules with exactly one recorded organism (412 odorants vs 153,643 others)
+    + Viridiplantae                    83.5% vs   61.4%   OR    3.19   q 1.1e-21
+    - Fungi                             1.2% vs   10.0%   OR    0.11   q 1.4e-12
+    - Bacillati                         2.9% vs    8.5%   OR    0.32   q 1.7e-05
+    - Metazoa                          10.7% vs   15.4%   OR    0.66   q 1.3e-02
+
+==========================================================================
+PHYLUM
+==========================================================================
+  share of a molecule's sources in each taxon (44 taxa tested, 37 significant, 13 accounting for >= 0.5% of sources)
+    taxon                           odorants    others   ratio   q
+    Chordata                            5.4%      1.5%    3.49   0.0e+00  <- host, not maker?
+    Arthropoda                          1.4%      0.6%    2.30   0.0e+00
+    Streptophyta                       84.0%     61.7%    1.36   4.2e-19
+    Pseudomonadota                      0.7%      1.1%    0.65   5.1e-203
+    Mollusca                            0.4%      0.8%    0.43   6.1e-143
+    Basidiomycota                       1.3%      2.9%    0.43   1.7e-153
+    Rhodophyta                          0.4%      1.1%    0.35   1.8e-133
+    Actinomycetota                      2.0%      6.3%    0.32   1.7e-49
+    Echinodermata                       0.1%      0.9%    0.14   1.1e-68
+    Cyanobacteriota                     0.1%      1.4%    0.08   3.7e-19
+    Porifera                            0.4%      4.8%    0.08   1.7e-09
+    Cnidaria                            0.2%      3.0%    0.08   2.1e-34
+
+  control: molecules with exactly one recorded organism (412 odorants vs 153,643 others)
+    + Chordata                          8.5% vs    1.7%   OR    5.23   q 6.5e-13  <- host, not maker?
+    + Streptophyta                     83.5% vs   61.1%   OR    3.23   q 1.9e-21
+    - Echinodermata                     0.0% vs    1.3%   OR    0.00   q 4.4e-02
+    - Cyanobacteriota                   0.0% vs    1.4%   OR    0.00   q 2.5e-02
+    - Cnidaria                          0.0% vs    4.2%   OR    0.00   q 2.8e-07
+
+==========================================================================
+CLASS
+==========================================================================
+  share of a molecule's sources in each taxon (137 taxa tested, 108 significant, 20 accounting for >= 0.5% of sources)
+    taxon                           odorants    others   ratio   q
+    Mammalia                            4.9%      0.6%    7.60   0.0e+00  <- host, not maker?
+    Insecta                             1.1%      0.5%    2.28   0.0e+00
+    Magnoliopsida                      81.4%     58.2%    1.40   3.3e-28
+    Pinopsida                           1.7%      1.6%    1.02   0.0e+00
+    Polypodiopsida                      0.4%      0.7%    0.65   6.3e-128
+    Gammaproteobacteria                 0.5%      0.8%    0.62   1.9e-133
+    Lecanoromycetes                     0.3%      0.5%    0.55   5.4e-109
+    Gastropoda                          0.3%      0.7%    0.49   1.8e-154
+    Cyanophyceae                        0.1%      1.4%    0.08   2.6e-19
+    Demospongiae                        0.3%      4.5%    0.07   4.2e-09
+    Anthozoa                            0.2%      2.9%    0.06   1.1e-14
+    Ascidiacea                          0.0%      0.6%    0.06   2.2e-13
+
+  control: molecules with exactly one recorded organism (412 odorants vs 153,643 others)
+    + Mammalia                          8.3% vs    0.8%   OR   11.84   q 1.5e-22  <- host, not maker?
+    + Magnoliopsida                    81.8% vs   57.7%   OR    3.30   q 2.3e-23
+    - Cyanophyceae                      0.0% vs    1.4%   OR    0.00   q 4.6e-02
+    - Anthozoa                          0.0% vs    4.1%   OR    0.00   q 1.1e-06
+    - Sordariomycetes                   0.0% vs    2.8%   OR    0.00   q 2.2e-04
+
+==========================================================================
+ORDER
+==========================================================================
+  share of a molecule's sources in each taxon (504 taxa tested, 357 significant, 47 accounting for >= 0.5% of sources)
+    taxon                           odorants    others   ratio   q
+    Artiodactyla                        0.6%      0.0%   13.35   0.0e+00  <- host, not maker?
+    Vitales                             1.8%      0.1%   12.70   0.0e+00
+    Primates                            4.1%      0.5%    8.27   0.0e+00  <- host, not maker?
+    Brassicales                         3.9%      0.8%    4.77   0.0e+00
+    Myrtales                            3.7%      0.9%    4.00   0.0e+00
+    Zingiberales                        2.6%      0.7%    3.97   0.0e+00
+    Apiales                             6.3%      2.1%    3.05   0.0e+00
+    Poales                              1.6%      0.6%    2.63   0.0e+00
+    Pleosporales                        0.1%      1.3%    0.08   2.6e-14
+    Haplosclerida                       0.0%      0.8%    0.05   2.4e-17
+    Malacalcyonacea                     0.1%      2.2%    0.04   5.1e-12
+    Dictyoceratida                      0.0%      1.1%    0.04   6.6e-14
+
+  control: molecules with exactly one recorded organism (412 odorants vs 153,643 others)
+    + Artiodactyla                      0.7% vs    0.0%   OR   36.35   q 3.6e-03  <- host, not maker?
+    + Vitales                           4.4% vs    0.1%   OR   33.70   q 4.4e-19
+    + Primates                          7.5% vs    0.6%   OR   12.50   q 2.0e-20  <- host, not maker?
+    + Brassicales                       5.1% vs    0.8%   OR    6.84   q 2.5e-09
+    + Myrtales                          4.1% vs    0.9%   OR    4.71   q 2.3e-05
+    - Malacalcyonacea                   0.0% vs    3.2%   OR    0.00   q 1.3e-04
+    - Malpighiales                      1.0% vs    4.4%   OR    0.21   q 4.3e-03
+    - Kitasatosporales                  2.2% vs    5.4%   OR    0.39   q 4.1e-02
+
+==========================================================================
+FAMILY
+==========================================================================
+  share of a molecule's sources in each taxon (1344 taxa tested, 853 significant, 43 accounting for >= 0.5% of sources)
+    taxon                           odorants    others   ratio   q
+    Caricaceae                          1.0%      0.0%   69.25   0.0e+00
+    Vitaceae                            1.8%      0.1%   12.75   0.0e+00
+    Anacardiaceae                       2.2%      0.2%   11.74   0.0e+00
+    Hominidae                           4.1%      0.5%    8.28   0.0e+00
+    Myrtaceae                           3.5%      0.6%    5.71   0.0e+00
+    Cannabaceae                         0.8%      0.1%    5.54   0.0e+00
+    Zingiberaceae                       2.6%      0.6%    4.19   0.0e+00
+    Amaryllidaceae                      2.1%      0.5%    4.15   0.0e+00
+    Polyporaceae                        0.1%      0.7%    0.20   5.4e-58
+    Celastraceae                        0.2%      0.9%    0.19   6.3e-134
+    Aspergillaceae                      0.5%      3.3%    0.16   2.8e-31
+    Alcyoniidae                         0.0%      0.5%    0.06   1.8e-15
+
+  control: molecules with exactly one recorded organism (412 odorants vs 153,643 others)
+    + Caricaceae                        1.7% vs    0.0%   OR  132.76   q 1.1e-10
+    + Bromeliaceae                      0.7% vs    0.0%   OR   53.66   q 2.1e-03
+    + Vitaceae                          4.4% vs    0.1%   OR   34.19   q 8.2e-19
+    + Anacardiaceae                     4.6% vs    0.2%   OR   26.29   q 4.6e-18
+    + Styracaceae                       0.7% vs    0.0%   OR   24.49   q 1.2e-02
+
+==========================================================================
+GENUS
+==========================================================================
+  share of a molecule's sources in each taxon (5146 taxa tested, 2897 significant, 36 accounting for >= 0.5% of sources)
+    taxon                           odorants    others   ratio   q
+    Carica                              1.0%      0.0%   73.63   0.0e+00
+    Mangifera                           2.0%      0.0%   51.25   0.0e+00
+    Coffea                              1.2%      0.0%   34.82   0.0e+00
+    Perilla                             0.7%      0.0%   23.15   0.0e+00
+    Mentha                              1.7%      0.1%   22.14   0.0e+00
+    Vitis                               1.8%      0.1%   19.80   0.0e+00
+    Thymus                              0.8%      0.0%   17.26   0.0e+00
+    Psidium                             1.0%      0.1%   17.21   0.0e+00
+    Aspergillus                         0.4%      1.9%    0.22   6.5e-22
+    Euphorbia                           0.1%      0.8%    0.14   8.2e-64
+    Isodon                              0.1%      0.5%    0.14   4.3e-120
+    Penicillium                         0.1%      1.3%    0.07   3.3e-44
+
+  control: molecules with exactly one recorded organism (412 odorants vs 153,643 others)
+    + Carica                            1.7% vs    0.0%   OR  132.76   q 1.6e-10
+    + Mangifera                         4.6% vs    0.0%   OR  109.19   q 7.5e-28
+    + Durio                             1.2% vs    0.0%   OR  104.85   q 5.5e-07
+    + Mentha                            3.2% vs    0.0%   OR  100.09   q 8.0e-19
+    + Coffea                            3.6% vs    0.0%   OR   98.35   q 2.3e-21
+
+  Reminder: COCONUT records where people looked. Plants are over-studied for
+  volatiles and Streptomyces for antibiotics, so this compares two literatures
+  as well as two chemistries.
