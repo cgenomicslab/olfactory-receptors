@@ -1,273 +1,248 @@
 molecule,n_receptors,group_id,group_size,SMILES,InChIKey,Odors,tags,n_tags
-SML0009,1,G001,19,CCC(C)CO,QPRQEDXDYOZYLA-UHFFFAOYSA-N,"leathery, fatty, winey, solvent, fermented, ethereal, cocoa, alcoholic","frozenset({'leathery', 'winey', 'ethereal', 'cocoa', 'alcoholic', 'fermented', 'fatty', 'solvent'})",8
-SML0157,1,G001,19,CCCCS,WQAQPCDUOCURKW-UHFFFAOYSA-N,"cheesy, coffee, fatty, meaty, beefy, onion, roasted, garlic, savory, sulfurous","frozenset({'roasted', 'garlic', 'savory', 'sulfurous', 'beefy', 'onion', 'cheesy', 'coffee', 'fatty', 'meaty'})",10
-SML0165,1,G001,19,CC(C)C12CCC(O1)(CC2)C,RFFOTVCVTJUTAD-UHFFFAOYSA-N,"minty, terpenic, cooling, herbal, camphoreous, pine, fresh, green","frozenset({'green', 'terpenic', 'camphoreous', 'herbal', 'pine', 'minty', 'cooling', 'fresh'})",8
-SML0166,1,G001,19,CCCC(C)C=O,FTZILAQGHINQQR-UHFFFAOYSA-N,"cheesy, green, fruity, ethereal, cocoa, vegetable","frozenset({'green', 'fruity', 'ethereal', 'cocoa', 'vegetable', 'cheesy'})",6
-SML0213,1,G001,19,CCCCCOC(=O)CCC,CFNJLPHOBMVMNS-UHFFFAOYSA-N,"tropical, pineapple, sweet, banana, fruity, cherry","frozenset({'tropical', 'fruity', 'sweet', 'pineapple', 'banana', 'cherry'})",6
-SML0230,1,G001,19,CC(C)[C@]12CCC(=C)[C@H]1C2,NDVASEGYNIMXJL-NXEZZACHSA-N,,frozenset(),0
-SML0290,1,G001,19,CCCC(CCO)S,TYZFMFVWHZKYSE-UHFFFAOYSA-N,"alliaceous, tropical, chicken, meaty, grapefruit, savory, fruity, sulfurous","frozenset({'tropical', 'fruity', 'chicken', 'grapefruit', 'savory', 'sulfurous', 'alliaceous', 'meaty'})",8
-SML0310,1,G001,19,CSSSC,YWHLKYXPLRWGSE-UHFFFAOYSA-N,"cooked, alliaceous, cabbage, meaty, onion, fresh, garlic, savory, vegetable, sulfurous","frozenset({'cabbage', 'savory', 'sulfurous', 'vegetable', 'alliaceous', 'onion', 'garlic', 'cooked', 'fresh', 'meaty'})",10
-SML0312,1,G001,19,CCCSSCCC,ALVPFGSHPUPROW-UHFFFAOYSA-N,"alliaceous, tropical, metallic, burnt, earthy, onion, fresh, garlic, green, sulfurous","frozenset({'tropical', 'green', 'sulfurous', 'burnt', 'alliaceous', 'onion', 'metallic', 'earthy', 'garlic', 'fresh'})",10
-SML0313,1,G001,19,CCCSSSCCC,GAZXPZNJTZIGBO-UHFFFAOYSA-N,"pungent, alliaceous, tropical, onion, garlic, green, vegetable, sulfurous","frozenset({'tropical', 'green', 'sulfurous', 'vegetable', 'alliaceous', 'onion', 'pungent', 'garlic'})",8
-SML0317,1,G001,19,CCC(C)C(=O)OCC,HCRBXQFHJMCTLF-UHFFFAOYSA-N,"estery, tropical, strawberry, berry, sharp, sweet, fresh, green, fruity, apple","frozenset({'tropical', 'berry', 'strawberry', 'sweet', 'green', 'fruity', 'sharp', 'apple', 'estery', 'fresh'})",10
-SML0334,1,G001,19,CCCSSSC,ZOYASYRPGHCQHW-UHFFFAOYSA-N,"cooked, clean, metallic, sweet, onion, garlic, green, sulfurous","frozenset({'green', 'clean', 'sweet', 'sulfurous', 'onion', 'metallic', 'garlic', 'cooked'})",8
-SML0484,1,G001,19,CC1=CC=CC=C1OC(=O)C(C)C,FDJBDZVTTXWIQM-UHFFFAOYSA-N,"phenolic, berry, fruity, medicinal","frozenset({'berry', 'fruity', 'phenolic', 'medicinal'})",4
-SML0503,1,G001,19,CCCCOC=O,NMJJFJNHVMGPGM-UHFFFAOYSA-N,"rummy, plum, brandy, rum, fruity, ethereal","frozenset({'brandy', 'fruity', 'rummy', 'ethereal', 'rum', 'plum'})",6
-SML0521,1,G001,19,CC(=C)[C@H]1CCC2(C(C1)O2)C,CCEFMUBVSUDRLG-IDKOKCKLSA-N,minty,frozenset({'minty'}),1
-SML0525,1,G001,19,CC(=C)C1CCC2(C(C1)O2)C,CCEFMUBVSUDRLG-UHFFFAOYSA-N,"minty, clean, herbal, citrus, sweet, fresh, fruity","frozenset({'clean', 'sweet', 'fruity', 'herbal', 'citrus', 'minty', 'fresh'})",7
-SML0543,1,G001,19,CCCC(C)C(=O)OCC,HZPKNSYIDSNZKW-UHFFFAOYSA-N,"natural, fatty, melon, pear, pineapple, fresh, green, waxy, fruity","frozenset({'pineapple', 'green', 'fruity', 'fresh', 'pear', 'waxy', 'melon', 'natural', 'fatty'})",9
-SML0589,1,G001,19,CC(C)(C)C1CCCCC1OCCCCO,GFVWSUIPAJYAEG-UHFFFAOYSA-N,,frozenset(),0
-SML0633,1,G001,19,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,YZXBAPSDXZZRGB-DOFZRALJSA-N,,frozenset(),0
-SML0021,7,G002,15,CCCCCCCCCCCCCCCC(=O)OCC,XIRNKXNNONJFQO-UHFFFAOYSA-N,"balsamic, milky, oily, sweet, waxy, fruity, creamy","frozenset({'fruity', 'sweet', 'milky', 'oily', 'balsamic', 'creamy', 'waxy'})",7
-SML0024,7,G002,15,CCCCCCCCCCCCCC(=O)OCC,MMKRHZKQPFCLLS-UHFFFAOYSA-N,"fatty, orris, violet, sweet, waxy","frozenset({'sweet', 'fatty', 'orris', 'violet', 'waxy'})",5
-SML0189,7,G002,15,CCCCC/C=C/CCC=O,CWRKZMLUDFBPAO-VOTSOKGWSA-N,"fatty, citrus, fresh, green, aldehydic, fruity, orange","frozenset({'green', 'aldehydic', 'fruity', 'citrus', 'orange', 'fatty', 'fresh'})",7
-SML0195,7,G002,15,CCCCCC(=O)C=C,KLTVSWGXIAYTHO-UHFFFAOYSA-N,"herbal, musty, cabbage, metallic, chicken, fishy, earthy, savory, mushroom, vegetable","frozenset({'mushroom', 'chicken', 'cabbage', 'musty', 'herbal', 'vegetable', 'fishy', 'metallic', 'earthy', 'savory'})",10
-SML0204,7,G002,15,C1CCCCC(=O)CCCC1,SXOZDDAFVJANJP-UHFFFAOYSA-N,,frozenset(),0
-SML0205,7,G002,15,C1CCCCCC(=O)CCCC1,UPOSSYJVWXLPTA-UHFFFAOYSA-N,,frozenset(),0
-SML0415,7,G002,15,CCCCC(CC)CO,YIWUKEYIRIRTPP-UHFFFAOYSA-N,"oily, fermented, citrus, sweet, floral, rose, fresh","frozenset({'sweet', 'citrus', 'rose', 'oily', 'fermented', 'floral', 'fresh'})",7
-SML0418,7,G002,15,CCCCC(CCC)O,WOFPPJOZXUTRAU-UHFFFAOYSA-N,,frozenset(),0
-SML0498,7,G002,15,CCCCC(=O)CC,NGAZZOYFWWSOGK-UHFFFAOYSA-N,"cheesy, ketonic, musty, fatty, sweet, banana, green, fruity","frozenset({'banana', 'green', 'sweet', 'fruity', 'musty', 'ketonic', 'cheesy', 'fatty'})",8
-SML0674,7,G002,15,CC(C)(CCC1CCCCC1)O,KZZASWGRLOTITL-UHFFFAOYSA-N,floral,frozenset({'floral'}),1
-SML0679,7,G002,15,CC(C)CCCC(C)CCO,PRNCMAKCNVRZFX-UHFFFAOYSA-N,"soapy, musty, leathery, citrus, sweet, rose, green, waxy, aldehydic","frozenset({'green', 'aldehydic', 'sweet', 'musty', 'leathery', 'citrus', 'rose', 'soapy', 'waxy'})",9
-SML0699,7,G002,15,C=CCCCCCCCCO,QGFSQVPRCWJZQK-UHFFFAOYSA-N,"clean, rose, fresh, waxy, aldehydic","frozenset({'aldehydic', 'clean', 'fresh', 'rose', 'waxy'})",5
-SML0705,7,G002,15,CCCCCCC(C)(CC)O,VZBFPIMCUSPDLS-UHFFFAOYSA-N,,frozenset(),0
-SML0714,7,G002,15,CCCCCCCCC=CC#N,HETFMJQWNWIBPN-UHFFFAOYSA-N,,frozenset(),0
-SML0734,7,G002,15,CCCC(=O)OC/C=C(\C)/CCC=C(C)C,ZSBOMYJPSRFZAL-JLHYYAGUSA-N,"raspberry, apricot, tropical, peach, sweet, rose, fresh, green, waxy, fruity","frozenset({'tropical', 'green', 'sweet', 'peach', 'fruity', 'raspberry', 'rose', 'waxy', 'apricot', 'fresh'})",10
-SML0011,2,G003,14,CCC(CC)O,AQIXEPGDORPWBJ-UHFFFAOYSA-N,"herbal, oily, fermented, nutty, sweet, fruity, ethereal","frozenset({'fruity', 'sweet', 'herbal', 'ethereal', 'oily', 'fermented', 'nutty'})",7
-SML0115,2,G003,14,C1=CN=CC=N1,KYQCOXFCLRTKLS-UHFFFAOYSA-N,"musty, pungent, hazelnut, nutty, sweet, roasted","frozenset({'sweet', 'roasted', 'musty', 'hazelnut', 'pungent', 'nutty'})",6
-SML0251,2,G003,14,CC1=CC[C@@H](C=C1)C(C)C,OGLDWXZKYODSOB-SNVBAGLBSA-N,"terpenic, spicy, citrus, fresh, medicinal","frozenset({'terpenic', 'citrus', 'spicy', 'medicinal', 'fresh'})",5
-SML0298,2,G003,14,CC(C)(CCOC)S,XVHGKKGBUDMTIQ-UHFFFAOYSA-N,"minty, tropical, peach, sweet, grapefruit, sulfurous","frozenset({'tropical', 'sweet', 'peach', 'grapefruit', 'sulfurous', 'minty'})",6
-SML0319,2,G003,14,CCOC(=O)CC(C)C,PPXUHEORWJQRHJ-UHFFFAOYSA-N,"estery, winey, buttery, sharp, pineapple, sweet, banana, green, fruity, orange, apple","frozenset({'pineapple', 'banana', 'sweet', 'green', 'fruity', 'orange', 'winey', 'buttery', 'sharp', 'apple', 'estery'})",11
-SML0353,2,G003,14,CCOC(=O)C(C)C,WDAXFOBOLVPGLV-UHFFFAOYSA-N,"rummy, pungent, rum, sweet, fruity, ethereal, alcoholic, apple","frozenset({'fruity', 'sweet', 'rummy', 'ethereal', 'rum', 'alcoholic', 'apple', 'pungent'})",8
-SML0414,2,G003,14,CC(C)C1C(COC(O1)(C)C)(C)C,WVYKHQRCBWWGFK-UHFFFAOYSA-N,"herbal, earthy, green, woody, fruity","frozenset({'green', 'fruity', 'herbal', 'woody', 'earthy'})",5
-SML0468,2,G003,14,CC(C)CCN,BMFVGAAISNGQNM-UHFFFAOYSA-N,cheesy,frozenset({'cheesy'}),1
-SML0480,2,G003,14,CCCCCCCOC(=O)C(C)C,RFDUMBPGZUIKOG-UHFFFAOYSA-N,"estery, apricot, herbal, tropical, warm, peach, pineapple, sweet, floral, green, fruity, cherry, apple","frozenset({'tropical', 'pineapple', 'sweet', 'peach', 'green', 'herbal', 'fruity', 'cherry', 'apricot', 'warm', 'floral', 'estery', 'apple'})",13
-SML0522,2,G003,14,CC(=C)[C@H]1CCC(=CC1)C=O,RUMOYJJNUMEFDD-SNVBAGLBSA-N,"minty, herbal, spicy, fatty, oily, fresh, green, cherry, grassy","frozenset({'green', 'cherry', 'herbal', 'spicy', 'fresh', 'oily', 'minty', 'grassy', 'fatty'})",9
-SML0526,2,G003,14,CC(=C)[C@@H]1CCC(=CC1)C=O,RUMOYJJNUMEFDD-JTQLQIEISA-N,,frozenset(),0
-SML0528,2,G003,14,C(CCCCO)CCCCO,ALVZNPYWJMLXKV-UHFFFAOYSA-N,,frozenset(),0
-SML0581,2,G003,14,CCOC(=O)CC1(OCCO1)C,XWEOGMYZFCHQNT-UHFFFAOYSA-N,"tropical, plum, sweet, pine, green, woody, fruity, apple","frozenset({'tropical', 'green', 'sweet', 'fruity', 'woody', 'pine', 'apple', 'plum'})",8
-SML0594,2,G003,14,CC1CC(CO1)(C)C2=CC=CC=C2,GPMLJOOQCIHFET-UHFFFAOYSA-N,"herbal, aromatic, citrus, floral, grapefruit, fresh, green, woody","frozenset({'green', 'herbal', 'grapefruit', 'citrus', 'woody', 'floral', 'aromatic', 'fresh'})",8
-SML0191,3,G004,13,CCCC/C=C/C=C/C=O,ZHHYXNZJDGDGPJ-BSWSSELBSA-N,"cucumber, fatty, chicken, melon, nutty, green, waxy","frozenset({'cucumber', 'green', 'chicken', 'waxy', 'melon', 'nutty', 'fatty'})",7
-SML0249,3,G004,13,CCCC/C=C/C=O,NDFKTBCGKNOHPJ-AATRIKPKSA-N,"pungent, fatty, oily, sweet, fresh, green, fruity, vegetable, apple","frozenset({'green', 'fruity', 'sweet', 'fatty', 'vegetable', 'oily', 'apple', 'pungent', 'fresh'})",9
-SML0335,3,G004,13,CC(=CCCC(=C)C=C)C,UAHWPYUMFXYFJY-UHFFFAOYSA-N,"terpenic, celery, peppery, herbal, spicy, balsamic, rose, woody","frozenset({'terpenic', 'herbal', 'spicy', 'celery', 'rose', 'woody', 'balsamic', 'peppery'})",8
-SML0456,3,G004,13,CCCCCC(C)(C)O,ACBMYYVZWKYLIP-UHFFFAOYSA-N,,frozenset(),0
-SML0457,3,G004,13,CCCCCC[C@H](C)O,SJWFXCIHNDVPSH-QMMMGPOBSA-N,"fatty, oily, grape, mushroom, creamy","frozenset({'mushroom', 'fatty', 'oily', 'creamy', 'grape'})",5
-SML0470,3,G004,13,CCCCCCC=C,KWKAKUADMBZCLK-UHFFFAOYSA-N,gasoline,frozenset({'gasoline'}),1
-SML0472,3,G004,13,CCCCC/C(=C\C1=CC=CC=C1)/C=O,HMKKIXGYKWDQSV-SDNWHVSQSA-N,floral,frozenset({'floral'}),1
-SML0485,3,G004,13,CC1=CC=C(C=C1)OC(=O)CC2=CC=CC=C2,OJEQSSJFSNLMLB-UHFFFAOYSA-N,"lily, hyacinth, honey, animal, rose","frozenset({'lily', 'hyacinth', 'rose', 'animal', 'honey'})",5
-SML0493,3,G004,13,C1OC2=C(O1)C=C(C=C2)CO,BHUIUXNAPJIDOG-UHFFFAOYSA-N,"powdery, sweet, vanilla","frozenset({'sweet', 'vanilla', 'powdery'})",3
-SML0506,3,G004,13,CCCCCCCC=CC=O,MMFCJPPRCYDLLZ-UHFFFAOYSA-N,"fatty, floral, rose, green, aldehydic, orange","frozenset({'green', 'aldehydic', 'orange', 'rose', 'floral', 'fatty'})",6
-SML0531,3,G004,13,CCCCC/C(=C\C1=CC=CC=C1)/C(OC)OC,QCHZKUPVENJLAW-FYWRMAATSA-N,"jasmine, floral, green","frozenset({'green', 'jasmine', 'floral'})",3
-SML0534,3,G004,13,CC=CC(=O)C1=C(CCCC1(C)C)C,BGTBFNDXYDYBEY-UHFFFAOYSA-N,"honey, tobacco, plum, floral, rose, fruity","frozenset({'fruity', 'rose', 'tobacco', 'floral', 'honey', 'plum'})",6
-SML0547,3,G004,13,CCCCCCCCCCOC(=O)C,NUPSHWCALHZGOV-UHFFFAOYSA-N,"clean, soapy, fatty, citrus, pineapple, sweet, rose, fresh, waxy, fruity, creamy, orange","frozenset({'pineapple', 'clean', 'sweet', 'fruity', 'citrus', 'orange', 'fresh', 'rose', 'waxy', 'soapy', 'creamy', 'fatty'})",12
-SML0106,1,G005,11,CCCCCCOC(=O)CCC,XAPCMTMQBXLDBB-UHFFFAOYSA-N,"estery, soapy, sweet, green, waxy, fruity, vegetable, apple","frozenset({'green', 'fruity', 'sweet', 'vegetable', 'soapy', 'apple', 'estery', 'waxy'})",8
-SML0127,1,G005,11,CCC(=O)C=C,JLIDVCMBCGBIEY-UHFFFAOYSA-N,"peppery, spicy, pungent, alliaceous, radish, onion, garlic, ethereal","frozenset({'ethereal', 'spicy', 'radish', 'alliaceous', 'onion', 'pungent', 'garlic', 'peppery'})",8
-SML0224,1,G005,11,C1=CC=CC=C1,UHOVQNZJYSORNB-UHFFFAOYSA-N,,frozenset(),0
-SML0259,1,G005,11,CCOC(C)OCC,DHKHKXVYLBGOIT-UHFFFAOYSA-N,"nutty, sweet, earthy, green, fruity, ethereal, alcoholic, vegetable","frozenset({'green', 'fruity', 'sweet', 'ethereal', 'vegetable', 'alcoholic', 'earthy', 'nutty'})",8
-SML0300,1,G005,11,CC1=CC=C(C=C1)O,IWDCLRJOBJJRNH-UHFFFAOYSA-N,"phenolic, smoky, animal, medicinal","frozenset({'animal', 'medicinal', 'phenolic', 'smoky'})",4
-SML0321,1,G005,11,CCOC(=O)C,XEKOWRVHYACXOJ-UHFFFAOYSA-N,"rummy, weedy, winey, sharp, grape, brandy, sweet, green, fruity, ethereal","frozenset({'green', 'brandy', 'sweet', 'fruity', 'rummy', 'winey', 'ethereal', 'sharp', 'weedy', 'grape'})",10
-SML0358,1,G005,11,CC1=CCC(C=C1)C(C)C,OGLDWXZKYODSOB-UHFFFAOYSA-N,"minty, spicy, mint, citrus, fresh, woody","frozenset({'citrus', 'mint', 'spicy', 'woody', 'minty', 'fresh'})",6
-SML0367,1,G005,11,CC1=CC[C@H](CC1)C(C)(C)O,WUOACPNHFRMFPN-SECBINFHSA-N,"terpenic, floral","frozenset({'terpenic', 'floral'})",2
-SML0375,1,G005,11,CC(=O)CC(C)(C)S,QRNZMFDCKKEPSX-UHFFFAOYSA-N,"tropical, meaty, savory, green, fruity, sulfurous","frozenset({'tropical', 'fruity', 'green', 'sulfurous', 'meaty', 'savory'})",6
-SML0494,1,G005,11,C1=CC=C2C(=C1)C(=CC(=O)O2)O,VXIXUWQIVKSKSA-UHFFFAOYSA-N,,frozenset(),0
-SML0566,1,G005,11,CC(C(=O)C)C(=O)C,GSOHKPVFCOWKPU-UHFFFAOYSA-N,"ketonic, burnt, fruity","frozenset({'fruity', 'burnt', 'ketonic'})",3
-SML0015,1,G006,10,CC(=O)O,QTBSBXVTEAMEQO-UHFFFAOYSA-N,"acidic, pungent, sharp, sour","frozenset({'pungent', 'sharp', 'sour', 'acidic'})",4
-SML0030,1,G006,10,CC(C(=O)O)O,JVTAAEKCZFNVCJ-UHFFFAOYSA-N,"odorless, buttery, sour","frozenset({'buttery', 'sour', 'odorless'})",3
-SML0049,1,G006,10,CCC(=O)O,XBDQKXXYIPTUBI-UHFFFAOYSA-N,"acidic, cheesy, pungent, milky, dairy, sour","frozenset({'milky', 'cheesy', 'acidic', 'sour', 'pungent', 'dairy'})",6
-SML0220,1,G006,10,C(C(=O)O)S,CWERGRDVMFNCDR-UHFFFAOYSA-N,sulfurous,frozenset({'sulfurous'}),1
-SML0602,1,G006,10,C[C@H](C(=O)N[C@H](C)C(=O)O)N,DEFJQIDDEAULHB-QWWZWVQMSA-N,,frozenset(),0
-SML0608,1,G006,10,C([C@@H](C(=O)O)O)O,RBNPOMFGQQGHHO-REOHCLBHSA-N,,frozenset(),0
-SML0611,1,G006,10,CC(=O)N[C@@H](CCC(=O)O)C(=O)O,RFMMMVDNIPUKGG-YFKPBYRVSA-N,,frozenset(),0
-SML0617,1,G006,10,C(CC(=O)O)C(=O)C(=O)O,KPGXRSRHYNQIFN-UHFFFAOYSA-N,odorless,frozenset({'odorless'}),1
-SML0622,1,G006,10,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@H]2O)CCC4=CC(=O)CC[C@]34C,MUMGGOZAMZWBJJ-KZYORJDKSA-N,,frozenset(),0
-SML0748,1,G006,10,C1C2CC(C1C=C2)C(=O)O,FYGUSUBEMUKACF-UHFFFAOYSA-N,"green, fruity","frozenset({'green', 'fruity'})",2
-SML0385,8,G007,10,C1CCCCCC(=O)CCCC=CCCCC1,ABRIMXGLNHCLIP-UHFFFAOYSA-N,,frozenset(),0
-SML0442,8,G007,10,CC(CCC=C(C)C)CC=O,NEHNMFOYXAPHSD-UHFFFAOYSA-N,"herbal, citrus, sweet, floral, dry, rose, green, waxy, aldehydic","frozenset({'green', 'aldehydic', 'sweet', 'herbal', 'citrus', 'rose', 'dry', 'floral', 'waxy'})",9
-SML0662,8,G007,10,C1CCCCCC(=O)CCC=CCCCC1,JIYIHILAGIZIMD-UHFFFAOYSA-N,,frozenset(),0
-SML0667,8,G007,10,C1CCCCCOCCCCOC(=O)CCCC1,MRMOPGVGWFNHIN-UHFFFAOYSA-N,"sweet, waxy, woody, fruity, musk","frozenset({'fruity', 'sweet', 'musk', 'woody', 'waxy'})",5
-SML0670,8,G007,10,C1CCCCOCCCCCCOC(=O)CCC1,MZLRFHKWWCSGHB-UHFFFAOYSA-N,"oily, animal, sweet, floral, fruity, musk","frozenset({'fruity', 'sweet', 'musk', 'oily', 'animal', 'floral'})",6
-SML0680,8,G007,10,CCCCCCCCN1CCCC1=O,WPPOGHDFAVQKLN-UHFFFAOYSA-N,,frozenset(),0
-SML0686,8,G007,10,CCC(C1CCCC/C=C\C1)O,LLYJRIQMURUPPF-XQRVVYSFSA-N,,frozenset(),0
-SML0690,8,G007,10,CC/C=C\CCCCCO,XJHRZBIBSSVCEL-ARJAWSKDSA-N,"juicy, clean, cucumber, fatty, melon, fresh, green, waxy, fruity, vegetable","frozenset({'cucumber', 'clean', 'green', 'fruity', 'fresh', 'vegetable', 'juicy', 'waxy', 'melon', 'fatty'})",10
-SML0693,8,G007,10,CC(CCC=C(C)C)CC#N,MTDAKBBUYMYKAR-UHFFFAOYSA-N,"metallic, lemon, citrus, floral, fresh, waxy","frozenset({'citrus', 'waxy', 'lemon', 'metallic', 'floral', 'fresh'})",6
-SML0694,8,G007,10,CCCCCCCCC(C)C#N,XPCSGXMQGQGBKU-UHFFFAOYSA-N,"lactonic, jasmin, peach, floral, fruity","frozenset({'fruity', 'peach', 'jasmin', 'lactonic', 'floral'})",5
-SML0004,4,G008,8,CCCCOCC(C)O,RWNUSVWFHDHRCJ-UHFFFAOYSA-N,,frozenset(),0
-SML0192,4,G008,8,CC(=CCC/C(=C/C/C=C(\C)/C=C)/C)C,CXENHBSYCFFKJS-VDQVFBMKSA-N,"bergamot, lavender, herbal, berry, citrus, floral, green, woody, vegetable, apple","frozenset({'lavender', 'berry', 'green', 'herbal', 'citrus', 'woody', 'vegetable', 'bergamot', 'floral', 'apple'})",10
-SML0229,4,G008,8,C1=CC=NC=C1,JUJWROOIHBZHMG-UHFFFAOYSA-N,"fishy, burnt, sour","frozenset({'sour', 'fishy', 'burnt'})",3
-SML0245,4,G008,8,CCCC[C@H]1[C@H](CC(=O)O1)C,WNVCMFHPRIBNCW-YUMQZZPRSA-N,coconut,frozenset({'coconut'}),1
-SML0444,4,G008,8,CCCCC/C=C/C=O,LVBXEMGDVWVTGY-VOTSOKGWSA-N,"herbal, cucumber, fatty, leafy, fresh, banana, green, waxy, vegetable","frozenset({'cucumber', 'banana', 'green', 'herbal', 'fatty', 'leafy', 'vegetable', 'waxy', 'fresh'})",9
-SML0703,4,G008,8,C=CCOC(=O)CCC1CCCCC1,TWXUTZNBHUWMKJ-UHFFFAOYSA-N,"tropical, pineapple, sweet, waxy, fruity","frozenset({'tropical', 'fruity', 'sweet', 'pineapple', 'waxy'})",5
-SML0715,4,G008,8,CCCCCC(CC)OC(=O)C,STZUZYMKSMSTOU-UHFFFAOYSA-N,"minty, bergamot, herbal, fatty, anisic, mint, citrus, floral, rose, grapefruit, fresh, green, waxy, aldehydic, woody, apple","frozenset({'green', 'aldehydic', 'herbal', 'citrus', 'grapefruit', 'mint', 'fresh', 'rose', 'woody', 'anisic', 'waxy', 'bergamot', 'floral', 'apple', 'minty', 'fatty'})",16
-SML0725,4,G008,8,CCOC(=O)C1C(O1)C2=CC=CC=C2,GOMAKLPNAAZVCJ-UHFFFAOYSA-N,"strawberry, berry, sweet, caramellic, fruity","frozenset({'berry', 'fruity', 'strawberry', 'sweet', 'caramellic'})",5
-SML0037,8,G009,8,CCCCCCCCCCCCCCCCCC(=O)OC,HPEUJPJOZXNMSJ-UHFFFAOYSA-N,"odorless, oily, waxy","frozenset({'waxy', 'oily', 'odorless'})",3
-SML0242,8,G009,8,CCCCCC1CCC(=O)O1,OALYTRUKMRCXNH-UHFFFAOYSA-N,"fatty, buttery, oily, sweet, coconut, waxy, creamy","frozenset({'sweet', 'oily', 'waxy', 'buttery', 'creamy', 'coconut', 'fatty'})",7
-SML0417,8,G009,8,CCCCCC(CC)O,NMRPBPVERJPACX-UHFFFAOYSA-N,"minty, herbal, spicy, musty, oily, melon, fermented, citrus, nutty, dairy, earthy, green, mushroom, waxy, woody, creamy","frozenset({'green', 'mushroom', 'musty', 'herbal', 'citrus', 'spicy', 'woody', 'oily', 'fermented', 'earthy', 'melon', 'nutty', 'minty', 'creamy', 'dairy', 'waxy'})",16
-SML0443,8,G009,8,CCCCCC1C(CCC1=O)CC(=O)OC,KVWWIYGFBYDJQC-UHFFFAOYSA-N,"lactonic, jasmin, natural, jasmine, tropical, oily, floral, green, fruity","frozenset({'tropical', 'green', 'fruity', 'jasmine', 'jasmin', 'oily', 'lactonic', 'natural', 'floral'})",9
-SML0569,8,G009,8,CCCCCC(=O)CC(=O)C,KFBXUKHERGLHLG-UHFFFAOYSA-N,,frozenset(),0
-SML0671,8,G009,8,CC(CCCC(C)(C)O)C=C,XSNQECSCDATQEL-UHFFFAOYSA-N,"weedy, clean, herbal, citrus, floral, fresh","frozenset({'clean', 'herbal', 'citrus', 'fresh', 'floral', 'weedy'})",6
-SML0688,8,G009,8,CC(C)CCCC(C)CC#N,SAPMLSXAXRULJB-UHFFFAOYSA-N,"metallic, fatty, lemon, citrus, aldehydic","frozenset({'aldehydic', 'citrus', 'lemon', 'metallic', 'fatty'})",5
-SML0691,8,G009,8,CC/C(=C/CCC(C)(C=C)O)/C,KRLBLPBPZSSIGH-CSKARUKUSA-N,"bergamot, lavender, herbal, floral, fresh, green","frozenset({'lavender', 'green', 'herbal', 'bergamot', 'floral', 'fresh'})",6
-SML0126,4,G010,8,CCCCCC/C=C/C=O,BSAIUMLZVGUGKX-BQYQJAHWSA-N,"cucumber, fatty, orris, melon, citrus, green, waxy, aldehydic","frozenset({'cucumber', 'green', 'aldehydic', 'citrus', 'orris', 'waxy', 'melon', 'fatty'})",8
-SML0179,4,G010,8,CC/C=C\CC/C=C/C=O,HZYHMHHBBBSGHB-ODYTWBPASA-N,"cucumber, fatty, violet, melon, leafy, dry, green, vegetable","frozenset({'cucumber', 'green', 'leafy', 'vegetable', 'violet', 'dry', 'melon', 'fatty'})",8
-SML0181,4,G010,8,CC/C=C\CC/C=C\C=O,HZYHMHHBBBSGHB-KPDBFRNYSA-N,,frozenset(),0
-SML0190,4,G010,8,CCCCCCC/C=C/C=C/C=O,QKTZBZWNADPFOL-BNFZFUHLSA-N,"fatty, citrus, meaty, grapefruit, orange","frozenset({'orange', 'grapefruit', 'citrus', 'fatty', 'meaty'})",5
-SML0233,4,G010,8,CC/C=C\CC/C=C/CO,AMXYRHBJZOVHOL-ODYTWBPASA-N,"herbal, cucumber, fatty, oily, violet, leafy, nutty, green","frozenset({'cucumber', 'green', 'herbal', 'leafy', 'oily', 'violet', 'nutty', 'fatty'})",8
-SML0254,4,G010,8,CCCCC/C=C\C=O,LVBXEMGDVWVTGY-SREVYHEPSA-N,"fatty, leafy, green, fruity","frozenset({'green', 'fruity', 'leafy', 'fatty'})",4
-SML0553,4,G010,8,CCCCCCCCC/C=C/C=O,SSNZFFBDIMUILS-ZHACJKMWSA-N,"herbal, metallic, citrus, waxy, aldehydic, orange","frozenset({'aldehydic', 'herbal', 'citrus', 'orange', 'metallic', 'waxy'})",6
-SML0659,4,G010,8,C[C@H]1CC(C2=C(C1(C)C)C[C@@]3([C@H](C2)O3)C)(C)C,OHHWFLWQMHUVFQ-YNZJMPHRSA-N,,frozenset(),0
-SML0084,3,G011,6,CCC(=O)C,ZWEHNKRNPOVVGH-UHFFFAOYSA-N,"ketonic, solvent, sweet, camphoreous, fruity, ethereal","frozenset({'fruity', 'sweet', 'camphoreous', 'ethereal', 'ketonic', 'solvent'})",6
-SML0092,3,G011,6,CC1(C2CCC(O1)(CC2)C)C,WEEGYLXZBRQIMU-UHFFFAOYSA-N,"herbal, camphoreous, fresh, medicinal","frozenset({'camphoreous', 'herbal', 'fresh', 'medicinal'})",4
-SML0281,3,G011,6,CCC1=CC(=CC=C1)O,HMNKTRSOROOSPP-UHFFFAOYSA-N,"phenolic, musty","frozenset({'musty', 'phenolic'})",2
-SML0331,3,G011,6,CCCCCCOC(=O)C,AOGQPLXWSUTHQB-UHFFFAOYSA-N,"fatty, pear, sweet, fresh, banana, green, fruity, apple","frozenset({'banana', 'green', 'sweet', 'fruity', 'fatty', 'pear', 'apple', 'fresh'})",8
-SML0461,3,G011,6,CCC(=O)OC,RJUFJBKOKNCXHH-UHFFFAOYSA-N,"rummy, strawberry, rum, fresh, fruity, ethereal, apple","frozenset({'fruity', 'strawberry', 'rummy', 'ethereal', 'rum', 'apple', 'fresh'})",7
-SML0554,3,G011,6,C/C=C(\C)/C=O,ACWQBUSCFPJUPN-HWKANZROSA-N,"herbal, green, fruity, almond","frozenset({'green', 'fruity', 'almond', 'herbal'})",4
-SML0022,6,G012,6,CCCCCCCCCCCCCCCCCC(=O)OCC,MVLVMROFTAUDAG-UHFFFAOYSA-N,"odorless, waxy","frozenset({'waxy', 'odorless'})",2
-SML0328,6,G012,6,CCOC(=O)C1CCCCC1,JJOYCHKVKWDMEA-UHFFFAOYSA-N,"cheesy, winey, berry, fermented, brandy, fruity, apple","frozenset({'berry', 'brandy', 'fruity', 'winey', 'fermented', 'cheesy', 'apple'})",7
-SML0540,6,G012,6,CCC(=C)CCCC(C)(C)O,VOATZOQREKBJMT-UHFFFAOYSA-N,,frozenset(),0
-SML0564,6,G012,6,C[C@H]1CC[C@@H](C(=O)C1)C(C)C,NFLGAXVYCFJBMK-DTWKUNHWSA-N,"minty, mentholic, mint","frozenset({'minty', 'mentholic', 'mint'})",3
-SML0673,6,G012,6,CC(C)(CCCC(=C)C=C)O,DUNCVNHORHNONW-UHFFFAOYSA-N,"lavender, citrus, floral, fresh, woody","frozenset({'lavender', 'citrus', 'woody', 'floral', 'fresh'})",5
-SML0720,6,G012,6,C1CCCCOC(=O)CCC1,FTXUQEKXCJSWMO-UHFFFAOYSA-N,,frozenset(),0
-SML0020,9,G013,5,CCCCCCCCCCCC(=O)OCC,MMXKVMNBHPAILY-UHFFFAOYSA-N,"clean, soapy, fatty, oily, sweet, floral, waxy, fruity","frozenset({'clean', 'sweet', 'fruity', 'oily', 'waxy', 'soapy', 'floral', 'fatty'})",8
-SML0039,9,G013,5,CCCCCCCCCCCCCC(=O)OC,ZAZKJZBWRNNLDS-UHFFFAOYSA-N,"fatty, orris, oily, cognac, waxy","frozenset({'fatty', 'orris', 'oily', 'cognac', 'waxy'})",5
-SML0336,9,G013,5,CCCCCCCC(=O)C,VKCYHJWLYTUGCC-UHFFFAOYSA-N,"weedy, soapy, herbal, cheesy, fatty, sweet, coconut, earthy, fresh, green, waxy, fruity","frozenset({'green', 'fruity', 'sweet', 'herbal', 'fresh', 'waxy', 'soapy', 'cheesy', 'earthy', 'weedy', 'coconut', 'fatty'})",12
-SML0627,9,G013,5,CCCCCCCCCCCCCCCCCC(=O)NCCO,OTGQIQQTPXJQRG-UHFFFAOYSA-N,,frozenset(),0
-SML0629,9,G013,5,CCCCCCCCCCCCCCCC(=O)NCCO,HXYVTAGFYLMHSO-UHFFFAOYSA-N,,frozenset(),0
-SML0256,2,G014,5,CC/C=C\CC=O,GXANMBISFKBPEX-ARJAWSKDSA-N,"weedy, pungent, fatty, leafy, fresh, green, fruity, grassy, apple","frozenset({'weedy', 'green', 'fruity', 'fresh', 'leafy', 'apple', 'pungent', 'grassy', 'fatty'})",9
-SML0314,2,G014,5,CCC/C=C/C=O,MBDOYVRWFFCFHM-SNAWJCMRSA-N,"clean, herbal, spicy, cheesy, pungent, fatty, sharp, leafy, fresh, banana, green, aldehydic, fruity, vegetable, grassy, apple","frozenset({'banana', 'clean', 'green', 'aldehydic', 'fruity', 'herbal', 'spicy', 'fresh', 'leafy', 'vegetable', 'sharp', 'cheesy', 'apple', 'pungent', 'grassy', 'fatty'})",16
-SML0373,2,G014,5,CC=CC(=O)C1=C(C=CCC1(C)C)C,POIARNZEYGURDG-UHFFFAOYSA-N,,frozenset(),0
-SML0376,2,G014,5,CCCC/C=C\C=C\C=O,ZHHYXNZJDGDGPJ-IGTJQSIKSA-N,"geranium, pungent, green","frozenset({'pungent', 'geranium', 'green'})",3
-SML0473,2,G014,5,CCCCCC(=O)OCCCCC,WRFZKAGPPQGDDQ-UHFFFAOYSA-N,"estery, fatty, pear, cognac, pineapple, sweet, green, waxy, fruity, apple","frozenset({'pineapple', 'green', 'sweet', 'fruity', 'pear', 'waxy', 'cognac', 'apple', 'estery', 'fatty'})",10
-SML0400,1,G015,5,C(CCCCC(=O)O)CCCCC(=O)O,LWBHHRRTOZQPDM-UHFFFAOYSA-N,,frozenset(),0
-SML0492,1,G015,5,CCC1=CC=CC=C1O,IXQGCWUGDFDQMF-UHFFFAOYSA-N,"phenolic, sweet","frozenset({'sweet', 'phenolic'})",2
-SML0507,1,G015,5,CC(=O)OC1CC2CCC1(C2(C)C)C,KGEKLUUHTZCSIP-UHFFFAOYSA-N,"cedar, mentholic, herbal, spicy, balsamic, sweet, camphoreous, pine, woody","frozenset({'sweet', 'camphoreous', 'herbal', 'cedar', 'spicy', 'woody', 'pine', 'balsamic', 'mentholic'})",9
-SML0631,1,G015,5,C1=C(N(C(=O)NC1=O)[C@H]2[C@@H]([C@@H]([C@H](O2)CO)O)O)C(=O)O,FKCRAVPPBFWEJD-XVFCMESISA-N,,frozenset(),0
-SML0639,1,G015,5,C(C(C=O)O)O,MNQZXJOMYWMBOU-UHFFFAOYSA-N,,frozenset(),0
-SML0689,9,G016,4,CC/C=C\CCCCO,VDHRTASWKDTLER-ARJAWSKDSA-N,"melon, green, mushroom, fruity","frozenset({'green', 'fruity', 'mushroom', 'melon'})",4
-SML0704,9,G016,4,CCCCCCC1CCCC1=O,JTHVYOIHZNYRCC-UHFFFAOYSA-N,"jasmine, floral, green, fruity","frozenset({'green', 'fruity', 'jasmine', 'floral'})",4
-SML0708,9,G016,4,CCCCCC1CCCC1=O,VNWOJVJCRAHBJJ-UHFFFAOYSA-N,"jasmin, herbal, oily, floral, coconut, rose, green","frozenset({'green', 'herbal', 'jasmin', 'rose', 'oily', 'floral', 'coconut'})",7
-SML0717,9,G016,4,CCCCCCCC1CCCC1=O,PJXHBTZLHITWFX-UHFFFAOYSA-N,"jasmin, tropical, oily, peach, fresh, fruity","frozenset({'tropical', 'fruity', 'peach', 'jasmin', 'oily', 'fresh'})",6
-SML0609,3,G017,4,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CCC4=CC(=O)CC[C@]34CO,XGUHPTGEXRHMQQ-BGJMDTOESA-N,,frozenset(),0
-SML0610,3,G017,4,C[C@]12CCC(=O)C[C@@H]1CC[C@@H]3[C@@H]2CC[C@]4([C@H]3CCC4=O)C,RAJWOBJTTGJROA-WZNAKSSCSA-N,,frozenset(),0
-SML0621,3,G017,4,C1CC(=O)NC1,HNJBEVLQSNELDL-UHFFFAOYSA-N,,frozenset(),0
-SML0623,3,G017,4,C[C@]12CC[C@H]3[C@H]([C@@H]1C[C@H]([C@@H]2O)O)CCC4=C3C=CC(=C4)O,PROQIPRRNZUXQM-ZXXIGWHRSA-N,,frozenset(),0
-SML0223,5,G018,4,CCCCCCCC(=O)OCCCCCC,PBGWNXWNCSSXCO-UHFFFAOYSA-N,"estery, herbal, fatty, berry, green, waxy, fruity, apple","frozenset({'berry', 'green', 'fruity', 'herbal', 'waxy', 'apple', 'estery', 'fatty'})",8
-SML0446,5,G018,4,CC(C)CC(C)CC=C(C)C=O,LCLLDHVSJPTTSF-UHFFFAOYSA-N,,frozenset(),0
-SML0542,5,G018,4,CC(=CCCC(=CCCC(=C)C=C)C)C,JSNRRGGBADWTMC-UHFFFAOYSA-N,,frozenset(),0
-SML0678,5,G018,4,CCC(C)(CCCC(C)C)O,DLHQZZUEERVIGQ-UHFFFAOYSA-N,"lily, citrus, sweet, floral, fresh","frozenset({'sweet', 'lily', 'citrus', 'floral', 'fresh'})",5
-SML0218,2,G019,4,C1CCN(CC1)C=O,FEWLNYSYJNLUOO-UHFFFAOYSA-N,,frozenset(),0
-SML0304,2,G019,4,CSCC=C,NVLPQIPTCCLBEU-UHFFFAOYSA-N,"alliaceous, onion, garlic, sulfurous","frozenset({'alliaceous', 'onion', 'garlic', 'sulfurous'})",4
-SML0337,2,G019,4,CCC(=O)C(=O)C,TZMFJUDUGYTVRY-UHFFFAOYSA-N,"cheesy, pungent, fatty, buttery, oily, nutty, sweet, caramellic, creamy","frozenset({'sweet', 'caramellic', 'oily', 'buttery', 'cheesy', 'pungent', 'nutty', 'creamy', 'fatty'})",9
-SML0374,2,G019,4,CCC1=CC(=C(C=C1)O)OC,CHWNEIVBYREQRF-UHFFFAOYSA-N,"clove, spicy, phenolic, smoky, sweet, woody, vanilla, medicinal","frozenset({'sweet', 'clove', 'spicy', 'woody', 'vanilla', 'phenolic', 'smoky', 'medicinal'})",8
-SML0008,2,G020,4,CC1=CN=C(C=N1)C,LCZUOKDVTBMCMX-UHFFFAOYSA-N,"powdery, musty, chocolate, nutty, earthy, roasted, woody, cocoa, medicinal, grassy","frozenset({'roasted', 'musty', 'cocoa', 'woody', 'chocolate', 'medicinal', 'earthy', 'powdery', 'nutty', 'grassy'})",10
-SML0068,2,G020,4,CCC1=NC=C(N=C1CC)C,PSINWXIDJYEXLO-UHFFFAOYSA-N,"musty, hazelnut, potato, chocolate, nutty, meaty, earthy, roasted, green, vegetable","frozenset({'green', 'roasted', 'musty', 'hazelnut', 'vegetable', 'chocolate', 'meaty', 'earthy', 'nutty', 'potato'})",10
-SML0535,2,G020,4,CC1=C(C=CO1)SSC2=C(OC=C2)C,OHDFENKFSKIFBJ-UHFFFAOYSA-N,"chicken, meaty, onion, roasted, savory, sulfurous","frozenset({'roasted', 'chicken', 'sulfurous', 'meaty', 'onion', 'savory'})",6
-SML0745,2,G020,4,CCC1=NC=C(N=C1C)C,JZBCTZLGKSYRSF-UHFFFAOYSA-N,"musty, coffee, hazelnut, chocolate, burnt, nutty, roasted, caramellic, almond, cocoa","frozenset({'roasted', 'musty', 'caramellic', 'hazelnut', 'almond', 'cocoa', 'burnt', 'chocolate', 'nutty', 'coffee'})",10
-SML0183,6,G021,4,CC/C=C\CCCCCC=O,UZFFFFWQKMPLAC-ARJAWSKDSA-N,"cucumber, citrus, aldehydic","frozenset({'cucumber', 'aldehydic', 'citrus'})",3
-SML0423,6,G021,4,CCCCCCC(=O)C,ZPVFWPFBNIEHGJ-UHFFFAOYSA-N,"natural, weedy, herbal, cheesy, ketonic, musty, fatty, dairy, earthy, green, woody, fruity, apple","frozenset({'green', 'fruity', 'musty', 'herbal', 'fatty', 'woody', 'ketonic', 'cheesy', 'earthy', 'natural', 'apple', 'dairy', 'weedy'})",13
-SML0517,6,G021,4,CCCC/C=C\CCCCC=O,YBBNUDDZOWRHOD-WAYWQWQTSA-N,,frozenset(),0
-SML0538,6,G021,4,CC/C=C\CCCCC=O,RTNPCOBSXBGDMO-ARJAWSKDSA-N,"cucumber, orris, melon, citrus, fresh, green, waxy, woody, vegetable","frozenset({'cucumber', 'green', 'citrus', 'orris', 'woody', 'vegetable', 'waxy', 'melon', 'fresh'})",9
-SML0076,6,G022,4,C1CCCCCCOC(=O)/C=C/CCCCC1,KHLFMZDGADSQGR-ACCUITESSA-N,"sweet, waxy, musk","frozenset({'sweet', 'musk', 'waxy'})",3
-SML0386,6,G022,4,CC1CC=CCCCCCCCCCC(=O)C1,NKMKFQCVDZVEJR-UHFFFAOYSA-N,,frozenset(),0
-SML0664,6,G022,4,C1CCCCCC(=O)CCC/C=C\CCCC1,ABRIMXGLNHCLIP-VURMDHGXSA-N,"amber, powdery, dry, musk","frozenset({'amber', 'dry', 'powdery', 'musk'})",4
-SML0738,6,G022,4,CC1CC=CCCCCCCCCC(=O)C1,ZFGBKXBPHOUSJX-UHFFFAOYSA-N,"powdery, fatty, anisic, animal, woody, musk","frozenset({'musk', 'woody', 'anisic', 'animal', 'powdery', 'fatty'})",6
-SML0294,4,G023,4,C=CC1=CC=C(C=C1)O,FUGYGGDSWSUORM-UHFFFAOYSA-N,"chemical, spicy, phenolic, musty, meaty, sweet, medicinal","frozenset({'sweet', 'musty', 'spicy', 'phenolic', 'chemical', 'medicinal', 'meaty'})",7
-SML0445,4,G023,4,CCC/C=C/C=C/C=O,DVVATNQISMINCX-YTXTXJHMSA-N,"fatty, melon, pear, citrus, green, fruity","frozenset({'green', 'fruity', 'citrus', 'pear', 'melon', 'fatty'})",6
-SML0585,4,G023,4,COC1CC2CC1C3C2CC(C3)C=O,UOGMZEGKCNHMBF-UHFFFAOYSA-N,"marine, ozone, floral, fresh, aldehydic, woody","frozenset({'aldehydic', 'marine', 'ozone', 'woody', 'floral', 'fresh'})",6
-SML0647,4,G023,4,CC(=O)NCCCCN,KLZGKIDSEJWEDW-UHFFFAOYSA-N,,frozenset(),0
-SML0209,4,G024,3,C[C@@H]1CCCCCCCCCCCCC(=O)C1,ALHUZKCOMYUFRB-OAHLLOKOSA-N,"powdery, animal, musk","frozenset({'animal', 'powdery', 'musk'})",3
-SML0389,4,G024,3,CC1CCCCCCCCCCCC(=O)C1,VPQWBNWSLZYYFH-UHFFFAOYSA-N,,frozenset(),0
-SML0737,4,G024,3,CC1=C(C(=C(C(=C1C)[N+](=O)[O-])C(C)(C)C)[N+](=O)[O-])C,MINYPECWDZURGR-UHFFFAOYSA-N,"powdery, fatty, sweet, musk","frozenset({'sweet', 'powdery', 'musk', 'fatty'})",4
-SML0210,5,G025,3,C[C@H]1CCCCCCCCCCCCC(=O)C1,ALHUZKCOMYUFRB-HNNXBMFYSA-N,,frozenset(),0
-SML0384,5,G025,3,C1CCCCCCCC(=O)CCCCCC1,OSOIQJGOYGSIMF-UHFFFAOYSA-N,"natural, powdery, animal, musk","frozenset({'animal', 'powdery', 'natural', 'musk'})",4
-SML0668,5,G025,3,CC1CCOC(=O)CCCCCCC/C=C\C1,NUSRNVWNTPMBJA-VURMDHGXSA-N,,frozenset(),0
-SML0036,7,G026,3,CCCCCCCCCCCCCCCC(=O)OC,FLIACVVOZYBSBS-UHFFFAOYSA-N,"fatty, orris, oily, sweet, waxy","frozenset({'sweet', 'fatty', 'orris', 'oily', 'waxy'})",5
-SML0143,7,G026,3,CCCCCC(C=C)O,VSMOENVRRABVKN-UHFFFAOYSA-N,"chicken, oily, sweet, earthy, green, mushroom, vegetable","frozenset({'green', 'sweet', 'chicken', 'mushroom', 'vegetable', 'oily', 'earthy'})",7
-SML0709,7,G026,3,CCCCCC1C(CC(=O)O1)C,LOQFOBUZYRBURV-UHFFFAOYSA-N,"lactonic, metallic, buttery, plum, floral, coconut, waxy","frozenset({'buttery', 'lactonic', 'metallic', 'floral', 'coconut', 'waxy', 'plum'})",7
-SML0320,5,G027,3,CCOC(=O)CCC(C)C,OFQRUTMGVBMTFQ-UHFFFAOYSA-N,"pineapple, fruity, apple","frozenset({'pineapple', 'fruity', 'apple'})",3
-SML0355,5,G027,3,CC/C=C/CC/C=C/CO,AMXYRHBJZOVHOL-DYWGDJMRSA-N,green,frozenset({'green'}),1
-SML0453,5,G027,3,CCCCC(=O)C,QQZOPKMRPOGIEB-UHFFFAOYSA-N,"cheesy, ketonic, buttery, meaty, dairy, fruity","frozenset({'fruity', 'ketonic', 'buttery', 'cheesy', 'dairy', 'meaty'})",6
-SML0296,4,G028,3,CCC1=CC=C(C=C1)O,HXDOZKJGKXYMEW-UHFFFAOYSA-N,"phenolic, smoky, animal, savory, woody","frozenset({'woody', 'phenolic', 'smoky', 'animal', 'savory'})",5
-SML0475,4,G028,3,C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O,ZCTQGTTXIYCGGC-UHFFFAOYSA-N,"clean, herbal, balsamic, oily, sweet","frozenset({'clean', 'sweet', 'herbal', 'oily', 'balsamic'})",5
-SML0632,4,G028,3,CC(=O)NC1=CC=C(C=C1)O,RZVAJINKPMORJF-UHFFFAOYSA-N,,frozenset(),0
-SML0293,3,G029,3,COC1=C(C=CC(=C1)C=C)O,YOMSJEATGXXYPX-UHFFFAOYSA-N,"clove, peppery, powdery, spicy, phenolic, smoky, sweet, woody","frozenset({'sweet', 'clove', 'spicy', 'woody', 'phenolic', 'smoky', 'powdery', 'peppery'})",8
-SML0514,3,G029,3,COC1=CC(=CC(=C1O)OC)C=O,KCDXJAYRVLXPFO-UHFFFAOYSA-N,"balsamic, chocolate, smoky, sweet, floral, green, woody, vanilla","frozenset({'green', 'sweet', 'woody', 'vanilla', 'smoky', 'balsamic', 'chocolate', 'floral'})",8
-SML0587,3,G029,3,CC1=C(C=C(C=C1)C(C)C)O,RECUKUPTGUEGMW-UHFFFAOYSA-N,"cooling, herbal, spicy, phenolic, smoky, camphoreous, woody, medicinal","frozenset({'camphoreous', 'herbal', 'spicy', 'woody', 'phenolic', 'smoky', 'medicinal', 'cooling'})",8
-SML0390,1,G030,3,C1CCCCOC(=O)CCCCC/C=C\CCC1,NVIPUOMWGQAOIT-RQOWECAXSA-N,"musty, animal, musk","frozenset({'animal', 'musty', 'musk'})",3
-SML0599,1,G030,3,C1CCC/C=C\CCCCCCC(=O)CCC1,ZGEHHVDYDNXYMW-UPHRSURJSA-N,"balsamic, tobacco, animal, floral, dry, waxy, musk","frozenset({'musk', 'balsamic', 'dry', 'animal', 'tobacco', 'floral', 'waxy'})",7
-SML0601,1,G030,3,CC1C/C=C/CCCCCCCCCC(=O)C1,NKMKFQCVDZVEJR-CSKARUKUSA-N,"soapy, animal, musk","frozenset({'soapy', 'animal', 'musk'})",3
-SML0655,7,G031,3,CCC(C)CCCC(C)(C)O,WRFXXJKURVTLSY-UHFFFAOYSA-N,"lily, citrus, sweet, floral, fresh","frozenset({'sweet', 'lily', 'citrus', 'floral', 'fresh'})",5
-SML0716,7,G031,3,CCCCCC(CCCC)O,SZMNDOUFZGODBR-UHFFFAOYSA-N,,frozenset(),0
-SML0733,7,G031,3,CC(C)CCCC(C)CC=O,UCSIFMPORANABL-UHFFFAOYSA-N,"lemon, citrus, fresh, green, aldehydic","frozenset({'green', 'aldehydic', 'citrus', 'lemon', 'fresh'})",5
-SML0019,8,G032,3,CCCCCCCCCC(=O)OCC,RGXWDWUGBIJHDO-UHFFFAOYSA-N,"fatty, winey, oily, grape, brandy, nutty, cognac, sweet, waxy, fruity, apple","frozenset({'brandy', 'sweet', 'fruity', 'winey', 'fatty', 'oily', 'waxy', 'cognac', 'apple', 'nutty', 'grape'})",11
-SML0240,8,G032,3,CCCCCCC1CCC(=O)O1,IFYYFLINQYPWGJ-UHFFFAOYSA-N,"fatty, buttery, oily, peach, sweet, coconut, fresh, waxy, fruity, creamy","frozenset({'fruity', 'sweet', 'peach', 'fresh', 'oily', 'waxy', 'buttery', 'creamy', 'coconut', 'fatty'})",10
-SML0244,8,G032,3,CCCCCCCC1CCC(=O)O1,PHXATPHONSXBIL-UHFFFAOYSA-N,"lactonic, apricot, ketonic, fatty, peach, coconut, fruity, creamy","frozenset({'fruity', 'peach', 'ketonic', 'lactonic', 'apricot', 'creamy', 'coconut', 'fatty'})",8
-SML0257,2,G033,3,CC/C=C\CCC=O,VVGOCOMZRGWHPI-ARJAWSKDSA-N,"fatty, milky, oily, dairy, green, creamy, vegetable","frozenset({'green', 'milky', 'vegetable', 'oily', 'creamy', 'dairy', 'fatty'})",7
-SML0455,2,G033,3,CCCCC[C@@H](C)O,CETWDUZRCINIHU-SSDOTTSWSA-N,"fatty, oily, sweet, fruity","frozenset({'fruity', 'sweet', 'oily', 'fatty'})",4
-SML0459,2,G033,3,CCCCC[C@H](C)O,CETWDUZRCINIHU-ZETCQYMHSA-N,"cheesy, fatty, oily, mushroom","frozenset({'mushroom', 'cheesy', 'oily', 'fatty'})",4
-SML0121,1,G034,3,CC1C(SC(=N1)C)C,CIEKNJJOENYFQL-UHFFFAOYSA-N,,frozenset(),0
-SML0122,1,G034,3,CC1=CN=C(C(=N1)C)C,IAEGWXHKWJGQAZ-UHFFFAOYSA-N,"powdery, musty, coffee, hazelnut, potato, burnt, nutty, earthy, roasted, cocoa","frozenset({'roasted', 'musty', 'hazelnut', 'cocoa', 'burnt', 'powdery', 'earthy', 'nutty', 'coffee', 'potato'})",10
-SML0132,1,G034,3,CC1C(=O)C(=C(O1)C)OC,SIMKGHMLPVDSJE-UHFFFAOYSA-N,"musty, coffee, potato, winey, brandy, meaty, sweet, caramellic, mushroom, fruity, cocoa, vegetable","frozenset({'brandy', 'sweet', 'mushroom', 'musty', 'fruity', 'caramellic', 'winey', 'cocoa', 'vegetable', 'meaty', 'coffee', 'potato'})",12
-SML0125,1,G035,3,CCCCC(=O)O,NQPDZGIKBAWPEJ-UHFFFAOYSA-N,"acidic, cheesy, tobacco, milky, sharp, fruity, sour","frozenset({'fruity', 'milky', 'sharp', 'cheesy', 'acidic', 'tobacco', 'sour'})",7
-SML0740,1,G035,3,CCCCC(C)C(=O)O,CVKMFSAVYPAZTQ-UHFFFAOYSA-N,"acidic, cheesy, fatty, chicken, oily, roasted, savory, fruity","frozenset({'fruity', 'chicken', 'roasted', 'oily', 'cheesy', 'acidic', 'fatty', 'savory'})",8
-SML0742,1,G035,3,CCC/C(=C/C(=O)O)/C,NTWSIWWJPQHFTO-AATRIKPKSA-N,,frozenset(),0
-SML0198,2,G036,3,CCCC(=O)C,XNLICIUVMPYHGG-UHFFFAOYSA-N,"ketonic, winey, fermented, rum, dairy, sweet, banana, woody, fruity, ethereal","frozenset({'banana', 'fruity', 'sweet', 'winey', 'ethereal', 'rum', 'woody', 'ketonic', 'fermented', 'dairy'})",10
-SML0280,2,G036,3,CCC(=O)C1=NCCC1,OVNCGQSYSSYBPO-UHFFFAOYSA-N,"fishy, roasted","frozenset({'roasted', 'fishy'})",2
-SML0545,2,G036,3,CCC1=C(C(=O)C=CO1)O,YIKYNHJUKRTCJL-UHFFFAOYSA-N,"strawberry, sweet, caramellic, fruity","frozenset({'sweet', 'fruity', 'strawberry', 'caramellic'})",4
-SML0282,1,G037,2,CC1=C(C(=O)C=CO1)O,XPCTZQVDEJYUGT-UHFFFAOYSA-N,"jammy, bready, strawberry, berry, burnt, sweet, caramellic, fruity","frozenset({'berry', 'fruity', 'strawberry', 'sweet', 'caramellic', 'jammy', 'burnt', 'bready'})",8
-SML0430,1,G037,2,CC1(C2CCC1(C(=O)C2)C)C,DSSYKIVIOFKYAU-UHFFFAOYSA-N,"mint, camphoreous, fresh","frozenset({'mint', 'camphoreous', 'fresh'})",3
-SML0047,4,G038,2,CC1=CC=C(C=C1)C(C)C,HFPZCAJZSCWRBC-UHFFFAOYSA-N,"citrus, fresh, woody","frozenset({'fresh', 'woody', 'citrus'})",3
-SML0562,4,G038,2,CC(C)C1=CC=CC=C1,RWGFKTVRMDUZSP-UHFFFAOYSA-N,,frozenset(),0
-SML0345,5,G039,2,CC(C1=CC=CC=C1)S,QZZBJCFNHPYNKO-UHFFFAOYSA-N,"tropical, meaty, floral, sulfurous","frozenset({'tropical', 'sulfurous', 'floral', 'meaty'})",4
-SML0572,5,G039,2,CCC(C1=CC=CC=C1)O,DYUQAZSOFZSPHD-UHFFFAOYSA-N,"balsamic, sweet, floral, rose","frozenset({'balsamic', 'sweet', 'rose', 'floral'})",4
-SML0344,10,G040,2,CSCC1=CC=CC=C1,OFQPKKGMNWASPN-UHFFFAOYSA-N,"chicken, burnt, meaty, beefy, roasted, savory, horseradish, sulfurous","frozenset({'roasted', 'chicken', 'savory', 'sulfurous', 'beefy', 'burnt', 'horseradish', 'meaty'})",8
-SML0465,10,G040,2,CCOC1=CC=CC=C1,DLRJIFUOBPOJNS-UHFFFAOYSA-N,"anisic, sweet","frozenset({'sweet', 'anisic'})",2
-SML0329,12,G041,2,C1=COC(=C1)CS,ZFFTZDQKIXPDAF-UHFFFAOYSA-N,"coffee, alliaceous, fatty, chicken, oily, smoky, burnt, meaty, caramellic, savory, sulfurous","frozenset({'chicken', 'caramellic', 'savory', 'sulfurous', 'oily', 'burnt', 'smoky', 'alliaceous', 'coffee', 'fatty', 'meaty'})",11
-SML0346,12,G041,2,C1=CC=C(C=C1)CS,UENWRTRMUIOCKN-UHFFFAOYSA-N,"minty, coffee, alliaceous, sharp, onion, garlic, horseradish, sulfurous","frozenset({'garlic', 'sulfurous', 'horseradish', 'alliaceous', 'onion', 'sharp', 'minty', 'coffee'})",8
-SML0050,1,G042,2,CC1C(=C(C(=O)O1)O)C,UNYNVICDCJHOPO-UHFFFAOYSA-N,"coffee, sweet, caramellic","frozenset({'sweet', 'coffee', 'caramellic'})",3
-SML0246,1,G042,2,CCC1C(=C(C(=O)O1)O)C,IUFQZPBIRYFPFD-UHFFFAOYSA-N,"nutty, sweet, caramellic, fruity","frozenset({'nutty', 'sweet', 'caramellic', 'fruity'})",4
-SML0661,7,G043,2,C1CCCCCCCC(=O)OCCCCCCC1,LOKPJYNMYCVCRM-UHFFFAOYSA-N,"amber, balsamic, animal, sweet, musk","frozenset({'amber', 'sweet', 'musk', 'balsamic', 'animal'})",5
-SML0684,7,G043,2,C/C=C/CCCCCCCC#N,RPLWLQJSZFPHGM-NSCUHMNNSA-N,,frozenset(),0
-SML0481,4,G044,2,CCCCCC/C(=C\C1=CC=CC=C1)/C=O,GUUHFMWKWLOQMM-NTCAYCPXSA-N,"jasmine, sweet, floral","frozenset({'sweet', 'jasmine', 'floral'})",3
-SML0518,4,G044,2,CCCC/C=C\CCC=O,QPULDJYQYDGZEI-WAYWQWQTSA-N,,frozenset(),0
-SML0466,3,G045,2,CCCCOC,CXBDYQVECUFKRK-UHFFFAOYSA-N,,frozenset(),0
-SML0499,3,G045,2,CCC(=O)C(=O)CC,KVFQMAZOBTXCAZ-UHFFFAOYSA-N,"buttery, nutty, caramellic","frozenset({'buttery', 'nutty', 'caramellic'})",3
-SML0450,5,G046,2,C[C@H](C1=CC=CC=C1)O,WAPNOHKVXSQRPX-SSDOTTSWSA-N,"floral, earthy, green","frozenset({'green', 'earthy', 'floral'})",3
-SML0460,5,G046,2,C[C@@H](C1=CC=CC=C1)O,WAPNOHKVXSQRPX-ZETCQYMHSA-N,"hyacinth, strawberry, floral","frozenset({'hyacinth', 'strawberry', 'floral'})",3
-SML0462,2,G047,2,CCC(=O)OC(C)(C)C,JAELLLITIZHOGQ-UHFFFAOYSA-N,"brandy, rum, fruity","frozenset({'brandy', 'fruity', 'rum'})",3
-SML0490,2,G047,2,C(CCCC(=O)Cl)CCCC(=O)Cl,HGEVGSTXQGZPCL-UHFFFAOYSA-N,,frozenset(),0
-SML0436,7,G048,2,CCCC(=O)SC,GRLJIIJNZJVMGP-UHFFFAOYSA-N,"cheesy, cabbage, milky, sweet, garlic, fruity, cocoa, tomato, sulfurous","frozenset({'fruity', 'sweet', 'cabbage', 'milky', 'sulfurous', 'cocoa', 'tomato', 'cheesy', 'garlic'})",9
-SML0695,7,G048,2,CC(C)C(=O)OCC1=CC=CC=C1,UIKJRDSCEYGECG-UHFFFAOYSA-N,"jasmin, juicy, powdery, tropical, oily, sweet, floral, rose, woody, fruity","frozenset({'tropical', 'fruity', 'sweet', 'jasmin', 'rose', 'juicy', 'oily', 'woody', 'powdery', 'floral'})",10
-SML0388,3,G049,2,CC1C/C=C/CCCCCCCCC(=O)C1,ZFGBKXBPHOUSJX-VQHVLOKHSA-N,,frozenset(),0
-SML0665,3,G049,2,C1CCC/C=C\CCCCCCCC(=O)CCC1,ZKVZSBSZTMPBQR-UPHRSURJSA-N,"clean, animal, sweet, dry, musk","frozenset({'clean', 'sweet', 'musk', 'dry', 'animal'})",5
-SML0605,2,G050,2,C(C(=O)C(=O)O)O,HHDDCCUIIUWNGJ-UHFFFAOYSA-N,"radish, cabbage, buttery, burnt, creamy, sour","frozenset({'cabbage', 'burnt', 'radish', 'buttery', 'sour', 'creamy'})",6
-SML0618,2,G050,2,C(=O)(N)N,XSQUKJJJFZCRTK-UHFFFAOYSA-N,,frozenset(),0
-SML0284,5,G051,2,CC(C)(CCOC=O)S,VTAPYUYITKYXJB-UHFFFAOYSA-N,"coffee, tropical, meaty, onion, roasted, caramellic, sulfurous","frozenset({'tropical', 'roasted', 'caramellic', 'sulfurous', 'onion', 'coffee', 'meaty'})",7
-SML0497,5,G051,2,CCCC(=O)C(=O)C,MWVFCEVNXHTDNF-UHFFFAOYSA-N,"jammy, phenolic, fatty, buttery, oily, sweet, dry, caramellic, fruity, creamy","frozenset({'fruity', 'sweet', 'caramellic', 'jammy', 'oily', 'phenolic', 'buttery', 'dry', 'creamy', 'fatty'})",10
-SML0291,2,G052,2,CCCC(CCOC(=O)C)S,JUCARGIKESIVLB-UHFFFAOYSA-N,"raspberry, tropical, pear, floral, grapefruit, fruity, sulfurous","frozenset({'tropical', 'fruity', 'grapefruit', 'sulfurous', 'raspberry', 'pear', 'floral'})",7
-SML0356,2,G052,2,CCCCCC(=O)C(C)C(=O)C,BGVBGAIWXAXBLP-UHFFFAOYSA-N,"burnt, caramellic, fruity, hay","frozenset({'fruity', 'hay', 'caramellic', 'burnt'})",4
-SML0323,6,G053,2,CCCC(=O)OCC,OBNCKNCVKJNDBV-UHFFFAOYSA-N,"juicy, buttery, ripe, cognac, pineapple, banana, fruity, ethereal","frozenset({'pineapple', 'banana', 'fruity', 'ethereal', 'juicy', 'cognac', 'buttery', 'ripe'})",8
-SML0463,6,G053,2,CCCC(=O)OCCC,HUAZGNHGCJGYNP-UHFFFAOYSA-N,"apricot, pineapple, sweet, fruity, ethereal","frozenset({'pineapple', 'fruity', 'sweet', 'ethereal', 'apricot'})",5
-SML0065,6,G054,2,CC1=NC=CN=C1,CAWHJQAVHZEVTJ-UHFFFAOYSA-N,"brown, musty, potato, chocolate, fishy, nutty, earthy, roasted, green, cocoa","frozenset({'green', 'roasted', 'musty', 'cocoa', 'fishy', 'brown', 'chocolate', 'earthy', 'nutty', 'potato'})",10
-SML0134,6,G054,2,CCC1=NC=CN=C1,KVFIJIWMDBAGDP-UHFFFAOYSA-N,"musty, coffee, buttery, fermented, nutty, meaty, roasted, woody, cocoa","frozenset({'roasted', 'musty', 'cocoa', 'woody', 'buttery', 'fermented', 'nutty', 'coffee', 'meaty'})",9
-SML0266,2,G055,2,COC1=C(C(=CC=C1)OC)O,KLIDCXVFHGNTTM-UHFFFAOYSA-N,"powdery, phenolic, balsamic, smoky, sweet, woody, medicinal","frozenset({'sweet', 'woody', 'phenolic', 'smoky', 'balsamic', 'medicinal', 'powdery'})",7
-SML0628,2,G055,2,C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@H]2CC[C@]4([C@H]3CCC4=O)C,AEMFNILZOJDQLW-QAGGRKNESA-N,,frozenset(),0
-SML0276,7,G056,2,CCCCCC1=CC=CC=N1,HSDXVAOHEOSTFZ-UHFFFAOYSA-N,"herbal, fatty, meaty, green, mushroom, vegetable","frozenset({'green', 'mushroom', 'herbal', 'vegetable', 'fatty', 'meaty'})",6
-SML0508,7,G056,2,CC(=C)C1CCC2(OC(C1)OO2)C,JRFITZGBELIFQM-UHFFFAOYSA-N,,frozenset(),0
-SML0206,7,G057,2,CCCCCCCCCCCCCC(=O)C,CJPNOLIZCWDHJK-UHFFFAOYSA-N,"celery, jasmin, fatty, oily, burnt, dairy, floral, fresh, waxy, fruity","frozenset({'fruity', 'jasmin', 'fresh', 'celery', 'oily', 'burnt', 'waxy', 'floral', 'dairy', 'fatty'})",10
-SML0427,7,G057,2,CCCCCCCCCCC(=O)C,LSKONYYRONEBKA-UHFFFAOYSA-N,"citrus, floral, fruity, orange","frozenset({'orange', 'fruity', 'floral', 'citrus'})",4
-SML0160,4,G058,2,CCCCCO,AMQJEAYHLZJPGS-UHFFFAOYSA-N,"bready, pungent, balsamic, winey, oily, solvent, fermented, sweet, alcoholic","frozenset({'sweet', 'winey', 'oily', 'balsamic', 'alcoholic', 'fermented', 'bready', 'pungent', 'solvent'})",9
-SML0469,4,G058,2,CCC1CCC(=O)O1,JBFHTYHTHYHCDJ-UHFFFAOYSA-N,"herbal, tobacco, sweet, coconut, coumarinic, creamy","frozenset({'sweet', 'coumarinic', 'herbal', 'tobacco', 'creamy', 'coconut'})",6
-SML0182,5,G059,2,CCCCC/C=C\CCC=O,CWRKZMLUDFBPAO-SREVYHEPSA-N,"citrus, aldehydic, orange","frozenset({'aldehydic', 'orange', 'citrus'})",3
-SML0590,5,G059,2,CC(C)CCCC(C)(C)O,HGDVHRITTGWMJK-UHFFFAOYSA-N,"herbal, citrus, floral, fresh, woody","frozenset({'herbal', 'citrus', 'woody', 'floral', 'fresh'})",5
-SML0208,1,G060,2,CCC(C(C)CO)S,HABNNYNSJFKZFE-UHFFFAOYSA-N,"onion, sulfurous","frozenset({'sulfurous', 'onion'})",2
-SML0366,1,G060,2,CCCC(C(C)CO)S,XVFIAOJQUHTZSV-UHFFFAOYSA-N,,frozenset(),0
-SML0128,1,G061,2,CC1C(=O)C(=C(O1)C)O,INAXVXBDKKUCGI-UHFFFAOYSA-N,"brown, strawberry, burnt, pineapple, sweet, roasted, caramellic, savory, fruity","frozenset({'pineapple', 'fruity', 'sweet', 'strawberry', 'roasted', 'caramellic', 'burnt', 'brown', 'savory'})",9
-SML0302,1,G061,2,CCC1C(=O)C(=C(O1)C)O,GWCRPYGYVRXVLI-UHFFFAOYSA-N,"sweet, caramellic","frozenset({'sweet', 'caramellic'})",2
-SML0139,5,G062,2,C[C@@H]1CC[C@H](C(=O)C1)C(C)C,NFLGAXVYCFJBMK-BDAKNGLRSA-N,"minty, cooling, anise, mentholic, herbal, sweet, camphoreous, fresh, green","frozenset({'green', 'sweet', 'camphoreous', 'herbal', 'anise', 'mentholic', 'minty', 'cooling', 'fresh'})",9
-SML0685,5,G062,2,CC/C=C\CC/C=C/C#N,DSOXXQLCMAEPEZ-ODYTWBPASA-N,"floral, green","frozenset({'green', 'floral'})",2
-SML0101,2,G063,2,C[C@@]12CC[C@@H](C1)C(C2=O)(C)C,LHXDLQBQYFFVNW-OIBJUYFYSA-N,"herbal, sweet, camphoreous, earthy, pine, woody","frozenset({'sweet', 'camphoreous', 'herbal', 'woody', 'pine', 'earthy'})",6
-SML0447,2,G063,2,C[C@]12CC[C@H](C1)C(C2=O)(C)C,LHXDLQBQYFFVNW-XCBNKYQSSA-N,"terpenic, cedar, cooling, mentholic, herbal, balsamic, mint, sweet, camphoreous, earthy, pine, fresh, woody","frozenset({'terpenic', 'sweet', 'camphoreous', 'herbal', 'cedar', 'mint', 'woody', 'pine', 'balsamic', 'mentholic', 'earthy', 'cooling', 'fresh'})",13
-SML0013,8,G064,2,CCC1=NC=CN=C1C,LNIMMWYNSBZESE-UHFFFAOYSA-N,"bready, musty, hazelnut, potato, burnt, nutty, earthy, roasted, green","frozenset({'green', 'roasted', 'musty', 'hazelnut', 'burnt', 'earthy', 'bready', 'nutty', 'potato'})",9
-SML0071,8,G064,2,CCC1=NC=CN=C1OC,DPCILIMHENXHQX-UHFFFAOYSA-N,"musty, nutty, earthy, green, vegetable","frozenset({'green', 'musty', 'vegetable', 'earthy', 'nutty'})",5
-SML0010,4,G065,2,CCCC(=O)CC,PFCHFHIRKBAQGU-UHFFFAOYSA-N,"rummy, winey, grape, sweet, waxy, fruity, ethereal","frozenset({'fruity', 'sweet', 'rummy', 'winey', 'ethereal', 'grape', 'waxy'})",7
-SML0318,4,G065,2,CCOC(=O)CCSC,YSNWHRKJEKWJNY-UHFFFAOYSA-N,"metallic, ripe, pineapple, caramellic, fruity, tomato, sulfurous","frozenset({'pineapple', 'fruity', 'caramellic', 'sulfurous', 'tomato', 'metallic', 'ripe'})",7
+SML0011,2,G001,16,CCC(CC)O,AQIXEPGDORPWBJ-UHFFFAOYSA-N,"ethereal, fermented, fruity, sweet, herbal, nutty, oily","frozenset({'oily', 'sweet', 'nutty', 'fermented', 'herbal', 'fruity', 'ethereal'})",7
+SML0115,2,G001,16,C1=CN=CC=N1,KYQCOXFCLRTKLS-UHFFFAOYSA-N,"musty, nutty, roasted, sweet, hazelnut, pungent","frozenset({'musty', 'sweet', 'nutty', 'hazelnut', 'pungent', 'roasted'})",6
+SML0157,2,G001,16,CCCCS,WQAQPCDUOCURKW-UHFFFAOYSA-N,"beefy, cheesy, garlic, meaty, onion, roasted, savory, sulfurous, fatty, coffee","frozenset({'fatty', 'meaty', 'savory', 'cheesy', 'onion', 'coffee', 'garlic', 'roasted', 'sulfurous', 'beefy'})",10
+SML0165,2,G001,16,CC(C)C12CCC(O1)(CC2)C,RFFOTVCVTJUTAD-UHFFFAOYSA-N,"camphoreous, fresh, pine, herbal, terpenic, cooling, green, minty","frozenset({'camphoreous', 'minty', 'pine', 'green', 'terpenic', 'herbal', 'cooling', 'fresh'})",8
+SML0213,2,G001,16,CCCCCOC(=O)CCC,CFNJLPHOBMVMNS-UHFFFAOYSA-N,"sweet, banana, fruity, pineapple, cherry, tropical","frozenset({'sweet', 'tropical', 'cherry', 'banana', 'fruity', 'pineapple'})",6
+SML0251,2,G001,16,CC1=CC[C@@H](C=C1)C(C)C,OGLDWXZKYODSOB-SNVBAGLBSA-N,"citrus, fresh, spicy, terpenic, medicinal","frozenset({'spicy', 'citrus', 'terpenic', 'medicinal', 'fresh'})",5
+SML0298,2,G001,16,CC(C)(CCOC)S,XVHGKKGBUDMTIQ-UHFFFAOYSA-N,"sulfurous, sweet, tropical, minty, grapefruit, peach","frozenset({'minty', 'sweet', 'peach', 'grapefruit', 'tropical', 'sulfurous'})",6
+SML0312,2,G001,16,CCCSSCCC,ALVPFGSHPUPROW-UHFFFAOYSA-N,"alliaceous, garlic, green, onion, metallic, sulfurous, tropical, burnt, fresh, earthy","frozenset({'metallic', 'tropical', 'earthy', 'alliaceous', 'onion', 'green', 'garlic', 'burnt', 'sulfurous', 'fresh'})",10
+SML0313,2,G001,16,CCCSSSCCC,GAZXPZNJTZIGBO-UHFFFAOYSA-N,"green, onion, vegetable, sulfurous, garlic, alliaceous, tropical, pungent","frozenset({'tropical', 'alliaceous', 'pungent', 'onion', 'green', 'garlic', 'sulfurous', 'vegetable'})",8
+SML0319,2,G001,16,CCOC(=O)CC(C)C,PPXUHEORWJQRHJ-UHFFFAOYSA-N,"apple, banana, buttery, fruity, winey, sweet, estery, pineapple, orange, green, sharp","frozenset({'sharp', 'sweet', 'orange', 'winey', 'green', 'apple', 'banana', 'estery', 'buttery', 'fruity', 'pineapple'})",11
+SML0353,2,G001,16,CCOC(=O)C(C)C,WDAXFOBOLVPGLV-UHFFFAOYSA-N,"apple, ethereal, fruity, rummy, sweet, pungent, alcoholic","frozenset({'sweet', 'rummy', 'pungent', 'alcoholic', 'apple', 'fruity', 'ethereal'})",7
+SML0468,2,G001,16,CC(C)CCN,BMFVGAAISNGQNM-UHFFFAOYSA-N,cheesy,frozenset({'cheesy'}),1
+SML0480,2,G001,16,CCCCCCCOC(=O)C(C)C,RFDUMBPGZUIKOG-UHFFFAOYSA-N,"fruity, herbal, tropical, sweet, estery, warm, floral, pineapple, apricot, apple, green, cherry, peach","frozenset({'warm', 'sweet', 'peach', 'tropical', 'apricot', 'green', 'cherry', 'estery', 'herbal', 'floral', 'apple', 'fruity', 'pineapple'})",13
+SML0484,2,G001,16,CC1=CC=CC=C1OC(=O)C(C)C,FDJBDZVTTXWIQM-UHFFFAOYSA-N,"berry, fruity, medicinal, phenolic","frozenset({'fruity', 'medicinal', 'phenolic', 'berry'})",4
+SML0581,2,G001,16,CCOC(=O)CC1(OCCO1)C,XWEOGMYZFCHQNT-UHFFFAOYSA-N,"apple, fruity, pine, sweet, woody, plum, green, tropical","frozenset({'sweet', 'tropical', 'pine', 'green', 'woody', 'apple', 'plum', 'fruity'})",8
+SML0594,2,G001,16,CC1CC(CO1)(C)C2=CC=CC=C2,GPMLJOOQCIHFET-UHFFFAOYSA-N,"aromatic, floral, fresh, herbal, citrus, green, woody, grapefruit","frozenset({'grapefruit', 'citrus', 'aromatic', 'green', 'woody', 'herbal', 'floral', 'fresh'})",8
+SML0009,1,G002,15,CCC(C)CO,QPRQEDXDYOZYLA-UHFFFAOYSA-N,"alcoholic, ethereal, fermented, solvent, winey, fatty, cocoa, leathery","frozenset({'fatty', 'cocoa', 'winey', 'leathery', 'fermented', 'solvent', 'alcoholic', 'ethereal'})",8
+SML0130,1,G002,15,CN(C)C,GETQZCLCWQTVFV-UHFFFAOYSA-N,"fishy, pungent, fruity, oily","frozenset({'fishy', 'fruity', 'oily', 'pungent'})",4
+SML0166,1,G002,15,CCCC(C)C=O,FTZILAQGHINQQR-UHFFFAOYSA-N,"cheesy, cocoa, fruity, green, vegetable, ethereal","frozenset({'cocoa', 'cheesy', 'green', 'fruity', 'vegetable', 'ethereal'})",6
+SML0217,1,G002,15,CC(C)CS,BDFAOUQQXJIZDG-UHFFFAOYSA-N,"garlic, onion, vegetable, sulfurous, cooked","frozenset({'onion', 'garlic', 'sulfurous', 'cooked', 'vegetable'})",5
+SML0230,1,G002,15,CC(C)[C@]12CCC(=C)[C@H]1C2,NDVASEGYNIMXJL-NXEZZACHSA-N,,frozenset(),0
+SML0290,1,G002,15,CCCC(CCO)S,TYZFMFVWHZKYSE-UHFFFAOYSA-N,"alliaceous, fruity, grapefruit, meaty, tropical, sulfurous, chicken, savory","frozenset({'tropical', 'grapefruit', 'meaty', 'alliaceous', 'sulfurous', 'savory', 'fruity', 'chicken'})",8
+SML0310,1,G002,15,CSSSC,YWHLKYXPLRWGSE-UHFFFAOYSA-N,"cabbage, garlic, onion, vegetable, meaty, sulfurous, savory, alliaceous, fresh, cooked","frozenset({'cabbage', 'meaty', 'savory', 'alliaceous', 'onion', 'garlic', 'sulfurous', 'cooked', 'vegetable', 'fresh'})",10
+SML0317,1,G002,15,CCC(C)C(=O)OCC,HCRBXQFHJMCTLF-UHFFFAOYSA-N,"apple, fruity, green, strawberry, sweet, estery, berry, fresh, tropical, sharp","frozenset({'sharp', 'sweet', 'tropical', 'green', 'strawberry', 'apple', 'estery', 'fruity', 'fresh', 'berry'})",10
+SML0454,1,G002,15,CCC(C)O,BTANRVKWQNVYAZ-UHFFFAOYSA-N,"alcoholic, fermented, oily, solvent, winey, sweet, fruity, apricot","frozenset({'oily', 'sweet', 'apricot', 'winey', 'fermented', 'solvent', 'fruity', 'alcoholic'})",8
+SML0464,1,G002,15,CC(C)CN,KDSNLYIMUZNERS-UHFFFAOYSA-N,"cheesy, fishy, malty, ripe","frozenset({'ripe', 'fishy', 'cheesy', 'malty'})",4
+SML0488,1,G002,15,CCN(CC)CC,ZMANZCXQSJIPKH-UHFFFAOYSA-N,"cheesy, fishy, ripe","frozenset({'fishy', 'cheesy', 'ripe'})",3
+SML0503,1,G002,15,CCCCOC=O,NMJJFJNHVMGPGM-UHFFFAOYSA-N,"ethereal, plum, rummy, fruity, brandy","frozenset({'rummy', 'brandy', 'plum', 'fruity', 'ethereal'})",5
+SML0521,1,G002,15,CC(=C)[C@H]1CCC2(C(C1)O2)C,CCEFMUBVSUDRLG-IDKOKCKLSA-N,minty,frozenset({'minty'}),1
+SML0525,1,G002,15,CC(=C)C1CCC2(C(C1)O2)C,CCEFMUBVSUDRLG-UHFFFAOYSA-N,"citrus, fruity, herbal, sweet, clean, fresh, minty","frozenset({'sweet', 'minty', 'citrus', 'clean', 'herbal', 'fruity', 'fresh'})",7
+SML0527,1,G002,15,CCSCC,LJSQFQKUNVCTIA-UHFFFAOYSA-N,"garlic, meaty, savory, sulfurous, tomato, ethereal","frozenset({'meaty', 'savory', 'tomato', 'garlic', 'sulfurous', 'ethereal'})",6
+SML0021,7,G003,14,CCCCCCCCCCCCCCCC(=O)OCC,XIRNKXNNONJFQO-UHFFFAOYSA-N,"sweet, waxy, fruity, oily, creamy, balsamic, milky","frozenset({'oily', 'sweet', 'waxy', 'milky', 'creamy', 'fruity', 'balsamic'})",7
+SML0189,7,G003,14,CCCCC/C=C/CCC=O,CWRKZMLUDFBPAO-VOTSOKGWSA-N,"citrus, fresh, fruity, orange, aldehydic, fatty, green","frozenset({'aldehydic', 'fatty', 'orange', 'citrus', 'green', 'fruity', 'fresh'})",7
+SML0195,7,G003,14,CCCCCC(=O)C=C,KLTVSWGXIAYTHO-UHFFFAOYSA-N,"metallic, mushroom, vegetable, musty, chicken, herbal, savory, cabbage, fishy, earthy","frozenset({'musty', 'cabbage', 'metallic', 'fishy', 'earthy', 'savory', 'mushroom', 'herbal', 'vegetable', 'chicken'})",10
+SML0204,7,G003,14,C1CCCCC(=O)CCCC1,SXOZDDAFVJANJP-UHFFFAOYSA-N,,frozenset(),0
+SML0205,7,G003,14,C1CCCCCC(=O)CCCC1,UPOSSYJVWXLPTA-UHFFFAOYSA-N,,frozenset(),0
+SML0415,7,G003,14,CCCCC(CC)CO,YIWUKEYIRIRTPP-UHFFFAOYSA-N,"fermented, oily, rose, sweet, floral, fresh, citrus","frozenset({'oily', 'sweet', 'citrus', 'fermented', 'rose', 'floral', 'fresh'})",7
+SML0418,7,G003,14,CCCCC(CCC)O,WOFPPJOZXUTRAU-UHFFFAOYSA-N,,frozenset(),0
+SML0444,7,G003,14,CCCCC/C=C/C=O,LVBXEMGDVWVTGY-VOTSOKGWSA-N,"fatty, green, vegetable, leafy, banana, herbal, cucumber, fresh, waxy","frozenset({'fatty', 'leafy', 'cucumber', 'waxy', 'green', 'banana', 'vegetable', 'fresh', 'herbal'})",9
+SML0540,7,G003,14,CCC(=C)CCCC(C)(C)O,VOATZOQREKBJMT-UHFFFAOYSA-N,,frozenset(),0
+SML0553,7,G003,14,CCCCCCCCC/C=C/C=O,SSNZFFBDIMUILS-ZHACJKMWSA-N,"orange, waxy, metallic, aldehydic, herbal, citrus","frozenset({'aldehydic', 'metallic', 'orange', 'citrus', 'waxy', 'herbal'})",6
+SML0674,7,G003,14,CC(C)(CCC1CCCCC1)O,KZZASWGRLOTITL-UHFFFAOYSA-N,floral,frozenset({'floral'}),1
+SML0679,7,G003,14,CC(C)CCCC(C)CCO,PRNCMAKCNVRZFX-UHFFFAOYSA-N,"rose, sweet, waxy, musty, aldehydic, green, soapy, citrus, leathery","frozenset({'aldehydic', 'musty', 'soapy', 'sweet', 'citrus', 'waxy', 'leathery', 'green', 'rose'})",9
+SML0705,7,G003,14,CCCCCCC(C)(CC)O,VZBFPIMCUSPDLS-UHFFFAOYSA-N,,frozenset(),0
+SML0734,7,G003,14,CCCC(=O)OC/C=C(\C)/CCC=C(C)C,ZSBOMYJPSRFZAL-JLHYYAGUSA-N,"fruity, rose, sweet, apricot, fresh, raspberry, green, tropical, peach, waxy","frozenset({'sweet', 'peach', 'tropical', 'apricot', 'waxy', 'green', 'rose', 'fruity', 'raspberry', 'fresh'})",10
+SML0015,1,G004,9,CC(=O)O,QTBSBXVTEAMEQO-UHFFFAOYSA-N,"pungent, sour, acidic, sharp","frozenset({'sour', 'sharp', 'acidic', 'pungent'})",4
+SML0030,1,G004,9,CC(C(=O)O)O,JVTAAEKCZFNVCJ-UHFFFAOYSA-N,"buttery, sour, odorless","frozenset({'buttery', 'odorless', 'sour'})",3
+SML0049,1,G004,9,CCC(=O)O,XBDQKXXYIPTUBI-UHFFFAOYSA-N,"milky, pungent, sour, acidic, dairy, cheesy","frozenset({'acidic', 'cheesy', 'pungent', 'milky', 'dairy', 'sour'})",6
+SML0162,1,G004,9,CCCCC(C(=O)O)Br,HZTPKMIMXLTOSK-UHFFFAOYSA-N,,frozenset(),0
+SML0226,1,G004,9,CCCC(=CC(=O)O)C,NTWSIWWJPQHFTO-UHFFFAOYSA-N,,frozenset(),0
+SML0602,1,G004,9,C[C@H](C(=O)N[C@H](C)C(=O)O)N,DEFJQIDDEAULHB-QWWZWVQMSA-N,,frozenset(),0
+SML0608,1,G004,9,C([C@@H](C(=O)O)O)O,RBNPOMFGQQGHHO-REOHCLBHSA-N,,frozenset(),0
+SML0611,1,G004,9,CC(=O)N[C@@H](CCC(=O)O)C(=O)O,RFMMMVDNIPUKGG-YFKPBYRVSA-N,,frozenset(),0
+SML0617,1,G004,9,C(CC(=O)O)C(=O)C(=O)O,KPGXRSRHYNQIFN-UHFFFAOYSA-N,odorless,frozenset({'odorless'}),1
+SML0040,1,G005,8,CC1=CC(=CC=C1)C,IVSZLXZYQVIEFR-UHFFFAOYSA-N,,frozenset(),0
+SML0106,1,G005,8,CCCCCCOC(=O)CCC,XAPCMTMQBXLDBB-UHFFFAOYSA-N,"fruity, sweet, vegetable, estery, apple, green, soapy, waxy","frozenset({'soapy', 'sweet', 'waxy', 'green', 'estery', 'apple', 'fruity', 'vegetable'})",8
+SML0224,1,G005,8,C1=CC=CC=C1,UHOVQNZJYSORNB-UHFFFAOYSA-N,,frozenset(),0
+SML0259,1,G005,8,CCOC(C)OCC,DHKHKXVYLBGOIT-UHFFFAOYSA-N,"alcoholic, fruity, green, sweet, vegetable, nutty, ethereal, earthy","frozenset({'sweet', 'earthy', 'nutty', 'alcoholic', 'green', 'fruity', 'vegetable', 'ethereal'})",8
+SML0352,1,G005,8,CCC(C)COC(=O)C,XHIUFYZDQBSEMF-UHFFFAOYSA-N,"apple, banana, ethereal, fruity, sweet, estery, ripe, tropical","frozenset({'sweet', 'tropical', 'ripe', 'apple', 'banana', 'estery', 'fruity', 'ethereal'})",8
+SML0358,1,G005,8,CC1=CCC(C=C1)C(C)C,OGLDWXZKYODSOB-UHFFFAOYSA-N,"citrus, fresh, minty, spicy, woody","frozenset({'spicy', 'minty', 'citrus', 'woody', 'fresh'})",5
+SML0375,1,G005,8,CC(=O)CC(C)(C)S,QRNZMFDCKKEPSX-UHFFFAOYSA-N,"fruity, meaty, savory, tropical, sulfurous, green","frozenset({'tropical', 'meaty', 'savory', 'sulfurous', 'green', 'fruity'})",6
+SML0566,1,G005,8,CC(C(=O)C)C(=O)C,GSOHKPVFCOWKPU-UHFFFAOYSA-N,"burnt, fruity, ketonic","frozenset({'fruity', 'ketonic', 'burnt'})",3
+SML0245,4,G006,7,CCCC[C@H]1[C@H](CC(=O)O1)C,WNVCMFHPRIBNCW-YUMQZZPRSA-N,coconut,frozenset({'coconut'}),1
+SML0335,4,G006,7,CC(=CCCC(=C)C=C)C,UAHWPYUMFXYFJY-UHFFFAOYSA-N,"spicy, peppery, terpenic, herbal, rose, balsamic, woody, celery","frozenset({'spicy', 'peppery', 'rose', 'terpenic', 'woody', 'herbal', 'celery', 'balsamic'})",8
+SML0455,4,G006,7,CCCCC[C@@H](C)O,CETWDUZRCINIHU-SSDOTTSWSA-N,"sweet, fruity, fatty, oily","frozenset({'fatty', 'fruity', 'oily', 'sweet'})",4
+SML0456,4,G006,7,CCCCCC(C)(C)O,ACBMYYVZWKYLIP-UHFFFAOYSA-N,,frozenset(),0
+SML0466,4,G006,7,CCCCOC,CXBDYQVECUFKRK-UHFFFAOYSA-N,,frozenset(),0
+SML0547,4,G006,7,CCCCCCCCCCOC(=O)C,NUPSHWCALHZGOV-UHFFFAOYSA-N,"fatty, fruity, orange, pineapple, rose, sweet, clean, creamy, fresh, soapy, citrus, waxy","frozenset({'soapy', 'fatty', 'sweet', 'orange', 'citrus', 'waxy', 'clean', 'rose', 'creamy', 'fruity', 'pineapple', 'fresh'})",12
+SML0715,4,G006,7,CCCCCC(CC)OC(=O)C,STZUZYMKSMSTOU-UHFFFAOYSA-N,"citrus, floral, green, minty, rose, waxy, aldehydic, fatty, herbal, apple, anisic, fresh, bergamot, woody, grapefruit","frozenset({'aldehydic', 'fatty', 'anisic', 'minty', 'grapefruit', 'bergamot', 'citrus', 'waxy', 'green', 'rose', 'woody', 'apple', 'herbal', 'floral', 'fresh'})",15
+SML0084,3,G007,7,CCC(=O)C,ZWEHNKRNPOVVGH-UHFFFAOYSA-N,"camphoreous, fruity, ketonic, solvent, sweet, ethereal","frozenset({'camphoreous', 'sweet', 'ketonic', 'solvent', 'fruity', 'ethereal'})",6
+SML0092,3,G007,7,CC1(C2CCC(O1)(CC2)C)C,WEEGYLXZBRQIMU-UHFFFAOYSA-N,"camphoreous, fresh, herbal, medicinal","frozenset({'medicinal', 'camphoreous', 'fresh', 'herbal'})",4
+SML0173,3,G007,7,C1CCNC1,RWRDLPDLKQPQOW-UHFFFAOYSA-N,"animal, fishy","frozenset({'fishy', 'animal'})",2
+SML0331,3,G007,7,CCCCCCOC(=O)C,AOGQPLXWSUTHQB-UHFFFAOYSA-N,"apple, fruity, pear, sweet, fatty, banana, fresh, green","frozenset({'pear', 'fatty', 'sweet', 'green', 'apple', 'banana', 'fruity', 'fresh'})",8
+SML0334,3,G007,7,CCCSSSC,ZOYASYRPGHCQHW-UHFFFAOYSA-N,"garlic, green, onion, sweet, metallic, clean, sulfurous, cooked","frozenset({'sweet', 'metallic', 'clean', 'onion', 'green', 'garlic', 'sulfurous', 'cooked'})",8
+SML0461,3,G007,7,CCC(=O)OC,RJUFJBKOKNCXHH-UHFFFAOYSA-N,"ethereal, fruity, rummy, strawberry, apple, fresh","frozenset({'rummy', 'strawberry', 'apple', 'fruity', 'fresh', 'ethereal'})",6
+SML0462,3,G007,7,CCC(=O)OC(C)(C)C,JAELLLITIZHOGQ-UHFFFAOYSA-N,"brandy, fruity, rummy","frozenset({'fruity', 'rummy', 'brandy'})",3
+SML0126,5,G008,7,CCCCCC/C=C/C=O,BSAIUMLZVGUGKX-BQYQJAHWSA-N,"cucumber, fatty, melon, orris, waxy, aldehydic, green, citrus","frozenset({'aldehydic', 'melon', 'fatty', 'cucumber', 'citrus', 'waxy', 'orris', 'green'})",8
+SML0191,5,G008,7,CCCC/C=C/C=C/C=O,ZHHYXNZJDGDGPJ-BSWSSELBSA-N,"chicken, fatty, nutty, melon, cucumber, green, waxy","frozenset({'fatty', 'melon', 'nutty', 'cucumber', 'waxy', 'green', 'chicken'})",7
+SML0192,5,G008,7,CC(=CCC/C(=C/C/C=C(\C)/C=C)/C)C,CXENHBSYCFFKJS-VDQVFBMKSA-N,"apple, berry, citrus, green, herbal, vegetable, floral, lavender, bergamot, woody","frozenset({'bergamot', 'citrus', 'green', 'woody', 'apple', 'herbal', 'floral', 'lavender', 'vegetable', 'berry'})",10
+SML0233,5,G008,7,CC/C=C\CC/C=C/CO,AMXYRHBJZOVHOL-ODYTWBPASA-N,"cucumber, green, herbal, violet, leafy, fatty, nutty, oily","frozenset({'fatty', 'oily', 'leafy', 'nutty', 'cucumber', 'green', 'herbal', 'violet'})",8
+SML0254,5,G008,7,CCCCC/C=C\C=O,LVBXEMGDVWVTGY-SREVYHEPSA-N,"leafy, fatty, fruity, green","frozenset({'leafy', 'fatty', 'green', 'fruity'})",4
+SML0355,5,G008,7,CC/C=C/CC/C=C/CO,AMXYRHBJZOVHOL-DYWGDJMRSA-N,green,frozenset({'green'}),1
+SML0453,5,G008,7,CCCCC(=O)C,QQZOPKMRPOGIEB-UHFFFAOYSA-N,"cheesy, dairy, fruity, ketonic, buttery, meaty","frozenset({'meaty', 'ketonic', 'dairy', 'cheesy', 'buttery', 'fruity'})",6
+SML0076,6,G009,6,C1CCCCCCOC(=O)/C=C/CCCCC1,KHLFMZDGADSQGR-ACCUITESSA-N,"sweet, musk, waxy","frozenset({'waxy', 'musk', 'sweet'})",3
+SML0209,6,G009,6,C[C@@H]1CCCCCCCCCCCCC(=O)C1,ALHUZKCOMYUFRB-OAHLLOKOSA-N,"powdery, animal, musk","frozenset({'powdery', 'musk', 'animal'})",3
+SML0387,6,G009,6,C1CCC/C=C/CCCCCCC(=O)CCC1,ZGEHHVDYDNXYMW-OWOJBTEDSA-N,,frozenset(),0
+SML0664,6,G009,6,C1CCCCCC(=O)CCC/C=C\CCCC1,ABRIMXGLNHCLIP-VURMDHGXSA-N,"dry, amber, powdery, musk","frozenset({'powdery', 'amber', 'musk', 'dry'})",4
+SML0668,6,G009,6,CC1CCOC(=O)CCCCCCC/C=C\C1,NUSRNVWNTPMBJA-VURMDHGXSA-N,,frozenset(),0
+SML0738,6,G009,6,CC1CC=CCCCCCCCCC(=O)C1,ZFGBKXBPHOUSJX-UHFFFAOYSA-N,"animal, fatty, powdery, anisic, woody, musk","frozenset({'fatty', 'anisic', 'musk', 'woody', 'powdery', 'animal'})",6
+SML0385,8,G010,6,C1CCCCCC(=O)CCCC=CCCCC1,ABRIMXGLNHCLIP-UHFFFAOYSA-N,,frozenset(),0
+SML0662,8,G010,6,C1CCCCCC(=O)CCC=CCCCC1,JIYIHILAGIZIMD-UHFFFAOYSA-N,,frozenset(),0
+SML0667,8,G010,6,C1CCCCCOCCCCOC(=O)CCCC1,MRMOPGVGWFNHIN-UHFFFAOYSA-N,"sweet, fruity, woody, musk, waxy","frozenset({'sweet', 'waxy', 'musk', 'woody', 'fruity'})",5
+SML0670,8,G010,6,C1CCCCOCCCCCCOC(=O)CCC1,MZLRFHKWWCSGHB-UHFFFAOYSA-N,"sweet, animal, floral, fruity, oily, musk","frozenset({'oily', 'sweet', 'musk', 'floral', 'fruity', 'animal'})",6
+SML0686,8,G010,6,CCC(C1CCCC/C=C\C1)O,LLYJRIQMURUPPF-XQRVVYSFSA-N,,frozenset(),0
+SML0694,8,G010,6,CCCCCCCCC(C)C#N,XPCSGXMQGQGBKU-UHFFFAOYSA-N,"floral, fruity, jasmine, peach, lactonic","frozenset({'jasmine', 'lactonic', 'peach', 'floral', 'fruity'})",5
+SML0127,2,G011,6,CCC(=O)C=C,JLIDVCMBCGBIEY-UHFFFAOYSA-N,"alliaceous, pungent, radish, spicy, peppery, garlic, onion, ethereal","frozenset({'spicy', 'alliaceous', 'pungent', 'peppery', 'onion', 'garlic', 'radish', 'ethereal'})",8
+SML0218,2,G011,6,C1CCN(CC1)C=O,FEWLNYSYJNLUOO-UHFFFAOYSA-N,,frozenset(),0
+SML0300,2,G011,6,CC1=CC=C(C=C1)O,IWDCLRJOBJJRNH-UHFFFAOYSA-N,"animal, medicinal, phenolic, smoky","frozenset({'smoky', 'medicinal', 'phenolic', 'animal'})",4
+SML0304,2,G011,6,CSCC=C,NVLPQIPTCCLBEU-UHFFFAOYSA-N,"garlic, onion, sulfurous, alliaceous","frozenset({'onion', 'alliaceous', 'sulfurous', 'garlic'})",4
+SML0321,2,G011,6,CCOC(=O)C,XEKOWRVHYACXOJ-UHFFFAOYSA-N,"brandy, ethereal, sharp, winey, sweet, rummy, grape, weedy, fruity, green","frozenset({'sharp', 'sweet', 'weedy', 'rummy', 'winey', 'brandy', 'green', 'grape', 'fruity', 'ethereal'})",10
+SML0374,2,G011,6,CCC1=CC(=C(C=C1)O)OC,CHWNEIVBYREQRF-UHFFFAOYSA-N,"phenolic, smoky, spicy, vanilla, sweet, medicinal, woody, clove","frozenset({'clove', 'spicy', 'smoky', 'phenolic', 'sweet', 'medicinal', 'woody', 'vanilla'})",8
+SML0206,8,G012,5,CCCCCCCCCCCCCC(=O)C,CJPNOLIZCWDHJK-UHFFFAOYSA-N,"dairy, fatty, fruity, waxy, floral, oily, burnt, fresh, jasmine, celery","frozenset({'fatty', 'jasmine', 'oily', 'waxy', 'burnt', 'floral', 'dairy', 'fruity', 'celery', 'fresh'})",10
+SML0574,8,G012,5,CCCCCCCCCC(C)C=O,NFAVNWJJYQAGNB-UHFFFAOYSA-N,"dry, fatty, fruity, metallic, aldehydic, amber, fresh, coumarinic, citrus, waxy","frozenset({'aldehydic', 'fatty', 'amber', 'coumarinic', 'dry', 'metallic', 'citrus', 'waxy', 'fruity', 'fresh'})",10
+SML0655,8,G012,5,CCC(C)CCCC(C)(C)O,WRFXXJKURVTLSY-UHFFFAOYSA-N,"citrus, floral, sweet, fresh, lily","frozenset({'sweet', 'citrus', 'lily', 'floral', 'fresh'})",5
+SML0671,8,G012,5,CC(CCCC(C)(C)O)C=C,XSNQECSCDATQEL-UHFFFAOYSA-N,"citrus, floral, fresh, herbal, clean, weedy","frozenset({'weedy', 'citrus', 'clean', 'herbal', 'floral', 'fresh'})",6
+SML0688,8,G012,5,CC(C)CCCC(C)CC#N,SAPMLSXAXRULJB-UHFFFAOYSA-N,"metallic, aldehydic, fatty, lemon, citrus","frozenset({'aldehydic', 'fatty', 'metallic', 'citrus', 'lemon'})",5
+SML0178,6,G013,5,CCCCC/C=C/C=C/C=O,JZQKTMZYLHNFPL-BLHCBFLLSA-N,"citrus, fatty, chicken, melon, cucumber, nutty, oily, brothy","frozenset({'brothy', 'fatty', 'melon', 'oily', 'nutty', 'cucumber', 'citrus', 'chicken'})",8
+SML0183,6,G013,5,CC/C=C\CCCCCC=O,UZFFFFWQKMPLAC-ARJAWSKDSA-N,"aldehydic, citrus, cucumber","frozenset({'aldehydic', 'cucumber', 'citrus'})",3
+SML0423,6,G013,5,CCCCCCC(=O)C,ZPVFWPFBNIEHGJ-UHFFFAOYSA-N,"apple, cheesy, fatty, fruity, green, musty, natural, weedy, herbal, woody, earthy, dairy, ketonic","frozenset({'fatty', 'musty', 'weedy', 'earthy', 'ketonic', 'cheesy', 'green', 'natural', 'woody', 'apple', 'herbal', 'dairy', 'fruity'})",13
+SML0517,6,G013,5,CCCC/C=C\CCCCC=O,YBBNUDDZOWRHOD-WAYWQWQTSA-N,,frozenset(),0
+SML0538,6,G013,5,CC/C=C\CCCCC=O,RTNPCOBSXBGDMO-ARJAWSKDSA-N,"citrus, cucumber, fresh, vegetable, melon, green, woody, orris, waxy","frozenset({'melon', 'cucumber', 'citrus', 'waxy', 'green', 'orris', 'woody', 'vegetable', 'fresh'})",9
+SML0680,9,G014,5,CCCCCCCCN1CCCC1=O,WPPOGHDFAVQKLN-UHFFFAOYSA-N,,frozenset(),0
+SML0689,9,G014,5,CC/C=C\CCCCO,VDHRTASWKDTLER-ARJAWSKDSA-N,"fruity, green, melon, mushroom","frozenset({'melon', 'fruity', 'green', 'mushroom'})",4
+SML0690,9,G014,5,CC/C=C\CCCCCO,XJHRZBIBSSVCEL-ARJAWSKDSA-N,"fruity, green, melon, waxy, juicy, vegetable, clean, fatty, cucumber, fresh","frozenset({'melon', 'fatty', 'juicy', 'cucumber', 'waxy', 'clean', 'green', 'fruity', 'vegetable', 'fresh'})",10
+SML0708,9,G014,5,CCCCCC1CCCC1=O,VNWOJVJCRAHBJJ-UHFFFAOYSA-N,"floral, rose, herbal, oily, coconut, green, jasmine","frozenset({'oily', 'coconut', 'green', 'rose', 'herbal', 'floral', 'jasmine'})",7
+SML0714,9,G014,5,CCCCCCCCC=CC#N,HETFMJQWNWIBPN-UHFFFAOYSA-N,,frozenset(),0
+SML0125,1,G015,4,CCCCC(=O)O,NQPDZGIKBAWPEJ-UHFFFAOYSA-N,"cheesy, sour, fruity, acidic, tobacco, milky, sharp","frozenset({'sharp', 'tobacco', 'acidic', 'cheesy', 'milky', 'fruity', 'sour'})",7
+SML0556,1,G015,4,C(CCBr)CC(=O)O,WNXNUPJZWYOKMW-UHFFFAOYSA-N,,frozenset(),0
+SML0740,1,G015,4,CCCCC(C)C(=O)O,CVKMFSAVYPAZTQ-UHFFFAOYSA-N,"fatty, chicken, fruity, acidic, savory, oily, roasted, cheesy","frozenset({'fatty', 'oily', 'savory', 'acidic', 'cheesy', 'roasted', 'fruity', 'chicken'})",8
+SML0742,1,G015,4,CCC/C(=C/C(=O)O)/C,NTWSIWWJPQHFTO-AATRIKPKSA-N,,frozenset(),0
+SML0210,7,G016,4,C[C@H]1CCCCCCCCCCCCC(=O)C1,ALHUZKCOMYUFRB-HNNXBMFYSA-N,,frozenset(),0
+SML0386,7,G016,4,CC1CC=CCCCCCCCCCC(=O)C1,NKMKFQCVDZVEJR-UHFFFAOYSA-N,,frozenset(),0
+SML0661,7,G016,4,C1CCCCCCCC(=O)OCCCCCCC1,LOKPJYNMYCVCRM-UHFFFAOYSA-N,"animal, musk, sweet, amber, balsamic","frozenset({'amber', 'sweet', 'musk', 'balsamic', 'animal'})",5
+SML0684,7,G016,4,C/C=C/CCCCCCCC#N,RPLWLQJSZFPHGM-NSCUHMNNSA-N,,frozenset(),0
+SML0522,5,G017,4,CC(=C)[C@H]1CCC(=CC1)C=O,RUMOYJJNUMEFDD-SNVBAGLBSA-N,"fatty, herbal, spicy, oily, grassy, fresh, green, cherry, minty","frozenset({'fresh', 'fatty', 'spicy', 'oily', 'minty', 'green', 'cherry', 'herbal', 'grassy'})",9
+SML0531,5,G017,4,CCCCC/C(=C\C1=CC=CC=C1)/C(OC)OC,QCHZKUPVENJLAW-FYWRMAATSA-N,"floral, green, jasmine","frozenset({'floral', 'green', 'jasmine'})",3
+SML0725,5,G017,4,CCOC(=O)C1C(O1)C2=CC=CC=C2,GOMAKLPNAAZVCJ-UHFFFAOYSA-N,"berry, caramellic, fruity, strawberry, sweet","frozenset({'sweet', 'strawberry', 'fruity', 'caramellic', 'berry'})",5
+SML0769,5,G017,4,C=CCSS(=O)CC=C,JDLKFOPOAOFWQN-UHFFFAOYSA-N,,frozenset(),0
+SML0482,1,G018,4,CC(=O)O[C@@H]1C[C@H]2CC[C@@]1(C2(C)C)C,KGEKLUUHTZCSIP-FOGDFJRCSA-N,,frozenset(),0
+SML0502,1,G018,4,CCCCOC(=O)C(C)OC(=O)CCC,NORZZKKLCYMBBF-UHFFFAOYSA-N,"buttery, fruity, sour, sweet, fatty, creamy, green, dairy, cheesy, waxy","frozenset({'fatty', 'sweet', 'dairy', 'cheesy', 'waxy', 'green', 'creamy', 'buttery', 'fruity', 'sour'})",10
+SML0507,1,G018,4,CC(=O)OC1CC2CCC1(C2(C)C)C,KGEKLUUHTZCSIP-UHFFFAOYSA-N,"herbal, pine, sweet, cedar, spicy, mentholic, camphoreous, balsamic, woody","frozenset({'cedar', 'spicy', 'camphoreous', 'mentholic', 'sweet', 'pine', 'woody', 'herbal', 'balsamic'})",9
+SML0637,1,G018,4,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@H]34,NPAGDVCDWIYMMC-IZPLOLCNSA-N,,frozenset(),0
+SML0022,6,G019,4,CCCCCCCCCCCCCCCCCC(=O)OCC,MVLVMROFTAUDAG-UHFFFAOYSA-N,"odorless, waxy","frozenset({'waxy', 'odorless'})",2
+SML0564,6,G019,4,C[C@H]1CC[C@@H](C(=O)C1)C(C)C,NFLGAXVYCFJBMK-DTWKUNHWSA-N,"minty, mentholic","frozenset({'mentholic', 'minty'})",2
+SML0659,6,G019,4,C[C@H]1CC(C2=C(C1(C)C)C[C@@]3([C@H](C2)O3)C)(C)C,OHHWFLWQMHUVFQ-YNZJMPHRSA-N,,frozenset(),0
+SML0720,6,G019,4,C1CCCCOC(=O)CCC1,FTXUQEKXCJSWMO-UHFFFAOYSA-N,,frozenset(),0
+SML0024,9,G020,4,CCCCCCCCCCCCCC(=O)OCC,MMKRHZKQPFCLLS-UHFFFAOYSA-N,"fatty, sweet, waxy, orris, violet","frozenset({'fatty', 'sweet', 'waxy', 'orris', 'violet'})",5
+SML0037,9,G020,4,CCCCCCCCCCCCCCCCCC(=O)OC,HPEUJPJOZXNMSJ-UHFFFAOYSA-N,"odorless, oily, waxy","frozenset({'waxy', 'odorless', 'oily'})",3
+SML0627,9,G020,4,CCCCCCCCCCCCCCCCCC(=O)NCCO,OTGQIQQTPXJQRG-UHFFFAOYSA-N,,frozenset(),0
+SML0629,9,G020,4,CCCCCCCCCCCCCCCC(=O)NCCO,HXYVTAGFYLMHSO-UHFFFAOYSA-N,,frozenset(),0
+SML0281,5,G021,4,CCC1=CC(=CC=C1)O,HMNKTRSOROOSPP-UHFFFAOYSA-N,"phenolic, musty","frozenset({'musty', 'phenolic'})",2
+SML0294,5,G021,4,C=CC1=CC=C(C=C1)O,FUGYGGDSWSUORM-UHFFFAOYSA-N,"medicinal, phenolic, spicy, sweet, musty, meaty, chemical","frozenset({'spicy', 'musty', 'phenolic', 'sweet', 'meaty', 'chemical', 'medicinal'})",7
+SML0460,5,G021,4,C[C@@H](C1=CC=CC=C1)O,WAPNOHKVXSQRPX-ZETCQYMHSA-N,"floral, strawberry, hyacinth","frozenset({'floral', 'strawberry', 'hyacinth'})",3
+SML0475,5,G021,4,C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O,ZCTQGTTXIYCGGC-UHFFFAOYSA-N,"balsamic, sweet, clean, herbal, oily","frozenset({'oily', 'sweet', 'clean', 'herbal', 'balsamic'})",5
+SML0345,6,G022,3,CC(C1=CC=CC=C1)S,QZZBJCFNHPYNKO-UHFFFAOYSA-N,"floral, meaty, sulfurous, tropical","frozenset({'floral', 'meaty', 'sulfurous', 'tropical'})",4
+SML0463,6,G022,3,CCCC(=O)OCCC,HUAZGNHGCJGYNP-UHFFFAOYSA-N,"fruity, sweet, pineapple, apricot, ethereal","frozenset({'sweet', 'apricot', 'fruity', 'pineapple', 'ethereal'})",5
+SML0572,6,G022,3,CCC(C1=CC=CC=C1)O,DYUQAZSOFZSPHD-UHFFFAOYSA-N,"balsamic, floral, rose, sweet","frozenset({'floral', 'rose', 'balsamic', 'sweet'})",4
+SML0417,9,G023,3,CCCCCC(CC)O,NMRPBPVERJPACX-UHFFFAOYSA-N,"earthy, herbal, mushroom, nutty, oily, musty, fermented, spicy, minty, melon, creamy, green, woody, dairy, citrus, waxy","frozenset({'musty', 'spicy', 'melon', 'oily', 'minty', 'earthy', 'nutty', 'mushroom', 'citrus', 'waxy', 'fermented', 'green', 'woody', 'herbal', 'creamy', 'dairy'})",16
+SML0442,9,G023,3,CC(CCC=C(C)C)CC=O,NEHNMFOYXAPHSD-UHFFFAOYSA-N,"sweet, dry, aldehydic, floral, herbal, rose, green, citrus, waxy","frozenset({'aldehydic', 'dry', 'sweet', 'citrus', 'waxy', 'green', 'rose', 'herbal', 'floral'})",9
+SML0712,9,G023,3,CCCCCCCCCC1CCCC(=O)O1,SKQYTJLYRIFFCO-UHFFFAOYSA-N,"buttery, creamy, fatty, milky, sweet, oily, dairy, cheesy, waxy","frozenset({'fatty', 'oily', 'sweet', 'dairy', 'cheesy', 'waxy', 'milky', 'creamy', 'buttery'})",9
+SML0240,8,G024,3,CCCCCCC1CCC(=O)O1,IFYYFLINQYPWGJ-UHFFFAOYSA-N,"coconut, peach, sweet, buttery, fatty, fruity, oily, creamy, fresh, waxy","frozenset({'fatty', 'oily', 'sweet', 'peach', 'coconut', 'waxy', 'creamy', 'buttery', 'fruity', 'fresh'})",10
+SML0244,8,G024,3,CCCCCCCC1CCC(=O)O1,PHXATPHONSXBIL-UHFFFAOYSA-N,"ketonic, fatty, fruity, apricot, coconut, creamy, peach, lactonic","frozenset({'fatty', 'peach', 'lactonic', 'ketonic', 'coconut', 'apricot', 'creamy', 'fruity'})",8
+SML0330,8,G024,3,CCCCCC(C)O,CETWDUZRCINIHU-UHFFFAOYSA-N,"green, herbal, lemon, sweet, floral, fruity, fresh, citrus","frozenset({'sweet', 'citrus', 'lemon', 'green', 'herbal', 'floral', 'fruity', 'fresh'})",8
+SML0457,5,G025,3,CCCCCC[C@H](C)O,SJWFXCIHNDVPSH-QMMMGPOBSA-N,"mushroom, fatty, grape, oily, creamy","frozenset({'fatty', 'oily', 'mushroom', 'grape', 'creamy'})",5
+SML0542,5,G025,3,CC(=CCCC(=CCCC(=C)C=C)C)C,JSNRRGGBADWTMC-UHFFFAOYSA-N,,frozenset(),0
+SML0703,5,G025,3,C=CCOC(=O)CCC1CCCCC1,TWXUTZNBHUWMKJ-UHFFFAOYSA-N,"fruity, pineapple, sweet, tropical, waxy","frozenset({'sweet', 'tropical', 'waxy', 'fruity', 'pineapple'})",5
+SML0121,1,G026,3,CC1C(SC(=N1)C)C,CIEKNJJOENYFQL-UHFFFAOYSA-N,,frozenset(),0
+SML0122,1,G026,3,CC1=CN=C(C(=N1)C)C,IAEGWXHKWJGQAZ-UHFFFAOYSA-N,"burnt, cocoa, coffee, nutty, potato, roasted, musty, powdery, hazelnut, earthy","frozenset({'musty', 'cocoa', 'earthy', 'nutty', 'hazelnut', 'potato', 'coffee', 'burnt', 'roasted', 'powdery'})",10
+SML0132,1,G026,3,CC1C(=O)C(=C(O1)C)OC,SIMKGHMLPVDSJE-UHFFFAOYSA-N,"caramellic, fruity, sweet, winey, vegetable, musty, meaty, mushroom, potato, cocoa, coffee, brandy","frozenset({'musty', 'sweet', 'cocoa', 'meaty', 'winey', 'mushroom', 'brandy', 'potato', 'coffee', 'fruity', 'caramellic', 'vegetable'})",12
+SML0271,3,G027,3,CC1=CC(=C(C=C1)OC)O,IFNDEOYXGHGERA-UHFFFAOYSA-N,"medicinal, phenolic, smoky, sweet, vanilla","frozenset({'smoky', 'phenolic', 'sweet', 'medicinal', 'vanilla'})",5
+SML0288,3,G027,3,CC1=CC(=CC=C1)O,RLSSMJSEOOYNOY-UHFFFAOYSA-N,"dry, leathery, medicinal, phenolic, woody","frozenset({'dry', 'phenolic', 'leathery', 'woody', 'medicinal'})",5
+SML0514,3,G027,3,COC1=CC(=CC(=C1O)OC)C=O,KCDXJAYRVLXPFO-UHFFFAOYSA-N,"balsamic, floral, smoky, sweet, vanilla, green, woody, chocolate","frozenset({'chocolate', 'smoky', 'sweet', 'green', 'woody', 'floral', 'vanilla', 'balsamic'})",8
+SML0013,8,G028,3,CCC1=NC=CN=C1C,LNIMMWYNSBZESE-UHFFFAOYSA-N,"burnt, earthy, green, hazelnut, nutty, potato, roasted, musty, bready","frozenset({'musty', 'earthy', 'nutty', 'bready', 'hazelnut', 'green', 'potato', 'burnt', 'roasted'})",9
+SML0071,8,G028,3,CCC1=NC=CN=C1OC,DPCILIMHENXHQX-UHFFFAOYSA-N,"earthy, green, musty, nutty, vegetable","frozenset({'musty', 'earthy', 'nutty', 'green', 'vegetable'})",5
+SML0486,8,G028,3,CC1=NC=CN=C1OC,VKJIAEQRKBQLLA-UHFFFAOYSA-N,"hazelnut, nutty, roasted, chocolate","frozenset({'nutty', 'chocolate', 'roasted', 'hazelnut'})",4
+SML0182,5,G029,3,CCCCC/C=C\CCC=O,CWRKZMLUDFBPAO-SREVYHEPSA-N,"aldehydic, orange, citrus","frozenset({'aldehydic', 'orange', 'citrus'})",3
+SML0470,5,G029,3,CCCCCCC=C,KWKAKUADMBZCLK-UHFFFAOYSA-N,gasoline,frozenset({'gasoline'}),1
+SML0518,5,G029,3,CCCC/C=C\CCC=O,QPULDJYQYDGZEI-WAYWQWQTSA-N,,frozenset(),0
+SML0266,2,G030,3,COC1=C(C(=CC=C1)OC)O,KLIDCXVFHGNTTM-UHFFFAOYSA-N,"medicinal, phenolic, smoky, woody, sweet, powdery, balsamic","frozenset({'smoky', 'phenolic', 'sweet', 'woody', 'powdery', 'medicinal', 'balsamic'})",7
+SML0492,2,G030,3,CCC1=CC=CC=C1O,IXQGCWUGDFDQMF-UHFFFAOYSA-N,"phenolic, sweet","frozenset({'phenolic', 'sweet'})",2
+SML0626,2,G030,3,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@]34C,MUMGGOZAMZWBJJ-DYKIIFRCSA-N,,frozenset(),0
+SML0390,1,G031,3,C1CCCCOC(=O)CCCCC/C=C\CCC1,NVIPUOMWGQAOIT-RQOWECAXSA-N,"musk, musty, animal","frozenset({'musty', 'musk', 'animal'})",3
+SML0599,1,G031,3,C1CCC/C=C\CCCCCCC(=O)CCC1,ZGEHHVDYDNXYMW-UPHRSURJSA-N,"dry, animal, floral, tobacco, balsamic, musk, waxy","frozenset({'dry', 'tobacco', 'waxy', 'musk', 'floral', 'balsamic', 'animal'})",7
+SML0601,1,G031,3,CC1C/C=C/CCCCCCCCCC(=O)C1,NKMKFQCVDZVEJR-CSKARUKUSA-N,"animal, musk, soapy","frozenset({'soapy', 'musk', 'animal'})",3
+SML0020,10,G032,3,CCCCCCCCCCCC(=O)OCC,MMXKVMNBHPAILY-UHFFFAOYSA-N,"fatty, floral, fruity, oily, waxy, sweet, clean, soapy","frozenset({'soapy', 'fatty', 'oily', 'sweet', 'waxy', 'clean', 'floral', 'fruity'})",8
+SML0036,10,G032,3,CCCCCCCCCCCCCCCC(=O)OC,FLIACVVOZYBSBS-UHFFFAOYSA-N,"sweet, waxy, orris, fatty, oily","frozenset({'fatty', 'oily', 'sweet', 'waxy', 'orris'})",5
+SML0039,10,G032,3,CCCCCCCCCCCCCC(=O)OC,ZAZKJZBWRNNLDS-UHFFFAOYSA-N,"cognac, fatty, oily, orris, waxy","frozenset({'fatty', 'oily', 'waxy', 'orris', 'cognac'})",5
+SML0257,4,G033,3,CC/C=C\CCC=O,VVGOCOMZRGWHPI-ARJAWSKDSA-N,"creamy, green, vegetable, fatty, oily, milky, dairy","frozenset({'fatty', 'oily', 'green', 'milky', 'creamy', 'dairy', 'vegetable'})",7
+SML0493,4,G033,3,C1OC2=C(O1)C=C(C=C2)CO,BHUIUXNAPJIDOG-UHFFFAOYSA-N,"sweet, vanilla, powdery","frozenset({'powdery', 'vanilla', 'sweet'})",3
+SML0585,4,G033,3,COC1CC2CC1C3C2CC(C3)C=O,UOGMZEGKCNHMBF-UHFFFAOYSA-N,"aldehydic, marine, floral, ozone, fresh, woody","frozenset({'aldehydic', 'ozone', 'floral', 'woody', 'marine', 'fresh'})",6
+SML0179,4,G034,3,CC/C=C\CC/C=C/C=O,HZYHMHHBBBSGHB-ODYTWBPASA-N,"cucumber, green, leafy, melon, violet, dry, vegetable, fatty","frozenset({'melon', 'fatty', 'dry', 'leafy', 'cucumber', 'green', 'vegetable', 'violet'})",8
+SML0181,4,G034,3,CC/C=C\CC/C=C\C=O,HZYHMHHBBBSGHB-KPDBFRNYSA-N,,frozenset(),0
+SML0190,4,G034,3,CCCCCCC/C=C/C=C/C=O,QKTZBZWNADPFOL-BNFZFUHLSA-N,"fatty, grapefruit, meaty, orange, citrus","frozenset({'fatty', 'grapefruit', 'meaty', 'orange', 'citrus'})",5
+SML0068,2,G035,2,CCC1=NC=C(N=C1CC)C,PSINWXIDJYEXLO-UHFFFAOYSA-N,"chocolate, hazelnut, meaty, nutty, roasted, musty, vegetable, potato, green, earthy","frozenset({'chocolate', 'musty', 'earthy', 'nutty', 'meaty', 'hazelnut', 'green', 'potato', 'roasted', 'vegetable'})",10
+SML0745,2,G035,2,CCC1=NC=C(N=C1C)C,JZBCTZLGKSYRSF-UHFFFAOYSA-N,"almond, burnt, chocolate, cocoa, hazelnut, nutty, musty, caramellic, coffee, roasted","frozenset({'chocolate', 'musty', 'cocoa', 'nutty', 'hazelnut', 'almond', 'coffee', 'burnt', 'roasted', 'caramellic'})",10
+SML0139,5,G036,2,C[C@@H]1CC[C@H](C(=O)C1)C(C)C,NFLGAXVYCFJBMK-BDAKNGLRSA-N,"sweet, anise, mentholic, herbal, camphoreous, cooling, fresh, green, minty","frozenset({'fresh', 'camphoreous', 'mentholic', 'sweet', 'minty', 'green', 'herbal', 'anise', 'cooling'})",9
+SML0685,5,G036,2,CC/C=C\CC/C=C/C#N,DSOXXQLCMAEPEZ-ODYTWBPASA-N,"floral, green","frozenset({'floral', 'green'})",2
+SML0065,6,G037,2,CC1=NC=CN=C1,CAWHJQAVHZEVTJ-UHFFFAOYSA-N,"cocoa, fishy, green, musty, nutty, potato, brown, roasted, earthy, chocolate","frozenset({'chocolate', 'musty', 'cocoa', 'earthy', 'nutty', 'fishy', 'green', 'potato', 'roasted', 'brown'})",10
+SML0421,6,G037,2,CC1=CC(=C(C=C1)C(C)C)O,MGSRCZKZVOBKFT-UHFFFAOYSA-N,"herbal, medicinal, phenolic, spicy, sweet, chemical, camphoreous","frozenset({'spicy', 'camphoreous', 'phenolic', 'sweet', 'chemical', 'herbal', 'medicinal'})",7
+SML0133,13,G038,2,CCC1=NC=CN=C1C(=O)C,PPJSYGVFDJEMRP-UHFFFAOYSA-N,"earthy, hazelnut, meaty, nutty, popcorn, potato, musty","frozenset({'musty', 'earthy', 'meaty', 'nutty', 'hazelnut', 'potato', 'popcorn'})",7
+SML0153,13,G038,2,CC1=NC=CN=C1C(=O)C,QUNOTZOHYZZWKQ-UHFFFAOYSA-N,"cocoa, coffee, hazelnut, nutty, popcorn, roasted, vegetable, caramellic","frozenset({'cocoa', 'nutty', 'hazelnut', 'coffee', 'roasted', 'popcorn', 'caramellic', 'vegetable'})",8
+SML0678,7,G039,2,CCC(C)(CCCC(C)C)O,DLHQZZUEERVIGQ-UHFFFAOYSA-N,"floral, sweet, fresh, lily, citrus","frozenset({'sweet', 'citrus', 'lily', 'floral', 'fresh'})",5
+SML0716,7,G039,2,CCCCCC(CCCC)O,SZMNDOUFZGODBR-UHFFFAOYSA-N,,frozenset(),0
+SML0427,8,G040,2,CCCCCCCCCCC(=O)C,LSKONYYRONEBKA-UHFFFAOYSA-N,"citrus, floral, fruity, orange","frozenset({'floral', 'fruity', 'orange', 'citrus'})",4
+SML0588,8,G040,2,CCCCCC(/C(=C/CC)/C)O,WSTQLNQRVZNEDV-CSKARUKUSA-N,"fruity, violet, oily, green, lily","frozenset({'oily', 'green', 'lily', 'fruity', 'violet'})",5
+SML0296,4,G041,2,CCC1=CC=C(C=C1)O,HXDOZKJGKXYMEW-UHFFFAOYSA-N,"animal, phenolic, woody, smoky, savory","frozenset({'smoky', 'phenolic', 'savory', 'woody', 'animal'})",5
+SML0632,4,G041,2,CC(=O)NC1=CC=C(C=C1)O,RZVAJINKPMORJF-UHFFFAOYSA-N,,frozenset(),0
+SML0128,1,G042,2,CC1C(=O)C(=C(O1)C)O,INAXVXBDKKUCGI-UHFFFAOYSA-N,"caramellic, fruity, pineapple, roasted, strawberry, sweet, savory, burnt, brown","frozenset({'sweet', 'savory', 'strawberry', 'roasted', 'burnt', 'fruity', 'pineapple', 'caramellic', 'brown'})",9
+SML0302,1,G042,2,CCC1C(=O)C(=C(O1)C)O,GWCRPYGYVRXVLI-UHFFFAOYSA-N,"caramellic, sweet","frozenset({'caramellic', 'sweet'})",2
+SML0291,2,G043,2,CCCC(CCOC(=O)C)S,JUCARGIKESIVLB-UHFFFAOYSA-N,"fruity, grapefruit, sulfurous, tropical, floral, pear, raspberry","frozenset({'pear', 'tropical', 'grapefruit', 'sulfurous', 'floral', 'fruity', 'raspberry'})",7
+SML0356,2,G043,2,CCCCCC(=O)C(C)C(=O)C,BGVBGAIWXAXBLP-UHFFFAOYSA-N,"caramellic, burnt, fruity, hay","frozenset({'fruity', 'caramellic', 'hay', 'burnt'})",4
+SML0449,1,G044,2,C[C@]12CC[C@H](C1(C)C)CC2=O,DSSYKIVIOFKYAU-OIBJUYFYSA-N,,frozenset(),0
+SML0477,1,G044,2,C[C@@]12CC[C@@H](C1(C)C)CC2=O,DSSYKIVIOFKYAU-XCBNKYQSSA-N,"medicinal, mentholic, herbal, camphoreous, cooling, phenolic, green, woody, minty","frozenset({'camphoreous', 'mentholic', 'phenolic', 'minty', 'green', 'woody', 'herbal', 'cooling', 'medicinal'})",9
+SML0280,3,G045,2,CCC(=O)C1=NCCC1,OVNCGQSYSSYBPO-UHFFFAOYSA-N,"roasted, fishy","frozenset({'fishy', 'roasted'})",2
+SML0473,3,G045,2,CCCCCC(=O)OCCCCC,WRFZKAGPPQGDDQ-UHFFFAOYSA-N,"apple, fruity, green, pear, pineapple, waxy, sweet, estery, fatty, cognac","frozenset({'pear', 'fatty', 'sweet', 'cognac', 'waxy', 'green', 'apple', 'estery', 'fruity', 'pineapple'})",10
+SML0639,2,G046,2,C(C(C=O)O)O,MNQZXJOMYWMBOU-UHFFFAOYSA-N,,frozenset(),0
+SML0643,2,G046,2,C(C(C(=O)O)N)N,PECYZEOJVXMISF-UHFFFAOYSA-N,,frozenset(),0
+SML0472,4,G047,2,CCCCC/C(=C\C1=CC=CC=C1)/C=O,HMKKIXGYKWDQSV-SDNWHVSQSA-N,floral,frozenset({'floral'}),1
+SML0481,4,G047,2,CCCCCC/C(=C\C1=CC=CC=C1)/C=O,GUUHFMWKWLOQMM-NTCAYCPXSA-N,"floral, jasmine, sweet","frozenset({'floral', 'jasmine', 'sweet'})",3
+SML0621,3,G048,2,C1CC(=O)NC1,HNJBEVLQSNELDL-UHFFFAOYSA-N,,frozenset(),0
+SML0622,3,G048,2,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@H]2O)CCC4=CC(=O)CC[C@]34C,MUMGGOZAMZWBJJ-KZYORJDKSA-N,,frozenset(),0
+SML0616,5,G049,2,C(C(=O)O)N,DHMQDGOQFOQNFH-UHFFFAOYSA-N,odorless,frozenset({'odorless'}),1
+SML0748,5,G049,2,C1C2CC(C1C=C2)C(=O)O,FYGUSUBEMUKACF-UHFFFAOYSA-N,"fruity, green","frozenset({'fruity', 'green'})",2
+SML0485,3,G050,2,CC1=CC=C(C=C1)OC(=O)CC2=CC=CC=C2,OJEQSSJFSNLMLB-UHFFFAOYSA-N,"animal, rose, honey, lily, hyacinth","frozenset({'lily', 'honey', 'rose', 'hyacinth', 'animal'})",5
+SML0633,3,G050,2,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,YZXBAPSDXZZRGB-DOFZRALJSA-N,,frozenset(),0
+SML0060,10,G051,2,CCCCCCCCCC(=O)OC,YRHYCMZPEVDGFQ-UHFFFAOYSA-N,"cognac, fatty, fruity, oily, winey, fermented, floral","frozenset({'fatty', 'oily', 'winey', 'fermented', 'cognac', 'floral', 'fruity'})",7
+SML0336,10,G051,2,CCCCCCCC(=O)C,VKCYHJWLYTUGCC-UHFFFAOYSA-N,"cheesy, coconut, fatty, fruity, herbal, sweet, weedy, fresh, green, earthy, soapy, waxy","frozenset({'soapy', 'fatty', 'sweet', 'weedy', 'earthy', 'coconut', 'cheesy', 'waxy', 'green', 'herbal', 'fruity', 'fresh'})",12
+SML0704,10,G052,2,CCCCCCC1CCCC1=O,JTHVYOIHZNYRCC-UHFFFAOYSA-N,"floral, fruity, green, jasmine","frozenset({'floral', 'fruity', 'green', 'jasmine'})",4
+SML0717,10,G052,2,CCCCCCCC1CCCC1=O,PJXHBTZLHITWFX-UHFFFAOYSA-N,"fruity, oily, fresh, jasmine, tropical, peach","frozenset({'jasmine', 'oily', 'peach', 'tropical', 'fruity', 'fresh'})",6
+SML0400,4,G053,2,C(CCCCC(=O)O)CCCCC(=O)O,LWBHHRRTOZQPDM-UHFFFAOYSA-N,,frozenset(),0
+SML0509,4,G053,2,CCC(C)CC(=O)O,IGIDLTISMCAULB-UHFFFAOYSA-N,"cheesy, animal, fruity, acidic, green, sharp","frozenset({'sharp', 'acidic', 'cheesy', 'green', 'fruity', 'animal'})",6
+SML0376,2,G054,2,CCCC/C=C\C=C\C=O,ZHHYXNZJDGDGPJ-IGTJQSIKSA-N,"geranium, pungent, green","frozenset({'green', 'geranium', 'pungent'})",3
+SML0494,2,G054,2,C1=CC=C2C(=C1)C(=CC(=O)O2)O,VXIXUWQIVKSKSA-UHFFFAOYSA-N,,frozenset(),0
+SML0381,1,G055,2,C1=CC=C(C=C1)CC(=O)O,WLJVXDMOQOGPHL-UHFFFAOYSA-N,"animal, honey, sweet, sour, floral, rose, powdery, tobacco, chocolate, waxy","frozenset({'chocolate', 'animal', 'sweet', 'tobacco', 'waxy', 'honey', 'rose', 'floral', 'powdery', 'sour'})",10
+SML0625,1,G055,2,C1=CC=C(C=C1)CC(=O)N[C@@H](CCC(=O)N)C(=O)O,JFLIEFSWGNOPJJ-JTQLQIEISA-N,,frozenset(),0
+SML0344,12,G056,2,CSCC1=CC=CC=C1,OFQPKKGMNWASPN-UHFFFAOYSA-N,"burnt, horseradish, meaty, roasted, savory, sulfurous, chicken, beefy","frozenset({'meaty', 'savory', 'horseradish', 'roasted', 'burnt', 'sulfurous', 'beefy', 'chicken'})",8
+SML0465,12,G056,2,CCOC1=CC=CC=C1,DLRJIFUOBPOJNS-UHFFFAOYSA-N,"anisic, sweet","frozenset({'anisic', 'sweet'})",2
+SML0050,1,G057,2,CC1C(=C(C(=O)O1)O)C,UNYNVICDCJHOPO-UHFFFAOYSA-N,"caramellic, sweet, coffee","frozenset({'caramellic', 'coffee', 'sweet'})",3
+SML0246,1,G057,2,CCC1C(=C(C(=O)O1)O)C,IUFQZPBIRYFPFD-UHFFFAOYSA-N,"caramellic, sweet, nutty, fruity","frozenset({'fruity', 'nutty', 'caramellic', 'sweet'})",4
+SML0035,11,G058,2,CCCCCCCCCCCC(=O)OC,UQDUPQYQJKYHQI-UHFFFAOYSA-N,"mushroom, coconut, creamy, soapy, waxy","frozenset({'soapy', 'coconut', 'mushroom', 'waxy', 'creamy'})",5
+SML0445,11,G058,2,CCC/C=C/C=C/C=O,DVVATNQISMINCX-YTXTXJHMSA-N,"citrus, fatty, fruity, green, melon, pear","frozenset({'pear', 'melon', 'fatty', 'citrus', 'green', 'fruity'})",6
+SML0208,1,G059,2,CCC(C(C)CO)S,HABNNYNSJFKZFE-UHFFFAOYSA-N,"onion, sulfurous","frozenset({'onion', 'sulfurous'})",2
+SML0366,1,G059,2,CCCC(C(C)CO)S,XVFIAOJQUHTZSV-UHFFFAOYSA-N,,frozenset(),0
+SML0388,3,G060,2,CC1C/C=C/CCCCCCCCC(=O)C1,ZFGBKXBPHOUSJX-VQHVLOKHSA-N,,frozenset(),0
+SML0665,3,G060,2,C1CCC/C=C\CCCCCCCC(=O)CCC1,ZKVZSBSZTMPBQR-UPHRSURJSA-N,"animal, musk, sweet, dry, clean","frozenset({'dry', 'sweet', 'clean', 'musk', 'animal'})",5
+SML0425,8,G061,2,CCCCCCC(=O)CC,IYTXKIXETAELAV-UHFFFAOYSA-N,"fruity, grassy, green, herbal, sweet, spicy, leafy, floral, fresh, jasmine","frozenset({'fresh', 'spicy', 'jasmine', 'sweet', 'leafy', 'green', 'herbal', 'floral', 'fruity', 'grassy'})",10
+SML0436,8,G061,2,CCCC(=O)SC,GRLJIIJNZJVMGP-UHFFFAOYSA-N,"cheesy, cocoa, fruity, milky, sweet, sulfurous, garlic, cabbage, tomato","frozenset({'sweet', 'cocoa', 'cabbage', 'sulfurous', 'cheesy', 'tomato', 'milky', 'garlic', 'fruity'})",9
+SML0543,2,G062,2,CCCC(C)C(=O)OCC,HZPKNSYIDSNZKW-UHFFFAOYSA-N,"fruity, green, melon, pear, pineapple, waxy, natural, fatty, fresh","frozenset({'pear', 'melon', 'fatty', 'waxy', 'green', 'natural', 'fruity', 'pineapple', 'fresh'})",9
+SML0550,2,G062,2,CCCCCOC(=O)CC,TWSRVQVEYJNFKQ-UHFFFAOYSA-N,"apple, banana, fruity, pineapple, sweet, tropical, apricot","frozenset({'sweet', 'tropical', 'apricot', 'apple', 'banana', 'fruity', 'pineapple'})",7
+SML0008,3,G063,2,CC1=CN=C(C=N1)C,LCZUOKDVTBMCMX-UHFFFAOYSA-N,"chocolate, earthy, roasted, musty, medicinal, cocoa, nutty, grassy, powdery, woody","frozenset({'chocolate', 'musty', 'cocoa', 'earthy', 'nutty', 'roasted', 'woody', 'powdery', 'medicinal', 'grassy'})",10
+SML0028,3,G063,2,CC1=CN=CC(=N1)C,HJFZAYHYIWGLNL-UHFFFAOYSA-N,"chocolate, potato, roasted, cocoa, nutty, coffee, beefy, brown, ethereal","frozenset({'chocolate', 'cocoa', 'nutty', 'potato', 'coffee', 'roasted', 'beefy', 'brown', 'ethereal'})",9
+SML0007,4,G064,2,CCCCC(=O)C(=O)C,FJPGAMCQJNLTJC-UHFFFAOYSA-N,"buttery, cheesy, fatty, sweet, oily","frozenset({'fatty', 'oily', 'sweet', 'cheesy', 'buttery'})",5
+SML0160,4,G064,2,CCCCCO,AMQJEAYHLZJPGS-UHFFFAOYSA-N,"alcoholic, solvent, sweet, fermented, winey, oily, bready, balsamic, pungent","frozenset({'oily', 'sweet', 'bready', 'winey', 'pungent', 'fermented', 'solvent', 'alcoholic', 'balsamic'})",9
+SML0198,2,G065,2,CCCC(=O)C,XNLICIUVMPYHGG-UHFFFAOYSA-N,"banana, dairy, ethereal, fruity, ketonic, rummy, sweet, fermented, winey, woody","frozenset({'sweet', 'ketonic', 'rummy', 'winey', 'fermented', 'woody', 'banana', 'dairy', 'fruity', 'ethereal'})",10
+SML0235,2,G065,2,CCC(=O)C(C)S,TWOGJUHCCNLYPC-UHFFFAOYSA-N,"grapefruit, onion, roasted, sulfurous, meaty","frozenset({'grapefruit', 'meaty', 'onion', 'roasted', 'sulfurous'})",5
+SML0256,3,G066,2,CC/C=C\CC=O,GXANMBISFKBPEX-ARJAWSKDSA-N,"fresh, grassy, green, leafy, pungent, fatty, weedy, fruity, apple","frozenset({'fatty', 'weedy', 'leafy', 'pungent', 'green', 'grassy', 'apple', 'fruity', 'fresh'})",9
+SML0314,3,G066,2,CCC/C=C/C=O,MBDOYVRWFFCFHM-SNAWJCMRSA-N,"apple, fresh, fruity, grassy, green, leafy, pungent, vegetable, aldehydic, clean, spicy, fatty, banana, herbal, cheesy, sharp","frozenset({'aldehydic', 'spicy', 'fatty', 'sharp', 'leafy', 'cheesy', 'pungent', 'clean', 'green', 'apple', 'grassy', 'fruity', 'banana', 'vegetable', 'fresh', 'herbal'})",16

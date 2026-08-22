@@ -214,7 +214,33 @@ __marimo__/
 /Chemicals/chembl/
 /Chemicals/embeddings/
 /Chemicals/odor_datasets/*embeddings*.npy
-/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/
+
+# Ancestral reconstruction. The 433 per-node IQ-TREE runs under NODE_*/ are ~11 GB of
+# .state files and stay out. The handful of small files below do NOT: the rooted tree
+# with internal node names is what every ancestral notebook walks, and without it
+# `Downstream_Analysis/scripts/ancestral_sets.py` cannot even be imported. Together
+# they are under 500 KB. Regenerating them needs the NODE_* runs, which is why they
+# are committed rather than left to be rebuilt.
+/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/*
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/all_nodes_ASR.final.fasta
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/hagfish_human_ASR.final.fasta
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/hagfish.fa
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/asr_extract.py
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/tree.py
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/human_hagfish_tree.ipynb
+!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/README.md
+# COCONUT chemical-space run: the download and the large intermediates are gigabytes.
+# The small s04/s06 CSVs and reports are kept, and so are the two small inputs the
+# analysis cannot be reproduced without (the odorant list and the ChEMBL LDA axis).
+/Chemicals/chemspace/data/*
+!/Chemicals/chemspace/data/reference_sets.csv
+!/Chemicals/chemspace/data/chembl_lda_structure.csv
+/Chemicals/chemspace/results/*.npy
+/Chemicals/chemspace/results/*.parquet
+/Chemicals/chemspace/results/embed_index.csv
+/Chemicals/chemspace/__pycache__/
 # Prediction data comes from Zenodo, not Git: see Downstream_Analysis/README.md.
 # ASR_Predictions_RefTree is re-included because it holds analysis code and small
 # reference tables rather than model output.
@@ -225,10 +251,21 @@ __marimo__/
 # Zenodo upload staging for the whole record (predictions + embeddings).
 /release/
 
-# Common phylogenetic inference and checkpoint outputs
+# Common phylogenetic inference and checkpoint outputs. These patterns exist mainly to
+# keep the 433 per-node ASR runs out; they are deliberately broad.
 *.ckp.gz
 *.iqtree
 *.state
 *.treefile
 *.contree
 *.mldist
+
+# ...but the published trees are results, not working files, and a paper repository has
+# to carry them. These are the inferred trees themselves plus the IQ-TREE reports that
+# record model selection for the Methods section. All small. The checkpoints (.ckp.gz),
+# distance matrices (.mldist) and run logs stay out.
+!/Phylogenetic_Analysis/data/HumanTree/human433_MFP.treefile
+!/Phylogenetic_Analysis/data/HumanTree/human433_MFP.contree
+!/Phylogenetic_Analysis/data/HumanTree/human433_MFP.iqtree
+!/Phylogenetic_Analysis/data/ReferenceTree/*.treefile
+!/Phylogenetic_Analysis/data/ReferenceTree/*.iqtree

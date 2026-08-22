@@ -1,0 +1,90 @@
+# Environment for the olfactory-receptor analysis.
+#
+#   conda env create -f environment.yml
+#   conda activate olfactory-receptors
+#
+# Mamba is much faster and understands the same file:
+#
+#   mamba env create -f environment.yml
+#
+# This one environment runs everything in the repository: the downstream notebooks,
+# the phylogenetics, and the whole COCONUT chemical-space pipeline. Versions are
+# pinned to the ones the published results were produced with.
+#
+# Two notes before you start.
+#
+# GPU. Only two steps want a GPU -- `Chemicals/chemspace/s02_embed.py` and the
+# `Model/Embeddings/extract_embeddings_*` notebooks -- and both are optional, because
+# their outputs are published on Zenodo. The pin below installs whichever PyTorch build
+# conda picks for your machine, which on a machine with no GPU is the CPU build. If you
+# do want the GPU steps, replace the pytorch line with the CUDA build for your driver,
+# from https://pytorch.org -- but keep transformers on 4.x either way (see below).
+#
+# transformers must stay on 4.x. Version 5 silently disables its PyTorch backend when
+# it finds torch < 2.5, printing a warning that is easy to miss and then failing when
+# MolFormer is loaded. MolFormer's `trust_remote_code` implementation targets 4.x in
+# any case. This is the single most common way to get a broken run.
+
+name: olfactory-receptors
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+
+  # --- numerics and plotting ---------------------------------------------------
+  - numpy=2.1.*
+  - pandas=2.2.*
+  - scipy=1.15.*
+  - scikit-learn=1.6.*
+  - statsmodels=0.14.*
+  - matplotlib-base=3.10.*
+  - seaborn=0.13.*
+  - plotly=5.24.*
+  - pyarrow>=15,<21          # reads the chemical-space .parquet intermediates
+
+  # --- chemistry ---------------------------------------------------------------
+  - rdkit=2026.03.*          # descriptors, SMARTS matching, Murcko scaffolds
+  - thermo=0.6.*             # Joback boiling points in s01. WITHOUT THIS, every
+                             # volatility number silently becomes NaN -- it does not
+                             # raise. Check it with the smoke test below.
+
+  # --- phylogenetics -----------------------------------------------------------
+  - ete4=4.3.*               # tree traversal for the ancestral notebooks
+  - biopython>=1.80          # FASTA parsing
+
+  # --- embeddings --------------------------------------------------------------
+  - pytorch>=2.5,<3          # used on CPU by the chemical-space kNN and matching;
+                             # only s02 and the embedding notebooks want a GPU
+  - transformers=4.48.*      # pinned to 4.x on purpose -- see the note above
+  - umap-learn=0.5.*
+
+  # --- figures and notebooks ---------------------------------------------------
+  - upsetplot=0.9.*
+  - jupyterlab
+  - ipykernel
+  - tqdm
+  - requests
+
+  - pip
+  - pip:
+      # Odour-descriptor datasets (Leffingwell, GoodScents). Only needed to rebuild
+      # Chemicals/odor_datasets/ from source; the built tables are in the repository.
+      - pyrfume==0.20
+
+      # ESM-C protein embeddings. Only needed to regenerate the protein embeddings
+      # in Model/Embeddings/; the published arrays come from Zenodo instead, so most
+      # people should leave this commented out -- it is a large install.
+      # - esm==3.2.1
+
+# --- smoke test ------------------------------------------------------------------
+# After `conda activate olfactory-receptors`, these four should all print cleanly:
+#
+#   python -c "from thermo import Joback; print(Joback('CCO').Tb(Joback('CCO').counts))"
+#   python -c "import rdkit, ete4, Bio; print('chem + phylo ok')"
+#   python -c "import torch, transformers; print(torch.__version__, transformers.__version__)"
+#   python -c "import torch; print('GPU:', torch.cuda.is_available())"
+#
+# The first is the one that matters most: if it errors, `thermo` is missing and the
+# volatility half of the chemical-space analysis will produce NaNs without complaining.

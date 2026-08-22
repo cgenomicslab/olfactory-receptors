@@ -192,7 +192,7 @@ def parse_args() -> argparse.Namespace:
         "--output-dir",
         type=Path,
         default=None,
-        help="Ignored directory in which to write release files. Default: Downstream_Analysis/release.",
+        help="Ignored directory in which to write release files. Default: <project-root>/release.",
     )
     parser.add_argument("--version", default="v1", help="Dataset version label.")
     parser.add_argument(
@@ -212,10 +212,14 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     project_root = args.project_root.resolve()
+    # <project-root>/release, matching prepare_zenodo_embeddings.py so both halves of
+    # the Zenodo record stage into one directory. It is also the only path .gitignore
+    # covers -- an earlier default of Downstream_Analysis/release put a 34 MB ZIP
+    # somewhere Git would have offered to commit.
     output_dir = (
         args.output_dir.resolve()
         if args.output_dir is not None
-        else project_root / "Downstream_Analysis" / "release"
+        else project_root / "release"
     )
     aggregated_root = project_root / "Downstream_Analysis" / "predictions" / "aggregated"
     run_root = resolve_run_root(project_root, args.archive_dir)

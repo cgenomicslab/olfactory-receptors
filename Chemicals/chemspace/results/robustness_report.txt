@@ -1,0 +1,87 @@
+universe 726407  odorants 5962  background 720445
+seeds 5  null replicates 5
+
+========================================================================
+ATTACKS 1 & 2  DOES THE MATCHED CONTROL HOLD UP?
+========================================================================
+  rebuilding the control under 5 matching seeds, scoring each
+  with random CV and with a Bemis-Murcko scaffold split
+
+  seed 0: matched 5939 (99.9%), worst |SMD| 0.0035 (PASS), 6146 distinct scaffolds
+    volatility_only    random CV 0.494   scaffold 0.465   optimism +0.030
+    descriptors_22     random CV 0.667   scaffold 0.657   optimism +0.010
+    molformer_768      random CV 0.795   scaffold 0.775   optimism +0.020
+
+  seed 1: matched 5939 (99.9%), worst |SMD| 0.0034 (PASS), 6156 distinct scaffolds
+    volatility_only    random CV 0.487   scaffold 0.466   optimism +0.021
+    descriptors_22     random CV 0.667   scaffold 0.659   optimism +0.009
+    molformer_768      random CV 0.795   scaffold 0.769   optimism +0.025
+
+  seed 2: matched 5939 (99.9%), worst |SMD| 0.0034 (PASS), 6151 distinct scaffolds
+    volatility_only    random CV 0.487   scaffold 0.480   optimism +0.007
+    descriptors_22     random CV 0.667   scaffold 0.657   optimism +0.010
+    molformer_768      random CV 0.793   scaffold 0.773   optimism +0.021
+
+  seed 3: matched 5939 (99.9%), worst |SMD| 0.0033 (PASS), 6142 distinct scaffolds
+    volatility_only    random CV 0.491   scaffold 0.480   optimism +0.011
+    descriptors_22     random CV 0.667   scaffold 0.660   optimism +0.008
+    molformer_768      random CV 0.793   scaffold 0.776   optimism +0.018
+
+  seed 4: matched 5939 (99.9%), worst |SMD| 0.0036 (PASS), 6129 distinct scaffolds
+    volatility_only    random CV 0.494   scaffold 0.471   optimism +0.024
+    descriptors_22     random CV 0.666   scaffold 0.658   optimism +0.008
+    molformer_768      random CV 0.793   scaffold 0.767   optimism +0.026
+
+  across seeds (mean +/- sd):
+    features                  random CV         scaffold
+    volatility_only       0.491 +/-0.004    0.472 +/-0.007
+    descriptors_22        0.667 +/-0.000    0.658 +/-0.001
+    molformer_768         0.794 +/-0.001    0.772 +/-0.004
+
+  Seed-to-seed spread is the matcher's contribution; the random-to-scaffold
+  gap is how much of the AUC was near-duplicate chemistry. Quote the
+  scaffold column.
+
+========================================================================
+ATTACK 3  IS THE kNN ENRICHMENT BIG, OR ONLY BIG-LOOKING?
+========================================================================
+
+  odorants                  :   46.9x  (purity 0.3848, base rate 0.0082)
+
+  matched natural products (the null that matters):
+    seed 0:   18.6x
+    seed 1:   18.4x
+    seed 2:   18.5x
+    seed 3:   18.5x
+    seed 4:   18.6x
+
+  random natural products (sanity check, should be ~1x):
+    draw 0:    1.1x
+    draw 1:    1.0x
+    draw 2:    1.0x
+    draw 3:    1.0x
+    draw 4:    1.0x
+
+  --------------------------------------------------------------------
+    observed (odorants)         46.9x
+    matched null                18.5x  +/- 0.1
+    random null                  1.0x  +/- 0.0
+    observed / matched null     2.53x  <-- THE NUMBER TO QUOTE
+
+  The raw enrichment counts the transport effect as if it were an olfactory
+  one. Against the matched null it is a factor of a few, not a factor of 47.
+
+========================================================================
+INTERVAL  HOW PRECISE IS THE ENRICHMENT?
+========================================================================
+  enrichment 46.9x   95% CI [46.1, 47.6]   (2000 resamples)
+  The interval is narrow because n is large. Narrow is not the same as
+  correct: it describes sampling noise only, never the matched null above.
+
+========================================================================
+WHAT TO PUT IN THE PAPER
+========================================================================
+  * the scaffold-split AUCs, not the random-CV ones
+  * the kNN enrichment beside its matched null, never on its own
+  * the matched functional-group odds ratios from s04's fg_enrichment.csv
+  * the seed spread, as evidence the control is not one lucky pairing
