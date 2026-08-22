@@ -221,16 +221,16 @@ __marimo__/
 # `Downstream_Analysis/scripts/ancestral_sets.py` cannot even be imported. Together
 # they are under 500 KB. Regenerating them needs the NODE_* runs, which is why they
 # are committed rather than left to be rebuilt.
-/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/*
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/all_nodes_ASR.final.fasta
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/hagfish_human_ASR.final.fasta
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/hagfish.fa
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/asr_extract.py
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/tree.py
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/human_hagfish_tree.ipynb
-!/Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/README.md
+/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/*
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/all_nodes_ASR.final.fasta
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/hagfish_human_ASR.final.fasta
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/hagfish.fa
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/asr_extract.py
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/tree.py
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_tree.ipynb
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/README.md
 # COCONUT chemical-space run: the download and the large intermediates are gigabytes.
 # The small s04/s06 CSVs and reports are kept, and so are the two small inputs the
 # analysis cannot be reproduced without (the odorant list and the ChEMBL LDA axis).

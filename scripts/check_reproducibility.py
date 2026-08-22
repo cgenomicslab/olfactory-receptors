@@ -83,7 +83,7 @@ GROUPS = {
                  "phylogenetic row order for the heatmaps in 02"),
             Item("Chemicals/odor_datasets/inchi_odors_smiles.csv",
                  "odour descriptors per molecule"),
-            Item("Ancestral_Receptor_Reconstruciton/human_tree_asr_hagfish_outgroup/"
+            Item("Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/"
                  "PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames",
                  "the rooted ASR tree with internal node names -- every ancestral "
                  "notebook walks it"),

@@ -18,7 +18,7 @@ Three trees, for three jobs.
 ## `HumanTree` — the 433 human ORs
 
 The main tree. Its tips are the extant receptors, and the ancestral reconstruction in
-[`../Ancestral_Receptor_Reconstruciton/`](../Ancestral_Receptor_Reconstruciton/) infers the
+[`../Ancestral_Receptor_Reconstruction/`](../Ancestral_Receptor_Reconstruction/) infers the
 internal nodes of exactly this topology.
 
 | file | what it is |

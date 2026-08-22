@@ -3,9 +3,10 @@
 Inferring the amino-acid sequences of the internal nodes of the human OR tree, so the model
 can be asked what an ancestral receptor would have bound.
 
-*(The directory name is misspelled — "Reconstruciton". It is referenced by path from
-`Downstream_Analysis/scripts/ancestral_sets.py`, so renaming it means updating that
-constant too.)*
+> This directory is referenced by path from `Downstream_Analysis/scripts/ancestral_sets.py`
+> (`ASR_TREE`), from `scripts/check_reproducibility.py`, and by name in `.gitignore`.
+> Renaming it means updating all three, or the ancestral notebooks stop finding the tree
+> and the 433 per-node runs stop being ignored.
 
 ```
 human_tree_asr_hagfish_outgroup/

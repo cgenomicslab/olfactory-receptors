@@ -9,7 +9,7 @@ smiles_to_odors_pyrfume.ipynb   builds those tables from pyrfume
 chemspace/            odorants against a natural-product background   <- the analysis
 chembl/               the ChEMBL bulk download (gitignored, ~1.5 GB)
 embeddings/           MolFormer embeddings of ChEMBL (gitignored, ~9 GB)
-chembl_molecues.ipynb           the earlier ChEMBL contrast
+chembl_molecules.ipynb           the earlier ChEMBL contrast
 odorant_chemical_space.ipynb    exploratory chemical-space work
 ```
 
@@ -74,7 +74,7 @@ Both directories are gitignored: the ChEMBL bulk download is ~1.5 GB and its Mol
 embedding array is 8.8 GB. Re-download from ChEMBL if you need them; nothing in the current
 analysis does.
 
-`chembl_molecues.ipynb` and `odorant_chemical_space.ipynb` are the notebooks behind that
+`chembl_molecules.ipynb` and `odorant_chemical_space.ipynb` are the notebooks behind that
 earlier work. They will not run on a fresh clone without those downloads.
 
 ---

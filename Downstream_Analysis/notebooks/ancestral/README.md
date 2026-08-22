@@ -116,7 +116,7 @@ the Zenodo record — see [`../../README.md`](../../README.md#getting-the-data).
 |---|---|
 | `predictions/aggregated/ASR_Predictions/asr_median_probability_wide.csv` | Zenodo |
 | `predictions/aggregated/Reference_Tree_Predictions/reference_median_probability_wide.csv` | Zenodo |
-| `Ancestral_Receptor_Reconstruciton/.../PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames` | repository |
+| `Ancestral_Receptor_Reconstruction/.../PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames` | repository |
 | `Model/Data_Preparation/processed/m2or_pairs_model.csv` | repository |
 | `Phylogenetic_Analysis/data/HumanTree/human433_OR_classes.csv` | repository |
 | `Chemicals/odor_datasets/inchi_odors_smiles.csv` | repository |

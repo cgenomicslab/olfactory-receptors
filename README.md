@@ -56,7 +56,7 @@ Model/
   Embeddings/              ESM-C protein and MolFormer ligand embeddings
 Phylogenetic_Analysis/     trees: class A GPCRs, six species, the 433 human ORs
 Ancestral_Receptor_
-  Reconstruciton/          IQ-TREE ancestral state reconstruction, and the rooted tree
+  Reconstruction/          IQ-TREE ancestral state reconstruction, and the rooted tree
 Chemicals/
   odor_datasets/           odour descriptors per molecule
   chemspace/               odorant chemistry against a natural-product background
@@ -89,7 +89,7 @@ Every analysis folder has its own README explaining its variables and how to run
          |                              v
          v                    median probability per pair
    Ancestral_Receptor_               /        \
-   Reconstruciton         ASR matrix          reference matrix
+   Reconstruction         ASR matrix          reference matrix
    432 nodes              (432 x 754)         (584 x 754)
                                    \          /
                                     v        v
