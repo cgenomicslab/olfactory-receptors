@@ -215,6 +215,12 @@ __marimo__/
 /Chemicals/embeddings/
 /Chemicals/odor_datasets/*embeddings*.npy
 
+# The per-node runs packaged for Zenodo, kept next to the folder they came from. 1.15 GB,
+# far over GitHub's 100 MB per-file limit, so it is local only. Rebuild it with
+# prepare_zenodo_asr.py. The .sha256 beside it IS committed, so the archive can be checked
+# after downloading it from Zenodo.
+/Ancestral_Receptor_Reconstruction/asr_node_runs.zip
+
 # Ancestral reconstruction. The 433 per-node IQ-TREE runs under NODE_*/ are ~11 GB of
 # .state files and stay out. The handful of small files below do NOT: the rooted tree
 # with internal node names is what every ancestral notebook walks, and without it
@@ -224,12 +230,12 @@ __marimo__/
 /Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/*
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft
-!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/all_nodes_ASR.final.fasta
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/hagfish_human_ASR.final.fasta
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/hagfish.fa
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/asr_extract.py
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/tree.py
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_tree.ipynb
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_asr.ipynb
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/README.md
 # COCONUT chemical-space run: the download and the large intermediates are gigabytes.
 # The small s04/s06 CSVs and reports are kept, and so are the two small inputs the

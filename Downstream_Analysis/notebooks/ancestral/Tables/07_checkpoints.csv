@@ -1,0 +1,6 @@
+index,0,0.75,0.83,0.9,0.96,1
+receptors (Class I + Class II),1,26 + 112,37 + 184,54 + 250,56 + 310,62 + 371
+odorants detected,21,549,650,660,666,687
+single detector,21,109,101,93,95,61
+combinatorial (>=2),0,440,549,567,571,626
+Class I only / both / Class II only,–,28 / 233 / 288,38 / 283 / 329,37 / 340 / 283,33 / 344 / 289,17 / 370 / 300

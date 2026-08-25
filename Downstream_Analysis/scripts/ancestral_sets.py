@@ -704,7 +704,8 @@ def class_clades(ingroup: str = "node_1") -> dict[str, set[str]]:
 
 
 def trajectory(times: Timescale, grid: np.ndarray | None = None,
-               ingroup: str = "node_1", blank_above: int | None = None) -> pd.DataFrame:
+               ingroup: str = "node_1", blank_above: int | None = None,
+               binary: pd.DataFrame | None = None) -> pd.DataFrame:
     """Sweep the tree and describe the code at every point on the time axis.
 
     One row per grid point, with the standing repertoire (the lineages crossing
@@ -722,8 +723,15 @@ def trajectory(times: Timescale, grid: np.ndarray | None = None,
     `blank_above` drops rows binding more than that many odorants before
     summarising — the sensitivity for the hyper-broad reconstructions, two of
     which alone account for a large share of the odorants ever gained.
+
+    `binary` substitutes a different call matrix for the shared density fill,
+    indexed by tree node name. The default (None) is the no-overlay fill this
+    folder uses everywhere else. `07` passes a grid whose extant rows carry the
+    measured M2OR values, which is what the collaborator's recipe does and what
+    reproduces its published endpoint; see that notebook for why the two differ.
     """
-    binary, _, _, _ = density_grid()
+    if binary is None:
+        binary, _, _, _ = density_grid()
     clades = class_clades(ingroup)
     if grid is None:
         grid = np.round(np.unique(np.clip(list(times.t.values()), 0, 1)), 12)
