@@ -49,17 +49,31 @@ for line in statefile:
             # eg. an amino acid wasn't selected
             pass
 
-mean_pp = np.mean(posterior_probs)
-sd_pp = np.std(posterior_probs)
-median_pp = np.median(posterior_probs)
+# A node with no rows in the state file (the root, node_0, is not reported by IQ-TREE
+# when the tree is given with -te) leaves posterior_probs empty. np.mean of an empty
+# list is nan and raises a RuntimeWarning per call -- across 433 nodes that was ~13 MB
+# of warnings in the driving notebook. Report it plainly instead.
+if posterior_probs:
+    mean_pp = np.mean(posterior_probs)
+    sd_pp = np.std(posterior_probs)
+    median_pp = np.median(posterior_probs)
+    stats = ('Mean posterior probability = ' + str(round(mean_pp, 3)) +
+             ' (standard deviation = ' + str(round(sd_pp, 3)) +
+             ', median = ' + str(round(median_pp, 3)) + ')\n')
+else:
+    stats = 'No states for ' + node + ' in this .state file; empty sequence written.\n'
+
 length = len(sequence) - sequence.count('-')
 
 print(('\n>'+node+'_ASR\n'+sequence+'\n'))
 print(('Protein length: ' + str(length)))
-print(('Mean posterior probability = ' + str(round(mean_pp,3)) + ' (standard deviation = ' + str(round(sd_pp,3)) + ', median = ' + str(round(median_pp,3)) + ')\n'))
+print(stats)
 
+# The trailing newline matters: these files get concatenated into one multi-FASTA, and
+# without it each header lands on the end of the previous sequence line, which makes
+# every record after the first unreadable.
 out = open(node+'_ASR.fasta','w')
-out.write('>'+node+'_ASR\n'+sequence)
+out.write('>'+node+'_ASR\n'+sequence+'\n')
 out.close()
 
 
