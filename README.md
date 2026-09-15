@@ -8,7 +8,7 @@ every receptor × odorant pair. This repository takes those probabilities and as
 say — about the 433 living human receptors, about 432 reconstructed ancestors, and about
 where odour chemistry sits in natural-product space.
 
-![Project schema](olfaction_abstract.png)
+![Project schema](olfaction_logo.png)
 
 ---
 
