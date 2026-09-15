@@ -19,7 +19,7 @@
 # For each category, the script exports:
 # - median probability wide matrix
 # Binary calls are deliberately not written here. Apply the analysis-specific
-# threshold in the relevant notebook; 01.model_behaviour derives the
+# threshold in the relevant notebook; figure2_activation_code (Part 1) derives the
 # calibrated value (0.915) from the measured pairs.
 
 # Usage examples:

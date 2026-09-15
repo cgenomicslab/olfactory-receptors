@@ -1,0 +1,5 @@
+variant,angle,null_median,null_max,draws_ge_observed
+"as specified (Euclidean, parent-referenced)",96.7,33.3,78.2,0.0
+"whitened (Mahalanobis, panel correlation)",88.5,45.6,73.9,0.0
+both branches referenced to node 0,108.0,,,
+"raw gain centroids, no parent subtracted",72.8,,,

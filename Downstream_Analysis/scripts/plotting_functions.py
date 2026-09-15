@@ -43,6 +43,11 @@ def custom_plots():
         "axes.spines.top": False,
         "axes.spines.right": False,
         "axes.grid": False,
-        "figure.dpi": 300,           # inline render resolution, not style
+        # Inline render resolution only -- what a notebook stores for display.
+        # Exported figures are governed by savefig.dpi above (and are vector in
+        # SVG/PDF regardless), so this is free to be small. At 300 the stored
+        # PNGs pushed the merged notebooks past 10 MB, which is where GitHub
+        # stops rendering a notebook and shows a download link instead.
+        "figure.dpi": 110,
     }
     return updated_style

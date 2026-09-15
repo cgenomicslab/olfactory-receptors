@@ -209,11 +209,16 @@ __marimo__/
 # Project-generated data and model artifacts
 # These files are reproducible outputs or large reference downloads. Keep their
 # creation/download instructions in the README rather than committing them.
-/Model/Embeddings/molecules/
-/Model/Embeddings/proteins/
+/Model_Inputs/Embeddings/molecules/
+/Model_Inputs/Embeddings/proteins/
 /Chemicals/chembl/
 /Chemicals/embeddings/
 /Chemicals/odor_datasets/*embeddings*.npy
+
+# Manuscript drafting, not code. METHODS.md is paper text built up folder by folder as
+# each analysis is finalised; it belongs with the manuscript, not here, and keeping one
+# copy avoids the two drifting apart.
+/METHODS.md
 
 # The per-node runs packaged for Zenodo, kept next to the folder they came from. 1.15 GB,
 # far over GitHub's 100 MB per-file limit, so it is local only. Rebuild it with
@@ -275,3 +280,58 @@ __marimo__/
 !/Phylogenetic_Analysis/data/HumanTree/human433_MFP.iqtree
 !/Phylogenetic_Analysis/data/ReferenceTree/*.treefile
 !/Phylogenetic_Analysis/data/ReferenceTree/*.iqtree
+
+# ---------------------------------------------------------------------------
+# Not in the manuscript.
+#
+# Everything below is real work that is kept locally but is not cited by any
+# figure, table or Methods paragraph of "Gene duplication shaped the origin and
+# evolution of the vertebrate olfactory combinatorial code". A reader arriving
+# from the paper should find only the analysis the paper stands on, so these
+# are untracked rather than deleted.
+# ---------------------------------------------------------------------------
+
+# Sparse-autoencoder feature interpretation over the ESM-C representations.
+# Exploratory throughout; no figure, panel or Methods section uses it.
+/Model_Inputs/Embeddings/*sae*
+/Model_Inputs/Embeddings/*SAE*
+/Model_Inputs/Embeddings/figures/*sae*
+/Model_Inputs/Embeddings/figures/*SAE*
+
+# The earlier ChEMBL background. Superseded by the COCONUT natural-product
+# background in Chemicals/chemspace/, which is what Fig. 4 reports, and neither
+# notebook runs on a fresh clone without the gitignored ~10 GB downloads.
+# The discriminant axis they produced is still used by s04's Q2 comparison, so
+# Chemicals/chemspace/data/chembl_lda_structure.csv stays tracked.
+/Chemicals/chembl_molecules.ipynb
+/Chemicals/odorant_chemical_space.ipynb
+
+# Loose exploratory notebooks that predate the numbered reference_tree/ and
+# ancestral/ series. They cross-reference each other and nothing else; every
+# result the paper reports was redone in the numbered notebooks.
+/Downstream_Analysis/notebooks/OR_ASR_functional_evolution.ipynb
+/Downstream_Analysis/notebooks/logp_transitions_human_ancestors.ipynb
+/Downstream_Analysis/notebooks/logP_by_groups.png
+/Downstream_Analysis/notebooks/m2or_molecules_per_class.ipynb
+/Downstream_Analysis/notebooks/paris.ipynb
+/Downstream_Analysis/notebooks/stiatistics_on_chemicals.ipynb
+
+# An older reference-tree ancestral prediction set, orphaned: nothing in the
+# repository reads it, and the paper's ancestral analysis runs on the 432-node
+# human-tree matrix instead.
+/Downstream_Analysis/predictions/aggregated/ASR_Predictions_RefTree/
+
+# Superseded whole-repository results dump, replaced by the manuscript itself.
+/results_overview.html
+/results_overview.pdf
+
+# The preprint PDF itself. It lives on bioRxiv; no reason to carry 4.3 MB of it here.
+/2026.08.31.747588v1.full.pdf
+
+# Local editor and tooling settings, not part of the analysis.
+/.vscode/
+
+# s12's full habitat table: one row per COCONUT molecule, ~15 MB. The panel-sized slice
+# beside it (aquatic_sources_panel.csv) is what the notebook reads and IS committed.
+/Chemicals/chemspace/results/aquatic_sources.csv
+/Chemicals/chemspace/results/aquatic_taxa_seen.csv

@@ -1,181 +1,169 @@
 # Olfactory receptors
 
-Source code for the analysis of predicted olfactory receptor–odorant interactions across
-the human OR repertoire and its reconstructed ancestors.
-
-![Project schema](olfaction_schema.png)
+Code for **"Gene duplication shaped the origin and evolution of the vertebrate olfactory
+combinatorial code."**
 
 A model trained on measured receptor–odorant bioassays predicts a binding probability for
 every receptor × odorant pair. This repository takes those probabilities and asks what they
-say — about the 433 extant human receptors, about 432 reconstructed ancestral nodes, and
-about how odour chemistry sits inside natural-product chemical space.
+say — about the 433 living human receptors, about 432 reconstructed ancestors, and about
+where odour chemistry sits in natural-product space.
 
-| | |
-|---|---|
-| receptors | **433** human ORs (reference tree), **432** reconstructed ancestral nodes |
-| odorants | **754** molecules with measured M2OR data |
-| measured pairs | **23,782** human receptor × odorant pairs, used to calibrate everything |
-| model output | 5 independent runs → per-pair **median probability** |
-| representations | ESM-C 300M protein embeddings (960-d), MolFormer ligand embeddings (768-d) |
+![Project schema](olfaction_schema.png)
 
 ---
 
-## Quickstart
+## Start here — one notebook per figure
+
+Every notebook stores its figures inline, so you can read the whole analysis by scrolling
+on GitHub without installing or running anything.
+
+| | Notebook | What it answers |
+|---|---|---|
+| **Figure 1** | [Receptor phylogeny](Phylogenetic_Analysis/notebooks/figure1_receptor_phylogeny.ipynb) | Are olfactory receptors one clade, and when did their two classes split? |
+| **Figure 2** | [The activation code](Downstream_Analysis/notebooks/reference_tree/figure2_activation_code.ipynb) | Do molecules read by similar receptors smell alike? |
+| **Figure 3** | [Ancestral origin](Downstream_Analysis/notebooks/ancestral/figure3_ancestral_origin.ipynb) | When did the combinatorial code appear? |
+| **Figure 4** | [Chemical space](Chemicals/chemspace/figure4_chemical_space.ipynb) | Where do odorants sit among natural products? |
+
+---
+
+## Every notebook, and what it produces
+
+### The paper
+
+| Notebook | Builds | Needs |
+|---|---|---|
+| [`figure1_receptor_phylogeny`](Phylogenetic_Analysis/notebooks/figure1_receptor_phylogeny.ipynb) | Figure 1, Extended Data Fig. 1 | embeddings |
+| [`figure2_activation_code`](Downstream_Analysis/notebooks/reference_tree/figure2_activation_code.ipynb) | Figure 2, Table 1, Extended Data Figs 2–4 | predictions |
+| [`figure3_ancestral_origin`](Downstream_Analysis/notebooks/ancestral/figure3_ancestral_origin.ipynb) | Figure 3, Extended Data Figs 5–6 | predictions |
+| [`figure4_chemical_space`](Chemicals/chemspace/figure4_chemical_space.ipynb) | Figure 4, Extended Data Fig. 7 | chemical space |
+
+### Supporting analyses
+
+Real analyses the paper draws on, but which have no figure of their own.
+
+| Notebook | Asks |
+|---|---|
+| [`model_errors`](Downstream_Analysis/notebooks/reference_tree/model_errors.ipynb) | where does the model get it wrong, and do the errors have structure? |
+| [`barcode_perception`](Downstream_Analysis/notebooks/reference_tree/barcode_perception.ipynb) | do molecules with identical receptor barcodes smell the same? With a chemical-similarity control |
+| [`biosynthetic_pathways`](Downstream_Analysis/notebooks/reference_tree/biosynthetic_pathways.ipynb) | do the activation clusters line up with biosynthetic origin? |
+
+### Building the inputs
+
+How the data the four figure notebooks read was made. You do not need to run these — their
+outputs are committed or on Zenodo.
+
+| Notebook | Makes |
+|---|---|
+| [`data`](Data/data.ipynb) | exploration of the raw M2OR export: coverage, balance, missingness |
+| [`extract_pairs`](Model_Inputs/Data_Preparation/extract_pairs.ipynb) | the modelling table — 52,175 filtered observations |
+| [`smiles_to_odors_pyrfume`](Chemicals/smiles_to_odors_pyrfume.ipynb) | the odour-descriptor tables, from pyrfume |
+| [`extract_embeddings_GPCR`](Model_Inputs/Embeddings/extract_embeddings_GPCR.ipynb) | ESM-C embeddings, 722 class A GPCRs — and the Fig. 1b map |
+| [`extract_embeddings_reference_tree`](Model_Inputs/Embeddings/extract_embeddings_reference_tree.ipynb) | ESM-C embeddings, 584 six-species proteins — and the Fig. 1d map |
+| [`extract_embeddings_m2or`](Model_Inputs/Embeddings/extract_embeddings_m2or.ipynb) | ESM-C embeddings, 1,399 assayed proteins |
+| [`human_hagfish_tree`](Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_tree.ipynb) | the rooted tree the ancestral reconstruction runs on |
+| [`human_hagfish_asr`](Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_asr.ipynb) | the 432 reconstructed ancestral sequences |
+
+The `extract_embeddings_*` notebooks need a GPU and the `esm` package. Everything else runs
+on a laptop.
+
+---
+
+## The numbers
+
+| | |
+|---|---|
+| receptors | **433** living human ORs, **432** reconstructed ancestors |
+| odorants | **754** molecules with measured M2OR data |
+| measured pairs | **23,782** human receptor × odorant pairs |
+| model output | 5 independent runs → per-pair **median probability** |
+| representations | ESM-C 300M proteins (960-d), MolFormer ligands (768-d) |
+
+---
+
+## Running it
 
 ```bash
 git clone https://github.com/cgenomicslab/olfactory-receptors.git
 cd olfactory-receptors
 
-# 1. environment  (~10 min; mamba is much faster than conda)
-conda env create -f environment.yml
+conda env create -f environment.yml         # ~10 min
 conda activate olfactory-receptors
 
-# 2. data that is too large for Git  (~50 MB by default)
-python scripts/download_zenodo_data.py
-
-# 3. check the clone is complete before running anything
-python scripts/check_reproducibility.py
-
-# 4. start reading
-#    Downstream_Analysis/notebooks/reference_tree/01.model_behaviour.ipynb
+python scripts/download_zenodo_data.py      # data too large for Git (~50 MB)
+python scripts/check_reproducibility.py     # says what is present and what is missing
 ```
 
-Step 2 fetches the prediction matrices and the pooled embeddings from Zenodo and verifies
-each archive's SHA-256 against `zenodo_manifest.json`. The multi-GB per-residue embedding
-archives are opt-in — `--assets all` if you want them, but nothing in the analysis needs
-them.
-
----
-
-## What is where
-
-```
-Data/                      M2OR bioassay pairs, as downloaded, plus an EDA notebook
-Model/
-  Data_Preparation/        M2OR -> the modelling table (sequence IDs, SMILES IDs, classes)
-  Embeddings/              ESM-C protein and MolFormer ligand embeddings
-Phylogenetic_Analysis/     trees: class A GPCRs, six species, the 433 human ORs
-Ancestral_Receptor_
-  Reconstruction/          IQ-TREE ancestral state reconstruction, and the rooted tree
-Chemicals/
-  odor_datasets/           odour descriptors per molecule
-  chemspace/               odorant chemistry against a natural-product background
-Downstream_Analysis/       what the predictions say            <- start here
-  notebooks/reference_tree/  the 433 extant human receptors
-  notebooks/ancestral/       the 432 reconstructed nodes
-  scripts/                   shared code the notebooks import
-  predictions/               the probability matrices (from Zenodo, not Git)
-scripts/                   data download and clone verification
-```
-
-Every analysis folder has its own README explaining its variables and how to run it.
-**[`Downstream_Analysis/README.md`](Downstream_Analysis/README.md) is the one to read first.**
-
----
-
-## The data flow
-
-```
-   M2OR bioassays                        odorant SMILES
-   (52,176 pairs)                        (754 molecules)
-         |                                      |
-         v                                      v
-  receptor sequences  --> ESM-C 300M      MolFormer
-         |                (960-d)          (768-d)
-         |                    \              /
-         |                     \            /
-   Phylogenetic_Analysis         [ binding model ]  -- 5 runs
-   433 human ORs                        |
-         |                              v
-         v                    median probability per pair
-   Ancestral_Receptor_               /        \
-   Reconstruction         ASR matrix          reference matrix
-   432 nodes              (432 x 754)         (584 x 754)
-                                   \          /
-                                    v        v
-                              Downstream_Analysis
-```
-
-**The binding model itself is not in this repository.** This repo covers everything up to
-the model input and everything downstream of its output; the training code lives separately.
-<!-- TODO: replace this line with the URL / DOI of the model repository before submission. -->
-
----
-
-## The path contract
-
-**Every path in this repository is relative to the repository root. Nothing is absolute.**
-`scripts/check_reproducibility.py` enforces this — it scans every `.py` and `.ipynb` and
-fails if it finds a path that only exists on one machine.
-
-That only works if the data downloaded from Zenodo lands exactly where the code expects it.
-It does: each archive in `zenodo_manifest.json` carries a `destination`, and
-`download_zenodo_data.py` extracts it there, so the internal layout of the ZIP plus the
-destination reproduces the directory tree the code already reads from.
-
-| archive | extracts into | giving |
-|---|---|---|
-| `..._downstream_probabilities` | `Downstream_Analysis/predictions/` | `predictions/aggregated/<Category>/<matrix>.csv`, `predictions/runs/…` |
-| `..._molecule_embeddings` | `Model/Embeddings/` | `Embeddings/molecules/molformer_smiles_embeddings.pt` |
-| `..._protein_embeddings_pooled` | `Model/Embeddings/proteins/` | `proteins/pooled/<dataset>_esmc300m_pooled.npy` |
-| `..._protein_embeddings_gpcr` | `Model/Embeddings/proteins/` | `proteins/gpcr_esmc_300m_embeddings/<id>.npy` |
-| `..._protein_embeddings_m2or` | `Model/Embeddings/proteins/` | `proteins/m2or_esmc_300m_embeddings/<id>.npy` |
-| `..._protein_embeddings_reference_tree` | `Model/Embeddings/proteins/` | `proteins/reference_tree_esmc_300m_embeddings/<id>.npy` |
-
-So after `python scripts/download_zenodo_data.py --assets all`, the tree is byte-for-byte
-the layout the notebooks were written against, and every relative path resolves.
-
-**If you ever repackage an archive, keep its internal prefix and its `destination` in step.**
-Changing either breaks every path downstream of it, silently — the notebook will just report
-a missing file. `scripts/check_reproducibility.py` is the fastest way to catch it.
-
----
-
-## Where the numbers come from
-
-Two conventions run through the whole analysis. Both are worth understanding before reading
-any figure.
-
-**Probabilities are turned into binding calls by a density fill, not by a chosen threshold.**
-The model emits probabilities; deciding what counts as "binds" needs a rule.
-[`Downstream_Analysis/scripts/calibration.py`](Downstream_Analysis/scripts/calibration.py)
-separates two questions — *how many* cells should be on is answered by isotonic calibration
-against the 23,782 measured pairs, and *which* cells are on is answered by rank. The
-resulting cut is an **output** of the procedure, never an input. It lands at 0.8875 on the
-ancestral matrix and 0.8947 on the extant one.
-
-**The rate-matched cut of 0.9150 is a reporting number, not a construction number.** It is
-the operating point at which the predicted binding proportion equals the measured one, and
-it is what the confusion matrix and per-pair metrics in `01.model_behaviour` are computed
-at. It is *not* used to fill any matrix, because recall there is ~0.6.
-
-**Joins are on biology, never on identifiers.** Receptors join by exact amino-acid sequence,
-so M2OR mutants never fold onto wild-type predictions. Molecules join on an InChIKey RDKit
-recomputes from SMILES, so a database release bump cannot silently break a join.
+Then open any notebook above and run it top to bottom.
 
 ---
 
 ## Reproducing
 
-Nothing here needs a GPU. The two steps that can use one —
-`Chemicals/chemspace/s02_embed.py` and the `Model/Embeddings/extract_embeddings_*`
-notebooks — regenerate data that is already published on Zenodo, so they are optional.
+**The downstream analysis needs no GPU.** Everything under `Downstream_Analysis/` runs on
+a laptop once the Zenodo data is downloaded — that is the bulk of the work and the part
+most people will want.
 
-| I want to… | do this |
-|---|---|
-| re-run the downstream analysis | download the Zenodo data, run the notebooks in numbered order |
-| rebuild the median matrices from the 5 runs | `python Downstream_Analysis/scripts/aggregate_prediction_runs.py` |
-| re-run the chemical-space analysis | see [`Chemicals/chemspace/README.md`](Chemicals/chemspace/README.md) — needs a 700 MB COCONUT download |
-| regenerate the embeddings | see [`Model/Embeddings/`](Model/Embeddings/) — needs a GPU and ESM-C |
-| publish a new data release | see the Zenodo section in [`Downstream_Analysis/README.md`](Downstream_Analysis/README.md) |
+**The chemical-space analysis needs a GPU.** `Chemicals/chemspace/s02_embed.py` embeds
+730,000 molecules with MolFormer and refuses to run on CPU, and its output is too large to
+archive. Without a GPU that analysis cannot be reproduced. This is a deliberate limit, not
+an oversight.
+
+| I want to… | do this | GPU |
+|---|---|---|
+| re-run the downstream analysis | download the Zenodo data, run `figure2_activation_code` and `figure3_ancestral_origin` | no |
+| rebuild the median matrices from the 5 runs | `python Downstream_Analysis/scripts/aggregate_prediction_runs.py` | no |
+| re-run the chemical-space analysis | see [`Chemicals/chemspace/README.md`](Chemicals/chemspace/README.md) — also needs a 700 MB COCONUT download | **yes** |
+| rebuild just the chemical-space figures | `python Chemicals/chemspace/s11_paper_figures.py` | no |
+| regenerate the protein embeddings | see [`Model_Inputs/Embeddings/`](Model_Inputs/Embeddings/) — or just download them | optional |
+| audit the ancestral reconstruction | `python scripts/download_zenodo_data.py --assets asr_node_runs` | no |
+| rebuild the Extended Data figures | `python scripts/build_extended_figures.py --out <dir>` | no |
+| rebuild the Supplementary Tables | `python scripts/build_supplementary_tables.py --out <dir>/Supplementary_Tables.xlsx` | no |
+| publish a new data release | see the Zenodo section in [`Downstream_Analysis/README.md`](Downstream_Analysis/README.md) | no |
 
 Run `python scripts/check_reproducibility.py` at any point; it reports which inputs are
 present, which are missing, and which command fetches each missing one.
 
 ---
 
-## Citing
+## What is where
 
-Data assets are archived on Zenodo — record ID and per-asset SHA-256 checksums in
-[`zenodo_manifest.json`](zenodo_manifest.json). Code is released under the terms in
-[`LICENSE`](LICENSE).
+```
+Data/                  the M2OR bioassay pairs, as downloaded
+Model_Inputs/          what the model reads: the modelling table, and the embeddings
+Phylogenetic_Analysis/ alignments and trees                          <- Figure 1
+Ancestral_Receptor_
+  Reconstruction/      the 432 reconstructed ancestral sequences
+Downstream_Analysis/   what the predictions say                      <- Figures 2 and 3
+Chemicals/chemspace/   odorants against a natural-product background <- Figure 4
+scripts/               download, checks, and the figure/table builders
+```
+
+**The binding model itself is not here.** This repository covers its inputs and everything
+downstream of its output. The training code lives separately.
+<!-- TODO: replace with the URL / DOI of the model repository before submission. -->
+
+---
+
+## Two things to know before reading any figure
+
+**Binding calls come from a density fill, not a chosen cut-off.** The model gives
+probabilities; deciding what counts as "binds" needs a rule.
+[`calibration.py`](Downstream_Analysis/scripts/calibration.py) splits that in two: *how
+many* cells should be on is answered by calibration against the 23,782 measured pairs, and
+*which* ones by rank. The cut is therefore an output, never an input. It lands at 0.8875 on
+the ancestral matrix and 0.8947 on the living one.
+
+**Joins are on biology, never on identifiers.** Receptors join by exact amino-acid
+sequence, so M2OR mutants never fold onto wild-type predictions. Molecules join on an
+InChIKey recomputed from SMILES, so a database update cannot silently break a join.
+
+---
+
+## Data and citation
+
+Large files are archived on Zenodo at
+[10.5281/zenodo.22178953](https://doi.org/10.5281/zenodo.22178953), with a SHA-256 for each
+in [`zenodo_manifest.json`](zenodo_manifest.json). `download_zenodo_data.py` checks them on
+arrival.
+
+Code is released under [`LICENSE`](LICENSE).

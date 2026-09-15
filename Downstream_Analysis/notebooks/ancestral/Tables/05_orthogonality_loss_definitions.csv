@@ -1,0 +1,4 @@
+definition,angle,null_median,null_max,draws_ge_obs,n_draws
+A  gained - parent (as reported),96.7,33.3,78.2,0,2000
+B  child - parent (loss-aware),98.4,35.8,84.2,0,2000
+C  gained - lost (turnover),106.6,89.5,157.9,566,2000

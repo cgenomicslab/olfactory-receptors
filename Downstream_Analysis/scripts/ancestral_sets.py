@@ -25,7 +25,7 @@ distribution. One calibration map, two fills, two cuts — the ASR grid lands ne
 onto the other matrix would put a chosen number back into the procedure.
 
 Passing an explicit numeric `threshold` to any function here restores the old
-absolute-cut behaviour, which is what `04.parent_child_decay` sweeps.
+absolute-cut behaviour, which is what `figure3_ancestral_origin` (Part 2) sweeps.
 
 Usage:
 
@@ -51,7 +51,7 @@ REPO = Path(__file__).resolve().parents[2]
 
 ASR_MATRIX = REPO / "Downstream_Analysis/predictions/aggregated/ASR_Predictions/asr_median_probability_wide.csv"
 REF_MATRIX = REPO / "Downstream_Analysis/predictions/aggregated/Reference_Tree_Predictions/reference_median_probability_wide.csv"
-PAIRS = REPO / "Model/Data_Preparation/processed/m2or_pairs_model.csv"
+PAIRS = REPO / "Model_Inputs/Data_Preparation/processed/m2or_pairs_model.csv"
 FASTA = REPO / "Phylogenetic_Analysis/data/ReferenceTree/PF13853.9606_7955_7740_7764_75743_137246.fa"
 ODORS = REPO / "Chemicals/odor_datasets/inchi_odors_smiles.csv"
 ASR_TREE = REPO / ("Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/"
@@ -124,7 +124,7 @@ def save_table(frame: pd.DataFrame, name: str, index: bool = False) -> None:
 def extant_calibration() -> tuple:
     """Return (threshold, measured_rate) from the reference-tree comparison.
 
-    The threshold is the one 01.model_behaviour derives: the cut at which the
+    The threshold is the one figure2_activation_code (Part 1) derives: the cut at which the
     predicted binding proportion equals the measured one on the 23,782
     experimentally tested cells. The measured rate is that proportion itself.
 

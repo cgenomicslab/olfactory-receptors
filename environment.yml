@@ -14,7 +14,7 @@
 # Two notes before you start.
 #
 # GPU. Only two steps want a GPU -- `Chemicals/chemspace/s02_embed.py` and the
-# `Model/Embeddings/extract_embeddings_*` notebooks -- and both are optional, because
+# `Model_Inputs/Embeddings/extract_embeddings_*` notebooks -- and both are optional, because
 # their outputs are published on Zenodo. The pin below installs whichever PyTorch build
 # conda picks for your machine, which on a machine with no GPU is the CPU build. If you
 # do want the GPU steps, replace the pytorch line with the CUDA build for your driver,
@@ -43,6 +43,8 @@ dependencies:
   - seaborn=0.13.*
   - plotly=5.24.*
   - pyarrow>=15,<21          # reads the chemical-space .parquet intermediates
+  - openpyxl=3.1.*           # writes the Supplementary Tables workbook
+                             # (scripts/build_supplementary_tables.py)
 
   # --- chemistry ---------------------------------------------------------------
   - rdkit=2026.03.*          # descriptors, SMARTS matching, Murcko scaffolds
@@ -74,7 +76,7 @@ dependencies:
       - pyrfume==0.20
 
       # ESM-C protein embeddings. Only needed to regenerate the protein embeddings
-      # in Model/Embeddings/; the published arrays come from Zenodo instead, so most
+      # in Model_Inputs/Embeddings/; the published arrays come from Zenodo instead, so most
       # people should leave this commented out -- it is a large install.
       # - esm==3.2.1
 

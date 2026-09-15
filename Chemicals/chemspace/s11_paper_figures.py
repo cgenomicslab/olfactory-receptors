@@ -21,8 +21,8 @@ final size, panel letters bold. Everything is drawn at final size, never scaled.
 
 Outputs
 -------
-figures/Figure4_chemical_space.png|svg|pdf
-figures/SupplementaryFigure_chemical_space.png|svg|pdf
+figures/Figure4_chemical_space.svg|pdf
+figures/SupplementaryFigure_chemical_space.svg|pdf
 """
 from __future__ import annotations
 
@@ -43,7 +43,12 @@ FIGURES = HERE / "figures"
 MM = 1 / 25.4
 DOUBLE_COLUMN = 180 * MM
 
-ODORANT_COLOUR = "#0b7350"
+ODORANT_COLOUR = "#0b7350"      # the odorant scatter in figure 4a, and the supplementary map
+# The bar charts in figure 4b-d get their own colour rather than reusing the green above.
+# Panel a is the only place green means "an odorant point on the map"; using the same green
+# for bars in the neighbouring panels made the two read as the same encoding when they are
+# not. Keep these two distinct.
+ODORANT_BAR_COLOUR = "#48546b"
 BACKGROUND_COLOUR = "#bfae94"
 AROMATIC_COLOUR = "#8a6a3b"
 M2OR_COLOUR = "#5b2c83"
@@ -93,17 +98,17 @@ HOST_TAXA = {"Primates", "Artiodactyla", "Mammalia", "Chordata", "Hominidae",
 
 
 def save(figure, name):
-    """Write one figure as PNG, SVG and PDF, without a bounding-box refit.
+    """Write one figure as SVG and PDF, without a bounding-box refit.
 
     `bbox_inches="tight"` is deliberately not used: it changes the figure size, which
     would undo the point of laying the panels out at print dimensions.
     """
     FIGURES.mkdir(exist_ok=True)
-    for extension in ("png", "svg", "pdf"):
+    for extension in ("svg", "pdf"):
         figure.savefig(FIGURES / f"{name}.{extension}")
     plt.close(figure)
     size = figure.get_size_inches()
-    print(f"wrote figures/{name}.png|svg|pdf   "
+    print(f"wrote figures/{name}.svg|pdf   "
           f"({size[0] * 25.4:.0f} x {size[1] * 25.4:.0f} mm)", flush=True)
 
 
@@ -181,8 +186,14 @@ def cliffs_delta(a, b, sample=100_000, seed=0):
 
 
 # --------------------------------------------------------------------- panels
-def panel_map(axis, universe, coordinates, point=0.8):
-    """Odorants on the natural-product map, with the M2OR subset picked out."""
+def panel_map(axis, universe, coordinates, point=0.8, m2or_scale=1.4):
+    """Odorants on the natural-product map, with the M2OR subset picked out.
+
+    ``m2or_scale`` enlarges the 754 M2OR points relative to everything else so they stay
+    findable among 720,445 background points. It is a compromise: too large and the M2OR
+    layer hides the wider odorant set beneath it, which is the comparison the panel is
+    there to make.
+    """
     is_odorant = universe.is_odorant.values == 1
     in_m2or = (universe.in_m2or == 1).values
 
@@ -197,15 +208,20 @@ def panel_map(axis, universe, coordinates, point=0.8):
                  s=point, c=ODORANT_COLOUR, alpha=0.55, lw=0, rasterized=True,
                  label=f"odorants ({len(others):,})")
     axis.scatter(coordinates[m2or, 0], coordinates[m2or, 1],
-                 s=point * 3, c=M2OR_COLOUR, alpha=0.8, lw=0, rasterized=True, zorder=4,
-                 label=f"M2OR ({len(m2or):,})")
+                 s=point * m2or_scale, c=M2OR_COLOUR, alpha=0.8, lw=0, rasterized=True,
+                 zorder=4, label=f"M2OR ({len(m2or):,})")
 
+    # UMAP axes are arbitrary but isotropic: stretching one against the other would
+    # distort apparent neighbourhoods, so the map is drawn square whatever the panel
+    # aspect. This also frees the margins either side for the legend.
+    axis.set_aspect("equal", adjustable="datalim")
     axis.set_xticks([])
     axis.set_yticks([])
     axis.set_xlabel("UMAP 1")
     axis.set_ylabel("UMAP 2")
-    axis.legend(frameon=False, markerscale=4, loc="upper right",
-                labelcolor=INK, handletextpad=0.3, borderpad=0.2)
+    axis.legend(frameon=False, markerscale=4, loc="upper left",
+                labelcolor=INK, handletextpad=0.3, borderpad=0.2,
+                bbox_to_anchor=(-0.02, 1.06))
 
 
 def panel_kingdom(axis):
@@ -221,7 +237,7 @@ def panel_kingdom(axis):
     odorant = [100 * shares.mean_share_odorant[k] for k in present]
     other = [100 * shares.mean_share_background[k] for k in present]
 
-    axis.barh(positions + 0.19, odorant, height=0.36, color=ODORANT_COLOUR,
+    axis.barh(positions + 0.19, odorant, height=0.36, color=ODORANT_BAR_COLOUR,
               label="odorants")
     axis.barh(positions - 0.19, other, height=0.36, color=BACKGROUND_COLOUR,
               label="other natural products")
@@ -245,7 +261,7 @@ def panel_pathway(axis):
     table = pd.read_csv(RESULTS / "pathway_enrichment.csv").sort_values("pct_odorant")
     positions = np.arange(len(table))
 
-    axis.barh(positions + 0.19, table.pct_odorant, height=0.36, color=ODORANT_COLOUR,
+    axis.barh(positions + 0.19, table.pct_odorant, height=0.36, color=ODORANT_BAR_COLOUR,
               label="odorants")
     axis.barh(positions - 0.19, table.pct_background, height=0.36,
               color=BACKGROUND_COLOUR, label="natural products")
@@ -264,7 +280,7 @@ def panel_functional_groups(axis):
     table = pd.read_csv(RESULTS / "fg_enrichment.csv").sort_values("odds_ratio")
     positions = np.arange(len(table))
     log_odds = np.log2(table.odds_ratio.clip(lower=1e-3))
-    colours = [ODORANT_COLOUR if v > 0 else BACKGROUND_COLOUR for v in log_odds]
+    colours = [ODORANT_BAR_COLOUR if v > 0 else BACKGROUND_COLOUR for v in log_odds]
 
     axis.barh(positions, log_odds, color=colours, height=0.68)
     axis.axvline(0, color=GRID, lw=0.8)
@@ -276,16 +292,24 @@ def panel_functional_groups(axis):
 
 
 # ------------------------------------------------------------------ figure 4
-def figure4():
-    """The main chemical-space figure."""
+def figure4(height_mm=118):
+    """The main chemical-space figure.
+
+    ``height_mm`` sets the drawn height only; type sizes come from the rcParams above and
+    are never scaled with it, so compacting the figure shrinks the plotting area and the
+    whitespace around it while leaving every label at its print size. The default of
+    118 mm is close to half the text height of a page. The second row is given the larger
+    share because panels c and d are categorical bar charts whose height is set by their
+    row count (7 pathways and 16 functional groups), not by the data range.
+    """
     universe = load_universe()
     coordinates = load_umap()
 
-    height = 165 * MM          # about two thirds of the text height of a page
+    height = height_mm * MM
     figure = plt.figure(figsize=(DOUBLE_COLUMN, height))
     grid = figure.add_gridspec(
-        2, 2, height_ratios=[1.0, 1.0], width_ratios=[1, 1],
-        left=0.135, right=0.99, top=0.945, bottom=0.075, hspace=0.30, wspace=0.42)
+        2, 2, height_ratios=[0.80, 1.20], width_ratios=[1, 1],
+        left=0.135, right=0.99, top=0.945, bottom=0.095, hspace=0.34, wspace=0.42)
 
     panel_map(figure.add_subplot(grid[0, 0]), universe, coordinates)
     panel_kingdom(figure.add_subplot(grid[0, 1]))
@@ -533,10 +557,12 @@ def supplementary():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--only", default="4s", help="4 for the main figure, s for supp")
+    parser.add_argument("--height", type=float, default=118.0,
+                        help="drawn height of figure 4 in mm; type size is unaffected")
     args = parser.parse_args()
 
     if "4" in args.only:
-        figure4()
+        figure4(height_mm=args.height)
     if "s" in args.only:
         supplementary()
 
