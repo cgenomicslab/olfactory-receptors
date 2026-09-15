@@ -20,7 +20,7 @@ Colours are the project's palm-green and sand pair, checked for colour-vision se
 Any figure whose inputs are missing is skipped with a message, so this is safe to run at
 any point in the pipeline.
 
-CPU only, about two minutes. Writes PNG (170 dpi) and SVG into figures/.
+CPU only, about two minutes. Writes SVG into figures/.
 """
 from __future__ import annotations
 
@@ -66,12 +66,11 @@ mpl.rcParams.update({
 
 
 def save(figure, name):
-    """Write one figure as both PNG and SVG."""
+    """Write one figure as SVG."""
     FIGURES.mkdir(exist_ok=True)
-    for extension in ("png", "svg"):
-        figure.savefig(FIGURES / f"{name}.{extension}", bbox_inches="tight")
+    figure.savefig(FIGURES / f"{name}.svg", bbox_inches="tight")
     plt.close(figure)
-    print(f"wrote figures/{name}.png|svg", flush=True)
+    print(f"wrote figures/{name}.svg", flush=True)
 
 
 # Which map the figures draw, and what gets appended to their filenames. Set by --map.

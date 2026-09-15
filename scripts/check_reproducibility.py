@@ -72,7 +72,7 @@ GROUPS = {
             Item("Downstream_Analysis/predictions/aggregated/Reference_Tree_Predictions/"
                  "reference_median_probability_wide.csv",
                  "584 reference-tree proteins x 754 odorants", ZENODO),
-            Item("Model/Data_Preparation/processed/m2or_pairs_model.csv",
+            Item("Model_Inputs/Data_Preparation/processed/m2or_pairs_model.csv",
                  "measured M2OR pairs; the experimental layer and the SMILES map"),
             Item("Phylogenetic_Analysis/data/ReferenceTree/"
                  "PF13853.9606_7955_7740_7764_75743_137246.fa",
@@ -90,8 +90,10 @@ GROUPS = {
         ],
     ),
     "chemspace": Group(
-        "Chemical space (optional)",
-        "Chemicals/chemspace/ -- odorants against a natural-product background",
+        "Chemical space (optional -- NEEDS A GPU)",
+        "Chemicals/chemspace/ -- odorants against a natural-product background. "
+        "s02 requires a GPU and its output is not archived, so without one this "
+        "analysis cannot be reproduced.",
         [
             Item("Chemicals/chemspace/data/reference_sets.csv",
                  "the 5,962-molecule odorant list, release-independent"),
@@ -103,17 +105,31 @@ GROUPS = {
                  "background + odorants with descriptors (built by s01)",
                  "python s01_build_universe.py", required=False),
             Item("Chemicals/chemspace/results/embeddings.npy",
-                 "MolFormer embeddings for the universe (built by s02)",
-                 "python s02_embed.py", required=False),
+                 "MolFormer embeddings for the universe -- GPU only, not on Zenodo",
+                 "python s02_embed.py   (needs a GPU)", required=False),
+        ],
+    ),
+    "ancestral": Group(
+        "Ancestral reconstruction runs (optional)",
+        "the 433 per-node IQ-TREE runs behind the reconstructed sequences. Only needed "
+        "to audit or re-derive them -- the sequences themselves are in the repository.",
+        [
+            Item("Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/"
+                 "hagfish_human_ASR.final.fasta",
+                 "the 432 reconstructed ancestral sequences"),
+            Item("Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/"
+                 "NODE_node_1",
+                 "per-node IQ-TREE runs, 9.6 GB unpacked",
+                 f"{ZENODO} --assets asr_node_runs", required=False, is_dir=True),
         ],
     ),
     "embeddings": Group(
         "Embeddings (optional)",
         "only needed to retrain the model or redo the embedding analyses",
         [
-            Item("Model/Embeddings/molecules/molformer_smiles_embeddings.pt",
+            Item("Model_Inputs/Embeddings/molecules/molformer_smiles_embeddings.pt",
                  "MolFormer ligand embeddings, 754 x 768", ZENODO, required=False),
-            Item("Model/Embeddings/proteins/reference_tree_esmc_300m_embeddings",
+            Item("Model_Inputs/Embeddings/proteins/reference_tree_esmc_300m_embeddings",
                  "per-residue ESM-C arrays, reference tree",
                  f"{ZENODO} --assets embeddings_reference_tree",
                  required=False, is_dir=True),
@@ -138,9 +154,10 @@ PACKAGES = [
     ("thermo", "Joback boiling points -- SILENTLY returns NaN if missing"),
     ("umap", "chemical-space maps"),
     ("statsmodels", "some downstream statistics"),
+    ("openpyxl", "the Supplementary Tables workbook"),
 ]
 
-OPTIONAL_PACKAGES = {"thermo", "umap", "torch", "statsmodels"}
+OPTIONAL_PACKAGES = {"thermo", "umap", "torch", "statsmodels", "openpyxl"}
 
 
 def check_files(groups, quiet=False):

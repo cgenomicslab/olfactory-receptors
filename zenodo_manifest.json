@@ -1,7 +1,8 @@
 {
-  "record_title": "Olfactory receptor binding probabilities with ESM-C protein and MolFormer ligand embeddings",
+  "record_title": "Data for: Gene duplication shaped the origin and evolution of the vertebrate olfactory combinatorial code",
   "version": "v1",
-  "zenodo_record_id": null,
+  "zenodo_record_id": "22178953",
+  "doi": "10.5281/zenodo.22178953",
   "_help": "After publishing, set zenodo_record_id to the NUMERIC id from the record URL (https://zenodo.org/records/<id>). Use the version-specific id, not the concept DOI, so the checksums below stay valid.",
   "assets": {
     "predictions": {
@@ -14,42 +15,79 @@
     "embeddings_molecules": {
       "filename": "olfactory_receptor_molecule_embeddings_v1.zip",
       "sha256": "f025118318cbce6d84e9a3fbc50a325ace803d9ddd3c976cbbf92283671688e4",
-      "destination": "Model/Embeddings",
+      "destination": "Model_Inputs/Embeddings",
       "description": "MolFormer ligand embeddings, (754, 768), indexed by smiles_id to join the prediction matrices.",
       "bytes": 4359430
     },
     "embeddings_pooled": {
       "filename": "olfactory_receptor_protein_embeddings_pooled_v1.zip",
       "sha256": "72169283d37ef402316ec20bfe0e3263ae4aba07278f4795cb9d71158ff119fc",
-      "destination": "Model/Embeddings/proteins",
+      "destination": "Model_Inputs/Embeddings/proteins",
       "bytes": 9665801,
       "description": "Mean-pooled (N, 960) ESM-C 300M matrices. This is what the model consumes."
     },
     "embeddings_gpcr": {
       "filename": "olfactory_receptor_protein_embeddings_gpcr_v1.zip",
       "sha256": "1557a0c02ce22763e478d94f760e78a515c6e80c301052bb50e225cf2e1d61e7",
-      "destination": "Model/Embeddings/proteins",
+      "destination": "Model_Inputs/Embeddings/proteins",
       "description": "Per-residue (L, 960) ESM-C 300M arrays, 722 GPCRs. Large.",
       "bytes": 901280958
     },
     "embeddings_m2or": {
       "filename": "olfactory_receptor_protein_embeddings_m2or_v1.zip",
       "sha256": "4bebe256759ac00860ac6ada08b5864419f21899ea79943cad50f12226e26842",
-      "destination": "Model/Embeddings/proteins",
+      "destination": "Model_Inputs/Embeddings/proteins",
       "description": "Per-residue (L, 960) ESM-C 300M arrays, 1399 M2OR proteins. Large.",
       "bytes": 1589342789
     },
     "embeddings_reference_tree": {
       "filename": "olfactory_receptor_protein_embeddings_reference_tree_v1.zip",
       "sha256": "bc4fc8378d58f24dff33f652cb629e098b094e3660da6de4e0a1f2c870667a0e",
-      "destination": "Model/Embeddings/proteins",
+      "destination": "Model_Inputs/Embeddings/proteins",
       "description": "Per-residue (L, 960) ESM-C 300M arrays, 584 reference-tree proteins. Large.",
       "bytes": 663192847
+    },
+    "asr_node_runs": {
+      "filename": "olfactory_receptor_asr_node_runs_v1.zip",
+      "sha256": "4f216b14af5d0d4c0eeae9c683d0b895bcecba709a475c18c8836212cd462aad",
+      "destination": "Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup",
+      "bytes": 1210175002,
+      "description": "Per-node IQ-TREE ancestral-state runs, 433 directories as produced. Includes the .state posteriors over all 20 amino acids at every site. Large; only needed to audit or re-derive the reconstruction."
+    },
+    "chemical_space": {
+      "filename": "olfactory_receptor_chemical_space_v1.zip",
+      "sha256": "b039a511728d3b17a47e2292a56e627f12a11fcc46501b0c22e185f67d034db4",
+      "destination": "Chemicals/chemspace/results",
+      "bytes": 324688742,
+      "description": "Derived data for the odorant vs natural-product analysis on COCONUT 08-2026: the 730,571-molecule analysis table, PCA-50 of the MoLFormer embedding, both UMAP projections, cached COCONUT parent structures and the resolved source-organism table."
     }
   },
   "default_assets": [
     "predictions",
     "embeddings_molecules",
     "embeddings_pooled"
-  ]
+  ],
+  "groups": {
+    "predictions": [
+      "predictions"
+    ],
+    "embeddings": [
+      "embeddings_molecules",
+      "embeddings_pooled"
+    ],
+    "embeddings-full": [
+      "embeddings_molecules",
+      "embeddings_pooled",
+      "embeddings_gpcr",
+      "embeddings_m2or",
+      "embeddings_reference_tree"
+    ],
+    "chemicals": [
+      "chemical_space"
+    ],
+    "asr": [
+      "asr_node_runs"
+    ]
+  },
+  "_help_groups": "Each key becomes a --flag on download_zenodo_data.py. Add a group here, not in the script."
 }

@@ -1,62 +1,38 @@
-# Ancestral receptor reconstruction
+# Ancestral reconstruction
 
-Reconstructs the amino-acid sequences of the 432 internal nodes of the human OR tree, so
-the binding model can be asked what an ancestral receptor would have bound.
+The 432 reconstructed ancestral receptor sequences, one per internal node of the human tree.
 
-Everything happens in `human_tree_asr_hagfish_outgroup/human_hagfish_asr.ipynb`.
+## What is here
 
-## The output that matters
-
-`hagfish_human_ASR.final.fasta` — 432 ancestral sequences, `node_1` to `node_432`.
-These are the rows of the ASR prediction matrix.
-
-`PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames` — the rooted tree with
-internal node names. Every notebook in `Downstream_Analysis/notebooks/ancestral/` walks it.
-
-## The steps
-
-1. Align 433 human ORs plus one hagfish sequence (MAFFT).
-2. Build the tree with IQ-TREE, root it on the hagfish, name the internal nodes
-   `node_0` … `node_432`.
-3. Recode the alignment as presence/absence (gap = 0, residue = 1) and run IQ-TREE `-asr`
-   on the fixed tree. This says which alignment columns each ancestor had.
-4. For each node: keep only its present columns, run IQ-TREE `-asr` again, and take the
-   highest-posterior amino acid at each site.
-
-The hagfish roots the tree. That is what makes `node_1` the common ancestor of Class I
-(`node_2`) and Class II (`node_3`). `node_0` is the root itself and has no reconstruction —
-IQ-TREE does not report states for it — so the usable set starts at `node_1`.
-
-## Files
-
-| | |
+| File | Is |
 |---|---|
-| `PF13853_9606.7764.mafft` | the alignment, 434 sequences |
-| `hagfish.fa` | the outgroup sequence |
-| `asr_extract.py` | pulls one node's sequence out of an IQ-TREE `.state` file |
-| `tree.py` | opens the tree in an interactive viewer |
-| `human_hagfish_tree.ipynb` | the tree figure |
+| `human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft` | the alignment: 433 human receptors plus a hagfish outgroup |
+| `...mafft.lg.treefile.rooted.withinternalnames` | the rooted tree with named internal nodes — **every ancestral notebook walks this** |
+| `hagfish_human_ASR.final.fasta` | the 432 reconstructed sequences |
+| `asr_extract.py`, `tree.py` | the extraction code |
+| `human_hagfish_tree.ipynb`, `human_hagfish_asr.ipynb` | how the tree and the reconstruction were run |
 
-`NODE_node_*/` holds the 433 per-node IQ-TREE runs — 9.6 GB, too large for Git. They are
-archived on Zenodo instead:
+## How it was done
+
+Gaps first, then sequence. The alignment is reduced to a presence/absence matrix and
+ancestral gap states are reconstructed on the fixed rooted topology (GTR2+FO+R4 over 337
+binary sites). For each node the alignment is then cut down to the columns that node is
+reconstructed to *have*, and amino acids are reconstructed on the same topology under
+LG+F+R9. Each ancestral sequence is the highest-posterior residue at each site.
+
+That gives `node_1` … `node_432`, ungapped length 305–323. IQ-TREE reports no states for
+`node_0`, so there are 432 sequences and not 433.
+
+## The per-node runs
+
+The 433 IQ-TREE runs behind these sequences are ~11 GB and are not in Git. You do not need
+them — the sequences are here. To audit them:
 
 ```bash
 python scripts/download_zenodo_data.py --assets asr_node_runs
 ```
 
-That unpacks the `NODE_node_*` tree back into `human_tree_asr_hagfish_outgroup/`. You only
-need it to audit the reconstruction — the `.state` files hold the per-site posterior over
-all 20 amino acids, so with them you can check confidence at any site or re-extract under a
-different rule. The finished sequences are in the repository, so nothing downstream needs
-the archive.
+That includes the `.state` files with the full posterior at every site.
 
-`prepare_zenodo_asr.py` builds it.
-
-## Re-running one node
-
-```bash
-python asr_extract.py NODE_node_27/human_sequences.node_27.fasta.state node_27
-```
-
-Writes `node_27_ASR.fasta` and prints the mean posterior probability, which is the number
-to look at when judging how much to trust a node.
+What the reconstruction is used for: [Figure
+3](../Downstream_Analysis/notebooks/ancestral/figure3_ancestral_origin.ipynb).

@@ -1,18 +1,21 @@
 """Download and verify published data assets from the project's Zenodo record.
 
-One Zenodo record holds several archives: the downstream prediction
-probabilities and the ESM-C protein embeddings. Each is listed in
+One Zenodo record holds every archive: the prediction probabilities, the ESM-C
+protein embeddings, the MolFormer molecule embeddings, the per-node ancestral
+reconstruction runs and the chemical-space tables. Each is listed in
 zenodo_manifest.json with its own checksum and extraction destination.
 
-By default only the small, immediately useful assets are fetched (predictions
-and the pooled embeddings). The multi-GB per-residue embedding archives are
-opt-in.
+Assets are selected by group. Every group in the manifest becomes a flag here,
+so adding one is a manifest edit rather than a code change.
 
 Usage:
-  python scripts/download_zenodo_data.py                     # default assets
-  python scripts/download_zenodo_data.py --list              # show what exists
-  python scripts/download_zenodo_data.py --assets all
-  python scripts/download_zenodo_data.py --assets embeddings_gpcr
+  python scripts/download_zenodo_data.py                     # default assets, ~49 MiB
+  python scripts/download_zenodo_data.py --list              # show groups and assets
+  python scripts/download_zenodo_data.py --predictions --chemicals
+  python scripts/download_zenodo_data.py --asr
+  python scripts/download_zenodo_data.py --embeddings-full   # includes the per-residue sets
+  python scripts/download_zenodo_data.py --all
+  python scripts/download_zenodo_data.py --assets embeddings_gpcr   # one archive by key
   python scripts/download_zenodo_data.py --base-url https://sandbox.zenodo.org
 """
 
@@ -25,11 +28,13 @@ import sys
 import tempfile
 import urllib.request
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Tuple
 from zipfile import ZipFile
 
 
 DEFAULT_BASE_URL = "https://zenodo.org"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_MANIFEST = PROJECT_ROOT / "zenodo_manifest.json"
 
 
 def sha256(path: Path) -> str:
@@ -72,8 +77,8 @@ def download_asset(
     expected = asset.get("sha256")
     if not expected:
         sys.exit(
-            f"Asset '{key}' has no sha256 in the manifest. Fill it in from the "
-            f"generated .sha256 file before downloading."
+            f"Asset '{key}' has no sha256 in the manifest. Build the archive and "
+            f"fill in its checksum before downloading."
         )
 
     destination = (project_root / asset["destination"]).resolve()
@@ -106,54 +111,141 @@ def download_asset(
             safe_extract(archive, destination)
 
 
-def parse_args() -> argparse.Namespace:
-    script_path = Path(__file__).resolve()
-    project_root = script_path.parents[1]
+def load_manifest(argv: List[str]) -> Tuple[Path, Dict[str, object]]:
+    """Read the manifest before building the real parser, since its groups define the flags."""
+    pre = argparse.ArgumentParser(add_help=False)
+    pre.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    known, _ = pre.parse_known_args(argv)
+    path = known.manifest.resolve()
+    if not path.is_file():
+        sys.exit(f"Manifest not found: {path}")
+    return path, json.loads(path.read_text(encoding="utf-8"))
+
+
+def build_parser(groups: Dict[str, List[str]]) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    parser.add_argument(
-        "--manifest",
-        type=Path,
-        default=project_root / "zenodo_manifest.json",
-        help="Zenodo release metadata JSON.",
-    )
+    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST, help="Zenodo release metadata JSON.")
     parser.add_argument(
         "--project-root",
         type=Path,
-        default=project_root,
+        default=PROJECT_ROOT,
         help="Root that asset destinations are resolved against.",
     )
-    parser.add_argument(
+
+    selection = parser.add_argument_group(
+        "what to download",
+        "Combine freely. With none of these, the manifest's default_assets are fetched.",
+    )
+    for name, keys in groups.items():
+        selection.add_argument(
+            f"--{name}",
+            action="store_true",
+            help=f"{', '.join(keys)}",
+        )
+    selection.add_argument("--all", action="store_true", help="Every asset in the manifest.")
+    selection.add_argument(
         "--assets",
         default=None,
-        help="Comma-separated asset keys, or 'all'. Default: the manifest's default_assets.",
+        help="Comma-separated asset keys, for selecting a single archive by name.",
     )
+
     parser.add_argument(
         "--base-url",
         default=DEFAULT_BASE_URL,
         help=f"Zenodo instance. Use https://sandbox.zenodo.org to rehearse. Default: {DEFAULT_BASE_URL}",
     )
-    parser.add_argument("--list", action="store_true", help="List available assets and exit.")
+    parser.add_argument("--list", action="store_true", help="List groups and assets, then exit.")
     parser.add_argument("--force", action="store_true", help="Allow extraction into a non-empty destination.")
-    return parser.parse_args()
+    return parser
+
+
+def describe(manifest: Dict[str, object]) -> None:
+    assets: Dict[str, Dict[str, object]] = manifest["assets"]
+    groups: Dict[str, List[str]] = manifest.get("groups", {})
+
+    print(f"{manifest['record_title']} ({manifest['version']})")
+    print(f"record id: {manifest.get('zenodo_record_id') or 'NOT PUBLISHED YET'}\n")
+
+    print("groups")
+    for name, keys in groups.items():
+        total = sum(assets[k].get("bytes") or 0 for k in keys if k in assets)
+        size_text = f"{total / 2**20:.0f} MiB" if total else "size unknown"
+        print(f"  --{name:<22} {size_text:>12}  {', '.join(keys)}")
+
+    print("\nassets")
+    for key, asset in assets.items():
+        size = asset.get("bytes")
+        size_text = f"{size / 2**20:.1f} MiB" if size else "size unknown"
+        ready = "ready" if asset.get("sha256") else "NOT BUILT"
+        print(f"  {key:<26} {size_text:>12}  [{ready}]  -> {asset['destination']}")
+        print(f"  {'':<26} {asset.get('description', '')}")
+
+    print(f"\ndefault: {', '.join(manifest.get('default_assets', []))}")
+
+
+def resolve_selection(
+    args: argparse.Namespace, manifest: Dict[str, object]
+) -> List[str]:
+    assets: Dict[str, Dict[str, object]] = manifest["assets"]
+    groups: Dict[str, List[str]] = manifest.get("groups", {})
+
+    requested: List[str] = []
+    from_group = set()
+
+    if args.all:
+        requested.extend(assets)
+        from_group.update(assets)
+
+    for name, keys in groups.items():
+        if getattr(args, name.replace("-", "_"), False):
+            requested.extend(keys)
+            from_group.update(keys)
+
+    explicit: List[str] = []
+    if args.assets:
+        explicit = [k.strip() for k in args.assets.split(",") if k.strip()]
+        requested.extend(explicit)
+
+    if not requested:
+        requested = list(manifest.get("default_assets", assets))
+
+    unknown = [k for k in requested if k not in assets]
+    if unknown:
+        sys.exit(f"Unknown asset(s): {', '.join(unknown)}. Known: {', '.join(assets)}")
+
+    # Keep manifest order, drop duplicates from overlapping groups.
+    selected = [k for k in assets if k in set(requested)]
+
+    # An archive that has not been built yet has no checksum. Skip it quietly when it
+    # arrived via a group or --all; fail loudly when it was named outright.
+    unbuilt = [k for k in selected if not assets[k].get("sha256")]
+    named_unbuilt = [k for k in unbuilt if k in explicit]
+    if named_unbuilt:
+        sys.exit(
+            f"Not published yet: {', '.join(named_unbuilt)}. "
+            "Build the archive and record its checksum in the manifest first."
+        )
+    if unbuilt:
+        print(f"Skipping (not published yet): {', '.join(unbuilt)}")
+        selected = [k for k in selected if k not in set(unbuilt)]
+
+    if not selected:
+        sys.exit("Nothing to download.")
+    return selected
 
 
 def main() -> None:
-    args = parse_args()
-    manifest = json.loads(args.manifest.resolve().read_text(encoding="utf-8"))
-    assets: Dict[str, Dict[str, object]] = manifest["assets"]
+    manifest_path, manifest = load_manifest(sys.argv[1:])
+    parser = build_parser(manifest.get("groups", {}))
+    args = parser.parse_args()
+
+    if args.manifest.resolve() != manifest_path:
+        manifest = json.loads(args.manifest.resolve().read_text(encoding="utf-8"))
 
     if args.list:
-        print(f"{manifest['record_title']} ({manifest['version']})")
-        print(f"record id: {manifest.get('zenodo_record_id') or 'NOT PUBLISHED YET'}\n")
-        for key, asset in assets.items():
-            size = asset.get("bytes")
-            size_text = f"{size / 2**20:.1f} MiB" if size else "size unknown"
-            ready = "ready" if asset.get("sha256") else "NO CHECKSUM"
-            print(f"  {key:<26} {size_text:>12}  [{ready}]  -> {asset['destination']}")
-            print(f"  {'':<26} {asset.get('description', '')}")
-        print(f"\ndefault: {', '.join(manifest.get('default_assets', []))}")
+        describe(manifest)
         return
 
     record_id = manifest.get("zenodo_record_id")
@@ -163,19 +255,16 @@ def main() -> None:
             "Publish the Zenodo record first, then record its numeric id."
         )
 
-    if args.assets == "all":
-        selected: List[str] = list(assets)
-    elif args.assets:
-        selected = [key.strip() for key in args.assets.split(",") if key.strip()]
-    else:
-        selected = list(manifest.get("default_assets", assets))
-
-    unknown = [key for key in selected if key not in assets]
-    if unknown:
-        sys.exit(f"Unknown asset(s): {', '.join(unknown)}. Known: {', '.join(assets)}")
-
+    selected = resolve_selection(args, manifest)
     for key in selected:
-        download_asset(key, assets[key], record_id, args.base_url, args.project_root.resolve(), args.force)
+        download_asset(
+            key,
+            manifest["assets"][key],
+            record_id,
+            args.base_url,
+            args.project_root.resolve(),
+            args.force,
+        )
 
     print(f"\nDone. Downloaded and verified: {', '.join(selected)}")
 

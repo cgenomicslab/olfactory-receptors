@@ -1,0 +1,9 @@
+duplication,background,group,n_gained,k,pct_gained,pct_background,odds_ratio,P
+dup1,full panel (737),carboxylic_acid,17,10,58.8,9.9,12.99,1.6e-06
+dup1,full panel (737),aromatic_ring,17,5,29.4,28.9,1.03,1.0
+dup1,ten-node universe (44),carboxylic_acid,17,10,58.8,25.0,4.29,0.018
+dup1,ten-node universe (44),aromatic_ring,17,5,29.4,47.7,0.46,0.25
+dup2,full panel (734),carboxylic_acid,20,0,0.0,11.3,0.0,0.15
+dup2,full panel (734),aromatic_ring,20,15,75.0,27.7,7.85,2e-05
+dup2,ten-node universe (41),carboxylic_acid,20,0,0.0,51.2,0.0,2.8e-05
+dup2,ten-node universe (41),aromatic_ring,20,15,75.0,26.8,8.18,0.0007

@@ -1,0 +1,5 @@
+duplication,parent,child,fig_label,parent_ligands,child_ligands,retained,gained,lost
+duplication 1,node_1,node_2,1,21,21,4,17,17
+duplication 1,node_1,node_3,2,21,8,7,1,14
+duplication 2,node_3,9606.A6NND4,—,8,4,4,0,4
+duplication 2,node_3,node_6,5,8,27,7,20,1

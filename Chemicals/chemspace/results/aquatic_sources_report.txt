@@ -1,0 +1,41 @@
+WHICH SOURCE ORGANISMS LIVE IN WATER
+==============================================================================
+  NCBI taxonomy: 2,972,074 nodes
+  COCONUT molecules with an organism annotation: 269,659
+  distinct organism names: 69,105
+  resolved to an NCBI taxon: 66,289  (2,816 unresolved)
+
+  organism names by habitat
+    terrestrial  44,637
+    unassigned   16,752
+    aquatic       4,696
+    host            139
+    mangrove         65
+
+  molecules written                  : 269,659
+  with at least one placed organism  : 203,642
+  with at least one aquatic organism : 49,702
+  median share_aquatic where defined : 0.0000
+  in a marine natural-product database: 31,793
+
+  most frequent aquatic source organisms
+      410  Laurencia dendroidea
+      378  Nelumbo nucifera
+      358  Briareum asbestinum
+      313  Laurencia obtusa
+      305  Theonella swinhoei
+      301  Briareum stechei
+      288  Asterospicularia laurae
+      281  Sinularia depressa
+      280  Leathesia nana
+      259  Amathia pinnata
+      258  Laurencia spectabilis
+      242  Martensia denticulata
+      241  Lamellodysidea herbacea
+      238  Negombata magnifica
+      236  Dictyota dichotoma
+      231  Symphyocladia latiuscula
+      223  Sarcophyton glaucum
+      219  Plakortis simplex
+      219  Dendronephthya griffini
+      214  Aaptos aaptos
