@@ -3,15 +3,7 @@
 The 433 `NODE_node_*` directories hold everything IQ-TREE produced while reconstructing
 each internal node: the filtered alignment it ran on, the posterior state file, the run
 report, the tree with that node's branch lengths, and the extracted sequence and mask.
-Together they are 9.6 GB, which is why they are not in Git.
-
-They are archived rather than dropped because they cannot be regenerated without re-running
-433 IQ-TREE jobs, and because the `.state` files are the only record of *how confident* each
-reconstructed residue is. With them, the reconstruction can be re-derived under a different
-rule -- sampling from the posterior instead of taking the maximum, say -- rather than being
-taken on trust as a finished FASTA.
-
-Packaged as-is: nothing is filtered out, so the archive is exactly what the pipeline wrote.
+Together they are 9.6 GB, which is why they are not in the repo.
 
 The ZIP unpacks directly into
 `Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/`, recreating the
@@ -34,8 +26,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 
-# The .state files are ~9.4 GB of the 9.6 and compress about 9x. Level 6 is the
-# sweet spot: level 9 buys under 2% more for roughly triple the time.
 COMPRESSLEVEL = 6
 
 RUN_DIR = "human_tree_asr_hagfish_outgroup"
