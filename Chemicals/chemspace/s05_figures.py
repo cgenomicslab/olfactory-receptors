@@ -53,8 +53,7 @@ MAP_SAMPLE = 120_000
 mpl.rcParams.update({
     "figure.dpi": 110, "savefig.dpi": 170,
     # Keep text as text in the exported files, so labels stay selectable and editable
-    # when the SVG is opened in Illustrator. Same convention as
-    # Downstream_Analysis/scripts/plotting_functions.py.
+    # when the SVG is opened in Illustrator. Same convention as scripts/plotting_functions.py.
     "svg.fonttype": "none",
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
