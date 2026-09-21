@@ -215,6 +215,12 @@ __marimo__/
 /Chemicals/embeddings/
 /Chemicals/odor_datasets/*embeddings*.npy
 
+# The interactive Plotly versions of the embedding maps: ~4.6 MB each because plotly.js
+# and every point are inlined, and between them they were 18% of the repository by
+# Linguist's count. The notebooks that write them also write the SVG each figure
+# actually uses, and those stay.
+/Model_Inputs/Embeddings/figures/*.html
+
 # The Leffingwell/GoodScents working files from the superseded ChEMBL background. Nothing
 # reads them: chemspace/ builds its 5,962-molecule odorant set from its own committed
 # data/reference_sets.csv, and the odour descriptors come from inchi_odors_smiles.csv.
