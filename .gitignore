@@ -215,6 +215,13 @@ __marimo__/
 /Chemicals/embeddings/
 /Chemicals/odor_datasets/*embeddings*.npy
 
+# The Leffingwell/GoodScents working files from the superseded ChEMBL background. Nothing
+# reads them: chemspace/ builds its 5,962-molecule odorant set from its own committed
+# data/reference_sets.csv, and the odour descriptors come from inchi_odors_smiles.csv.
+/Chemicals/odor_datasets/leffingwell_goodscents_smiles.csv
+/Chemicals/odor_datasets/leffingwell_goodscents_projected_on_chembl_umap.csv
+/Chemicals/odor_datasets/molformer_leffingwell_goodscents_smiles.csv
+
 # Manuscript drafting, not code. METHODS.md is paper text built up folder by folder as
 # each analysis is finalised; it belongs with the manuscript, not here, and keeping one
 # copy avoids the two drifting apart.
@@ -324,9 +331,6 @@ __marimo__/
 # Superseded whole-repository results dump, replaced by the manuscript itself.
 /results_overview.html
 /results_overview.pdf
-
-# The original project schema, superseded by olfaction_abstract.png in the README.
-/olfaction_schema.png
 
 # The preprint PDF itself. It lives on bioRxiv; no reason to carry 4.3 MB of it here.
 /2026.08.31.747588v1.full.pdf
