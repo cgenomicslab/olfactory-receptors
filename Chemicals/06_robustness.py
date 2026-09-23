@@ -1,6 +1,6 @@
 """Step 6 -- is any of this reportable?
 
-`s04` produces numbers. This produces the reasons to believe them, by attacking the
+`04` produces numbers. This produces the reasons to believe them, by attacking the
 three places where the analysis could be fooling itself. Run it before quoting anything.
 
 The three attacks
@@ -48,9 +48,9 @@ results/robustness_report.txt      everything printed below
 
 Usage
 -----
-    python s06_robustness.py                  # 5 seeds, 5 random null sets
-    python s06_robustness.py --seeds 10       # tighter interval, slower
-    python s06_robustness.py --quick          # 2 seeds, 2 nulls, for a smoke test
+    python 06_robustness.py                  # 5 seeds, 5 random null sets
+    python 06_robustness.py --seeds 10       # tighter interval, slower
+    python 06_robustness.py --quick          # 2 seeds, 2 nulls, for a smoke test
 
 A GPU makes it faster but is not required; on CPU the default run is roughly 10 minutes.
 """
@@ -67,13 +67,18 @@ from sklearn.model_selection import StratifiedGroupKFold, cross_val_predict
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
+import importlib
+
 import chemspace as cs
-import s04_analyze as s04
+
+# Python cannot `import 04_analyze` -- a module name may not begin with a digit --
+# so step 04 is loaded by name instead. Same module, same functions.
+analyze = importlib.import_module("04_analyze")
 
 HERE = Path(__file__).resolve().parent
 RESULTS = HERE / "results"
 
-NEIGHBOURS = s04.NEIGHBOURS
+NEIGHBOURS = analyze.NEIGHBOURS
 DESCRIPTORS = cs.DESCRIPTOR_NAMES
 
 # Resamples for the bootstrap interval on the kNN enrichment. 2000 is enough for a
@@ -127,12 +132,12 @@ def murcko_scaffolds(smiles_list):
     return np.asarray(groups)
 
 
-def auc_scaffold_split(features, labels, groups, seed=0, folds=s04.FOLDS):
+def auc_scaffold_split(features, labels, groups, seed=0, folds=analyze.FOLDS):
     """ROC AUC where no scaffold appears in both train and test.
 
     `StratifiedGroupKFold` keeps each scaffold whole while holding the odorant/partner
     balance roughly even across folds. Compare the result against
-    `s04.auc_cross_validated` on the same data: the gap between them is how much of the
+    `analyze.auc_cross_validated` on the same data: the gap between them is how much of the
     random-CV number was memorised chemotype rather than learned chemistry.
     """
     model = make_pipeline(
@@ -152,7 +157,7 @@ def matched_across_seeds(universe, normalised, odorant_rows, background_rows,
     """Attack 1 and 2 -- rebuild the matched control under each seed, both ways.
 
     For every seed the matching is redone from scratch, balance is rechecked, and each
-    feature set is scored twice: once with random cross-validation (comparable to `s04`)
+    feature set is scored twice: once with random cross-validation (comparable to `04`)
     and once with a scaffold split (the honest number).
 
     Returns
@@ -176,8 +181,8 @@ def matched_across_seeds(universe, normalised, odorant_rows, background_rows,
     random_rows, scaffold_rows = [], []
     for seed in seeds:
         matched_odorants, matched_background, fraction = cs.match_on(
-            universe, s04.MATCH_COVARIATES, odorant_rows, background_rows,
-            caliper_sd=s04.CALIPER_SD, seed=seed,
+            universe, analyze.MATCH_COVARIATES, odorant_rows, background_rows,
+            caliper_sd=analyze.CALIPER_SD, seed=seed,
         )
         pairs = np.r_[matched_odorants, matched_background]
         labels = np.r_[np.ones(len(matched_odorants), int),
@@ -186,17 +191,17 @@ def matched_across_seeds(universe, normalised, odorant_rows, background_rows,
         worst = max(
             abs(cs.smd(universe[covariate].values.astype(float)[matched_odorants],
                        universe[covariate].values.astype(float)[matched_background]))
-            for covariate in s04.MATCH_COVARIATES
+            for covariate in analyze.MATCH_COVARIATES
         )
         groups = murcko_scaffolds(universe["smiles"].values[pairs])
 
         log(f"\n  seed {seed}: matched {len(matched_odorants)} ({fraction:.1%}), "
             f"worst |SMD| {worst:.4f} "
-            f"({'PASS' if worst < s04.BALANCE_TOLERANCE else 'FAIL'}), "
+            f"({'PASS' if worst < analyze.BALANCE_TOLERANCE else 'FAIL'}), "
             f"{len(set(groups))} distinct scaffolds")
 
         for name, features in feature_sets.items():
-            random_auc = s04.auc_cross_validated(features[pairs], labels, seed=seed)
+            random_auc = analyze.auc_cross_validated(features[pairs], labels, seed=seed)
             scaffold_auc = auc_scaffold_split(features[pairs], labels, groups, seed=seed)
             log(f"    {name:18s} random CV {random_auc:.3f}   "
                 f"scaffold {scaffold_auc:.3f}   "
@@ -230,7 +235,7 @@ def matched_across_seeds(universe, normalised, odorant_rows, background_rows,
 def knn_enrichment(normalised, query_rows, member_mask, universe_size):
     """Enrichment of a set among its own members' nearest neighbours.
 
-    The same quantity `s04`'s Q1 computes, written so it can be pointed at any set:
+    The same quantity `04`'s Q1 computes, written so it can be pointed at any set:
     the share of a query's `NEIGHBOURS` nearest neighbours that also belong to the set,
     divided by the share of the whole universe the set occupies.
 
@@ -271,8 +276,8 @@ def enrichment_nulls(universe, normalised, odorant_rows, background_rows,
     matched_enrichments = []
     for replicate in range(null_sets):
         _, matched_background, _ = cs.match_on(
-            universe, s04.MATCH_COVARIATES, odorant_rows, background_rows,
-            caliper_sd=s04.CALIPER_SD, seed=seed + replicate,
+            universe, analyze.MATCH_COVARIATES, odorant_rows, background_rows,
+            caliper_sd=analyze.CALIPER_SD, seed=seed + replicate,
         )
         mask = np.zeros(universe_size, bool)
         mask[matched_background] = True
@@ -361,7 +366,7 @@ def main():
     n_seeds = 2 if arguments.quick else arguments.seeds
     n_nulls = 2 if arguments.quick else arguments.null_sets
 
-    universe, _, normalised = s04.load_universe()
+    universe, _, normalised = analyze.load_universe()
     is_odorant = universe.is_odorant.values == 1
     odorant_rows = np.flatnonzero(is_odorant)
     background_rows = np.flatnonzero(universe.in_background.values == 1)
@@ -385,7 +390,8 @@ def main():
     log("=" * 72)
     log("  * the scaffold-split AUCs, not the random-CV ones")
     log("  * the kNN enrichment beside its matched null, never on its own")
-    log("  * the matched functional-group odds ratios from s04's fg_enrichment.csv")
+    log("  * the RAW functional-group odds ratios from 04's fg_enrichment.csv,")
+    log("    with the matched column beside them, never instead of them")
     log("  * the seed spread, as evidence the control is not one lucky pairing")
 
     (RESULTS / "robustness_report.txt").write_text("\n".join(_report_lines) + "\n")

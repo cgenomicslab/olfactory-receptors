@@ -13,7 +13,7 @@
 #
 # Two notes before you start.
 #
-# GPU. Only two steps want a GPU -- `Chemicals/chemspace/s02_embed.py` and the
+# GPU. Only two steps want a GPU -- `Chemicals/02_embed.py` and the
 # `Model_Inputs/Embeddings/extract_embeddings_*` notebooks -- and both are optional, because
 # their outputs are published on Zenodo. The pin below installs whichever PyTorch build
 # conda picks for your machine, which on a machine with no GPU is the CPU build. If you
@@ -48,7 +48,7 @@ dependencies:
 
   # --- chemistry ---------------------------------------------------------------
   - rdkit=2026.03.*          # descriptors, SMARTS matching, Murcko scaffolds
-  - thermo=0.6.*             # Joback boiling points in s01. WITHOUT THIS, every
+  - thermo=0.6.*             # Joback boiling points in 01. WITHOUT THIS, every
                              # volatility number silently becomes NaN -- it does not
                              # raise. Check it with the smoke test below.
 
@@ -58,7 +58,7 @@ dependencies:
 
   # --- embeddings --------------------------------------------------------------
   - pytorch>=2.5,<3          # used on CPU by the chemical-space kNN and matching;
-                             # only s02 and the embedding notebooks want a GPU
+                             # only step 02 and the embedding notebooks want a GPU
   - transformers=4.48.*      # pinned to 4.x on purpose -- see the note above
   - umap-learn=0.5.*
 

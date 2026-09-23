@@ -1,6 +1,6 @@
 """Step 12 -- does a molecule come from organisms that live in water?
 
-s07 asked which kingdoms odorants are isolated from and s10 asked it of the M2OR list.
+Step 07 asked which kingdoms odorants are isolated from and step 10 asked it of the M2OR list.
 This asks a different question of the same COCONUT organism field: of the organisms a
 molecule was isolated from, how many live in water. The answer is written per molecule so
 the receptor notebooks can join it to whatever grouping they are testing -- the immediate
@@ -19,7 +19,7 @@ before it hits `Embryophyta`, and a whale hits `Cetacea` before `Artiodactyla`.
                plants that grow in water, from seagrasses to duckweed to water lilies.
   terrestrial  land plants, insects, arachnids and land vertebrates.
   host         mammals and birds, which turn up as "source organisms" when a compound was
-               found in breath, milk or body odour rather than made by the animal. s07
+               found in breath, milk or body odour rather than made by the animal. 07
                takes the same view. Excluded from the comparison rather than counted as
                terrestrial, because that is a statement about where a measurement was
                taken, not where the chemistry comes from.
@@ -66,7 +66,7 @@ RESULTS = HERE / "results"
 COCONUT_CSV = DATA / "coconut_csv-08-2026.csv"
 NODES = DATA / "nodes.dmp"
 NAMES = DATA / "names.dmp"
-CACHE = RESULTS / "taxid_cache.json"          # s07's name -> taxid cache, reused if present
+CACHE = RESULTS / "taxid_cache.json"          # 07's name -> taxid cache, reused if present
 
 # COCONUT collections that are marine by construction. Used only as an independent check
 # on the taxonomy: it is a property of the molecule's literature record, not of the
@@ -111,7 +111,7 @@ TERRESTRIAL = {"Embryophyta", "Insecta", "Arachnida", "Myriapoda", "Onychophora"
                "Collembola", "Diplura", "Protura", "Amphibia", "Testudines", "Squamata",
                "Crocodylia"}
 
-# Detected in, not made by. s07's convention, kept identical.
+# Detected in, not made by. 07's convention, kept identical.
 HOST = {"Homo sapiens", "Primates", "Artiodactyla", "Perissodactyla", "Carnivora",
         "Rodentia", "Lagomorpha", "Chiroptera", "Mammalia", "Aves"}
 
@@ -124,13 +124,13 @@ def log(message=""):
 
 
 def clean_organism_name(name):
-    """Reduce one raw organism string to something NCBI might recognise (as s07)."""
+    """Reduce one raw organism string to something NCBI might recognise (as in step 07)."""
     cleaned = re.sub(r"[^A-Za-z .\-]", " ", name)
     return re.sub(r"\s+", " ", cleaned).strip()
 
 
 def split_organisms(field):
-    """Split one organisms cell into its individual cleaned names (as s07)."""
+    """Split one organisms cell into its individual cleaned names (as in step 07)."""
     return [c for part in re.split(r"[|+]", str(field))
             for c in [clean_organism_name(part)] if len(c) > 2]
 

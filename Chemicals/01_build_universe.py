@@ -1,31 +1,3 @@
-"""Step 1 -- build the universe: odorants plus a natural-product background.
-
-The ChEMBL comparison showed odorants sitting apart from the rest of chemical space. But
-ChEMBL is mostly drug chemistry, so a lot of that separation was really "odorants are not
-drugs" -- odorants carry no nitrogen and plenty of oxygen, and drugs are the opposite.
-COCONUT is a database of natural products, which are themselves nitrogen-poor and
-oxygen-rich, so swapping the background to COCONUT takes that easy contrast away.
-
-If odorants still stand apart from natural products, odour chemistry is genuinely its own
-thing. If they do not, the honest conclusion is that odorants are simply the volatile
-natural products, and the ChEMBL result was a gap between two curation styles.
-
-This script does the bookkeeping for that comparison: read COCONUT, clean it up, add the
-odorants, and describe every molecule.
-
-Inputs
-------
-data/coconut_csv-08-2026.csv   the COCONUT dump (see README; not committed, it is ~700 MB)
-data/reference_sets.csv        the 5,962 odorants (M2OR + Leffingwell + GoodScents)
-
-Outputs
--------
-results/coconut_parents.parquet   cleaned COCONUT; cached, so re-runs are cheap
-results/universe.parquet          background + odorants, with descriptors for each
-
-CPU only. About 30 minutes on 48 processes, or 3 on 64. Nearly all of that is the
-functional-group matching and the boiling-point estimates over 738k molecules.
-"""
 from __future__ import annotations
 
 import argparse
@@ -44,11 +16,7 @@ RESULTS = HERE / "results"
 COCONUT_CSV = DATA / "coconut_csv-08-2026.csv"
 COCONUT_CLEANED = RESULTS / "coconut_parents.parquet"
 
-# The odorant list. Built from M2OR and pyrfume rather than from COCONUT, so it carries no
-# dependency on which COCONUT release we happen to be using.
 ODORANTS = DATA / "reference_sets.csv"
-
-# Columns we read from the COCONUT dump. Reading only these keeps the 700 MB file manageable.
 COCONUT_COLUMNS = [
     "identifier", "canonical_smiles", "np_likeness", "contains_sugar",
     "np_classifier_pathway", "np_classifier_superclass", "np_classifier_class",
@@ -74,9 +42,6 @@ def canonicalise(smiles):
 def load_coconut(n_processes):
     """
     Read COCONUT and reduce every entry to a clean parent structure.
-
-    Desalting and canonicalising 738k molecules takes a while, so the result is cached as
-    a parquet file. After the first run this function just reads that back.
 
     Parameters
     ----------
@@ -194,7 +159,7 @@ def main():
     odorants = load_odorants(args.nproc, coconut_keys)
 
     # Build the background. Odorants are taken out of the pool so that "background" means
-    # natural products that are NOT odorants -- otherwise we would be comparing odorants
+    # natural products that are NOT odorants. Otherwise we would be comparing odorants
     # against a set that partly contains them.
     background = coconut_unique[~coconut_unique.inchikey.isin(set(odorants.inchikey))]
     if args.n_background and args.n_background < len(background):

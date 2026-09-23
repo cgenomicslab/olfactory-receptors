@@ -222,7 +222,7 @@ __marimo__/
 /Model_Inputs/Embeddings/figures/*.html
 
 # The Leffingwell/GoodScents working files from the superseded ChEMBL background. Nothing
-# reads them: chemspace/ builds its 5,962-molecule odorant set from its own committed
+# reads them: the pipeline builds its 5,962-molecule odorant set from its own committed
 # data/reference_sets.csv, and the odour descriptors come from inchi_odors_smiles.csv.
 /Chemicals/odor_datasets/leffingwell_goodscents_smiles.csv
 /Chemicals/odor_datasets/leffingwell_goodscents_projected_on_chembl_umap.csv
@@ -256,15 +256,14 @@ __marimo__/
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_asr.ipynb
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/README.md
 # COCONUT chemical-space run: the download and the large intermediates are gigabytes.
-# The small s04/s06 CSVs and reports are kept, and so are the two small inputs the
-# analysis cannot be reproduced without (the odorant list and the ChEMBL LDA axis).
-/Chemicals/chemspace/data/*
-!/Chemicals/chemspace/data/reference_sets.csv
-!/Chemicals/chemspace/data/chembl_lda_structure.csv
-/Chemicals/chemspace/results/*.npy
-/Chemicals/chemspace/results/*.parquet
-/Chemicals/chemspace/results/embed_index.csv
-/Chemicals/chemspace/__pycache__/
+# The small 04/06 CSVs and reports are kept, and so is the odorant list, which the
+# analysis cannot be reproduced without.
+/Chemicals/data/*
+!/Chemicals/data/reference_sets.csv
+/Chemicals/results/*.npy
+/Chemicals/results/*.parquet
+/Chemicals/results/embed_index.csv
+/Chemicals/__pycache__/
 # Prediction data comes from Zenodo, not Git: see Downstream_Analysis/README.md.
 # ASR_Predictions_RefTree is re-included because it holds analysis code and small
 # reference tables rather than model output.
@@ -312,10 +311,8 @@ __marimo__/
 /Model_Inputs/Embeddings/figures/*SAE*
 
 # The earlier ChEMBL background. Superseded by the COCONUT natural-product
-# background in Chemicals/chemspace/, which is what Fig. 4 reports, and neither
-# notebook runs on a fresh clone without the gitignored ~10 GB downloads.
-# The discriminant axis they produced is still used by s04's Q2 comparison, so
-# Chemicals/chemspace/data/chembl_lda_structure.csv stays tracked.
+# background in Chemicals/, which is what Fig. 4 reports, and neither notebook
+# runs on a fresh clone without the gitignored ~10 GB downloads.
 /Chemicals/chembl_molecules.ipynb
 /Chemicals/odorant_chemical_space.ipynb
 
@@ -346,5 +343,5 @@ __marimo__/
 
 # s12's full habitat table: one row per COCONUT molecule, ~15 MB. The panel-sized slice
 # beside it (aquatic_sources_panel.csv) is what the notebook reads and IS committed.
-/Chemicals/chemspace/results/aquatic_sources.csv
-/Chemicals/chemspace/results/aquatic_taxa_seen.csv
+/Chemicals/results/aquatic_sources.csv
+/Chemicals/results/aquatic_taxa_seen.csv

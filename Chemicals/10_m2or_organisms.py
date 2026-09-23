@@ -1,6 +1,6 @@
 """Step 10 -- one odorant list at a time, molecule by molecule, with its source organism.
 
-s07 asked where odorants as a whole come from. This asks it of one list at a time --
+Step 07 asked where odorants as a whole come from. This asks it of one list at a time --
 M2OR by default, or Leffingwell/GoodScents with --panel lg -- because the two are
 different kinds of set. M2OR is the one with receptor data behind it: every molecule has
 been tested against olfactory receptors, so a source organism attached to one of these is
@@ -22,7 +22,7 @@ results/m2or_organism_table.csv     one row per M2OR molecule
 results/m2or_kingdom_stats.csv      the kingdom comparison with p-values
 results/m2or_organism_report.txt    everything printed below
 
-Needs results/taxid_cache.json, which s07 writes. CPU only, about a minute.
+Needs results/taxid_cache.json, which 07 writes. CPU only, about a minute.
 """
 from __future__ import annotations
 
@@ -35,8 +35,13 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
+import importlib
+
 import chemspace as cs
-from s07_organism_source import RANKS, split_organisms
+# Python cannot `from 07_organism_source import ...` -- a module name may not begin
+# with a digit -- so step 07 is loaded by name and the two names taken off it.
+_step07 = importlib.import_module("07_organism_source")
+RANKS, split_organisms = _step07.RANKS, _step07.split_organisms
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
@@ -46,7 +51,7 @@ CACHE = RESULTS / "taxid_cache.json"
 
 # The odour descriptors for the M2OR ligands, so the table says what each one smells of.
 # Only M2OR molecules carry these, so the column is mostly empty for the larger list.
-ODOURS = HERE.parent / "odor_datasets" / "inchi_odors_smiles.csv"
+ODOURS = HERE / "odor_datasets" / "inchi_odors_smiles.csv"
 
 # The two odorant lists, and how to recognise each in the universe.
 PANELS = {
@@ -218,7 +223,7 @@ def main():
     log("  looked, which is different from having no source.")
 
     if not CACHE.exists():
-        raise SystemExit(f"missing {CACHE}; run s07_organism_source.py first")
+        raise SystemExit(f"missing {CACHE}; run 07_organism_source.py first")
     mapping = {k: int(v) for k, v in json.loads(CACHE.read_text()).items()}
 
     # Everything with an organism, so the panel can be compared against the background.

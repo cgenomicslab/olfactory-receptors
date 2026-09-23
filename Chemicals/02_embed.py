@@ -1,29 +1,3 @@
-"""Step 2 -- turn every molecule into a 768-number vector with MoLFormer-XL.
-
-The descriptor panel from s01 says useful but coarse things about a molecule: how heavy,
-how greasy, how many rings. MoLFormer is a language model trained on SMILES strings, and
-its embedding captures structure the descriptors miss. We use it for the "are odorants
-near each other" question, because nearness there means chemical similarity in a much
-richer sense than "similar molecular weight".
-
-** This is the only step that needs a GPU. ** It refuses to start without one rather than
-quietly falling back to CPU, which would take days rather than an hour.
-
-Two choices worth knowing about:
-
-  * The model revision is pinned. If it were not, HuggingFace could move the checkpoint
-    under us and every number downstream would change with no warning.
-  * Everything is float32. Half precision would be faster, but the rounding shuffles which
-    molecules count as nearest neighbours, and the neighbour ranking is exactly what the
-    kNN result in s04 depends on.
-
-Outputs
--------
-results/embeddings.npy    float32, (n_molecules, 768), aligned row-for-row with the index
-results/embed_index.csv   inchikey and token length -- the key everything downstream joins on
-
-About an hour for 730k molecules on a T1000; faster on a bigger card.
-"""
 from __future__ import annotations
 
 import time
@@ -38,7 +12,7 @@ HERE = Path(__file__).resolve().parent
 RESULTS = HERE / "results"
 
 MODEL_NAME = "ibm-research/MoLFormer-XL-both-10pct"
-MODEL_REVISION = "7b12d946c181a37f6012b9dc3b002275de070314"   # pinned; do not change casually
+MODEL_REVISION = "7b12d946c181a37f6012b9dc3b002275de070314"   
 
 # The model cannot look at more than this many tokens, so longer molecules are dropped.
 MAX_TOKENS = 202
@@ -51,7 +25,7 @@ def main():
         raise SystemExit(
             "no GPU visible.\n"
             "  This is the one step that needs one. Run it on the GPU server;\n"
-            "  s01, s03, s04 and s05 are CPU-only and can run anywhere."
+            "  steps 01, 03, 04 and 05 are CPU-only and can run anywhere."
         )
 
     universe = pd.read_parquet(

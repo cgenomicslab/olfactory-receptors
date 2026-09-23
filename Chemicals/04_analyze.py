@@ -14,8 +14,6 @@ rather than drugs: the two sets are already comparable, so the differences betwe
 are the answer rather than an artefact to be controlled away. Odds ratios come with
 confidence intervals, and p-values are floored rather than printed as a false zero.
 
-For comparison, the earlier ChEMBL background gave odorants 57x more clustered than
-chance -- but ChEMBL is drug chemistry, so much of that was "odorants are not drugs".
 
 Why Q2 is not optional
 ----------------------
@@ -33,7 +31,7 @@ afterwards. If the matched AUC collapses to chance, reading (b) wins; the gap be
 the unmatched and matched AUC is the size of the effect that is *not* explained by
 "odorants are small and volatile".
 
-So Q1 and Q2 must always be quoted together. `s06_robustness.py` then repeats Q2 across
+So Q1 and Q2 must always be quoted together. `06_robustness.py` then repeats Q2 across
 matching seeds and re-estimates every AUC under a scaffold split, which is what turns
 these numbers from visible into reportable.
 
@@ -43,7 +41,6 @@ results/knn_enrichment.csv        Q1
 results/coconut_matched_smd.csv   Q2  covariate balance, before and after matching
 results/coconut_matched_auc.csv   Q2  the AUCs, matched and unmatched
 results/coconut_lda_structure.csv Q2  the discriminant axis against this background
-results/compare_chembl_coconut.csv Q2 that axis against the ChEMBL one
 results/pathway_enrichment.csv    Q3
 results/fg_enrichment.csv         Q4  raw and matched odds ratios, side by side
 results/analyze_report.txt        everything printed below
@@ -184,7 +181,6 @@ def question1_clustering(universe, normalised, odorant_rows, is_odorant):
     log(f"  ENRICHMENT                                : {enrichment:.1f}x")
     log(f"  odorants with >=50% odorant neighbours     : "
         f"{100 * (odorant_fraction >= 0.5).mean():.1f}%")
-    log("  (The ChEMBL background gave 57x, but that background was drug chemistry.)")
 
     pd.DataFrame([{
         "knn_purity": odorant_fraction.mean(),
@@ -199,7 +195,7 @@ class MatchedControl:
     """The matched pair set, and the evidence that the matching worked.
 
     Passed to Q4 so the functional-group table can carry a matched odds ratio beside
-    the raw one, and returned from `main` so s06 can rebuild the same contrast under
+    the raw one, and returned from `main` so step 06 can rebuild the same contrast under
     other seeds.
     """
 
@@ -227,8 +223,8 @@ def auc_cross_validated(features, labels, seed=SEED, groups=None):
     seed : int, optional
         Controls the fold split.
     groups : ndarray, optional
-        Group label per molecule -- a Bemis-Murcko scaffold, in `s06`. When given, a
-        group never straddles the train/test boundary. Ignored here; `s06` is what
+        Group label per molecule -- a Bemis-Murcko scaffold, in `06`. When given, a
+        group never straddles the train/test boundary. Ignored here; `06` is what
         uses it, via its own splitter.
 
     Returns
@@ -259,8 +255,7 @@ def lda_structure_coefficients(features, labels, names):
     Returns
     -------
     Series
-        Structure coefficient per descriptor, sorted ascending, matching the layout of
-        the committed `data/chembl_lda_structure.csv`.
+        Structure coefficient per descriptor, sorted ascending.
     """
     standardised = StandardScaler().fit_transform(features)
     axis = LinearDiscriminantAnalysis(n_components=1).fit_transform(
@@ -284,8 +279,7 @@ def question2_matched_control(universe, normalised, odorant_rows, background_row
       * did the matching work? (every |SMD| under `BALANCE_TOLERANCE`)
       * how separable are the two groups now, on volatility alone, on the 22-descriptor
         panel, and on the MolFormer embedding?
-      * which descriptors carry that separation, and is it the same axis the ChEMBL
-        background gave?
+      * which descriptors carry that separation
 
     The unmatched AUC is computed alongside, against a random background sample of the
     same size. The drop from unmatched to matched is the part of "odorants are
@@ -381,36 +375,11 @@ def question2_matched_control(universe, normalised, odorant_rows, background_row
     log("    (volatility alone should land near 0.50 once matched -- that is the")
     log("     check that the matching removed what it was meant to remove.)")
 
-    # --- which descriptors carry it, and is it the ChEMBL axis? ------------------
+    # --- which descriptors carry the separation ----------------------------------
     coconut_axis = lda_structure_coefficients(
         descriptor_values[pairs], labels, DESCRIPTORS
     )
     coconut_axis.to_frame().to_csv(RESULTS / "coconut_lda_structure.csv")
-
-    chembl_path = HERE / "data" / "chembl_lda_structure.csv"
-    if chembl_path.exists():
-        chembl_axis = pd.read_csv(chembl_path, index_col=0)["structure_coefficient"]
-        comparison = pd.DataFrame({
-            "chembl": chembl_axis,
-            "coconut": coconut_axis,
-        }).dropna()
-        # The sign of a discriminant axis is arbitrary -- LDA is free to call either
-        # group "positive" -- so compare the axes up to a flip and report which way
-        # they had to be aligned.
-        raw = float(comparison["chembl"].corr(comparison["coconut"]))
-        comparison["coconut_aligned"] = comparison["coconut"] * np.sign(raw)
-        comparison.to_csv(RESULTS / "compare_chembl_coconut.csv")
-
-        log(f"\n  discriminant axis, ChEMBL background vs COCONUT background:")
-        log(f"    Pearson r over {len(comparison)} descriptors : {raw:+.3f}"
-            f"  ({'same' if raw > 0 else 'opposite'} orientation)")
-        reversals = comparison[
-            np.sign(comparison["chembl"]) != np.sign(comparison["coconut_aligned"])
-        ]
-        log(f"    descriptors changing sign between backgrounds : {len(reversals)}"
-            + (f"  ({', '.join(reversals.index[:6])})" if len(reversals) else ""))
-    else:
-        log(f"\n  (no {chembl_path.name}; skipping the background comparison)")
 
     return MatchedControl(
         odorant_rows=matched_odorants,
@@ -552,8 +521,12 @@ def question4_functional_groups(universe, odorant_rows, background_rows, matched
             f"{verdict}")
     log(f"\n    {len(reversed_groups)} of {len(groups)} groups reverse direction "
         f"between the two contrasts.")
-    log("    Those were reporting that odorants are small and volatile, not that")
-    log("    odour chemistry favours the group. Quote the matched column.")
+    log("    A reversal means the raw contrast is carried partly by size.")
+    log("    Report the RAW column. Odorants are small and volatile because that is")
+    log("    what makes a molecule smellable, so matching it away removes the thing")
+    log("    being studied -- and Tb_joback correlates with MolWt at rho 0.93 in the")
+    log("    background, so the match is closer to size-only than it looks.")
+    log("    Carry the matched column beside it, never instead of it.")
 
 
 def report_sugar(universe, is_odorant):
@@ -601,7 +574,7 @@ def main():
     log("HOW TO READ THIS")
     log("=" * 72)
     log("  Q1's enrichment and Q2's matched AUC answer the same question and only")
-    log("  mean something together. Quote neither alone. Then run s06_robustness.py:")
+    log("  mean something together. Quote neither alone. Then run 06_robustness.py:")
     log("  it repeats Q2 across matching seeds, re-estimates every AUC under a")
     log("  scaffold split, and puts Q1's enrichment against the matched null.")
 

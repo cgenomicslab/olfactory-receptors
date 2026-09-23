@@ -1,4 +1,4 @@
-"""Step 5 -- the figures. Reads only what s01-s04 and s06 wrote.
+"""Step 5 -- the figures. Reads only what steps 01-04 and 06 wrote.
 
   F0  The molecules in PCA space, where distances are real, plus the variance
       each component carries
@@ -83,7 +83,7 @@ def load_umap():
     """
     Read the map coordinates, either version.
 
-    s03 writes umap.npy from the 50 principal components and umap_raw768.npy from the
+    Step 03 writes umap.npy from the 50 principal components and umap_raw768.npy from the
     full embedding (--raw). Every figure that draws a map reads through here, so the
     whole set switches together and no two figures can show different layouts.
     """
@@ -267,7 +267,7 @@ def figure1_map(universe):
     Odorants drawn on the natural-product map.
 
     Illustrative only. How clustered odorants actually are is measured in the full
-    768-dimensional space by s04 and s06, never from these coordinates -- UMAP
+    768-dimensional space by steps 04 and 06, never from these coordinates -- UMAP
     preserves roughly who is near whom, not how far apart anything is.
     """
     coordinates = load_umap()
@@ -709,7 +709,7 @@ def figure7_organism_kingdom(universe):
     all_file = RESULTS / "organism_rank_enrichment.csv"
     lg_file = RESULTS / "leffingwell_goodscents_kingdom_stats.csv"
     if not all_file.exists():
-        print("s07 output missing; skipping F7", flush=True)
+        print("07 output missing; skipping F7", flush=True)
         return
 
     # Plants, animals and fungi come from the kingdom rows; bacteria from the
@@ -726,7 +726,7 @@ def figure7_organism_kingdom(universe):
                "A  All odorants")]
 
     if lg_file.exists():
-        # s10 writes its own short labels; map them onto the NCBI names the rest of the
+        # Step 10 writes its own short labels; map them onto the NCBI names the rest of the
         # figure is keyed by, so both panels can share one row order.
         to_ncbi = {"plants": "Viridiplantae", "animals": "Metazoa",
                    "fungi": "Fungi", "bacteria": "Bacteria"}
@@ -760,7 +760,7 @@ def figureS1_organism_detail(universe, n_shown=12):
     """
     shares_file = RESULTS / "organism_rank_enrichment.csv"
     if not shares_file.exists():
-        print("s07 outputs missing; skipping S1", flush=True)
+        print("07 outputs missing; skipping S1", flush=True)
         return
 
     table = pd.read_csv(shares_file)

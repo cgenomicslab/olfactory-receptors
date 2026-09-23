@@ -2,15 +2,14 @@
 
 The question this folder answers: odorants sit close together in chemical space, but is that
 because odour chemistry is special, or only because odorants are small and evaporate easily?
-The ChEMBL comparison could not tell those apart, because ChEMBL is mostly drug chemistry --
-"odorants are not drugs" was doing much of the work. COCONUT (natural products) is the fairer
-background, and these helpers are what the s01-s06 scripts share to build it.
+COCONUT is the background because natural products and odorants are already chemically
+comparable. These helpers are what steps 01-06 share to build it.
 
 Two conventions worth knowing, because everything downstream depends on them:
 
   * Molecules are joined on an InChIKey that RDKit recomputes from the SMILES, never on a
     COCONUT identifier. A database release bump therefore cannot silently break a join.
-  * Every call that touches a GPU is guarded, so only s02 (and optionally s06) needs one.
+  * Every call that touches a GPU is guarded, so only step 02 (and optionally step 06) needs one.
 """
 from __future__ import annotations
 
@@ -73,7 +72,7 @@ def device():
     """
     Return "cuda" if a GPU is visible, otherwise "cpu".
 
-    Everything except s02 works either way; a GPU only makes it faster.
+    Everything except step 02 works either way; a GPU only makes it faster.
     """
     import torch
 
@@ -311,7 +310,7 @@ def process(smiles):
     """
     Canonicalise one molecule and describe it, in a single call.
 
-    This is what the multiprocessing pools in s01 map over.
+    This is what the multiprocessing pools in step 01 map over.
 
     Returns
     -------
@@ -374,7 +373,7 @@ def greedy_match(covariates, odorant_rows, background_rows, caliper_sd=0.25, see
         Largest allowed distance, in standard deviations per covariate.
     seed : int, optional
         Controls the order odorants are matched in. Different seeds give slightly
-        different pairings, which is why s06 repeats this.
+        different pairings, which is why step 06 repeats this.
 
     Returns
     -------
