@@ -51,7 +51,7 @@ CACHE = RESULTS / "taxid_cache.json"
 
 # The odour descriptors for the M2OR ligands, so the table says what each one smells of.
 # Only M2OR molecules carry these, so the column is mostly empty for the larger list.
-ODOURS = HERE / "odor_datasets" / "inchi_odors_smiles.csv"
+ODOURS = HERE / "processed_data" / "m2or_inchi_odors_smiles.csv"
 
 # The two odorant lists, and how to recognise each in the universe.
 PANELS = {

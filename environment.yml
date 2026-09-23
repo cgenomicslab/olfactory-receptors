@@ -72,7 +72,7 @@ dependencies:
   - pip
   - pip:
       # Odour-descriptor datasets (Leffingwell, GoodScents). Only needed to rebuild
-      # Chemicals/odor_datasets/ from source; the built tables are in the repository.
+      # Chemicals/processed_data/ from source; the built tables are in the repository.
       - pyrfume==0.20
 
       # ESM-C protein embeddings. Only needed to regenerate the protein embeddings

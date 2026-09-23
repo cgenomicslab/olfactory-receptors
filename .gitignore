@@ -213,20 +213,12 @@ __marimo__/
 /Model_Inputs/Embeddings/proteins/
 /Chemicals/chembl/
 /Chemicals/embeddings/
-/Chemicals/odor_datasets/*embeddings*.npy
 
 # The interactive Plotly versions of the embedding maps: ~4.6 MB each because plotly.js
 # and every point are inlined, and between them they were 18% of the repository by
 # Linguist's count. The notebooks that write them also write the SVG each figure
 # actually uses, and those stay.
 /Model_Inputs/Embeddings/figures/*.html
-
-# The Leffingwell/GoodScents working files from the superseded ChEMBL background. Nothing
-# reads them: the pipeline builds its 5,962-molecule odorant set from its own committed
-# data/reference_sets.csv, and the odour descriptors come from inchi_odors_smiles.csv.
-/Chemicals/odor_datasets/leffingwell_goodscents_smiles.csv
-/Chemicals/odor_datasets/leffingwell_goodscents_projected_on_chembl_umap.csv
-/Chemicals/odor_datasets/molformer_leffingwell_goodscents_smiles.csv
 
 # Manuscript drafting, not code. METHODS.md is paper text built up folder by folder as
 # each analysis is finalised; it belongs with the manuscript, not here, and keeping one
@@ -255,11 +247,10 @@ __marimo__/
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_tree.ipynb
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_asr.ipynb
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/README.md
-# COCONUT chemical-space run: the download and the large intermediates are gigabytes.
-# The small 04/06 CSVs and reports are kept, and so is the odorant list, which the
-# analysis cannot be reproduced without.
-/Chemicals/data/*
-!/Chemicals/data/reference_sets.csv
+# Chemicals/data/ holds the raw downloads (COCONUT, NCBI taxonomy) and is never committed.
+# The small tables the analysis needs are in Chemicals/processed_data/. The large
+# intermediates in results/ are gigabytes.
+/Chemicals/data/
 /Chemicals/results/*.npy
 /Chemicals/results/*.parquet
 /Chemicals/results/embed_index.csv

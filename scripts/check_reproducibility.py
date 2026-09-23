@@ -81,7 +81,7 @@ GROUPS = {
                  "Class I / Class II assignment per human receptor"),
             Item("Phylogenetic_Analysis/data/HumanTree/human433_MFP_reorder.tree",
                  "phylogenetic row order for the heatmaps in 02"),
-            Item("Chemicals/odor_datasets/inchi_odors_smiles.csv",
+            Item("Chemicals/processed_data/m2or_inchi_odors_smiles.csv",
                  "odour descriptors per molecule"),
             Item("Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/"
                  "PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames",
@@ -95,7 +95,7 @@ GROUPS = {
         "Step 02 requires a GPU and its output is not archived, so without one this "
         "analysis cannot be reproduced.",
         [
-            Item("Chemicals/data/reference_sets.csv",
+            Item("Chemicals/processed_data/odorants_m2or_leffingwell_goodscents.csv",
                  "the 5,962-molecule odorant list, release-independent"),
             Item("Chemicals/data/coconut_csv-08-2026.csv",
                  "the COCONUT natural-product dump", COCONUT, required=False),
