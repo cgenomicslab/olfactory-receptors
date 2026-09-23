@@ -1,11 +1,5 @@
 # Figure legends — chemical space
 
-Drafted to Nature Ecology & Evolution style: a bold title phrase, then panel-by-panel
-description carrying every *n*, every test, and the meaning of every graphical element.
-Numbers are taken directly from the files the figures are drawn from.
-
----
-
 ## Figure 4 | Odorants occupy a plant-derived, volatile corner of natural-product chemical space.
 
 **Whole-figure legend.** Odorants were compared against all non-odorant natural products
