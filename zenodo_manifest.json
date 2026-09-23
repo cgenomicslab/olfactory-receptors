@@ -57,7 +57,7 @@
     "chemical_space": {
       "filename": "olfactory_receptor_chemical_space_v1.zip",
       "sha256": "b039a511728d3b17a47e2292a56e627f12a11fcc46501b0c22e185f67d034db4",
-      "destination": "Chemicals/chemspace/results",
+      "destination": "Chemicals",
       "bytes": 324688742,
       "description": "Derived data for the odorant vs natural-product analysis on COCONUT 08-2026: the 730,571-molecule analysis table, PCA-50 of the MoLFormer embedding, both UMAP projections, cached COCONUT parent structures and the resolved source-organism table."
     }

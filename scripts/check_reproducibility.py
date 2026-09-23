@@ -59,7 +59,7 @@ class Group:
 
 
 ZENODO = "python scripts/download_zenodo_data.py"
-COCONUT = "see Chemicals/chemspace/README.md (700 MB COCONUT download)"
+COCONUT = "see Chemicals/README.md (700 MB COCONUT download)"
 
 GROUPS = {
     "downstream": Group(
@@ -91,22 +91,20 @@ GROUPS = {
     ),
     "chemspace": Group(
         "Chemical space (optional -- NEEDS A GPU)",
-        "Chemicals/chemspace/ -- odorants against a natural-product background. "
-        "s02 requires a GPU and its output is not archived, so without one this "
+        "Chemicals/ -- odorants against a natural-product background. "
+        "Step 02 requires a GPU and its output is not archived, so without one this "
         "analysis cannot be reproduced.",
         [
-            Item("Chemicals/chemspace/data/reference_sets.csv",
+            Item("Chemicals/data/reference_sets.csv",
                  "the 5,962-molecule odorant list, release-independent"),
-            Item("Chemicals/chemspace/data/chembl_lda_structure.csv",
-                 "the ChEMBL discriminant axis, for the two-background comparison"),
-            Item("Chemicals/chemspace/data/coconut_csv-08-2026.csv",
+            Item("Chemicals/data/coconut_csv-08-2026.csv",
                  "the COCONUT natural-product dump", COCONUT, required=False),
-            Item("Chemicals/chemspace/results/universe.parquet",
-                 "background + odorants with descriptors (built by s01)",
-                 "python s01_build_universe.py", required=False),
-            Item("Chemicals/chemspace/results/embeddings.npy",
+            Item("Chemicals/results/universe.parquet",
+                 "background + odorants with descriptors (built by step 01)",
+                 "python 01_build_universe.py", required=False),
+            Item("Chemicals/results/embeddings.npy",
                  "MolFormer embeddings for the universe -- GPU only, not on Zenodo",
-                 "python s02_embed.py   (needs a GPU)", required=False),
+                 "python 02_embed.py   (needs a GPU)", required=False),
         ],
     ),
     "ancestral": Group(

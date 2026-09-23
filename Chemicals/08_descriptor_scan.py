@@ -1,6 +1,6 @@
 """Step 8 -- sweep every COCONUT column for differences between odorants and the rest.
 
-s01 reads ten of COCONUT's forty-four columns, because those were the ones the analysis
+01 reads ten of COCONUT's forty-four columns, because those were the ones the analysis
 needed. This script goes back to the raw file and tests all of the others, so that
 nothing informative is sitting unexamined in a column nobody opened. It is a screen, not
 a hypothesis: everything it turns up needs reading with the multiple-testing correction

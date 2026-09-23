@@ -21,7 +21,7 @@ from openpyxl.utils import get_column_letter
 REPO = Path(__file__).resolve().parent.parent
 REF = REPO / "Downstream_Analysis/notebooks/reference_tree"
 ANC = REPO / "Downstream_Analysis/notebooks/ancestral"
-CHEM = REPO / "Chemicals/chemspace/results"
+CHEM = REPO / "Chemicals/results"
 PHY = REPO / "Phylogenetic_Analysis/data"
 
 HEADER_FILL = PatternFill("solid", fgColor="E8E8E4")
@@ -282,7 +282,7 @@ def s9_chemspace_controls():
     return blocks, legend
 
 
-def s10_enrichment():
+def 10_enrichment():
     path = pd.read_csv(CHEM / "pathway_enrichment.csv")
     fg = pd.read_csv(CHEM / "fg_enrichment.csv")
     king = pd.read_csv(CHEM / "organism_kingdom_summary.csv")
@@ -317,7 +317,7 @@ TABS = [
     ("S7 Ancestral nodes", s7_nodes),
     ("S8 Duplications", s8_duplications),
     ("S9 Chemspace controls", s9_chemspace_controls),
-    ("S10 Enrichment stats", s10_enrichment),
+    ("S10 Enrichment stats", 10_enrichment),
 ]
 
 
@@ -378,7 +378,7 @@ def main():
 
     # The published panels must be the ones the analysis actually used.
     import sys
-    sys.path.insert(0, str(REPO / "Chemicals/chemspace"))
+    sys.path.insert(0, str(REPO / "Chemicals"))
     try:
         import chemspace as cs
         assert cs.FUNCTIONAL_GROUP_SMARTS == FG_SMARTS, "SMARTS panel has drifted from the code"

@@ -33,7 +33,7 @@ Phylogenetic_Analysis/ alignments and trees
 Ancestral_Receptor_
   Reconstruction/      the 432 reconstructed ancestral sequences
 Downstream_Analysis/   what the predictions say                      
-Chemicals/chemspace/   odorants against a natural-product background 
+Chemicals/   odorants against a natural-product background 
 scripts/               download, checks, and the figure/table builders
 ```
 

@@ -1,6 +1,6 @@
 """Step 11 -- the assembled figures for the manuscript.
 
-s05 draws one figure per question, at whatever size suits that question. This script
+05 draws one figure per question, at whatever size suits that question. This script
 composes the panels that go in the paper, at the page dimensions and type sizes Nature
 Ecology and Evolution asks for, so nothing has to be rescaled afterwards (rescaling a
 finished figure is what breaks type size).

@@ -1,24 +1,3 @@
-"""Step 3 -- squeeze the embedding down to two dimensions, for the maps.
-
-This produces the picture, and only the picture. Every number we actually report -- how
-clustered odorants are, how well they can be told apart from matched natural products --
-is measured in the full 768-dimensional space in s04 and s06, never on these coordinates.
-UMAP distances are not trustworthy in that way: it preserves who is near whom, roughly,
-but not how far apart anything is.
-
-UMAP runs on the top 50 principal components rather than the raw 768 numbers. Finding
-nearest neighbours in 50 dimensions is roughly 15x cheaper and the overall picture looks
-the same. Pass --raw to use all 768 instead, which takes hours rather than minutes.
-
-Outputs
--------
-results/pca50.npy    float32, (n_molecules, 50)
-results/pca_evr.npy  how much variance each component captures (plotted as F0)
-results/umap.npy         float32, (n_molecules, 2), aligned with embed_index.csv
-results/umap_raw768.npy  the same, but computed on all 768 dimensions (--raw)
-
-CPU only. Roughly 10 minutes for the PCA and 20 for the UMAP.
-"""
 from __future__ import annotations
 
 import argparse

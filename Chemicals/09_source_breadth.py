@@ -1,6 +1,6 @@
 """Step 9 -- are odorants really found in more organisms, or does it only look that way?
 
-s07 turned up a pattern before it turned up any taxon: odorants are recorded from far
+Step 07 turned up a pattern before it turned up any taxon: odorants are recorded from far
 more source organisms than other natural products (mean 50.4 against 4.3). That is
 either a real ecological fact -- volatile compounds like limonene and linalool genuinely
 occur across enormous numbers of species -- or an artefact of famous compounds being
