@@ -16,7 +16,7 @@ RESULTS = HERE / "results"
 COCONUT_CSV = DATA / "coconut_csv-08-2026.csv"
 COCONUT_CLEANED = RESULTS / "coconut_parents.parquet"
 
-ODORANTS = DATA / "reference_sets.csv"
+ODORANTS = HERE / "processed_data" / "odorants_m2or_leffingwell_goodscents.csv"
 COCONUT_COLUMNS = [
     "identifier", "canonical_smiles", "np_likeness", "contains_sugar",
     "np_classifier_pathway", "np_classifier_superclass", "np_classifier_class",

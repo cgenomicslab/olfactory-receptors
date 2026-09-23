@@ -46,7 +46,7 @@ Four files are committed. Three are downloaded and are not.
 | file | size | source |
 |---|---|---|
 | `data/reference_sets.csv` | 0.5 MB | committed. The 5,962 odorants, keyed by InChIKey and canonical SMILES. Release-independent. |
-| `odor_datasets/inchi_odors_smiles.csv` | | committed. 754 molecules with their odour descriptors. |
+| `odor_datasets/m2or_inchi_odors_smiles.csv` | | committed. 754 molecules with their odour descriptors. |
 | `odor_datasets/ligand_pathways.csv` | | committed. NPClassifier pathway per molecule, joined from COCONUT. |
 | `data/coconut_csv-08-2026.csv` | 668 MB | downloaded, gitignored |
 | `data/nodes.dmp`, `data/names.dmp` | 512 MB | downloaded, gitignored |

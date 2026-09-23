@@ -53,7 +53,7 @@ ASR_MATRIX = REPO / "Downstream_Analysis/predictions/aggregated/ASR_Predictions/
 REF_MATRIX = REPO / "Downstream_Analysis/predictions/aggregated/Reference_Tree_Predictions/reference_median_probability_wide.csv"
 PAIRS = REPO / "Model_Inputs/Data_Preparation/processed/m2or_pairs_model.csv"
 FASTA = REPO / "Phylogenetic_Analysis/data/ReferenceTree/PF13853.9606_7955_7740_7764_75743_137246.fa"
-ODORS = REPO / "Chemicals/odor_datasets/inchi_odors_smiles.csv"
+ODORS = REPO / "Chemicals/processed_data/m2or_inchi_odors_smiles.csv"
 ASR_TREE = REPO / ("Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/"
                    "PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames")
 CLASSES = REPO / "Phylogenetic_Analysis/data/HumanTree/human433_OR_classes.csv"
