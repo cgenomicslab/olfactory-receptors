@@ -2,47 +2,47 @@
 LEFFINGWELL / GOODSCENTS AND ITS SOURCE ORGANISMS
 ==========================================================================
   molecules in the list              5,785
-    with an organism recorded        1,911
-    excluded, no source recorded     3,874
+    with an organism recorded        1,921
+    excluded, no source recorded     3,864
   Molecules with no recorded source are dropped, not counted as zero: nobody
   looked, which is different from having no source.
 
-  organism names resolved to taxa    38,622
+  organism names resolved to taxa    38,837
 
-  wrote /mnt/data.P8-nvme/izirdeli/olfactory-receptors/Chemicals/chemspace/results/leffingwell_goodscents_organism_table.csv  (1911 molecules)
+  wrote /mnt/data.P8-nvme/izirdeli/olfactory-receptors/Chemicals/results/leffingwell_goodscents_organism_table.csv  (1921 molecules)
 
   what the panel's molecules mostly come from:
-    plants                     1734  (90.7%)
-    animals                      72  (3.8%)
-    bacteria                     37  (1.9%)
-    fungi                        22  (1.2%)
+    plants                     1740  (90.6%)
+    animals                      72  (3.7%)
+    bacteria                     45  (2.3%)
+    fungi                        22  (1.1%)
 
   the ten molecules with the most recorded sources:
     palmitic acid               1585 sources   plants     odorless, creamy, fatty, waxy
-    3,4-DIHYDROXYBENZOIC ACID   1455 sources   plants     -
-    4-HYDROXYBENZOIC ACID       1356 sources   plants     -
-    P-CYMENE                    1336 sources   plants     citrus, fresh, woody
-    MYRCENE                     1324 sources   plants     spicy, peppery, terpenic, herbal, 
+    3,4-DIHYDROXYBENZOIC ACID   1454 sources   plants     -
+    4-HYDROXYBENZOIC ACID       1355 sources   plants     -
+    P-CYMENE                    1335 sources   plants     citrus, fresh, woody
+    MYRCENE                     1323 sources   plants     spicy, peppery, terpenic, herbal, 
     stearic acid                1313 sources   plants     odorless
-    Vanillic acid               1303 sources   plants     odorless, sweet, vanilla, powdery,
+    Vanillic acid               1302 sources   plants     odorless, sweet, vanilla, powdery,
     linoleic acid               1276 sources   plants     -
+    nan                         1229 sources   plants     -
     Isocaryophyllene            1184 sources   plants     -
-    nan                         1151 sources   plants     balsamic
 
 ==========================================================================
 LEFFINGWELL / GOODSCENTS AGAINST THE NATURAL-PRODUCT BACKGROUND, BY KINGDOM
 ==========================================================================
   Both sides restricted to molecules with a recorded source organism.
-    Leffingwell / GoodScents   1,870
-    natural products  258,816
+    Leffingwell / GoodScents   1,884
+    natural products  263,882
 
     kingdom                        list   others    fold           95% CI           p   q
-    plants                        85.2%    62.1%    1.37     [1.35, 1.39]     5.0e-05   5.0e-05
-    animals                        7.3%    12.0%    0.61     [0.55, 0.67]     5.0e-05   5.0e-05
-    bacteria                       3.4%     9.8%    0.34     [0.29, 0.41]     5.0e-05   5.0e-05
-    fungi                          3.1%    13.4%    0.23     [0.20, 0.27]     5.0e-05   5.0e-05
+    plants                        84.9%    61.2%    1.39     [1.37, 1.40]     5.0e-05   5.0e-05
+    animals                        7.4%    12.4%    0.59     [0.53, 0.66]     5.0e-05   5.0e-05
+    bacteria                       3.6%    10.4%    0.34     [0.29, 0.41]     5.0e-05   5.0e-05
+    fungi                          3.1%    13.3%    0.23     [0.20, 0.27]     5.0e-05   5.0e-05
 
-  Label-shuffling test on the mean share (20,000 shuffles), so the p-value
-  tests the fold change that is plotted. Interval from bootstrapping the panel.
-  Benjamini-Hochberg across the five kingdoms. p = 5.0e-05 is the floor set by
-  the number of shuffles, not an exact value.
+  Permutation test on the mean share (20,000 label shuffles), so the p-value
+  tests the fold change that is shown; the smallest possible p is 5.0e-05.
+  Interval: percentile bootstrap, both groups resampled. Benjamini-Hochberg
+  across the 4 groups.

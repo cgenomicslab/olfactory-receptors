@@ -11,14 +11,14 @@ CHECK 1  the whole distribution, not the mean
       percentile   odorants     others
              10%          1          1
              25%          2          1
-             50%          5          1
+             50%          6          1
              75%         32          2
-             90%        127          6
+             90%        131          6
              99%        770         50
 
     Cliff's delta overall: +0.53
-    odorants recorded from a single organism : 21.4%
-    others  recorded from a single organism  : 58.1%
+    odorants recorded from a single organism : 21.2%
+    others  recorded from a single organism  : 57.6%
 
 --------------------------------------------------------------------------
 CHECK 2  is it just that odorants are better studied?
@@ -27,11 +27,11 @@ CHECK 2  is it just that odorants are better studied?
 
   within bands of papers behind the entry:
                   band  n odor   n other  median odor  median other   delta
-                   1-2     459   145,755            1             1   +0.19
-                   2-3     220    53,319            2             2   +0.40
-                   3-6     319    26,203            5             3   +0.43
-                  6-11     202     6,066           12             8   +0.33
-                  >=11     556     4,493           76            30   +0.44
+                   1-2     455   145,364            1             1   +0.19
+                   2-3     219    53,113            2             2   +0.40
+                   3-6     318    26,088            5             3   +0.43
+                  6-11     201     6,037           12             8   +0.34
+                  >=11     552     4,459           76            30   +0.43
 
 --------------------------------------------------------------------------
 CHECK 3  is it just that odorants are small?
@@ -40,8 +40,8 @@ CHECK 3  is it just that odorants are small?
   within bands of molecular weight:
                   band  n odor   n other  median odor  median other   delta
                  0-150     879     3,256            5             1   +0.43
-               150-250     946    26,575            6             2   +0.47
-               250-350     149    60,229            6             1   +0.51
+               150-250     946    26,575            7             2   +0.48
+               250-350     149    60,229            7             1   +0.52
 
 --------------------------------------------------------------------------
 CHECK 4  is it just that odorants are in more databases?
@@ -49,10 +49,10 @@ CHECK 4  is it just that odorants are in more databases?
 
   within bands of collections listing it:
                   band  n odor   n other  median odor  median other   delta
-                   1-2      91    70,174            1             1   +0.09
-                   2-3     266   100,238            1             1   +0.09
-                   3-5     396    67,199            2             2   -0.04
-                   >=5   1,242    29,839           17             4   +0.45
+                   1-2     101    70,633            1             1   +0.18
+                   2-3     264   100,007            1             1   +0.09
+                   3-5     396    67,047            2             2   -0.04
+                   >=5   1,234    29,763           17             4   +0.45
 
 ==========================================================================
 READING THIS

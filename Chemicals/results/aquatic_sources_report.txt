@@ -1,41 +1,42 @@
 WHICH SOURCE ORGANISMS LIVE IN WATER
 ==============================================================================
   NCBI taxonomy: 2,972,074 nodes
-  COCONUT molecules with an organism annotation: 269,659
-  distinct organism names: 69,105
-  resolved to an NCBI taxon: 66,289  (2,816 unresolved)
+  molecules with an organism annotation: 269,445
+  distinct organism names: 69,369
+  resolved to an NCBI taxon: 66,542  (2,827 unresolved)
 
   organism names by habitat
-    terrestrial  44,637
-    unassigned   16,752
-    aquatic       4,696
+    terrestrial  44,735
+    unassigned   16,890
+    aquatic       4,713
     host            139
     mangrove         65
+  aquatic_sources_panel.csv: 407 of 269,445 rows
 
-  molecules written                  : 269,659
-  with at least one placed organism  : 203,642
-  with at least one aquatic organism : 49,702
+  molecules written                  : 269,445
+  with at least one placed organism  : 203,648
+  with at least one aquatic organism : 49,810
   median share_aquatic where defined : 0.0000
-  in a marine natural-product database: 31,793
+  in a marine natural-product database: 32,275
 
   most frequent aquatic source organisms
       410  Laurencia dendroidea
-      378  Nelumbo nucifera
+      381  Nelumbo nucifera
       358  Briareum asbestinum
       313  Laurencia obtusa
-      305  Theonella swinhoei
+      309  Theonella swinhoei
       301  Briareum stechei
-      288  Asterospicularia laurae
-      281  Sinularia depressa
-      280  Leathesia nana
-      259  Amathia pinnata
-      258  Laurencia spectabilis
+      289  Asterospicularia laurae
+      282  Sinularia depressa
+      281  Leathesia nana
+      260  Amathia pinnata
+      259  Laurencia spectabilis
       242  Martensia denticulata
-      241  Lamellodysidea herbacea
-      238  Negombata magnifica
+      242  Lamellodysidea herbacea
+      240  Negombata magnifica
       236  Dictyota dichotoma
-      231  Symphyocladia latiuscula
+      232  Symphyocladia latiuscula
       223  Sarcophyton glaucum
+      220  Dendronephthya griffini
       219  Plakortis simplex
-      219  Dendronephthya griffini
-      214  Aaptos aaptos
+      215  Aaptos aaptos

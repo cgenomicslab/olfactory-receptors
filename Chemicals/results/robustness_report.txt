@@ -8,49 +8,68 @@ ATTACKS 1 & 2  DOES THE MATCHED CONTROL HOLD UP?
   with random CV and with a Bemis-Murcko scaffold split
 
   seed 0: matched 5939 (99.9%), worst |SMD| 0.0035 (PASS), 6146 distinct scaffolds
-    volatility_only    random CV 0.494   scaffold 0.465   optimism +0.030
-    descriptors_22     random CV 0.667   scaffold 0.657   optimism +0.010
+    volatility_only    random CV 0.494   scaffold 0.478   optimism +0.017
+    descriptors_22     random CV 0.667   scaffold 0.659   optimism +0.008
     molformer_768      random CV 0.795   scaffold 0.775   optimism +0.020
 
   seed 1: matched 5939 (99.9%), worst |SMD| 0.0034 (PASS), 6156 distinct scaffolds
-    volatility_only    random CV 0.487   scaffold 0.466   optimism +0.021
+    volatility_only    random CV 0.487   scaffold 0.482   optimism +0.005
     descriptors_22     random CV 0.667   scaffold 0.659   optimism +0.009
-    molformer_768      random CV 0.795   scaffold 0.769   optimism +0.025
+    molformer_768      random CV 0.794   scaffold 0.776   optimism +0.018
 
   seed 2: matched 5939 (99.9%), worst |SMD| 0.0034 (PASS), 6151 distinct scaffolds
-    volatility_only    random CV 0.487   scaffold 0.480   optimism +0.007
-    descriptors_22     random CV 0.667   scaffold 0.657   optimism +0.010
-    molformer_768      random CV 0.793   scaffold 0.773   optimism +0.021
+    volatility_only    random CV 0.487   scaffold 0.475   optimism +0.012
+    descriptors_22     random CV 0.667   scaffold 0.659   optimism +0.008
+    molformer_768      random CV 0.794   scaffold 0.776   optimism +0.017
 
   seed 3: matched 5939 (99.9%), worst |SMD| 0.0033 (PASS), 6142 distinct scaffolds
-    volatility_only    random CV 0.491   scaffold 0.480   optimism +0.011
-    descriptors_22     random CV 0.667   scaffold 0.660   optimism +0.008
-    molformer_768      random CV 0.793   scaffold 0.776   optimism +0.018
+    volatility_only    random CV 0.491   scaffold 0.474   optimism +0.017
+    descriptors_22     random CV 0.668   scaffold 0.659   optimism +0.009
+    molformer_768      random CV 0.794   scaffold 0.774   optimism +0.019
 
   seed 4: matched 5939 (99.9%), worst |SMD| 0.0036 (PASS), 6129 distinct scaffolds
-    volatility_only    random CV 0.494   scaffold 0.471   optimism +0.024
-    descriptors_22     random CV 0.666   scaffold 0.658   optimism +0.008
-    molformer_768      random CV 0.793   scaffold 0.767   optimism +0.026
+    volatility_only    random CV 0.494   scaffold 0.476   optimism +0.018
+    descriptors_22     random CV 0.667   scaffold 0.658   optimism +0.009
+    molformer_768      random CV 0.793   scaffold 0.777   optimism +0.016
 
   across seeds (mean +/- sd):
     features                  random CV         scaffold
-    volatility_only       0.491 +/-0.004    0.472 +/-0.007
-    descriptors_22        0.667 +/-0.000    0.658 +/-0.001
-    molformer_768         0.794 +/-0.001    0.772 +/-0.004
+    volatility_only       0.491 +/-0.004    0.477 +/-0.003
+    descriptors_22        0.667 +/-0.000    0.659 +/-0.000
+    molformer_768         0.794 +/-0.001    0.776 +/-0.001
 
   Seed-to-seed spread is the matcher's contribution; the random-to-scaffold
   gap is how much of the AUC was near-duplicate chemistry. Quote the
   scaffold column.
 
+  matched functional-group odds ratios across seeds:
+    group                     mean     sd     min     max
+    fg_thiol                  3.08  0.021    3.07    3.12
+    fg_ester                  1.68  0.004    1.68    1.69
+    fg_sulfide                1.64  0.007    1.64    1.65
+    fg_lactone                1.64  0.005    1.63    1.65
+    fg_ether                  1.49  0.005    1.48    1.50
+    fg_nitrile                1.47  0.071    1.40    1.56
+    fg_aldehyde               1.17  0.013    1.16    1.19
+    fg_carboxylic_acid        1.16  0.008    1.14    1.16
+    fg_alcohol                1.14  0.005    1.13    1.14
+    fg_ketone                 1.02  0.008    1.01    1.03
+    fg_benzene                0.92  0.005    0.92    0.93
+    fg_phenol                 0.86  0.005    0.85    0.86
+    fg_terpene_isopropyl      0.81  0.005    0.81    0.82
+    fg_amide                  0.50  0.008    0.49    0.51
+    fg_amine                  0.27  0.006    0.26    0.28
+    fg_halogen                0.08  0.001    0.08    0.08
+
 ========================================================================
 ATTACK 3  IS THE kNN ENRICHMENT BIG, OR ONLY BIG-LOOKING?
 ========================================================================
 
-  odorants                  :   46.9x  (purity 0.3848, base rate 0.0082)
+  odorants                  :   46.9x  (purity 0.3849, base rate 0.0082)
 
   matched natural products (the null that matters):
     seed 0:   18.6x
-    seed 1:   18.4x
+    seed 1:   18.5x
     seed 2:   18.5x
     seed 3:   18.5x
     seed 4:   18.6x
@@ -83,5 +102,6 @@ WHAT TO PUT IN THE PAPER
 ========================================================================
   * the scaffold-split AUCs, not the random-CV ones
   * the kNN enrichment beside its matched null, never on its own
-  * the matched functional-group odds ratios from s04's fg_enrichment.csv
-  * the seed spread, as evidence the control is not one lucky pairing
+  * the matched functional-group odds ratios from c05's fg_enrichment.csv,
+    with their seed spread from robust_fg_matched.csv
+  * the seed spread of the AUCs, as evidence the control is not one lucky pairing

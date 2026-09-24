@@ -282,20 +282,29 @@ def s9_chemspace_controls():
     return blocks, legend
 
 
-def 10_enrichment():
+def s10_enrichment():
     path = pd.read_csv(CHEM / "pathway_enrichment.csv")
     fg = pd.read_csv(CHEM / "fg_enrichment.csv")
-    king = pd.read_csv(CHEM / "organism_kingdom_summary.csv")
+    fg_seeds = pd.read_csv(CHEM / "robust_fg_matched.csv")
+    # The compositional test (c07): mean share of a molecule's sources per kingdom,
+    # with bacteria taken at superkingdom rank, as drawn in Fig. 4b.
+    ranks = pd.read_csv(CHEM / "organism_rank_enrichment.csv")
+    king = pd.concat([
+        ranks[(ranks["rank"] == "kingdom")
+              & ranks.taxon.isin(["Viridiplantae", "Metazoa", "Fungi"])],
+        ranks[(ranks["rank"] == "superkingdom") & (ranks.taxon == "Bacteria")],
+    ])
     recovery = pd.read_csv(REF / "Figures/05_pathway_recovery.csv")
     blocks = [("Biosynthetic pathway, odorants vs other natural products (Fig. 4c)", path),
               ("Functional groups, odorants vs other natural products (Fig. 4d)", fg),
+              ("Matched functional-group odds ratios under five matching seeds", fg_seeds),
               ("Source-organism composition by kingdom (Fig. 4b)", king),
               ("Recovery of pathway labels by two partitions of the same molecules", recovery)]
     legend = ("Supplementary Table 10 | Enrichment statistics behind Fig. 4 and the cluster "
               "pathway result. Pathway and functional-group blocks give the percentage of each side "
               "carrying the label, the odds ratio with its confidence interval, and Benjamini–"
               "Hochberg q; columns suffixed _matched repeat the test against the matched control of "
-              "Supplementary Table 9, and the values reported in Fig. 4d are the unmatched ones. The "
+              "Supplementary Table 9, and the values reported in Fig. 4d are the matched ones. The "
               "last block gives Cramér's V for the association between biosynthetic pathway and two "
               "partitions of the same molecules, the receptor-activation clusters and clusters "
               "built from molecular descriptors, against a floor from 2,000 label permutations. "
@@ -317,7 +326,7 @@ TABS = [
     ("S7 Ancestral nodes", s7_nodes),
     ("S8 Duplications", s8_duplications),
     ("S9 Chemspace controls", s9_chemspace_controls),
-    ("S10 Enrichment stats", 10_enrichment),
+    ("S10 Enrichment stats", s10_enrichment),
 ]
 
 

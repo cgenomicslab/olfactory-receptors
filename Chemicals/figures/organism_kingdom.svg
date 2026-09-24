@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="280.173437pt" height="210.36375pt" viewBox="0 0 280.173437 210.36375" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-24T15:50:11.462834</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 210.36375 
+L 280.173437 210.36375 
+L 280.173437 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 49.773438 173.52 
+L 272.973437 173.52 
+L 272.973437 7.2 
+L 49.773438 7.2 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 49.773438 29.314011 
+L 212.721605 29.314011 
+L 212.721605 14.76 
+L 49.773438 14.76 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #48546b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 49.773438 69.741818 
+L 65.911576 69.741818 
+L 65.911576 55.187807 
+L 49.773438 55.187807 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #48546b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 49.773438 110.169626 
+L 55.905036 110.169626 
+L 55.905036 95.615615 
+L 49.773438 95.615615 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #48546b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 49.773438 150.597433 
+L 56.650535 150.597433 
+L 56.650535 136.043422 
+L 49.773438 136.043422 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #48546b"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 49.773438 44.676578 
+L 168.635529 44.676578 
+L 168.635529 30.122567 
+L 49.773438 30.122567 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #bfae94"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 49.773438 85.104385 
+L 73.827124 85.104385 
+L 73.827124 70.550374 
+L 49.773438 70.550374 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #bfae94"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 49.773438 125.532193 
+L 75.534494 125.532193 
+L 75.534494 110.978182 
+L 49.773438 110.978182 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #bfae94"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 49.773438 165.96 
+L 70.001091 165.96 
+L 70.001091 151.405989 
+L 49.773438 151.405989 
+z
+" clip-path="url(#p4378deb3c8)" style="fill: #bfae94"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="me740746a09" d="M 0 0 
+L 0 3.5 
+" style="stroke: #595959; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me740746a09" x="49.773438" y="173.52" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="49.773438" y="187.766875" transform="rotate(-0 49.773438 187.766875)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#me740746a09" x="98.295177" y="173.52" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="98.295177" y="187.766875" transform="rotate(-0 98.295177 187.766875)">25</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#me740746a09" x="146.816916" y="173.52" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="146.816916" y="187.766875" transform="rotate(-0 146.816916 187.766875)">50</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#me740746a09" x="195.338655" y="173.52" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="195.338655" y="187.766875" transform="rotate(-0 195.338655 187.766875)">75</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#me740746a09" x="243.860394" y="173.52" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="243.860394" y="187.766875" transform="rotate(-0 243.860394 187.766875)">100</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="161.373437" y="201.08875" transform="rotate(-0 161.373437 201.08875)">share of a molecule's source organisms (%)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_7">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: end" x="42.773438" y="33.341726" transform="rotate(-0 42.773438 33.341726)">plants</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_8">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: end" x="42.773438" y="73.769534" transform="rotate(-0 42.773438 73.769534)">animals</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_9">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: end" x="42.773438" y="114.197341" transform="rotate(-0 42.773438 114.197341)">fungi</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_10">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: end" x="42.773438" y="154.625149" transform="rotate(-0 42.773438 154.625149)">bacteria</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_11">
+    <path d="M 49.773438 173.52 
+L 49.773438 7.2 
+" style="fill: none; stroke: #595959; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 49.773438 173.52 
+L 272.973437 173.52 
+" style="fill: none; stroke: #595959; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="216.603344" y="31.787039" transform="rotate(-0 216.603344 31.787039)">1.37×</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="77.708863" y="72.214846" transform="rotate(-0 77.708863 72.214846)">0.67×</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="79.416233" y="112.642654" transform="rotate(-0 79.416233 112.642654)">0.24×</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="73.88283" y="153.070461" transform="rotate(-0 73.88283 153.070461)">0.34×</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_13">
+     <path d="M 138.701562 148.123125 
+L 158.701562 148.123125 
+L 158.701562 141.123125 
+L 138.701562 141.123125 
+z
+" style="fill: #48546b"/>
+    </g>
+    <g id="text_15">
+     <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: start" x="166.701562" y="148.123125" transform="rotate(-0 166.701562 148.123125)">odorants</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 138.701562 162.445 
+L 158.701562 162.445 
+L 158.701562 155.445 
+L 138.701562 155.445 
+z
+" style="fill: #bfae94"/>
+    </g>
+    <g id="text_16">
+     <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: start" x="166.701562" y="162.445" transform="rotate(-0 166.701562 162.445)">other natural products</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4378deb3c8">
+   <rect x="49.773438" y="7.2" width="223.2" height="166.32"/>
+  </clipPath>
+ </defs>
+</svg>

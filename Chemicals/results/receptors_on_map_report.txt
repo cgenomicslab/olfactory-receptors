@@ -1,0 +1,83 @@
+========================================================================
+THE RECEPTOR PANEL ON THE NATURAL-PRODUCT MAP
+========================================================================
+  receptors 433, odorants 754, matrix density 2.7453%, cut 0.8917
+  co-tuning clusters: 687 odorants read by at least one receptor, cost 328.9871, sizes [214, 127, 108, 100, 70, 68]
+  receptor classes: 62 class I, 371 class II; threshold 1/62; groups {'Class I only': 111, 'shared': 276, 'Class II only': 112}, below it in both 188
+
+  clustered odorants              687
+    InChIKey computed             687
+    found in the universe         687
+    with Tb_joback                686
+    with np_likeness              486
+
+========================================================================
+1  DO THE CLUSTERS SIT APART ON THE MAP, OR INTERLEAVE?
+========================================================================
+  median pairwise map distance; ratio near 1 = interleaved, well below 1 = apart
+    cluster 0  n=127   within  3.53   between  3.45   ratio 1.02
+    cluster 1  n=214   within  3.58   between  3.70   ratio 0.97
+    cluster 2  n= 70   within  2.86   between  3.20   ratio 0.89
+    cluster 3  n=108   within  3.41   between  3.50   ratio 0.97
+    cluster 4  n=100   within  2.21   between  3.52   ratio 0.63
+    cluster 5  n= 68   within  3.48   between  3.41   ratio 1.02
+  Descriptive only: map distances are not metric, so there is no test.
+
+========================================================================
+2  DO THE CLUSTERS DIFFER IN VOLATILITY OR NATURAL-PRODUCT LIKENESS?
+========================================================================
+
+  boiling point (K)
+  Kruskal-Wallis H = 109.6, P = 4.9e-22
+    cluster 0      n=126   median   546.85
+    cluster 1      n=214   median   524.18
+    cluster 2      n= 70   median   548.13
+    cluster 3      n=108   median   486.40
+    cluster 4      n=100   median   516.56
+    cluster 5      n= 68   median   440.86
+  pairwise Mann-Whitney, BH across 15 pairs: 12 with q < 0.05
+    cluster 0 vs cluster 5: q = 4.9e-15, Cliff's delta = +0.71
+    cluster 1 vs cluster 5: q = 1.4e-13, Cliff's delta = +0.62
+    cluster 2 vs cluster 5: q = 2e-10, Cliff's delta = +0.65
+    cluster 0 vs cluster 3: q = 7.4e-10, Cliff's delta = +0.48
+    cluster 4 vs cluster 5: q = 3.1e-09, Cliff's delta = +0.56
+    cluster 1 vs cluster 3: q = 6.9e-07, Cliff's delta = +0.35
+    cluster 2 vs cluster 3: q = 1.8e-06, Cliff's delta = +0.44
+    cluster 3 vs cluster 4: q = 0.0013, Cliff's delta = -0.27
+    cluster 3 vs cluster 5: q = 0.0013, Cliff's delta = +0.30
+    cluster 0 vs cluster 4: q = 0.0019, Cliff's delta = +0.25
+    cluster 2 vs cluster 4: q = 0.012, Cliff's delta = +0.24
+    cluster 0 vs cluster 1: q = 0.031, Cliff's delta = +0.15
+
+  natural-product likeness
+  Kruskal-Wallis H = 63.1, P = 2.8e-12
+    cluster 0      n= 82   median     0.65
+    cluster 1      n=137   median     0.77
+    cluster 2      n= 48   median     0.59
+    cluster 3      n= 82   median     0.41
+    cluster 4      n= 82   median    -0.07
+    cluster 5      n= 55   median     0.25
+  pairwise Mann-Whitney, BH across 15 pairs: 9 with q < 0.05
+    cluster 1 vs cluster 4: q = 7e-11, Cliff's delta = +0.56
+    cluster 2 vs cluster 4: q = 1.4e-07, Cliff's delta = +0.59
+    cluster 0 vs cluster 4: q = 1.9e-06, Cliff's delta = +0.46
+    cluster 1 vs cluster 5: q = 0.00012, Cliff's delta = +0.38
+    cluster 3 vs cluster 4: q = 0.00014, Cliff's delta = +0.37
+    cluster 2 vs cluster 5: q = 0.0014, Cliff's delta = +0.39
+    cluster 0 vs cluster 5: q = 0.0098, Cliff's delta = +0.29
+    cluster 1 vs cluster 3: q = 0.022, Cliff's delta = +0.20
+    cluster 2 vs cluster 3: q = 0.048, Cliff's delta = +0.23
+
+========================================================================
+3  DO THE RECEPTOR-CLASS GROUPS DIFFER IN VOLATILITY?
+========================================================================
+  Kruskal-Wallis H = 1.2, P = 0.54
+    Class I only   n=111   median   515.43
+    shared         n=275   median   528.66
+    Class II only  n=112   median   532.21
+  pairwise Mann-Whitney, BH across 3 pairs: 0 with q < 0.05
+
+  against every other natural product (n = 648,119, median 1092 K):
+    Class I only   Cliff's delta -0.90
+    shared         Cliff's delta -0.95
+    Class II only  Cliff's delta -0.94

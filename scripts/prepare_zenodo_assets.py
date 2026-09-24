@@ -53,12 +53,9 @@ ASSET_SPECS: Dict[str, Dict[str, object]] = {
         "summary": "Odorants against a natural-product background, COCONUT 08-2026.",
         "required": [
             ("Chemicals/results/universe.parquet", "results/universe.parquet"),
-            ("Chemicals/results/pca50.npy", "results/pca50.npy"),
-            ("Chemicals/results/pca_evr.npy", "results/pca_evr.npy"),
             ("Chemicals/results/coconut_parents.parquet", "results/coconut_parents.parquet"),
             ("Chemicals/results/embed_index.csv", "results/embed_index.csv"),
             ("Chemicals/results/umap.npy", "results/umap.npy"),
-            ("Chemicals/results/umap_raw768.npy", "results/umap_raw768.npy"),
         ],
         # Ship only while the organism-habitat section is in the manuscript.
         "optional": [
@@ -68,7 +65,7 @@ ASSET_SPECS: Dict[str, Dict[str, object]] = {
         "notes": (
             "The raw 768-dimensional MolFormer embedding (results/embeddings.npy, 2.1 GB) "
             "is not included. It is deterministic given the pinned model revision and can "
-            "be regenerated on a GPU by Chemicals/02_embed.py."
+            "be regenerated on a GPU by Chemicals/c03_embed.py."
         ),
     },
 }

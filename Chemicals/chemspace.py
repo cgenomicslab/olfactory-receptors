@@ -1,15 +1,4 @@
-"""Shared chemistry and statistics helpers for the odorant chemical-space analysis.
-
-The question this folder answers: odorants sit close together in chemical space, but is that
-because odour chemistry is special, or only because odorants are small and evaporate easily?
-COCONUT is the background because natural products and odorants are already chemically
-comparable. These helpers are what steps 01-06 share to build it.
-
-Two conventions worth knowing, because everything downstream depends on them:
-
-  * Molecules are joined on an InChIKey that RDKit recomputes from the SMILES, never on a
-    COCONUT identifier. A database release bump therefore cannot silently break a join.
-  * Every call that touches a GPU is guarded, so only step 02 (and optionally step 06) needs one.
+"""Chemistry and statistics helpers shared by the Chemicals scripts.
 """
 from __future__ import annotations
 
@@ -72,7 +61,7 @@ def device():
     """
     Return "cuda" if a GPU is visible, otherwise "cpu".
 
-    Everything except step 02 works either way; a GPU only makes it faster.
+    Everything except c03 works either way; a GPU only makes it faster.
     """
     import torch
 
@@ -310,7 +299,7 @@ def process(smiles):
     """
     Canonicalise one molecule and describe it, in a single call.
 
-    This is what the multiprocessing pools in step 01 map over.
+    This is what the multiprocessing pools in c02 map over.
 
     Returns
     -------
@@ -373,7 +362,7 @@ def greedy_match(covariates, odorant_rows, background_rows, caliper_sd=0.25, see
         Largest allowed distance, in standard deviations per covariate.
     seed : int, optional
         Controls the order odorants are matched in. Different seeds give slightly
-        different pairings, which is why step 06 repeats this.
+        different pairings, which is why c06 repeats this.
 
     Returns
     -------
@@ -516,6 +505,150 @@ def knn(normalised_embeddings, query_rows, k=50, chunk=256, target_rows=None):
     del target_matrix
     free_gpu_memory()
     return np.vstack(all_indices), np.vstack(all_similarities)
+
+
+def odds_ratio_ci(n_with_a, total_a, n_with_b, total_b):
+    """
+    Odds ratio of group A against group B, with a 95% Woolf (logit) interval.
+
+    The point estimate and the interval are computed from the same 2 x 2 table, so the
+    estimate always sits inside its interval. Half a count is added to every cell only
+    when one of them is zero, which is the one case where the logit interval is otherwise
+    undefined. At the counts in this folder that happens only for rare taxa.
+
+    Parameters
+    ----------
+    n_with_a, total_a : int
+        Members of group A carrying the feature, and the size of group A.
+    n_with_b, total_b : int
+        The same for group B.
+
+    Returns
+    -------
+    odds_ratio, low, high : float
+    """
+    cells = np.array([n_with_a, total_a - n_with_a,
+                      n_with_b, total_b - n_with_b], dtype=float)
+    if (cells == 0).any():
+        cells = cells + 0.5
+    a, c, b, d = cells
+
+    odds_ratio = (a * d) / (b * c)
+    log_se = np.sqrt(1 / a + 1 / b + 1 / c + 1 / d)
+    z = 1.959963984540054          # the 97.5th percentile of the standard normal
+    return (float(odds_ratio),
+            float(np.exp(np.log(odds_ratio) - z * log_se)),
+            float(np.exp(np.log(odds_ratio) + z * log_se)))
+
+
+def _odds_ratio_of_prevalences(n_with_a, n_with_b, n_pairs):
+    """Odds ratio between two prevalences on n_pairs each; half a count if any cell is 0."""
+    cells = np.stack([n_with_a, n_pairs - n_with_a, n_with_b, n_pairs - n_with_b]).astype(float)
+    cells = np.where((cells == 0).any(axis=0), cells + 0.5, cells)
+    a, c, b, d = cells
+    return (a * d) / (b * c)
+
+
+def paired_odds_ratio(has_feature_a, has_feature_b, n_bootstrap=2000, seed=0):
+    """
+    Odds ratio between the two members of 1:1 matched pairs, tested pair by pair.
+
+    The odds ratio compares the share of A carrying the feature with the share of B
+    carrying it, so it is the number the two percentages beside it imply. What makes it
+    a matched analysis is the uncertainty. The two groups are not independent samples:
+    each odorant has its own partner, chosen to be like it, so their features are
+    correlated. Treating them as independent (Fisher's test) gets the variance wrong.
+    Instead:
+
+      * the p-value is McNemar's exact test, which asks whether the two shares differ
+        using only the discordant pairs -- those where one member carries the feature
+        and the other does not;
+      * the 95% interval resamples whole pairs, so the correlation inside a pair is kept.
+
+    Parameters
+    ----------
+    has_feature_a, has_feature_b : ndarray of bool
+        Whether each member of the pair carries the feature. Aligned: element i of both
+        arrays is one pair.
+    n_bootstrap : int, optional
+        Resamples of the pairs for the interval.
+    seed : int, optional
+
+    Returns
+    -------
+    dict
+        pct_a, pct_b, only_a, only_b (the discordant counts), odds_ratio, ci_lo, ci_hi, p.
+    """
+    from scipy.stats import binomtest
+
+    has_feature_a = np.asarray(has_feature_a, bool)
+    has_feature_b = np.asarray(has_feature_b, bool)
+    n_pairs = len(has_feature_a)
+
+    both = int((has_feature_a & has_feature_b).sum())
+    only_a = int((has_feature_a & ~has_feature_b).sum())
+    only_b = int((~has_feature_a & has_feature_b).sum())
+    neither = n_pairs - both - only_a - only_b
+
+    odds_ratio = float(_odds_ratio_of_prevalences(np.array(both + only_a),
+                                                  np.array(both + only_b), n_pairs))
+
+    discordant = only_a + only_b
+    p_value = float(binomtest(only_a, discordant, 0.5).pvalue) if discordant else 1.0
+
+    # Resampling pairs with replacement is the same as redrawing how many pairs fall in
+    # each of the four kinds (both, only A, only B, neither) from a multinomial.
+    rng = np.random.default_rng(seed)
+    counts = rng.multinomial(n_pairs, np.array([both, only_a, only_b, neither]) / n_pairs,
+                             size=n_bootstrap)
+    resampled = _odds_ratio_of_prevalences(counts[:, 0] + counts[:, 1],
+                                           counts[:, 0] + counts[:, 2], n_pairs)
+    low, high = np.percentile(resampled, [2.5, 97.5])
+
+    return {
+        "pct_a": 100 * (both + only_a) / n_pairs,
+        "pct_b": 100 * (both + only_b) / n_pairs,
+        "only_a": only_a, "only_b": only_b,
+        "odds_ratio": odds_ratio, "ci_lo": float(low), "ci_hi": float(high),
+        "p": p_value,
+    }
+
+
+def cliffs_delta(values_a, values_b, sample=200_000, seed=0):
+    """
+    How often a random member of A exceeds a random member of B, rescaled to -1..+1.
+
+    Zero means the two are interchangeable; +1 means every member of A is larger. Ties
+    count half. Computed through ranks, which is the same number as the pairwise
+    definition but n log n rather than n^2. When B is larger than `sample` it is
+    subsampled, because the background has 720,000 members.
+
+    Returns
+    -------
+    float
+        Cliff's delta, or nan if either group has fewer than 10 finite values.
+    """
+    from scipy.stats import rankdata
+
+    values_a = np.asarray(values_a, float)
+    values_b = np.asarray(values_b, float)
+    values_a = values_a[np.isfinite(values_a)]
+    values_b = values_b[np.isfinite(values_b)]
+    if len(values_a) < 10 or len(values_b) < 10:
+        return np.nan
+
+    if len(values_b) > sample:
+        values_b = np.random.default_rng(seed).choice(values_b, sample, replace=False)
+
+    ranks = rankdata(np.concatenate([values_a, values_b]))
+    n_a, n_b = len(values_a), len(values_b)
+    u_statistic = ranks[:n_a].sum() - n_a * (n_a + 1) / 2
+    return float(2 * u_statistic / (n_a * n_b) - 1)
+
+
+def format_p(p_value):
+    """Format a p-value, showing a floor rather than a misleading exact zero."""
+    return "<1e-300" if p_value <= 0 else f"{p_value:.2e}"
 
 
 def benjamini_hochberg(p_values):

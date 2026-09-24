@@ -55,11 +55,11 @@
       "description": "Per-node IQ-TREE ancestral-state runs, 433 directories as produced. Includes the .state posteriors over all 20 amino acids at every site. Large; only needed to audit or re-derive the reconstruction."
     },
     "chemical_space": {
-      "filename": "olfactory_receptor_chemical_space_v1.zip",
-      "sha256": "b039a511728d3b17a47e2292a56e627f12a11fcc46501b0c22e185f67d034db4",
+      "filename": "olfactory_receptor_chemical_space_v2.zip",
+      "sha256": "16eb33d6f2bd8b21dced124556593af4c77285c1ea1bb584628e8342bd2414e2",
       "destination": "Chemicals",
-      "bytes": 324688742,
-      "description": "Derived data for the odorant vs natural-product analysis on COCONUT 08-2026: the 730,571-molecule analysis table, PCA-50 of the MoLFormer embedding, both UMAP projections, cached COCONUT parent structures and the resolved source-organism table."
+      "bytes": 183616868,
+      "description": "Derived data for the odorant vs natural-product analysis on COCONUT 08-2026: the 730,571-molecule analysis table (universe.parquet), the embedding row index, the UMAP of the full 768-dimensional MoLFormer embedding, cached COCONUT parent structures, and the per-molecule source-organism habitat table."
     }
   },
   "default_assets": [

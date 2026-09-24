@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="300.6275pt" height="308.298125pt" viewBox="0 0 300.6275 308.298125" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-24T15:50:19.668271</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 308.298125 
+L 300.6275 308.298125 
+L 300.6275 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 70.2275 271.37625 
+L 293.4275 271.37625 
+L 293.4275 21.89625 
+L 70.2275 21.89625 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 181.8275 48.731902 
+L 251.5775 48.731902 
+L 251.5775 33.23625 
+L 181.8275 33.23625 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #0b7350"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 181.8275 72.210163 
+L 223.801369 72.210163 
+L 223.801369 56.714511 
+L 181.8275 56.714511 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #0b7350"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 181.8275 95.688424 
+L 222.293002 95.688424 
+L 222.293002 80.192772 
+L 181.8275 80.192772 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #0b7350"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 181.8275 119.166685 
+L 210.576331 119.166685 
+L 210.576331 103.671033 
+L 181.8275 103.671033 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #0b7350"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 181.8275 142.644946 
+L 210.094712 142.644946 
+L 210.094712 127.149293 
+L 181.8275 127.149293 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #0b7350"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 181.8275 166.123207 
+L 161.159943 166.123207 
+L 161.159943 150.627554 
+L 181.8275 150.627554 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #bfae94"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 181.8275 189.601467 
+L 155.230933 189.601467 
+L 155.230933 174.105815 
+L 181.8275 174.105815 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #bfae94"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 181.8275 213.079728 
+L 155.052543 213.079728 
+L 155.052543 197.584076 
+L 181.8275 197.584076 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #bfae94"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 181.8275 236.557989 
+L 151.832294 236.557989 
+L 151.832294 221.062337 
+L 181.8275 221.062337 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #bfae94"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 181.8275 260.03625 
+L 135.49276 260.03625 
+L 135.49276 244.540598 
+L 181.8275 244.540598 
+z
+" clip-path="url(#pa38f1b3d60)" style="fill: #bfae94"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="maa0b669144" d="M 0 0 
+L 0 3.5 
+" style="stroke: #595959; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#maa0b669144" x="125.082285" y="271.37625" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="125.082285" y="285.623125" transform="rotate(-0 125.082285 285.623125)">−5</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#maa0b669144" x="181.8275" y="271.37625" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="181.8275" y="285.623125" transform="rotate(-0 181.8275 285.623125)">0</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#maa0b669144" x="238.572715" y="271.37625" style="fill: #595959; stroke: #595959; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #595959; font: 10px 'Liberation Sans'; text-anchor: middle" x="238.572715" y="285.623125" transform="rotate(-0 238.572715 285.623125)">5</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <!-- log$_2$ fold change in source share -->
+     <g style="fill: #595959" transform="translate(109.8775 298.998125)">
+      <text>
+       <tspan style="font: 10px 'Liberation Sans'" x="0 2.22168 7.783203 18.16748 20.945801 23.724121 29.285645 31.507324 37.068848 39.847168 44.847168 50.408691 55.970215 61.531738 67.093262 72.654785 75.433105 77.654785 83.216309 85.994629 90.994629 96.556152 102.117676 105.447754 110.447754 116.009277 118.787598 123.787598 129.349121 134.910645 138.240723" y="-0.75">log fold change in source share</tspan>
+       <tspan style="font: 7px 'DejaVu Sans'" x="13.44043" y="0.890625">2</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_5">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(22.765 40.154076)">Caricaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(36.98375 48.771076)">papaya</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_6">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(32.23625 63.632337)">Vitaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(42.76875 72.249337)">grape</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_7">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(9.86 87.110598)">Anacardiaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(7.2 95.727598)">mango, cashew</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_8">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(25.8825 110.588859)">Myrtaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(24.98375 119.205859)">eucalyptus</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="text_9">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(13.41125 134.06712)">Cannabaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(45.88125 142.68412)">hops</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="text_10">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(26.765 157.54538)">Meliaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(43.2175 166.16238)">neem</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="text_11">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(14.30875 181.023641)">Polyporaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(17.42625 189.640641)">bracket fungi</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="text_12">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(16.09375 204.501902)">Celastraceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(17.87125 213.118902)">spindle trees</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="text_13">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(10.75375 227.980163)">Aspergillaceae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(37.44 236.597163)">moulds</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="text_14">
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(22.315 251.458424)">Alcyoniidae</text>
+      <text style="fill: #595959; font: 8px 'Liberation Sans'" transform="translate(26.7725 260.075424)">soft corals</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <path d="M 181.8275 271.37625 
+L 181.8275 21.89625 
+" clip-path="url(#pa38f1b3d60)" style="fill: none; stroke: #e8e8e4; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 70.2275 271.37625 
+L 70.2275 21.89625 
+" style="fill: none; stroke: #595959; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 70.2275 271.37625 
+L 293.4275 271.37625 
+" style="fill: none; stroke: #595959; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_15">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="253.279856" y="43.052826" transform="rotate(-0 253.279856 43.052826)">70.8×</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="225.503726" y="66.531087" transform="rotate(-0 225.503726 66.531087)">13.0×</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="223.995359" y="90.009348" transform="rotate(-0 223.995359 90.009348)">11.8×</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="212.278688" y="113.487609" transform="rotate(-0 212.278688 113.487609)">5.8×</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: start" x="211.797069" y="136.96587" transform="rotate(-0 211.797069 136.96587)">5.6×</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: end" x="159.457587" y="160.44413" transform="rotate(-0 159.457587 160.44413)">0.28×</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: end" x="153.528577" y="183.922391" transform="rotate(-0 153.528577 183.922391)">0.2×</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: end" x="153.350187" y="207.400652" transform="rotate(-0 153.350187 207.400652)">0.19×</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: end" x="150.129937" y="230.878913" transform="rotate(-0 150.129937 230.878913)">0.16×</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #595959; font: 8px 'Liberation Sans'; text-anchor: end" x="133.790404" y="254.357174" transform="rotate(-0 133.790404 254.357174)">0.059×</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #595959; font: 12px 'Liberation Sans'; text-anchor: middle" x="181.8275" y="15.89625" transform="rotate(-0 181.8275 15.89625)">Family</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa38f1b3d60">
+   <rect x="70.2275" y="21.89625" width="223.2" height="249.48"/>
+  </clipPath>
+ </defs>
+</svg>
