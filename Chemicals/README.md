@@ -2,8 +2,7 @@
 
 Places the odorants in natural-product chemical space. Every known odorant is compared with the
 whole COCONUT natural-product database: how clustered odorants are, which functional groups and
-biosynthetic pathways they carry, and which organisms they are isolated from. The results feed
-Figure 4 and its supplementary figure.
+biosynthetic pathways they carry, and which organisms they are isolated from.
 
 Everything below runs from `Chemicals/`.
 
@@ -74,34 +73,7 @@ time. The rest take minutes. Only `c03` needs a GPU.
 
 ## Outputs
 
-`results/` holds the tables and plain-text reports. Each report (`*_report.txt`) is everything
-the script printed. The large intermediates are gitignored: `universe.parquet`,
-`coconut_parents.parquet`, `embed_index.csv`, `umap.npy`, `aquatic_sources.csv` and
-`aquatic_taxa_seen.csv` are on Zenodo, so you can skip `c02` to `c04`:
-
-```bash
-python scripts/download_zenodo_data.py --chemicals
-```
-
-`embeddings.npy` (2.1 GB) is not on Zenodo; `c03` rebuilds it.
-
-The main numbers:
-
-| quantity | value | file |
-|---|---|---|
-| clustering of odorants | 46.9x, against 18.5x for matched natural products (ratio 2.53) | `robustness_report.txt` |
-| matched control, worst covariate imbalance | SMD 0.0035, 5,939 of 5,962 odorants matched | `analyze_report.txt` |
-| odorants vs matched pairs, scaffold-split AUC | 0.78 on the embedding, 0.66 on 22 descriptors, 0.48 on boiling point | `robustness_report.txt` |
-| functional groups, matched odds ratio | thiol 3.07, amine 0.27, halogen 0.08 | `fg_enrichment.csv` |
-| source organisms, odorants vs other natural products | plants 1.37x, animals 0.67x, fungi 0.24x, bacteria 0.34x | `organism_rank_enrichment.csv` |
-
-## Figures
-
-| figure | files in `figures/` |
-|---|---|
-| Figure 4 | `odorant_map`, `organism_kingdom`, `biosynthetic_pathway`, `functional_groups_matched` |
-| Supplementary | `aromatic_map`, `aromatic_vs_aliphatic`, `receptor_class_map_class_I`, `receptor_class_map_shared`, `receptor_class_map_class_II`, `receptor_class_volatility`, `organism_order`, `organism_family` |
-| not in the paper | `map_boiling_point`, `map_molecular_weight`, `map_logP`, `organism_kingdom_by_list`, `receptor_clusters_on_map`, `receptor_clusters_properties` |
-
-`figure4_chemical_space.ipynb` shows the Figure 4 and supplementary plots with the tables behind
-them.
+Tables and text reports go to `results/`, figures to `figures/`. The large intermediates
+(`universe.parquet`, `coconut_parents.parquet`, `embed_index.csv`, `umap.npy`) are not in Git;
+download them with `python scripts/download_zenodo_data.py --chemicals` instead of running `c02`
+to `c04`.
