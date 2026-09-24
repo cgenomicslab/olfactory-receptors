@@ -206,7 +206,7 @@ def check_packages(quiet=False):
                 missing += 1
         if not header_shown:
             print("\nPython environment")
-            print("  conda env create -f environment.yml && conda activate olfactory-receptors")
+            print("  conda env create -f olfaction-env.yaml && conda activate olfactory-receptors")
             header_shown = True
         print(f"  [{mark}] {name}{note}")
     return missing

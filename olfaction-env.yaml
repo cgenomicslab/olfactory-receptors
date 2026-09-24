@@ -1,11 +1,11 @@
 # Environment for the olfactory-receptor analysis.
 #
-#   conda env create -f environment.yml
+#   conda env create -f olfaction-env.yaml
 #   conda activate olfactory-receptors
 #
 # Mamba is much faster and understands the same file:
 #
-#   mamba env create -f environment.yml
+#   mamba env create -f olfaction-env.yaml
 #
 # This one environment runs everything in the repository: the downstream notebooks,
 # the phylogenetics, and the whole COCONUT chemical-space pipeline. Versions are

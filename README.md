@@ -15,7 +15,7 @@ every receptor × odorant pair.
 git clone https://github.com/cgenomicslab/olfactory-receptors.git
 cd olfactory-receptors
 
-conda env create -f environment.yml         
+conda env create -f olfaction-env.yaml         
 conda activate olfactory-receptors
 
 python scripts/download_zenodo_data.py      

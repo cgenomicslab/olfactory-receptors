@@ -17,10 +17,10 @@ and only those get amino acids.
 ## Running it
 
 You need IQ-TREE on your PATH. It is a standalone binary rather than a Python package, so
-`environment.yml` does not carry it.
+`olfaction-env.yaml` does not carry it. Set up and activate the environment as in the
+[main README](../README.md), then:
 
 ```bash
-conda activate olfactory-receptors
 cd Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup
 ```
 

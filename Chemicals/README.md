@@ -26,8 +26,9 @@ it.
 
 ## Running it
 
+Set up and activate the environment as in the [main README](../README.md), then:
+
 ```bash
-conda activate olfactory-receptors
 cd Chemicals
 python c00_download_inputs.py      # COCONUT and NCBI taxonomy into data/, about 1.2 GB
 ```
