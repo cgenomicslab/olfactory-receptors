@@ -317,6 +317,11 @@ __marimo__/
 /Downstream_Analysis/notebooks/paris.ipynb
 /Downstream_Analysis/notebooks/stiatistics_on_chemicals.ipynb
 
+# reference_tree/ before the restructure: the old notebooks (their analyses now live in
+# figure2_activation_code.ipynb and supplementary/S1-S6), figures no notebook writes any
+# more, and a table nothing reads.
+/Downstream_Analysis/notebooks/reference_tree/archive/
+
 # An older reference-tree ancestral prediction set, orphaned: nothing in the
 # repository reads it, and the paper's ancestral analysis runs on the 432-node
 # human-tree matrix instead.

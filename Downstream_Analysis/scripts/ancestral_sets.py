@@ -124,7 +124,7 @@ def save_table(frame: pd.DataFrame, name: str, index: bool = False) -> None:
 def extant_calibration() -> tuple:
     """Return (threshold, measured_rate) from the reference-tree comparison.
 
-    The threshold is the one figure2_activation_code (Part 1) derives: the cut at which the
+    The threshold is the one figure2_activation_code (section 1) derives: the cut at which the
     predicted binding proportion equals the measured one on the 23,782
     experimentally tested cells. The measured rate is that proportion itself.
 

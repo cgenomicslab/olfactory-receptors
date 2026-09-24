@@ -126,7 +126,7 @@ def s1_datasets():
 
 def s2_receptors():
     classes = pd.read_csv(PHY / "HumanTree/human433_OR_classes.csv")
-    breadth = pd.read_csv(REF / "Figures/class_tuning_breadth.csv")
+    breadth = pd.read_csv(REF / "Tables/class_tuning_breadth.csv")
     breadth["uniprot"] = breadth["pid"].str.split(".").str[-1]
     frame = classes.merge(breadth[["uniprot", "n_ligands"]], on="uniprot", how="left")
     frame["n_ligands"] = frame["n_ligands"].fillna(0).astype(int)
@@ -160,7 +160,7 @@ def s3_panels():
 
 
 def s4_calibration():
-    pairs = pd.read_csv(REF / "metadata/exp_pred_common_pairs.csv",
+    pairs = pd.read_csv(REF / "Tables/exp_pred_common_pairs.csv",
                         usecols=["experimental", "probability"])
     y = pairs["experimental"].to_numpy().astype(int)
     p = pairs["probability"].to_numpy()
@@ -190,11 +190,27 @@ def s4_calibration():
     return [("", frame)], legend
 
 
+def cluster_numbers():
+    """PAM label -> "C1".."C6" in the order of Table 1.
+
+    The PAM labels 0-5 are arbitrary; Table 1, the summary block and the figures number the
+    clusters in display order instead. The two are matched through the theme name, which the
+    notebook writes next to both.
+    """
+    desc = pd.read_csv(REF / "Tables/chemspace_clusters_hybrid_density_descriptors.csv")
+    summary = pd.read_csv(REF / "Tables/chemspace_clusters_hybrid_density_summary.csv")
+    number_of_theme = dict(zip(summary["theme"], summary["cluster"]))
+    theme_of_label = desc.drop_duplicates("cluster").set_index("cluster")["cluster_name"]
+    numbers = {int(label): number_of_theme[theme] for label, theme in theme_of_label.items()}
+    assert len(set(numbers.values())) == len(numbers) == len(summary), numbers
+    return numbers
+
+
 def s5_clusters():
-    summary = pd.read_csv(REF / "Figures/chemspace_clusters_hybrid_density_summary.csv")
-    tags = pd.read_csv(REF / "Figures/enrichment_hybrid_density.csv")
+    summary = pd.read_csv(REF / "Tables/chemspace_clusters_hybrid_density_summary.csv")
+    tags = pd.read_csv(REF / "Tables/enrichment_hybrid_density.csv")
     tags = tags[tags["fdr"] < 0.05].copy()
-    tags["cluster"] = "C" + (tags["cluster"] + 1).astype(str)
+    tags["cluster"] = tags["cluster"].map(cluster_numbers())
     tags = tags.sort_values(["cluster", "obs_exp"], ascending=[True, False])
     tags = tags.rename(columns={"n": "cluster_n", "obs": "molecules_with_tag",
                                 "tag_total": "tag_total_in_panel", "exp": "expected",
@@ -213,9 +229,9 @@ def s5_clusters():
 
 
 def s6_odorants():
-    desc = pd.read_csv(REF / "Figures/chemspace_clusters_hybrid_density_descriptors.csv")
+    desc = pd.read_csv(REF / "Tables/chemspace_clusters_hybrid_density_descriptors.csv")
     desc = desc.rename(columns={"sml": "molecule_id", "cluster_name": "cluster_theme"})
-    desc["cluster"] = "C" + (desc["cluster"] + 1).astype(str)
+    desc["cluster"] = desc["cluster"].map(cluster_numbers())
     front = ["molecule_id", "SMILES", "cluster", "cluster_theme"]
     frame = desc[front + [c for c in desc.columns if c not in front]]
     legend = ("Supplementary Table 6 | The 687 odorants with at least one predicted binder. "
@@ -294,7 +310,7 @@ def s10_enrichment():
               & ranks.taxon.isin(["Viridiplantae", "Metazoa", "Fungi"])],
         ranks[(ranks["rank"] == "superkingdom") & (ranks.taxon == "Bacteria")],
     ])
-    recovery = pd.read_csv(REF / "Figures/05_pathway_recovery.csv")
+    recovery = pd.read_csv(REF / "Tables/05_pathway_recovery.csv")
     blocks = [("Biosynthetic pathway, odorants vs other natural products (Fig. 4c)", path),
               ("Functional groups, odorants vs other natural products (Fig. 4d)", fg),
               ("Matched functional-group odds ratios under five matching seeds", fg_seeds),

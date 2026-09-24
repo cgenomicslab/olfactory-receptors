@@ -20,9 +20,9 @@ Both lists are in `processed_data/`:
 * `odorants_m2or_leffingwell_goodscents.csv`: the 5,962 odorants and which list each comes from
 * `ligand_pathways.csv`: the NPClassifier pathway of each M2OR ligand, taken from COCONUT
 
-The first two are written by `c01_odorant_sets.ipynb`. The third is written by `build_pathways()`
-in `Downstream_Analysis/notebooks/reference_tree/biosynthetic_pathways.ipynb`, which also reads
-it.
+The first two are written by `c01_odorant_sets.ipynb`. The third is written by
+`build_ligand_pathways()` in `Downstream_Analysis/scripts/activation_code.py` and read by section 7
+of `Downstream_Analysis/notebooks/reference_tree/figure2_activation_code.ipynb`.
 
 ## Running it
 

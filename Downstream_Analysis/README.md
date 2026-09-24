@@ -9,10 +9,8 @@ needs a GPU.
 
 | Notebook | Shows |
 |---|---|
-| [`figure2_activation_code.ipynb`](notebooks/reference_tree/figure2_activation_code.ipynb) | **Figure 2**, Table 1, Extended Data 2–4 |
-| [`model_errors.ipynb`](notebooks/reference_tree/model_errors.ipynb) | where the model gets it wrong, and whether the errors have structure |
-| [`barcode_perception.ipynb`](notebooks/reference_tree/barcode_perception.ipynb) | do identical receptor barcodes mean identical smell? |
-| [`biosynthetic_pathways.ipynb`](notebooks/reference_tree/biosynthetic_pathways.ipynb) | pathway against activation cluster |
+| [`figure2_activation_code.ipynb`](notebooks/reference_tree/figure2_activation_code.ipynb) | **Figure 2**, Table 1, Extended Data 2–4, and the pathway numbers of Supplementary Table 10 |
+| [`supplementary/`](notebooks/reference_tree/supplementary/) | S1–S6: model errors, the p ≥ 0.50 matrix, other views of the chemistry, pathway figures, barcodes and perception, aquatic origin |
 
 **Reconstructed ancestors** — [`notebooks/ancestral/`](notebooks/ancestral/)
 
@@ -47,6 +45,8 @@ python Downstream_Analysis/scripts/aggregate_prediction_runs.py
 | File | Does |
 |---|---|
 | `calibration.py` | turns probabilities into binding calls by density fill |
+| `activation_code.py` | the human activation matrix, its clusters and the odorant chemistry |
+| `activation_figures.py` | the figures of the reference-tree notebooks |
 | `ancestral_sets.py` | loads ancestral repertoires, walks the tree, builds the node sets |
 | `plotting_functions.py` | the shared plot style |
 | `aggregate_prediction_runs.py` | five runs → per-pair median |

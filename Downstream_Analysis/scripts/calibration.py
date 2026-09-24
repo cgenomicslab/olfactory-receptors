@@ -8,7 +8,7 @@ Why not a classification threshold
 The rate-matched cut (~0.915) is the operating point at which the predicted
 binding proportion equals the measured one on the tested cells. It is the right
 number to *report* for per-pair classification performance, and it is what the
-confusion matrix and precision/recall in `figure2_activation_code` (Part 1) are computed at.
+confusion matrix and precision/recall in `figure2_activation_code` (section 1) are computed at.
 
 It is the wrong tool for filling a grid. Recall there is ~0.6, so thresholding
 the full matrix keeps only the cells the model is most confident about and drops
