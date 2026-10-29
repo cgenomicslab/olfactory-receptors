@@ -1,67 +1,83 @@
 # Ancestral reconstruction of human olfactory receptors
 
 Reconstructs the sequence of every ancestral olfactory receptor in the human tree, rooted on a
-hagfish receptor. The result is 432 ancestral proteins, one per internal node, and they feed the
-ancestral analyses in `Downstream_Analysis/notebooks/ancestral/`.
+hagfish receptor (UniProt A0A8C4N3S4). The result is 432 ancestral proteins, one per internal
+node, in `human_tree_asr_hagfish_outgroup/hagfish_human_ASR.final.fasta`. They are the input of
+`Downstream_Analysis/notebooks/ancestral/`.
+
+## What you need
+
+The environment from the [main README](../README.md), plus Clustal Omega 1.2.3, trimAl 1.5,
+MAFFT 7.505 and IQ-TREE 3.0.1, which are not part of it.
 
 Everything below runs from `human_tree_asr_hagfish_outgroup/`.
 
-## Why two passes
+## How the reconstruction works
 
-At every column of the alignment there are two questions: did the ancestor have a residue there,
-and if so which one. A gap is not a 21st amino acid, and treating it as one lets columns the
-ancestor never had drag its sequence around. So the gaps are reconstructed first, on their own.
-Then, node by node, the alignment is cut down to the columns that node is inferred to have had,
-and only those get amino acids.
+At each alignment column there are two questions: did the ancestor have a residue there, and if
+so which one. Gaps are reconstructed first, on their own, as presence/absence. Then for each node
+the alignment is reduced to the columns that node had, and only those get amino acids. Treating a
+gap as a 21st amino acid instead would let columns the ancestor never had change its sequence.
 
-## Running it
+## Steps
 
-You need IQ-TREE on your PATH. It is a standalone binary rather than a Python package, so
-`olfaction-env.yaml` does not carry it. Set up and activate the environment as in the
-[main README](../README.md), then:
+1. **Alignment.** The 433 human receptors are aligned and trimmed, and the hagfish receptor is
+   added to the trimmed alignment:
 
-```bash
-cd Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup
-```
+   ```bash
+   clustalo -i ../../Phylogenetic_Analysis/data/HumanTree/human_433_seqs.fa -o PF13853_9606.clustalo
+   trimal -in PF13853_9606.clustalo -out PF13853_9606.clustalo.gt01 -gt 0.1
+   mafft --add hagfish.fa PF13853_9606.clustalo.gt01 > PF13853_9606.7764.mafft
+   ```
 
-1. **Root the tree and name the internal nodes.** Run `human_hagfish_tree.ipynb`. It roots the
-tree on the hagfish sequence `New|7764.A0A8C4N3S4`, names the internal nodes `node_0` to
-`node_432`, and writes `PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames`. Do this
-first — every ancestral notebook in the repo reads that file.
+   The result has 434 sequences (433 human and the hagfish receptor) and 337 columns. MAFFT names
+   the added sequence `New|7764.A0A8C4N3S4`.
 
-2. **Reconstruct the gaps.** `human_hagfish_asr.ipynb` reduces the 434-sequence alignment to a
-0/1 presence-absence matrix and reconstructs it on the fixed topology:
+2. **Tree.**
 
-```bash
-iqtree -m MFP -s PF13853_9606.7764.mafft.presence_absence \
-       -te PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames -asr -nt 12
-```
+   ```bash
+   iqtree -s PF13853_9606.7764.mafft -m MFP -mset LG -B 1000 -T AUTO --prefix PF13853_9606.7764.mafft.lg
+   ```
 
-Model selection lands on GTR2+FO+R4 over 337 binary sites. `asr_extract.py` reads the `.state`
-file into one presence-absence mask per node.
+   BIC selects LG+F+R10. Writes `PF13853_9606.7764.mafft.lg.treefile`.
 
-3. **Reconstruct the residues.** For each of the 433 nodes the notebook cuts the alignment down
-to that node's kept columns and runs:
+3. **Root and name the nodes.** The first cell of `human_hagfish_asr.ipynb` roots the tree on
+   `New|7764.A0A8C4N3S4`, names the internal nodes `node_0` (root) to `node_432`, and writes
+   `PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames`. Every ancestral notebook uses
+   these node names, so a tree rebuilt from scratch must be renamed and used throughout.
 
-```bash
-iqtree -s NODE_node_17/human_sequences.node_17.fasta -m LG+F+R9 \
-       -te PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames -asr -nt 48
-```
+4. **Gaps.** The notebook turns the alignment into a 0/1 presence-absence matrix and runs
 
-`asr_extract.py` then takes the highest-posterior residue at each site. Everything for that node
-lands in `NODE_node_17/`.
+   ```bash
+   iqtree -m MFP -s PF13853_9606.7764.mafft.presence_absence \
+          -te PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames -asr
+   ```
 
-4. The per-node sequences are concatenated into `all_nodes_ASR.final.fasta`. The copy committed
-here is that same file under a clearer name, `hagfish_human_ASR.final.fasta`.
+   ModelFinder selects GTR2+FO+R4. `asr_extract.py` reads the `.state` file into one 0/1 mask
+   per node.
 
-Steps 1 and 2 take seconds. Step 3 is 433 IQ-TREE runs asking for 48 threads each and writes
-9.7 GB, so it is a cluster job.
+5. **Residues.** For each node the notebook keeps that node's columns and runs
+
+   ```bash
+   iqtree -s NODE_node_17/human_sequences.node_17.fasta -m LG+F+R9 \
+          -te PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames -asr
+   ```
+
+   `asr_extract.py` takes the most probable residue at each site and prints the node's mean
+   posterior probability. Each node's files go to `NODE_node_N/`. This step is 433 IQ-TREE runs
+   and writes 9.7 GB.
+
+6. The per-node sequences are concatenated into `all_nodes_ASR.final.fasta`, committed as
+   `hagfish_human_ASR.final.fasta`.
+
+## Check the output
+
+The notebook does not stop if one IQ-TREE run fails. Afterwards every `NODE_node_*/` except
+`node_0` should contain `node_*_ASR.final.fasta`, and the final file should hold 432 records,
+`node_1_ASR` to `node_432_ASR`, ungapped, 305 to 323 residues long. There is no `node_0_ASR`:
+IQ-TREE reports no states for the root when the topology is fixed with `-te`.
 
 ## Using the sequences
-
-`hagfish_human_ASR.final.fasta` holds 432 records named `node_1_ASR` to `node_432_ASR`, ungapped
-and 305 to 323 residues long. There is no `node_0_ASR`: node_0 is the root, and IQ-TREE reports
-no states for it when the topology is fixed with `-te`.
 
 A node number is a position in the rooted tree. Three of them carry most of the paper:
 
@@ -82,6 +98,9 @@ print(len(list(node.leaves())))   # 62
 The downstream notebooks go through `Downstream_Analysis/scripts/ancestral_sets.py`, which
 caches the parsed tree and uses the same node names.
 
+`human_hagfish_tree.ipynb` opens the tree in an interactive ete4 viewer, with the two classes
+coloured and node_1-3 marked.
+
 ## The per-node runs
 
 The 433 `NODE_node_*/` directories are 9.7 GB and stay out of Git. You do not need them to use
@@ -95,7 +114,3 @@ python scripts/download_zenodo_data.py --assets asr_node_runs
 
 `prepare_zenodo_asr.py` built that archive: it zips the directories exactly as the pipeline
 wrote them and prints the checksum recorded in `zenodo_manifest.json`.
-
----
-
-These sequences feed [Figure 3](../Downstream_Analysis/notebooks/ancestral/figure3_ancestral_origin.ipynb).

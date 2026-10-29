@@ -241,7 +241,7 @@ __marimo__/
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/hagfish_human_ASR.final.fasta
-/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/hagfish.fa
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/hagfish.fa
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/asr_extract.py
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/tree.py
 !/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/human_hagfish_tree.ipynb
@@ -283,6 +283,7 @@ __marimo__/
 !/Phylogenetic_Analysis/data/HumanTree/human433_MFP.iqtree
 !/Phylogenetic_Analysis/data/ReferenceTree/*.treefile
 !/Phylogenetic_Analysis/data/ReferenceTree/*.iqtree
+!/Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_outgroup/PF13853_9606.7764.mafft.lg.treefile
 
 # ---------------------------------------------------------------------------
 # Not in the manuscript.
