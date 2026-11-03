@@ -67,7 +67,7 @@ def main():
     all_smiles = list(universe.smiles)
 
     # Process similar-length molecules together. Batches are padded to their longest
-    # member, so sorting by length means far less wasted computation -- worth about 3x.
+    # member, so sorting by length wastes less computation.
     by_length = np.argsort(token_counts, kind="stable")
     embeddings = np.zeros((len(all_smiles), 768), dtype=np.float32)
 
@@ -100,6 +100,7 @@ def main():
     assert (np.abs(embeddings).sum(1) == 0).sum() == 0, "all-zero embedding rows"
 
     np.save(RESULTS / "embeddings.npy", embeddings)
+    # Rows stay in universe order; chemspace.align_to_embedding relies on it.
     universe[["inchikey"]].assign(token_len=token_counts).to_csv(
         RESULTS / "embed_index.csv", index=False
     )

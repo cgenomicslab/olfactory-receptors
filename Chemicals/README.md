@@ -1,80 +1,163 @@
 # Chemicals
 
-Places the odorants in natural-product chemical space. Every known odorant is compared with the
-whole COCONUT natural-product database: how clustered odorants are, which functional groups and
-biosynthetic pathways they carry, and which organisms they are isolated from.
+Compares every known odorant with the natural products in COCONUT: where odorants sit on a
+map of chemical space, which biosynthetic pathways and functional groups they carry, and
+which organisms they come from. The plots of Figure 4 and Extended Data Fig. 7 are drawn
+here.
 
-Everything below runs from `Chemicals/`.
+## What you need
 
-## Two odorant sets
+The environment from the [main README](../README.md). `c03` needs an NVIDIA GPU.
+
+To redraw the figures without running `c02`–`c04`, download the intermediates instead:
+
+```bash
+python scripts/download_zenodo_data.py --chemicals             # universe, embedding index, map, 175 MiB
+python scripts/download_zenodo_data.py --chemical-embeddings   # the 768-d embedding for c05 and c06, 2 GB
+```
+
+## The odorants and the background
 
 | set | molecules | used for |
 |---|---|---|
 | M2OR ligands | 754 | the receptor predictions and all of `Downstream_Analysis/` |
 | all odorants | 5,962 | this folder |
 
-The 5,962 are M2OR (754), Leffingwell (3,522) and GoodScents (4,492), deduplicated on InChIKey.
-Both lists are in `processed_data/`:
+The 5,962 are M2OR (754), Leffingwell (3,522) and GoodScents (4,492), merged on InChIKey.
+They are in `processed_data/`:
 
-* `m2or_inchi_odors_smiles.csv`: the 754 M2OR ligands with their odour descriptors
-* `odorants_m2or_leffingwell_goodscents.csv`: the 5,962 odorants and which list each comes from
-* `ligand_pathways.csv`: the NPClassifier pathway of each M2OR ligand, taken from COCONUT
+| file | contents | written by |
+|---|---|---|
+| `m2or_inchi_odors_smiles.csv` | the 754 M2OR ligands and their odour descriptors | `c01_odorant_sets.ipynb` |
+| `odorants_m2or_leffingwell_goodscents.csv` | the 5,962 odorants and the lists each is in | `c01_odorant_sets.ipynb` |
+| `ligand_pathways.csv` | the NPClassifier pathway of each M2OR ligand, from COCONUT | `build_ligand_pathways()` in `Downstream_Analysis/scripts/activation_code.py` |
 
-The first two are written by `c01_odorant_sets.ipynb`. The third is written by
-`build_ligand_pathways()` in `Downstream_Analysis/scripts/activation_code.py` and read by section 7
-of `Downstream_Analysis/notebooks/reference_tree/figure2_activation_code.ipynb`.
+The background is COCONUT release 08-2026, 738,827 entries. Every SMILES is reduced to its
+largest fragment, written as an RDKit canonical SMILES and keyed by InChIKey. Entries with
+the same key are merged, which leaves 727,582 structures. The 2,973 odorants found in
+COCONUT are removed from the background, so no molecule is on both sides. MoLFormer cannot
+read 4,164 SMILES longer than 202 tokens, none of them odorants. The analysis therefore has
+726,407 molecules: 5,962 odorants and 720,445 natural products.
 
-## Running it
+## Steps
 
-Set up and activate the environment as in the [main README](../README.md), then:
+Everything runs from `Chemicals/`, in the order of the numbers.
 
-```bash
-cd Chemicals
-python c00_download_inputs.py      # COCONUT and NCBI taxonomy into data/, about 1.2 GB
-```
+1. **Inputs.** Downloads COCONUT 08-2026 and the NCBI taxonomy of 2026-08-01 into `data/`,
+   checks both against their SHA-256 and builds `data/taxa.sqlite` for ete4.
 
-The scripts are numbered in the order they run.
+   ```bash
+   python c00_download_inputs.py
+   ```
 
-1. **Build the universe.** `c02_build_universe.py` joins the odorants with COCONUT and computes
-descriptors, functional groups and a Joback boiling point for every molecule. Every SMILES is
-reduced to its largest fragment and rewritten as an RDKit canonical SMILES, so both sides are
-keyed and embedded the same way. The universe has 730,571 molecules.
+2. **Odorant sets.** Reads M2OR from `../Data/m2or_pairs.csv` and Leffingwell and
+   GoodScents from the pyrfume-data repository at a pinned commit, and writes the two odorant
+   files above.
 
-2. **Embed and map.** `c03_embed.py` embeds every molecule with MoLFormer. It needs a GPU, takes
-about an hour on a T1000 and drops the 4,164 molecules whose SMILES are too long for the model
-(none of them odorants), leaving 726,407. `c04_umap.py` makes the two-dimensional map from the
-full embedding. The map is only for plotting; every distance in the analysis is measured in the
-768-dimensional embedding.
+   ```bash
+   jupyter nbconvert --to notebook --execute --inplace c01_odorant_sets.ipynb
+   ```
 
-3. **Compare odorants with natural products.** `c05_analyze.py` measures how clustered odorants
-are, builds a control set of natural products matched to the odorants on boiling point,
-molecular weight and logP, and tests pathways and functional groups. `c06_robustness.py` repeats
-the matched analysis under five seeds, re-scores it with a scaffold split, and compares the
-clustering with matched and random natural-product sets.
+3. **Universe.** Joins the odorants with COCONUT and computes for every molecule the RDKit
+   descriptors, the functional groups of `scripts/functional_groups.py` and a Joback boiling
+   point. Writes `results/universe.parquet` (730,571 molecules).
 
-4. **Source organisms.** `c07_organism_source.py` resolves COCONUT's organism names against NCBI
-taxonomy and compares, taxon by taxon, the share of each molecule's source organisms that falls
-in it. `c08_odorant_list_organisms.py` does the kingdom comparison for one list at a time (M2OR
-by default, `--panel lg` for Leffingwell and GoodScents). `c12_aquatic_sources.py` labels each
-source organism as aquatic or terrestrial.
+   ```bash
+   python c02_build_universe.py
+   ```
 
-5. **Screens.** `c09_descriptor_scan.py` tests COCONUT's remaining columns. `c10_source_breadth.py`
-tests whether odorants are recorded from more organisms than other natural products; they are
-not once database membership is equal, so it is a negative result.
+4. **Embedding.** MoLFormer-XL (`ibm-research/MoLFormer-XL-both-10pct`, pinned revision),
+   768 dimensions per molecule. Writes `results/embeddings.npy` and `results/embed_index.csv`
+   (726,407 rows). GPU.
 
-6. **The receptor panel on the map.** `c11_receptors_on_map.py` rebuilds the six co-tuning
-clusters and the receptor-class groups from the prediction matrix and places them on the map.
-It reads from `Downstream_Analysis/`, `Model_Inputs/` and `Phylogenetic_Analysis/`, and writes
-`results/panel_universe_join.csv`, which `c12` and `c13` need.
+   ```bash
+   python c03_embed.py
+   ```
 
-7. **Figures.** `c13_figures.py` draws every figure as a separate SVG in `figures/`.
+5. **Map.** UMAP of the 768-d embedding (cosine, 15 neighbours, min_dist 0.1, seed 42).
+   The map is only for plotting; every distance in the analysis is measured in the 768-d
+   embedding. Writes `results/umap.npy`.
 
-`c02` takes about 3 minutes on 64 cores, `c04` about an hour, `c07` about 20 minutes the first
-time. The rest take minutes. Only `c03` needs a GPU.
+   ```bash
+   python c04_umap.py
+   ```
+
+6. **Odorants against natural products.**
+   * clustering: the share of each odorant's 50 nearest neighbours that are odorants
+   * a matched control: each odorant paired with the closest unused natural product in
+     boiling point, molecular weight and logP (caliper 0.25 SD)
+   * biosynthetic pathways: Fisher's exact test against all natural products
+   * functional groups: odds ratio against the matched partners, exact McNemar test, interval
+     from 2,000 resamples of the pairs
+
+   Benjamini–Hochberg q-values throughout.
+
+   ```bash
+   python c05_analyze.py
+   ```
+
+7. **Robustness.** Repeats the matching under five seeds, re-scores the separability with a
+   scaffold split, and compares the clustering with matched and random natural-product sets.
+  
+
+   ```bash
+   python c06_robustness.py
+   ```
+
+8. **Source organisms.** Resolves COCONUT's organism names to NCBI taxa with ete4 and, for
+   every taxon from domain to genus, compares the mean share of a molecule's source organisms
+   that falls in it: permutation test (20,000 shuffles), bootstrap 95% interval on the
+   ratio, q-values within each rank. `c08` repeats the kingdom comparison for one odorant
+   list at a time.
+
+   ```bash
+   python c07_organism_source.py
+   python c08_odorant_list_organisms.py              # M2OR
+   python c08_odorant_list_organisms.py --panel lg   # Leffingwell and GoodScents
+   ```
+
+9. **Receptors on the map.** Places the receptor classes and co-tuning clusters of
+   `Downstream_Analysis/` on the map (needs the predictions, see the main README), and labels
+   each source organism aquatic or terrestrial for `Supplementary_Material/aquatic_origin/`.
+
+   ```bash
+   python c09_receptors_on_map.py
+   python c10_aquatic_sources.py
+   ```
+
+10. **Figures.** Draws every plot as its own SVG in `figures/`.
+
+    ```bash
+    python c11_figures.py
+    ```
+
+## Which file is which figure
+
+| figure | file | drawn from |
+|---|---|---|
+| Fig. 4a | `odorant_map.svg` | `umap.npy`, `universe.parquet` |
+| Fig. 4b | `organism_kingdom.svg` | `organism_rank_enrichment.csv` |
+| Fig. 4c | `biosynthetic_pathway.svg` | `pathway_enrichment.csv` |
+| Fig. 4d | `functional_groups_matched.svg` | `fg_enrichment.csv` |
+| Ext. Data Fig. 7a | `aromatic_map.svg` | `umap.npy`, `universe.parquet` |
+| Ext. Data Fig. 7b | `aromatic_vs_aliphatic.svg` | `universe.parquet` |
+| Ext. Data Fig. 7c–e | `receptor_class_map_class_I.svg`, `_shared.svg`, `_class_II.svg` | `panel_universe_join.csv` |
+| Ext. Data Fig. 7f | `receptor_class_volatility.svg` | `panel_universe_join.csv`, `universe.parquet` |
+| Ext. Data Fig. 7g | `organism_order.svg` | `organism_rank_enrichment.csv` |
+| Ext. Data Fig. 7h | `organism_family.svg` | `organism_rank_enrichment.csv` |
+
+`c11` also draws some plots that are not in the paper; they are not in Git.
+
+## Check the output
+
+* `c03` keeps 726,407 molecules
+* `c05`: 5,939 of 5,962 odorants matched, worst standardised difference under 0.01 (PASS)
+* `c07`: 266,000 molecules with at least one resolved organism, 1,957 of them odorants
 
 ## Outputs
 
-Tables and text reports go to `results/`, figures to `figures/`. The large intermediates
-(`universe.parquet`, `coconut_parents.parquet`, `embed_index.csv`, `umap.npy`) are not in Git;
-download them with `python scripts/download_zenodo_data.py --chemicals` instead of running `c02`
-to `c04`.
+Tables and text reports go to `results/`, plots to `figures/`. Git holds only the tables
+that a figure or another folder reads; every other table and report is written when the
+scripts run. The large intermediates (`universe.parquet`, `coconut_parents.parquet`,
+`embed_index.csv`, `embeddings.npy`, `umap.npy`, `aquatic_sources.csv`,
+`aquatic_taxa_seen.csv`) are on Zenodo.

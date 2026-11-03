@@ -106,11 +106,11 @@ def auc_scaffold_split(features, labels, groups, seed=0, folds=analyze.FOLDS):
 # ------------------------------------------------------------------- the three parts
 def matched_across_seeds(universe, normalised, odorant_rows, background_rows,
                          volatility, seeds):
-    """Attack 1 and 2 -- rebuild the matched control under each seed, both ways.
+    """Parts 1 and 2: rebuild the matched control under each seed, both ways.
 
     For every seed the matching is redone from scratch, balance is rechecked, and each
     feature set is scored twice: once with random cross-validation (comparable to c05)
-    and once with a scaffold split (the honest number).
+    and once with a scaffold split.
 
     Returns
     -------
@@ -225,7 +225,7 @@ def knn_enrichment(normalised, query_rows, member_mask, universe_size):
 
 def enrichment_nulls(universe, normalised, odorant_rows, background_rows,
                      is_odorant, null_sets, seed=0):
-    """Attack 3 -- Q1's enrichment against a matched null and a random null."""
+    """Part 3: Q1's enrichment against a matched null and a random null."""
     log("\n" + "=" * 72)
     log("ATTACK 3  IS THE kNN ENRICHMENT BIG, OR ONLY BIG-LOOKING?")
     log("=" * 72)
@@ -243,7 +243,7 @@ def enrichment_nulls(universe, normalised, odorant_rows, background_rows,
     log(f"\n  odorants                  : {enrichment:6.1f}x  "
         f"(purity {purity.mean():.4f}, base rate {base_rate:.4f})")
 
-    # The null that matters: a set matched to the odorants on transport properties.
+    # A null set matched to the odorants on transport properties.
     log("\n  matched natural products (the null that matters):")
     matched_enrichments = []
     for replicate in range(null_sets):
@@ -261,7 +261,7 @@ def enrichment_nulls(universe, normalised, odorant_rows, background_rows,
                      "base_rate": rate, "enrichment": value})
         log(f"    seed {seed + replicate}: {value:6.1f}x")
 
-    # The sanity check: any random set of the same size should show no clustering.
+    # A random set of the same size, which should show no clustering.
     log("\n  random natural products (sanity check, should be ~1x):")
     rng = np.random.default_rng(seed)
     random_enrichments = []

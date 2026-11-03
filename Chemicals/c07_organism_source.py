@@ -13,6 +13,8 @@ from __future__ import annotations
 
 import json
 import re
+import sqlite3
+import warnings
 from collections import Counter
 from pathlib import Path
 
@@ -29,9 +31,9 @@ RESULTS = HERE / "results"
 COCONUT_CSV = DATA / "coconut_csv-08-2026.csv"
 CACHE = RESULTS / "taxid_cache.json"
 
-# The ranks worth testing. Finer than genus is mostly strain designations, and coarser
-# than superkingdom is not a distinction.
-RANKS = ["superkingdom", "kingdom", "phylum", "class", "order", "family", "genus"]
+# The ranks worth testing. Finer than genus is mostly strain designations. "domain" is the
+# NCBI rank of Bacteria, Archaea and Eukaryota (named "superkingdom" before 2025).
+RANKS = ["domain", "kingdom", "phylum", "class", "order", "family", "genus"]
 
 # A taxon needs this many molecules behind it before it is tested, otherwise the table
 # fills up with taxa seen in one compound.
@@ -40,8 +42,8 @@ MIN_MOLECULES = 20
 # Mammals and birds turn up as "source organisms" because a compound was detected in
 # breath, milk or body odour, not because the animal makes it. Flagged here, and left
 # out of the figures.
-HOST_TAXA = {"Primates", "Artiodactyla", "Mammalia", "Chordata", "Homo sapiens",
-             "Carnivora", "Rodentia", "Aves"}
+HOST_TAXA = {"Primates", "Artiodactyla", "Mammalia", "Chordata", "Hominidae",
+             "Bovidae", "Carnivora", "Rodentia", "Aves", "Homo sapiens"}
 
 # A ratio of means is unstable when both means are near zero: a taxon accounting for
 # 0.05% of odorant sources against 0.0005% of the rest scores 100x and means nothing.
@@ -117,23 +119,36 @@ def translate_names(ncbi, names, chunk=4000):
     """
     Look up many names at once, in batches.
 
-    ete3 builds a literal SQL statement from the names, so a single awkward string can
+    ete4 builds a literal SQL statement from the names, so a single awkward string can
     take the whole query down. Batching keeps one bad name from costing more than its
     own batch, and the statement short enough for sqlite.
+
+    The match is case-insensitive, but ete4 returns only one spelling per lower-cased
+    name, so results are looked up by lower case. Otherwise "Abies" and "abies" in one
+    batch would leave one of them unresolved, and the outcome would depend on batching.
     """
     resolved = {}
+    failed = []
     names = [n for n in names if n]
     for start in range(0, len(names), chunk):
         batch = names[start:start + chunk]
         try:
-            resolved.update(ncbi.get_name_translator(batch))
-        except Exception:
+            found = ncbi.get_name_translator(batch)
+        except sqlite3.Error:
             # Fall back to one at a time, so only the offending name is lost.
+            found = {}
             for name in batch:
                 try:
-                    resolved.update(ncbi.get_name_translator([name]))
-                except Exception:
-                    pass
+                    found.update(ncbi.get_name_translator([name]))
+                except sqlite3.Error:
+                    failed.append(name)
+        by_lower_case = {name.lower(): taxids for name, taxids in found.items()}
+        for name in batch:
+            if name.lower() in by_lower_case:
+                resolved[name] = by_lower_case[name.lower()]
+    if failed:
+        log(f"    names the taxonomy query rejected: {len(failed):,} "
+            f"(e.g. {failed[:3]})")
     return resolved
 
 
@@ -179,25 +194,41 @@ def resolve_to_taxids(ncbi, names):
     return mapping
 
 
+def read_name_cache():
+    """
+    The cached name -> taxid map, or an empty one if it was built from another taxonomy.
+
+    The cache records the NCBI dump it was resolved against, so taxids from a different
+    dump are never mixed in.
+    """
+    if not CACHE.exists():
+        return {}
+    cached = json.loads(CACHE.read_text())
+    if cached.get("taxonomy") != cs.TAXDUMP_ARCHIVE:
+        log(f"  {CACHE.name} was built from {cached.get('taxonomy')}, not "
+            f"{cs.TAXDUMP_ARCHIVE}; resolving every name again")
+        return {}
+    return {name: int(taxid) for name, taxid in cached["names"].items()}
+
+
 def load_name_mapping(ncbi, per_molecule):
     """
     Name -> taxid, from the cache where possible.
 
     The cache only holds names that resolved, so any name not in it -- new, or one that
-    failed before -- is looked up again and the cache extended. Failing names cost a
-    few seconds per run; a name that has become resolvable is never silently skipped.
+    failed before -- is looked up again and the cache extended.
     """
     all_names = {n for names in per_molecule for n in names}
-    mapping = {}
-    if CACHE.exists():
-        mapping = {k: int(v) for k, v in json.loads(CACHE.read_text()).items()}
+    mapping = read_name_cache()
+    if mapping:
         log(f"  cached name -> taxid map: {len(mapping):,} entries")
 
     missing = sorted(all_names - set(mapping))
     if missing:
         log(f"  looking up {len(missing):,} names not in the cache")
         mapping.update(resolve_to_taxids(ncbi, missing))
-        CACHE.write_text(json.dumps(mapping))
+        CACHE.write_text(json.dumps({"taxonomy": cs.TAXDUMP_ARCHIVE,
+                                     "names": dict(sorted(mapping.items()))}))
     resolved = len(all_names & set(mapping))
     log(f"  names resolved: {resolved:,} of {len(all_names):,} "
         f"({100 * resolved / len(all_names):.1f}%)")
@@ -208,19 +239,31 @@ def lineage_by_rank(ncbi, taxids):
     """
     For each taxon, the ancestor it has at each rank we care about.
 
+    A taxid retired by NCBI is followed to its replacement through merged.dmp. A taxid
+    with no lineage at all is counted and reported, and its organisms drop out of every
+    share.
+
     Returns
     -------
     dict
         taxid -> {rank: ancestor_taxid}
     """
     out = {}
+    missing = []
+    n_merged = 0
     for taxid in taxids:
-        try:
-            lineage = ncbi.get_lineage(taxid)
-            ranks = ncbi.get_rank(lineage)
-        except Exception:
-            continue
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            try:
+                lineage = ncbi.get_lineage(taxid)
+            except ValueError:
+                missing.append(taxid)
+                continue
+        n_merged += any("translated into" in str(w.message) for w in caught)
+        ranks = ncbi.get_rank(lineage)
         out[taxid] = {rank: node for node, rank in ranks.items() if rank in RANKS}
+    log(f"  lineages: {len(out):,} of {len(taxids):,} taxids "
+        f"({n_merged:,} through merged.dmp, {len(missing):,} not found)")
     return out
 
 
@@ -507,9 +550,7 @@ def report_rank(rank, shares, singles, n_single_odorant, n_single_background):
 
 
 def main():
-    from ete3 import NCBITaxa
-
-    ncbi = NCBITaxa()
+    ncbi = cs.open_taxonomy()
     RESULTS.mkdir(exist_ok=True)
 
     log("=" * 74)

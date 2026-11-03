@@ -2,30 +2,29 @@
 
 Each organism is labelled aquatic, terrestrial, host (mammals and birds, not counted) or
 unassigned, by walking up its NCBI lineage until it reaches a listed clade.
-share_aquatic = aquatic / (aquatic + terrestrial). Used by the Downstream receptor notebooks.
+share_aquatic = aquatic / (aquatic + terrestrial). Used by Supplementary_Material/aquatic_origin.
 
-Needs data/nodes.dmp and data/names.dmp (c00) and results/panel_universe_join.csv (c11).
+Needs data/taxa.sqlite (c00) and results/panel_universe_join.csv (c09).
 Outputs in results/: aquatic_sources.csv, aquatic_sources_panel.csv, aquatic_taxa_seen.csv,
 aquatic_sources_report.txt
 """
 from __future__ import annotations
 
-import json
+import warnings
 from collections import Counter
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-from c07_organism_source import load_organism_field, split_organisms
+import chemspace as cs
+from c07_organism_source import (load_organism_field, read_name_cache, resolve_to_taxids,
+                                 split_organisms)
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
 RESULTS = HERE / "results"
 COCONUT_CSV = DATA / "coconut_csv-08-2026.csv"
-NODES = DATA / "nodes.dmp"
-NAMES = DATA / "names.dmp"
-CACHE = RESULTS / "taxid_cache.json"          # c07's name -> taxid cache, reused if present
 PANEL_JOIN = RESULTS / "panel_universe_join.csv"
 
 # COCONUT collections that are marine by construction. Used only as an independent check
@@ -34,8 +33,7 @@ PANEL_JOIN = RESULTS / "panel_universe_join.csv"
 MARINE_COLLECTIONS = {"CMNPD", "Marine Natural Products",
                       "Seaweed Metabolite Database (SWMD)"}
 
-# Clades that live in water. Resolved to taxids by name at run time, so there are no
-# magic numbers here to rot when NCBI renumbers something.
+# Clades that live in water, resolved to taxids by name at run time.
 AQUATIC = {
     # --- algae and the aquatic protist lineages ---------------------------------
     "Rhodophyta", "Ochrophyta", "Phaeophyceae", "Bacillariophyta", "Chrysophyceae",
@@ -49,7 +47,9 @@ AQUATIC = {
     # --- fish, crustaceans, marine mammals and reptiles -------------------------
     "Chondrichthyes", "Actinopterygii", "Cladistia", "Coelacanthimorpha", "Dipnoi",
     "Hyperoartia", "Myxini", "Petromyzontiformes",
-    "Crustacea", "Cetacea", "Sirenia", "Pinnipedia", "Cheloniidae", "Dermochelyidae",
+    # NCBI has no taxon named Crustacea. Pancrustacea stands for it: the hexapods inside
+    # it are labelled terrestrial lower down the lineage, so they never reach this rule.
+    "Pancrustacea", "Cetacea", "Sirenia", "Pinnipedia", "Cheloniidae", "Dermochelyidae",
     # --- land plants that grow in water -----------------------------------------
     # Seagrasses first, then the freshwater macrophytes and the aquatic ferns. This is
     # the block that stops COCONUT's plant-heavy annotation from making every plant
@@ -83,78 +83,77 @@ def log(message=""):
     _report.append(str(message))
 
 
-def load_taxonomy():
-    """parent map, rank map and name->taxid map, straight out of the dump files."""
-    parent, rank = {}, {}
-    with open(NODES, encoding="latin-1") as handle:
-        for line in handle:
-            f = line.split("\t|\t")
-            taxid, par = int(f[0]), int(f[1])
-            parent[taxid] = par
-            rank[taxid] = f[2]
-    name2taxid, taxid2name = {}, {}
-    with open(NAMES, encoding="latin-1") as handle:
-        for line in handle:
-            f = line.split("\t|\t")
-            taxid, name, kind = int(f[0]), f[1], f[3].split("\t|")[0]
-            if kind == "scientific name":
-                taxid2name[taxid] = name
-            name2taxid.setdefault(name, taxid)
-    return parent, rank, name2taxid, taxid2name
+# Ranks at or below genus. A clade name shared with a genus (Ctenophora, Diplura) means the
+# higher taxon, never the genus.
+GENUS_AND_BELOW = {"genus", "subgenus", "species group", "species subgroup", "species",
+                   "subspecies", "varietas", "forma", "strain", "isolate"}
 
 
-def resolve_labels(name2taxid):
-    """Turn the clade name sets into taxid -> label, warning about anything unresolved."""
+def resolve_labels(ncbi):
+    """
+    Turn the clade name sets into taxid -> label.
+
+    Stops the run if a name matches no taxon, or more than one above genus rank.
+    """
     labels = {}
     for group, names in [("aquatic", AQUATIC), ("mangrove", MANGROVE),
                          ("terrestrial", TERRESTRIAL), ("host", HOST)]:
-        for name in names:
-            taxid = name2taxid.get(name)
-            if taxid is None:
-                log(f"  warning: no NCBI taxon called {name!r} — rule ignored")
-                continue
-            labels[taxid] = group
+        for name in sorted(names):
+            candidates = ncbi.get_name_translator([name]).get(name, [])
+            ranks = ncbi.get_rank(candidates)
+            if len(candidates) > 1:
+                candidates = [t for t in candidates if ranks[t] not in GENUS_AND_BELOW]
+            if len(candidates) != 1:
+                raise SystemExit(f"clade {name!r}: expected one NCBI taxon, "
+                                 f"found {candidates}")
+            labels[candidates[0]] = group
     return labels
 
 
-def classify(taxid, parent, labels, memo):
-    """Walk from the organism towards the root; the first labelled ancestor wins."""
-    if taxid in memo:
-        return memo[taxid]
-    chain, node, out = [], taxid, "unassigned"
-    seen = set()
-    while node and node not in seen:
-        seen.add(node)
-        chain.append(node)
-        if node in memo:
-            out = memo[node]
-            break
-        if node in labels:
-            out = labels[node]
-            break
-        nxt = parent.get(node)
-        if nxt is None or nxt == node:
-            break
-        node = nxt
-    for n in chain:
-        memo[n] = out
+def classify_taxa(ncbi, taxids, labels):
+    """
+    Label each taxon by the first labelled clade on its lineage, walking towards the root.
+
+    Returns
+    -------
+    dict
+        taxid -> "aquatic", "mangrove", "terrestrial", "host" or "unassigned", for the
+        taxids that have a lineage.
+    """
+    out = {}
+    missing = []
+    for taxid in taxids:
+        with warnings.catch_warnings():
+            # A retired taxid is followed through merged.dmp; ete4 warns each time.
+            warnings.simplefilter("ignore")
+            try:
+                lineage = ncbi.get_lineage(taxid)
+            except ValueError:
+                missing.append(taxid)
+                continue
+        out[taxid] = "unassigned"
+        for node in reversed(lineage):
+            if node in labels:
+                out[taxid] = labels[node]
+                break
+    log(f"  taxa with a lineage: {len(out):,} of {len(taxids):,} "
+        f"({len(missing):,} not found)")
     return out
 
 
-def resolve_names(names, name2taxid):
-    """Name -> taxid, falling back to the genus when the binomial is not in NCBI."""
-    cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
-    out, misses = {}, 0
-    for name in names:
-        taxid = cache.get(name) or name2taxid.get(name)
-        if taxid is None:
-            genus = name.split(" ")[0]
-            taxid = cache.get(genus) or name2taxid.get(genus)
-        if taxid is None:
-            misses += 1
-        else:
-            out[name] = int(taxid) if not isinstance(taxid, list) else int(taxid[0])
-    return out, misses
+def resolve_names(ncbi, names):
+    """
+    Name -> taxid by c07's rules, from c07's cache where it has the name.
+
+    Names missing from the cache are resolved here and not written back, so the cache
+    stays the one c07 builds.
+    """
+    mapping = read_name_cache()
+    missing = sorted(set(names) - set(mapping))
+    if missing:
+        mapping.update(resolve_to_taxids(ncbi, missing))
+    out = {name: mapping[name] for name in names if name in mapping}
+    return out, len(names) - len(out)
 
 
 def load_collections():
@@ -172,13 +171,12 @@ def main():
     RESULTS.mkdir(exist_ok=True)
     log("WHICH SOURCE ORGANISMS LIVE IN WATER")
     log("=" * 78)
-    for path in (NODES, NAMES, COCONUT_CSV):
-        if not path.exists():
-            raise SystemExit(f"missing {path} — see the module docstring")
+    if not COCONUT_CSV.exists():
+        raise SystemExit(f"missing {COCONUT_CSV}; run c00_download_inputs.py")
 
-    parent, rank, name2taxid, taxid2name = load_taxonomy()
-    log(f"  NCBI taxonomy: {len(parent):,} nodes")
-    labels = resolve_labels(name2taxid)
+    ncbi = cs.open_taxonomy()
+    log(f"  NCBI taxonomy: {cs.TAXDUMP_ARCHIVE}")
+    labels = resolve_labels(ncbi)
 
     coconut = load_organism_field().rename("organisms").reset_index()
     coconut = coconut.merge(load_collections(), on="inchikey", how="left")
@@ -188,11 +186,11 @@ def main():
     vocabulary = sorted({n for names in parsed for n in names})
     log(f"  distinct organism names: {len(vocabulary):,}")
 
-    name2id, misses = resolve_names(vocabulary, name2taxid)
+    name2id, misses = resolve_names(ncbi, vocabulary)
     log(f"  resolved to an NCBI taxon: {len(name2id):,}  ({misses:,} unresolved)")
 
-    memo = {}
-    name2label = {n: classify(t, parent, labels, memo) for n, t in name2id.items()}
+    taxon_label = classify_taxa(ncbi, sorted(set(name2id.values())), labels)
+    name2label = {n: taxon_label[t] for n, t in name2id.items() if t in taxon_label}
     log("\n  organism names by habitat")
     for group, n in Counter(name2label.values()).most_common():
         log(f"    {group:<12} {n:6,}")
@@ -216,10 +214,8 @@ def main():
     table = pd.DataFrame(rows)
     table.to_csv(RESULTS / "aquatic_sources.csv", index=False)
 
-    # A panel-sized copy, restricted to the molecules the odorant panel actually joins to.
-    # The full table has one row per COCONUT molecule (~270k, ~15 MB) and stays out of Git
-    # like the other large chemical-space outputs; this slice is a few hundred rows, so the
-    # downstream notebook can run on a fresh clone without the 700 MB COCONUT download.
+    # The full table (one row per COCONUT molecule) is on Zenodo, not in Git. This copy holds
+    # only the panel odorants, so Supplementary_Material/aquatic_origin runs on a fresh clone.
     if PANEL_JOIN.exists():
         keys = pd.read_csv(PANEL_JOIN, usecols=["inchikey"]).inchikey.dropna().unique()
         panel = table[table.inchikey.isin(keys)]

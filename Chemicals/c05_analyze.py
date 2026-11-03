@@ -41,7 +41,7 @@ NEIGHBOURS = 50
 # The three transport properties. A molecule has to be small enough and volatile enough
 # to reach the receptor at all, so these are exactly the axes on which "odorants are
 # special" is least interesting -- which is why the control equalises them. They are the
-# same three the F6 property maps are drawn on.
+# same three the c11 property maps are drawn on.
 MATCH_COVARIATES = ["Tb_joback", "MolWt", "LogP"]
 
 # Largest allowed distance between a molecule and its partner, per covariate, in
@@ -85,7 +85,8 @@ def load_universe():
     index = pd.read_csv(RESULTS / "embed_index.csv")
     embeddings = np.load(RESULTS / "embeddings.npy")
 
-    universe = universe.set_index("inchikey").loc[index.inchikey].reset_index()
+    universe = cs.align_to_embedding(universe, index)
+    assert len(universe) == len(embeddings), "embed_index.csv and embeddings.npy differ in length"
 
     # A handful of descriptors can be missing; fill them with the column median so the
     # classifiers do not choke.

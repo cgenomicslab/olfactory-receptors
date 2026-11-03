@@ -11,7 +11,6 @@ Outputs in results/: <list>_organism_table.csv, <list>_kingdom_stats.csv,
 from __future__ import annotations
 
 import argparse
-import json
 from collections import Counter
 from pathlib import Path
 
@@ -20,14 +19,13 @@ import pandas as pd
 from scipy import sparse
 
 import chemspace as cs
-from c07_organism_source import (compare_mean_shares, lineage_by_rank,
-                                 load_organism_field, split_organisms)
+from c07_organism_source import (CACHE, compare_mean_shares, lineage_by_rank,
+                                 load_organism_field, read_name_cache, split_organisms)
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
 RESULTS = HERE / "results"
 COCONUT_CSV = DATA / "coconut_csv-08-2026.csv"
-CACHE = RESULTS / "taxid_cache.json"
 
 # The odour descriptors for the M2OR ligands, so the table says what each one smells of.
 # Only M2OR molecules carry these, so the column is mostly empty for the larger list.
@@ -48,14 +46,13 @@ PANELS = {
 }
 
 # The groups worth a column: a display name, the NCBI rank to look it up at, and the
-# taxon name. Bacteria are taken at superkingdom rather than as the two kingdom-rank
-# groups NCBI splits them into (Bacillati and Pseudomonadati), because "bacteria" is the
-# distinction that means something here and the split would report the same result twice.
+# taxon name. Bacteria are taken at domain rank rather than as the two kingdom-rank
+# groups NCBI splits them into (Bacillati and Pseudomonadati).
 GROUPS = {
     "plants": ("kingdom", "Viridiplantae"),
     "animals": ("kingdom", "Metazoa"),
     "fungi": ("kingdom", "Fungi"),
-    "bacteria": ("superkingdom", "Bacteria"),
+    "bacteria": ("domain", "Bacteria"),
 }
 
 _report_lines = []
@@ -71,21 +68,24 @@ def group_taxids(ncbi):
     """
     Map each reported group to the (rank, taxid) that identifies it.
 
-    Resolved by name lookup rather than hard-coded ids, so the script carries no table
-    of magic numbers to rot when NCBI renumbers something.
+    A name can belong to several taxa, so the taxon is the one with that name at the
+    group's rank, and the run stops unless there is exactly one.
 
     Returns
     -------
     dict
         (rank, taxid) -> display name
     """
-    wanted = {name for _, name in GROUPS.values()}
-    found = ncbi.get_name_translator(sorted(wanted))
-    missing = [name for name in wanted if name not in found]
-    if missing:
-        raise SystemExit(f"could not resolve taxon names: {missing}")
-    return {(rank, found[name][0]): label
-            for label, (rank, name) in GROUPS.items()}
+    lookup = {}
+    for label, (rank, name) in GROUPS.items():
+        candidates = ncbi.get_name_translator([name]).get(name, [])
+        at_rank = [taxid for taxid, found_rank in ncbi.get_rank(candidates).items()
+                   if found_rank == rank]
+        if len(at_rank) != 1:
+            raise SystemExit(f"expected one taxon named {name!r} at rank {rank!r}, "
+                             f"found {at_rank}")
+        lookup[(rank, at_rank[0])] = label
+    return lookup
 
 
 def load_panel():
@@ -122,15 +122,13 @@ def load_panel():
 
 
 def main():
-    from ete3 import NCBITaxa
-
     parser = argparse.ArgumentParser()
     parser.add_argument("--panel", choices=list(PANELS), default="m2or",
                         help="which odorant list to describe")
     args = parser.parse_args()
     panel_spec = PANELS[args.panel]
 
-    ncbi = NCBITaxa()
+    ncbi = cs.open_taxonomy()
     table = load_panel()
 
     log("=" * 74)
@@ -149,9 +147,10 @@ def main():
     log("  Molecules with no recorded source are dropped, not counted as zero: nobody")
     log("  looked, which is different from having no source.")
 
-    if not CACHE.exists():
-        raise SystemExit(f"missing {CACHE}; run c07_organism_source.py first")
-    mapping = {k: int(v) for k, v in json.loads(CACHE.read_text()).items()}
+    mapping = read_name_cache()
+    if not mapping:
+        raise SystemExit(f"no {CACHE.name} for {cs.TAXDUMP_ARCHIVE}; "
+                         "run c07_organism_source.py first")
 
     # Everything with an organism, so the panel can be compared against the background.
     annotated = table[has_organisms].reset_index(drop=True)
@@ -199,7 +198,7 @@ def main():
     panel = panel[columns].sort_values("n_organisms", ascending=False)
     table_path = RESULTS / f"{panel_spec['stem']}_organism_table.csv"
     panel.to_csv(table_path, index=False)
-    log(f"\n  wrote {table_path}  ({len(panel)} molecules)")
+    log(f"\n  wrote {table_path.relative_to(HERE.parent)}  ({len(panel)} molecules)")
 
     log("\n  what the panel's molecules mostly come from:")
     for kingdom, count in panel.dominant_group.value_counts().items():

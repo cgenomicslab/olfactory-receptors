@@ -2,11 +2,17 @@
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import numpy as np
 from rdkit import Chem, RDLogger
 from rdkit.Chem import Crippen, Descriptors, QED, inchi, rdMolDescriptors
 
 RDLogger.DisableLog("rdApp.*")
+
+sys.path.append(str(Path(__file__).resolve().parents[1] / "scripts"))
+import functional_groups as fg  # noqa: E402
 
 # Atomic numbers of F, Cl, Br, I.
 HALOGENS = {9, 17, 35, 53}
@@ -22,26 +28,14 @@ DESCRIPTOR_NAMES = [
     "NumStereo", "QED", "nHeteroatoms", "nO", "nN", "nS", "nHalogen", "nC",
 ]
 
-# Functional groups, named the way a perfumer would name them rather than the way a
-# cheminformatician would. Each value is a SMARTS pattern RDKit matches against a molecule.
-FUNCTIONAL_GROUP_SMARTS = {
-    "fg_alcohol": "[CX4;!$(C=O)][OX2H]",
-    "fg_phenol": "[c][OX2H]",
-    "fg_carboxylic_acid": "[CX3](=O)[OX2H1]",
-    "fg_ester": "[CX3](=O)[OX2H0][#6]",
-    "fg_lactone": "[#6][OX2][CX3](=O)[#6]",
-    "fg_ether": "[OD2]([#6])[#6]",
-    "fg_aldehyde": "[CX3H1](=O)[#6]",
-    "fg_ketone": "[#6][CX3](=O)[#6]",
-    "fg_amine": "[NX3;H2,H1,H0;!$(NC=O);!$(N[a])]",
-    "fg_amide": "[NX3][CX3](=[OX1])",
-    "fg_thiol": "[#16X2H]",
-    "fg_sulfide": "[#16X2H0][#6]",
-    "fg_nitrile": "[NX1]#[CX2]",
-    "fg_halogen": "[F,Cl,Br,I]",
-    "fg_benzene": "c1ccccc1",
-    "fg_terpene_isopropyl": "CC(C)[!#1]",
-}
+# Functional groups: the repository-wide panel in scripts/functional_groups.py, restricted to
+# the 16 groups compared against the natural-product background.
+CHEMSPACE_GROUPS = [
+    "alcohol", "phenol", "carboxylic_acid", "ester", "lactone", "ether", "aldehyde", "ketone",
+    "amine", "amide", "thiol", "sulfide", "nitrile", "halogen", "aromatic_ring",
+    "terpene_isopropyl",
+]
+FUNCTIONAL_GROUP_SMARTS = {f"fg_{name}": fg.FUNCTIONAL_GROUPS[name] for name in CHEMSPACE_GROUPS}
 
 # Compiled once at import; matching against a compiled pattern is much faster.
 FUNCTIONAL_GROUP_PATTERNS = {
@@ -55,6 +49,76 @@ DESC = DESCRIPTOR_NAMES
 FG_COLS = FUNCTIONAL_GROUP_NAMES
 FG_SMARTS = FUNCTIONAL_GROUP_SMARTS
 FG_PATTS = FUNCTIONAL_GROUP_PATTERNS
+
+
+# The NCBI taxonomy every organism lookup uses: the dated monthly dump matching COCONUT
+# 08-2026, converted by c00 into an ete4 database. TAXA_DB_SOURCE records which dump
+# built the database.
+TAXDUMP_ARCHIVE = "taxdmp_2026-08-01.zip"
+TAXA_DB = Path(__file__).resolve().parent / "data" / "taxa.sqlite"
+TAXA_DB_SOURCE = TAXA_DB.with_name("taxa.sqlite.source")
+
+
+def taxonomy_is_built():
+    """Return True if data/taxa.sqlite exists and was built from TAXDUMP_ARCHIVE."""
+    if not TAXA_DB.exists() or not TAXA_DB_SOURCE.exists():
+        return False
+    return TAXA_DB_SOURCE.read_text().split("\n")[0].strip() == TAXDUMP_ARCHIVE
+
+
+def open_taxonomy():
+    """
+    Open the NCBI taxonomy database built by c00.
+
+    ete4 downloads the current NCBI dump whenever it cannot find or read its database,
+    which would silently change the taxonomy. Opening with update=False and refusing to
+    continue without the c00 database keeps every script on the same dated dump.
+
+    Returns
+    -------
+    ete4.NCBITaxa
+    """
+    from ete4 import NCBITaxa
+
+    if not taxonomy_is_built():
+        raise SystemExit(
+            f"missing {TAXA_DB} built from {TAXDUMP_ARCHIVE}\n"
+            "  run: python c00_download_inputs.py --only taxonomy"
+        )
+    return NCBITaxa(dbfile=str(TAXA_DB), update=False)
+
+
+def align_to_embedding(universe, index):
+    """
+    Keep the universe rows that were embedded, in embedding order.
+
+    c03 embeds the universe in its own row order, minus the molecules too long for the
+    model, and writes their InChIKeys to results/embed_index.csv in that order. Row i of
+    embeddings.npy and umap.npy is therefore the i-th embedded universe row. A universe
+    rebuilt with other keys or another row order no longer matches those arrays, and
+    this raises instead of pairing molecules with the wrong coordinates.
+
+    Parameters
+    ----------
+    universe : DataFrame
+        results/universe.parquet, with an "inchikey" column.
+    index : DataFrame
+        results/embed_index.csv.
+
+    Returns
+    -------
+    DataFrame
+        The embedded rows, re-indexed from 0.
+    """
+    embedded = universe.inchikey.isin(set(index.inchikey)).values
+    same_rows = (embedded.sum() == len(index)
+                 and (universe.inchikey.values[embedded] == index.inchikey.values).all())
+    if not same_rows:
+        raise ValueError(
+            "universe.parquet does not match embed_index.csv: rerun c03 and c04 after "
+            "rebuilding the universe, or use the universe they were computed from"
+        )
+    return universe[embedded].reset_index(drop=True)
 
 
 def device():

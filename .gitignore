@@ -224,6 +224,7 @@ __marimo__/
 # each analysis is finalised; it belongs with the manuscript, not here, and keeping one
 # copy avoids the two drifting apart.
 /METHODS.md
+METHODS_DRAFT.md
 
 # The per-node runs packaged for Zenodo, kept next to the folder they came from. 1.15 GB,
 # far over GitHub's 100 MB per-file limit, so it is local only. Rebuild it with
@@ -251,10 +252,37 @@ __marimo__/
 # The small tables the analysis needs are in Chemicals/processed_data/. The large
 # intermediates in results/ are gigabytes.
 /Chemicals/data/
-/Chemicals/results/*.npy
-/Chemicals/results/*.parquet
-/Chemicals/results/embed_index.csv
 /Chemicals/__pycache__/
+# Extra checks that no figure or table of the paper uses; kept local.
+/Chemicals/extra_*.py
+# Only the results that a figure or another folder reads are committed; the scripts write
+# the rest (reports, other tables, the large intermediates from Zenodo) when they run.
+/Chemicals/results/*
+!/Chemicals/results/fg_enrichment.csv
+!/Chemicals/results/pathway_enrichment.csv
+!/Chemicals/results/organism_rank_enrichment.csv
+!/Chemicals/results/panel_universe_join.csv
+!/Chemicals/results/coconut_matched_auc.csv
+!/Chemicals/results/coconut_matched_smd.csv
+!/Chemicals/results/knn_enrichment.csv
+!/Chemicals/results/robust_fg_matched.csv
+!/Chemicals/results/robust_knn_null.csv
+!/Chemicals/results/robust_scaffold_auc.csv
+!/Chemicals/results/aquatic_sources_panel.csv
+# Only the paper plots are committed; c13 also draws working plots, kept local.
+/Chemicals/figures/*
+!/Chemicals/figures/odorant_map.svg
+!/Chemicals/figures/organism_kingdom.svg
+!/Chemicals/figures/biosynthetic_pathway.svg
+!/Chemicals/figures/functional_groups_matched.svg
+!/Chemicals/figures/aromatic_map.svg
+!/Chemicals/figures/aromatic_vs_aliphatic.svg
+!/Chemicals/figures/receptor_class_map_class_I.svg
+!/Chemicals/figures/receptor_class_map_shared.svg
+!/Chemicals/figures/receptor_class_map_class_II.svg
+!/Chemicals/figures/receptor_class_volatility.svg
+!/Chemicals/figures/organism_order.svg
+!/Chemicals/figures/organism_family.svg
 # Prediction data comes from Zenodo, not Git: see Downstream_Analysis/README.md.
 # ASR_Predictions_RefTree is re-included because it holds analysis code and small
 # reference tables rather than model output.
@@ -343,3 +371,15 @@ __marimo__/
 /Chemicals/results/aquatic_sources.csv
 /Chemicals/results/aquatic_taxa_seen.csv
 /Chemicals/figures/FIGURE_LEGENDS.md
+
+# Figure pages: build output, and local archives of retired notebooks and outputs
+/figures/_build/
+/Chemicals/archive/
+/Downstream_Analysis/notebooks/ancestral/archive/
+/Downstream_Analysis/notebooks/reference_tree/archive/
+/PREPRINT_CORRECTIONS.md
+/Supplementary_Tables.xlsx
+/Chemicals/results_section*.txt
+/Downstream_Analysis/notebooks/archive/
+
+/Supplementary_Material/supplementary_tables/Supplementary_Tables.xlsx

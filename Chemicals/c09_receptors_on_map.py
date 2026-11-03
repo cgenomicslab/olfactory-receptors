@@ -250,7 +250,7 @@ def load_universe():
                                columns=["inchikey", "Tb_joback", "np_likeness",
                                         "in_background"])
     index = pd.read_csv(RESULTS / "embed_index.csv")
-    return universe.set_index("inchikey").loc[index.inchikey].reset_index()
+    return cs.align_to_embedding(universe, index)
 
 
 # ---------------------------------------------------------------- questions
