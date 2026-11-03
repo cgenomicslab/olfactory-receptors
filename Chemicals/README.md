@@ -98,7 +98,7 @@ Everything runs from `Chemicals/`, in the order of the numbers.
 
 7. **Robustness.** Repeats the matching under five seeds, re-scores the separability with a
    scaffold split, and compares the clustering with matched and random natural-product sets.
-  
+   Writes the three robustness tables of the Supplementary Tables.
 
    ```bash
    python c06_robustness.py
@@ -146,18 +146,8 @@ Everything runs from `Chemicals/`, in the order of the numbers.
 | Ext. Data Fig. 7g | `organism_order.svg` | `organism_rank_enrichment.csv` |
 | Ext. Data Fig. 7h | `organism_family.svg` | `organism_rank_enrichment.csv` |
 
-`c11` also draws some plots that are not in the paper; they are not in Git.
-
-## Check the output
-
-* `c03` keeps 726,407 molecules
-* `c05`: 5,939 of 5,962 odorants matched, worst standardised difference under 0.01 (PASS)
-* `c07`: 266,000 molecules with at least one resolved organism, 1,957 of them odorants
-
 ## Outputs
 
-Tables and text reports go to `results/`, plots to `figures/`. Git holds only the tables
-that a figure or another folder reads; every other table and report is written when the
-scripts run. The large intermediates (`universe.parquet`, `coconut_parents.parquet`,
-`embed_index.csv`, `embeddings.npy`, `umap.npy`, `aquatic_sources.csv`,
-`aquatic_taxa_seen.csv`) are on Zenodo.
+Tables and text reports go to `results/`, plots to `figures/`. The large intermediates
+(`universe.parquet`, `coconut_parents.parquet`, `embed_index.csv`, `embeddings.npy`,
+`umap.npy`, `aquatic_sources.csv`, `aquatic_taxa_seen.csv`) are on Zenodo.

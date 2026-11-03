@@ -70,13 +70,6 @@ gap as a 21st amino acid instead would let columns the ancestor never had change
 6. The per-node sequences are concatenated into `all_nodes_ASR.final.fasta`, committed as
    `hagfish_human_ASR.final.fasta`.
 
-## Check the output
-
-The notebook does not stop if one IQ-TREE run fails. Afterwards every `NODE_node_*/` except
-`node_0` should contain `node_*_ASR.final.fasta`, and the final file should hold 432 records,
-`node_1_ASR` to `node_432_ASR`, ungapped, 305 to 323 residues long. There is no `node_0_ASR`:
-IQ-TREE reports no states for the root when the topology is fixed with `-te`.
-
 ## Using the sequences
 
 A node number is a position in the rooted tree. Three of them carry most of the paper:

@@ -76,6 +76,8 @@ CLUSTER_COLOURS = ["#543005", "#ae7121", "#c8923b", "#98d7cd", "#24877f", "#003c
 
 # Numbers printed beside bars, a step smaller than the tick labels.
 ANNOTATION = {"fontsize": 8, "color": GREY}
+# 95% intervals, the same on every bar plot.
+ERROR_BARS = {"fmt": "none", "ecolor": GREY, "elinewidth": 0.8, "capsize": 2}
 
 # The four source groups and the NCBI rank each is taken at. Bacteria are the domain, not
 # one of NCBI's two kingdom-rank halves of it.
@@ -347,8 +349,7 @@ def functional_groups_matched(groups):
                                   1.0 if is_significant else 0.35)
                for value, is_significant in zip(log_odds, significant)]
     axis.barh(positions, log_odds, color=colours, height=0.68)
-    axis.errorbar(log_odds, positions, xerr=[log_odds - low, high - log_odds],
-                  fmt="none", ecolor=GREY, elinewidth=0.6, capsize=0)
+    axis.errorbar(log_odds, positions, xerr=[log_odds - low, high - log_odds], **ERROR_BARS)
     for position, value, top, bottom, ratio in zip(positions, log_odds, high, low,
                                                    table.OR_matched):
         edge = top if value >= 0 else bottom
@@ -580,8 +581,7 @@ def organism_rank(ranks, rank, n_shown=10):
     figure, axis = plt.subplots(figsize=FIGSIZE, layout="constrained")
     axis.barh(positions, log_ratio, height=0.66,
               color=[ODORANT_COLOUR if v > 0 else BACKGROUND_COLOUR for v in log_ratio])
-    axis.errorbar(log_ratio, positions, xerr=[below, above], fmt="none",
-                  ecolor=GREY, elinewidth=0.8, capsize=2)
+    axis.errorbar(log_ratio, positions, xerr=[below, above], **ERROR_BARS)
     axis.axvline(0, color=ZERO_LINE, lw=0.8)
     for position, value, ratio, low, high in zip(positions, log_ratio, shown.share_ratio,
                                                  below, above):
