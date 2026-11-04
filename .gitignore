@@ -384,3 +384,13 @@ METHODS_DRAFT.md
 /Downstream_Analysis/notebooks/archive/
 
 /Supplementary_Material/supplementary_tables/Supplementary_Tables.xlsx
+
+# Phylogenetic_Analysis: not part of the paper
+/Phylogenetic_Analysis/data/ReferenceTree/PF00001.060925_DeepTax_localfasta_9606_7897_7918_7955_34765_7739_51511_7719_137246_75743_7868_7741_7764_7740_7227_6087.clustalo.gt01.lg.fasttree
+/Phylogenetic_Analysis/notebooks/figure1_receptor_phylogeny.ipynb
+/Phylogenetic_Analysis/notebooks/six_species_tree.ipynb
+/Phylogenetic_Analysis/data/ReferenceTree/PF13853.060925_DeepTax.*
+/Phylogenetic_Analysis/figures/sixsp_*.itol.svg
+!/Phylogenetic_Analysis/data/ReferenceTree/robustness/*.treefile
+!/Phylogenetic_Analysis/data/ReferenceTree/robustness/*.iqtree
+/Phylogenetic_Analysis/figures/PF13853.6sp.einsi.gt01.treefile.itol.svg
