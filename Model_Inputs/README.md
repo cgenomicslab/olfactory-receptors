@@ -1,8 +1,7 @@
 # Model inputs
 
 PLinter requires two main data assets for training and inference: the processed table of
-receptor–odorant pairs (`Data_Preparation/processed/m2or_pairs_model.csv`) and their
-precomputed embeddings.
+receptor–odorant pairs and their precomputed embeddings.
 
 ## `Data_Preparation/`
 
