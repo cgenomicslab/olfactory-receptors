@@ -1,7 +1,6 @@
 # Model inputs
 
-What the binding model reads: the modelling table, and the embeddings. **The model itself is
-not here** — its architecture and training code live in a separate repository.
+What the binding model reads: the modelling table, and the embeddings.
 
 ## `Data_Preparation/`
 
@@ -21,21 +20,15 @@ column back to a structure.
 
 ## `Embeddings/`
 
-Proteins: ESM-C 300M, one `.npy` each, shaped (L, 960), under `proteins/` — 722 class A
-GPCRs, 1,399 M2OR proteins, 584 reference-tree proteins. Molecules:
-`molecules/molformer_smiles_embeddings.pt`, 768-d, keyed by SMILES.
+Proteins: ESM-C 300M, one `.npy` per protein under `proteins/`, shaped (L + 2, 960) with the
+start and end tokens: 722 class A GPCRs, 1,399 M2OR proteins, 584 reference-tree proteins.
+Molecules: `molecules/molformer_smiles_embeddings.pt`, 768-d, keyed by SMILES.
 
 Regenerating needs a GPU and the `esm` package. Download them instead:
 
 ```bash
-python scripts/download_zenodo_data.py                                    # pooled, 10 MB
-python scripts/download_zenodo_data.py --assets embeddings_reference_tree # per-residue, 663 MB
+python scripts/download_zenodo_data.py --embeddings        # class A and reference-tree arrays, 1.5 GB
+python scripts/download_zenodo_data.py --embeddings-full   # also the M2OR proteins and the molecules
 ```
 
 The `extract_embeddings_*.ipynb` notebooks are how they were made, and draw the Figure 1 maps.
-
-> The class A set drops BOS/EOS before pooling; the reference-tree set does not. Each map is
-> reproduced under the convention it was published with.
-
-To package a release: `python Model_Inputs/Embeddings/prepare_zenodo_embeddings.py --version v1`,
-output to the gitignored `release/`.

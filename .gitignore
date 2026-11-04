@@ -211,6 +211,7 @@ __marimo__/
 # creation/download instructions in the README rather than committing them.
 /Model_Inputs/Embeddings/molecules/
 /Model_Inputs/Embeddings/proteins/
+/Model_Inputs/Embeddings/umap/
 /Chemicals/chembl/
 /Chemicals/embeddings/
 
