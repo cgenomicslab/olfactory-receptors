@@ -7,7 +7,7 @@ class I and class II with data/HumanTree/human433_OR_classes.csv.
 Format: https://itol.embl.de/help/colors_styles_template.txt
 In iTOL, drag figures/itol/six_species.itol_colours.txt onto the tree.
 
-Run from Phylogenetic_Analysis/:  python scripts/itol_colours.py
+Run from Phylogenetic_Analysis/:  python itol_colours.py
 """
 from pathlib import Path
 
