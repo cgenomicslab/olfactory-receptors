@@ -1,28 +1,32 @@
 # Phylogenetic analysis
 
-The olfactory receptor phylogenies behind Figure 1 and Extended Data Fig. 1c. Plus the class I / class II
-assignment the rest of the repository uses.
+The olfactory receptor phylogenies behind Figure 1. Plus the class I / class II
+assignment, the rest of the repository uses.
 
 ## Trees
 
 | Tree | Sequences | Built by | Drawing | Figure |
 |---|---|---|---|---|
 | Class A GPCRs | 722 human, Pfam PF00001 | `class_A_tree.sh` | `figures/hGPCR.1.svg` | Fig. 1a |
-| Six species | 584 ORs, Pfam PF13853 | `six_species_tree.sh` | `figures/6sp.main.tree.04112026.svg` | Fig. 1c |
-| Six species, four methods | the same 584 | `six_species_robustness.sh` | `figures/6sp.unrooted.*.svg` | Ext. Data Fig. 1c |
+| Six species | 584 ORs, Pfam PF13853 | `six_species_tree.sh` | `figures/six_species.itol.svg` | Fig. 1c |
+| Six species, clade support | the same 584, seven trees | `data/ReferenceTree/clade_support.csv` | `six_species_clade_support.py` draws `figures/six_species_clade_support.svg` | Fig. 1d |
 | Human ORs | 433 | `human_tree.ipynb` | `figures/human433_MFP_reorder.tree.itol.svg` | Ext. Data Fig. 3 |
 
+`clade_support.csv` gives, for each main clade, its support in the trees of six alignments under JTT and of the
+E-INS-i alignment under LG. Those trees, their bootstrap trees and the script that fills the table are in the
+six-species archive on Zenodo.
+
 Run the scripts and notebooks from this folder, e.g. `bash six_species_tree.sh`. They use
-HMMER 3.3.2, Clustal Omega 1.2.3, MAFFT 7.505, trimAl 1.5, FastTree 2.1.11 and IQ-TREE 3.0.1.
+HMMER 3.3.2, Clustal Omega 1.2.3, MAFFT 7.505, trimAl 1.5 and IQ-TREE 3.0.1.
 
 ## Folders
 
 | Folder | Holds |
 |---|---|
 | `data/GPCR_classA/` | class A sequences and tree, and the tip lists used for the Figure 1 maps |
-| `data/ReferenceTree/` | six-species sequences, alignment and tree; `robustness/` holds the four method combinations |
+| `data/ReferenceTree/` | six-species sequences, alignment, model selection report and tree (`*.ML.best.treefile`; `.alrt.treefile` and `.ufb.suptree` carry the SH-aLRT and ultrafast bootstrap supports); `clade_support.csv` |
 | `data/HumanTree/` | 433 human sequences, alignment and tree, and `human433_OR_classes.csv` |
-| `figures/` | tree drawings exported from iTOL |
+| `figures/` | tree drawings exported from iTOL, and the clade support panel |
 
 ## Class I and class II
 

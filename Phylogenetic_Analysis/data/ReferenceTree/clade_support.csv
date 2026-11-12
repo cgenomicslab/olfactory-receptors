@@ -1,0 +1,36 @@
+clade,alignment,model,in_ml_tree,sh_alrt,bootstrap_percent
+Hagfish,einsi,JTT+F+R10,1,70.6,76.1
+Hagfish,linsi,JTT+F+R10,1,82.8,80.3
+Hagfish,ginsi,JTT+F+R10,1,73.2,77.7
+Hagfish,mft,JTT+F+R10,1,64.2,76.0
+Hagfish,muscle,JTT+F+R11,1,71.8,75.2
+Hagfish,clustalo,JTT+F+R10,1,83.6,88.9
+Hagfish,einsi,LG+F+R10,0,,27.5
+Zebrafish clade,einsi,JTT+F+R10,1,95.9,95.3
+Zebrafish clade,linsi,JTT+F+R10,1,95.0,95.7
+Zebrafish clade,ginsi,JTT+F+R10,1,94.7,94.0
+Zebrafish clade,mft,JTT+F+R10,1,96.5,94.5
+Zebrafish clade,muscle,JTT+F+R11,1,95.2,93.6
+Zebrafish clade,clustalo,JTT+F+R10,1,97.2,95.8
+Zebrafish clade,einsi,LG+F+R10,1,95.2,99.6
+Class I group,einsi,JTT+F+R10,1,94.8,91.2
+Class I group,linsi,JTT+F+R10,1,94.7,91.9
+Class I group,ginsi,JTT+F+R10,1,91.2,89.5
+Class I group,mft,JTT+F+R10,1,96.9,95.1
+Class I group,muscle,JTT+F+R11,1,90.2,85.4
+Class I group,clustalo,JTT+F+R10,1,90.8,88.9
+Class I group,einsi,LG+F+R10,1,91.5,97.5
+Class I + II groups,einsi,JTT+F+R10,1,99.4,99.1
+Class I + II groups,linsi,JTT+F+R10,1,98.9,99.5
+Class I + II groups,ginsi,JTT+F+R10,1,98.6,99.7
+Class I + II groups,mft,JTT+F+R10,1,98.1,98.9
+Class I + II groups,muscle,JTT+F+R11,1,98.9,99.7
+Class I + II groups,clustalo,JTT+F+R10,1,99.3,98.7
+Class I + II groups,einsi,LG+F+R10,1,94.7,98.1
+Class II group,einsi,JTT+F+R10,1,93.1,92.1
+Class II group,linsi,JTT+F+R10,1,82.0,84.3
+Class II group,ginsi,JTT+F+R10,1,90.8,86.3
+Class II group,mft,JTT+F+R10,1,91.7,89.2
+Class II group,muscle,JTT+F+R11,1,91.8,86.6
+Class II group,clustalo,JTT+F+R10,1,83.3,80.5
+Class II group,einsi,LG+F+R10,1,95.6,99.9
