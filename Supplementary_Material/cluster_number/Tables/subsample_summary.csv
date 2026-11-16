@@ -1,0 +1,3 @@
+subsample,runs,median_adjusted_rand_index,pct_runs_all_six_perceptual,pct_runs_acid_cluster_sour,median_acid_cluster_pct_acid,mean_jaccard_Floral / Balsamic,mean_jaccard_Fruity / Fatty / Aldehydic,mean_jaccard_Acid / Dairy / Cheese,mean_jaccard_Smoky,mean_jaccard_Roasted / Phenolic / Spice,mean_jaccard_Fermented / Solvent
+odorants,200,0.7935674992461227,51.5,85.5,58.87605042016807,0.7483420165552048,0.7922068700406936,0.6328070993260028,0.6431804470756145,0.7486281826969559,0.7524683203290453
+receptors,200,0.5126458057173209,64.5,81.5,49.73684210526316,0.6070806361868502,0.7127866483153944,0.46796324354262964,0.46732225287034274,0.5030231227187183,0.5863831675690301

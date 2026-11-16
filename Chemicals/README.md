@@ -118,7 +118,7 @@ Everything runs from `Chemicals/`, in the order of the numbers.
 
 9. **Receptors on the map.** Places the receptor classes and co-tuning clusters of
    `Downstream_Analysis/` on the map (needs the predictions, see the main README), and labels
-   each source organism aquatic or terrestrial for `Supplementary_Material/aquatic_origin/`.
+   each source organism aquatic or terrestrial.
 
    ```bash
    python c09_receptors_on_map.py

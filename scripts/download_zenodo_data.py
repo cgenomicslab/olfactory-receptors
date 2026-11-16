@@ -9,11 +9,12 @@ Assets are selected by group. Every group in the manifest becomes a flag here,
 so adding one is a manifest edit rather than a code change.
 
 Usage:
-  python scripts/download_zenodo_data.py                     # default assets, ~49 MiB
+  python scripts/download_zenodo_data.py                     # the predictions, ~33 MiB
   python scripts/download_zenodo_data.py --list              # show groups and assets
   python scripts/download_zenodo_data.py --predictions --chemicals
   python scripts/download_zenodo_data.py --asr
-  python scripts/download_zenodo_data.py --embeddings-full   # includes the per-residue sets
+  python scripts/download_zenodo_data.py --embeddings        # Figure 1, ~1.5 GiB
+  python scripts/download_zenodo_data.py --embeddings-full   # also the M2OR and molecule sets
   python scripts/download_zenodo_data.py --all
   python scripts/download_zenodo_data.py --assets embeddings_gpcr   # one archive by key
   python scripts/download_zenodo_data.py --base-url https://sandbox.zenodo.org
@@ -72,7 +73,7 @@ def download_asset(
     base_url: str,
     project_root: Path,
     force: bool,
-) -> None:
+) -> bool:
     filename = asset["filename"]
     expected = asset.get("sha256")
     if not expected:
@@ -81,12 +82,9 @@ def download_asset(
             f"fill in its checksum before downloading."
         )
 
+    # Several archives extract into folders that already hold tracked files, so only
+    # refuse when extracting would overwrite a file that is already there.
     destination = (project_root / asset["destination"]).resolve()
-    if destination.exists() and any(destination.iterdir()) and not force:
-        sys.exit(
-            f"Destination for '{key}' already contains files: {destination}\n"
-            "Use --force only if you intend to merge into it."
-        )
 
     url = f"{base_url.rstrip('/')}/records/{record_id}/files/{filename}?download=1"
     print(f"\n{key}: {url}")
@@ -106,9 +104,16 @@ def download_asset(
         observed = sha256(downloaded_path)
         if observed.lower() != expected.lower():
             sys.exit(f"  Checksum mismatch for {filename}.\n  expected {expected}\n  got      {observed}")
-        print(f"  checksum OK, extracting into {destination}")
         with ZipFile(downloaded_path) as archive:
+            existing = [m.filename for m in archive.infolist()
+                        if not m.is_dir() and (destination / m.filename).exists()]
+            if existing and not force:
+                print(f"  skipped: {len(existing)} of its files are already in {destination}, "
+                      f"e.g. {existing[0]}. Use --force to overwrite them.")
+                return False
+            print(f"  checksum OK, extracting into {destination}")
             safe_extract(archive, destination)
+    return True
 
 
 def load_manifest(argv: List[str]) -> Tuple[Path, Dict[str, object]]:
@@ -157,7 +162,7 @@ def build_parser(groups: Dict[str, List[str]]) -> argparse.ArgumentParser:
         help=f"Zenodo instance. Use https://sandbox.zenodo.org to rehearse. Default: {DEFAULT_BASE_URL}",
     )
     parser.add_argument("--list", action="store_true", help="List groups and assets, then exit.")
-    parser.add_argument("--force", action="store_true", help="Allow extraction into a non-empty destination.")
+    parser.add_argument("--force", action="store_true", help="Overwrite files that are already there.")
     return parser
 
 
@@ -256,17 +261,22 @@ def main() -> None:
         )
 
     selected = resolve_selection(args, manifest)
+    extracted = []
     for key in selected:
-        download_asset(
+        if download_asset(
             key,
             manifest["assets"][key],
             record_id,
             args.base_url,
             args.project_root.resolve(),
             args.force,
-        )
+        ):
+            extracted.append(key)
 
-    print(f"\nDone. Downloaded and verified: {', '.join(selected)}")
+    skipped = [key for key in selected if key not in extracted]
+    print(f"\nDone. Downloaded and verified: {', '.join(extracted) or 'nothing new'}")
+    if skipped:
+        print(f"Already present, left as they were: {', '.join(skipped)}")
 
 
 if __name__ == "__main__":

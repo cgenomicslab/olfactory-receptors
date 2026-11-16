@@ -1,31 +1,17 @@
-"""Build the Zenodo release archives and stage them in release/.
+"""Build the chemical-space Zenodo archives into release/.
 
-Assets are declared here and keyed to zenodo_manifest.json, so packaging and
-downloading read the same names: what `prepare_zenodo_assets.py --chemicals`
-writes is what `download_zenodo_data.py --chemicals` fetches, and the manifest
-is what keeps the two in step.
-
-Each archive keeps the internal prefix its destination expects, so unzipping it
-at the manifest's `destination` recreates the layout the analysis code reads
-from. Changing either the prefix or the destination without the other silently
-breaks every path downstream of it.
-
-Migration note: predictions, the pooled and per-residue embeddings, and the ASR
-node runs are still built by their original scripts
+Each asset is keyed to its entry in zenodo_manifest.json, and each archive keeps the
+internal prefix its manifest destination expects, so unzipping it there recreates the
+layout the code reads. The other archives are built by
 
     Downstream_Analysis/scripts/prepare_zenodo_predictions.py
     Model_Inputs/Embeddings/prepare_zenodo_embeddings.py
     Ancestral_Receptor_Reconstruction/prepare_zenodo_asr.py
 
-and their archives are already in release/. Folding them in here needs the
-mean-pooling step from the embeddings script, which computes rather than copies.
-Until then this script owns chemical_space only.
-
 Usage:
   python scripts/prepare_zenodo_assets.py --list
-  python scripts/prepare_zenodo_assets.py --chemicals
-  python scripts/prepare_zenodo_assets.py --chemicals --dry-run
-  python scripts/prepare_zenodo_assets.py --chemicals --update-manifest
+  python scripts/prepare_zenodo_assets.py --chemicals --version v3 --update-manifest
+  python scripts/prepare_zenodo_assets.py --chemical-embeddings --version v1 --update-manifest
 """
 
 from __future__ import annotations
@@ -57,16 +43,17 @@ ASSET_SPECS: Dict[str, Dict[str, object]] = {
             ("Chemicals/results/embed_index.csv", "results/embed_index.csv"),
             ("Chemicals/results/umap.npy", "results/umap.npy"),
         ],
-        # Ship only while the organism-habitat section is in the manuscript.
         "optional": [
             ("Chemicals/results/aquatic_sources.csv", "results/aquatic_sources.csv"),
             ("Chemicals/results/aquatic_taxa_seen.csv", "results/aquatic_taxa_seen.csv"),
         ],
-        "notes": (
-            "The raw 768-dimensional MolFormer embedding (results/embeddings.npy, 2.1 GB) "
-            "is not included. It is deterministic given the pinned model revision and can "
-            "be regenerated on a GPU by Chemicals/c03_embed.py."
-        ),
+    },
+    "chemical_space_embeddings": {
+        "group": "chemical-embeddings",
+        "summary": "MoLFormer embedding of the chemical universe, rows in embed_index.csv order.",
+        "required": [
+            ("Chemicals/results/embeddings.npy", "results/embeddings.npy"),
+        ],
     },
 }
 

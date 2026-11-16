@@ -1,29 +1,16 @@
-# Environment for the olfactory-receptor analysis.
+# One environment runs everything in the repository except the command-line tree tools
+# (see Phylogenetic_Analysis/README.md).
 #
 #   conda env create -f olfaction-env.yaml
 #   conda activate olfactory-receptors
 #
-# Mamba is much faster and understands the same file:
+# The exact build used for the results is in olfaction-env.lock.txt (linux-64):
 #
-#   mamba env create -f olfaction-env.yaml
+#   conda create -n olfactory-receptors --file olfaction-env.lock.txt
 #
-# This one environment runs everything in the repository: the downstream notebooks,
-# the phylogenetics, and the whole COCONUT chemical-space pipeline. Versions are
-# pinned to the ones the published results were produced with.
-#
-# Two notes before you start.
-#
-# GPU. Only two steps want a GPU -- `Chemicals/02_embed.py` and the
-# `Model_Inputs/Embeddings/extract_embeddings_*` notebooks -- and both are optional, because
-# their outputs are published on Zenodo. The pin below installs whichever PyTorch build
-# conda picks for your machine, which on a machine with no GPU is the CPU build. If you
-# do want the GPU steps, replace the pytorch line with the CUDA build for your driver,
-# from https://pytorch.org -- but keep transformers on 4.x either way (see below).
-#
-# transformers must stay on 4.x. Version 5 silently disables its PyTorch backend when
-# it finds torch < 2.5, printing a warning that is easy to miss and then failing when
-# MolFormer is loaded. MolFormer's `trust_remote_code` implementation targets 4.x in
-# any case. This is the single most common way to get a broken run.
+# Conda installs the CUDA build of PyTorch on a machine with an NVIDIA driver and the CPU
+# build otherwise. Only Chemicals/c03_embed.py and the Model_Inputs/Embeddings/extract_*
+# notebooks need a GPU.
 
 name: olfactory-receptors
 
@@ -31,62 +18,34 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.10
+  - python=3.10.22
 
-  # --- numerics and plotting ---------------------------------------------------
-  - numpy=2.1.*
-  - pandas=2.2.*
-  - scipy=1.15.*
-  - scikit-learn=1.6.*
-  - statsmodels=0.14.*
-  - matplotlib-base=3.10.*
-  - seaborn=0.13.*
-  - plotly=5.24.*
-  - pyarrow>=15,<21          # reads the chemical-space .parquet intermediates
-  - openpyxl=3.1.*           # writes the Supplementary Tables workbook
-                             # (scripts/build_supplementary_tables.py)
+  - numpy=2.1.3
+  - pandas=2.2.3
+  - scipy=1.15.2
+  - scikit-learn=1.6.1
+  - matplotlib-base=3.10.9
+  - seaborn=0.13.2
+  - plotly=5.24.1
+  - pyarrow=20.0.0
+  - openpyxl=3.1.5
 
-  # --- chemistry ---------------------------------------------------------------
-  - rdkit=2026.03.*          # descriptors, SMARTS matching, Murcko scaffolds
-  - thermo=0.6.*             # Joback boiling points in 01. WITHOUT THIS, every
-                             # volatility number silently becomes NaN -- it does not
-                             # raise. Check it with the smoke test below.
+  - rdkit=2026.03.6
+  - thermo=0.6.1               # Joback boiling points
+  - ete4=4.3.0
+  - biopython=1.88
 
-  # --- phylogenetics -----------------------------------------------------------
-  - ete4=4.3.*               # tree traversal for the ancestral notebooks
-  - biopython>=1.80          # FASTA parsing
+  - pytorch=2.12.0
+  - transformers=4.48.3        # MoLFormer's remote code needs transformers 4
+  - umap-learn=0.5.12
+  - pynndescent=0.6.0
+  - numba=0.67.0
 
-  # --- embeddings --------------------------------------------------------------
-  - pytorch>=2.5,<3          # used on CPU by the chemical-space kNN and matching;
-                             # only step 02 and the embedding notebooks want a GPU
-  - transformers=4.48.*      # pinned to 4.x on purpose -- see the note above
-  - umap-learn=0.5.*
-
-  # --- figures and notebooks ---------------------------------------------------
-  - upsetplot=0.9.*
-  - jupyterlab
-  - ipykernel
-  - tqdm
-  - requests
-
+  - jupyterlab=4.6.3
+  - ipykernel=7.3.0
+  - nbconvert-core=7.17.1
+  - nbformat=5.11.1
+  - tqdm=4.70.0
   - pip
-  - pip:
-      # Odour-descriptor datasets (Leffingwell, GoodScents). Only needed to rebuild
-      # Chemicals/processed_data/ from source; the built tables are in the repository.
-      - pyrfume==0.20
 
-      # ESM-C protein embeddings. Only needed to regenerate the protein embeddings
-      # in Model_Inputs/Embeddings/; the published arrays come from Zenodo instead, so most
-      # people should leave this commented out -- it is a large install.
-      # - esm==3.2.1
-
-# --- smoke test ------------------------------------------------------------------
-# After `conda activate olfactory-receptors`, these four should all print cleanly:
-#
-#   python -c "from thermo import Joback; print(Joback('CCO').Tb(Joback('CCO').counts))"
-#   python -c "import rdkit, ete4, Bio; print('chem + phylo ok')"
-#   python -c "import torch, transformers; print(torch.__version__, transformers.__version__)"
-#   python -c "import torch; print('GPU:', torch.cuda.is_available())"
-#
-# The first is the one that matters most: if it errors, `thermo` is missing and the
-# volatility half of the chemical-space analysis will produce NaNs without complaining.
+# The Model_Inputs/Embeddings/extract_* notebooks also need ESM-C:  pip install esm==3.2.1

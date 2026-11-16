@@ -1,0 +1,81 @@
+split,run,model,roc_auc,pr_auc
+random (as in the paper),1,odorant binding rate,0.7940374496659431,0.2563805427171058
+random (as in the paper),1,receptor binding rate,0.7884301478367051,0.36142045786888993
+random (as in the paper),1,odorant + receptor binding rates,0.8638809904243416,0.44591974683652313
+random (as in the paper),1,"ESM C + MoLFormer, gradient boosting",0.9046115315150391,0.5016075063834221
+random (as in the paper),1,"ESM C + Morgan fingerprint, gradient boosting",0.8996834202551343,0.4989732120663713
+random (as in the paper),2,odorant binding rate,0.77759991032562,0.21836877113680633
+random (as in the paper),2,receptor binding rate,0.7952257015262554,0.3686868632170047
+random (as in the paper),2,odorant + receptor binding rates,0.8617568617150755,0.43276504816897987
+random (as in the paper),2,"ESM C + MoLFormer, gradient boosting",0.9064136416487085,0.5174304555372241
+random (as in the paper),2,"ESM C + Morgan fingerprint, gradient boosting",0.8868630349869367,0.49134623773770053
+random (as in the paper),3,odorant binding rate,0.8105665205478363,0.24317199531513423
+random (as in the paper),3,receptor binding rate,0.8015689036842772,0.3634390431529309
+random (as in the paper),3,odorant + receptor binding rates,0.8687242028630802,0.44588193695560785
+random (as in the paper),3,"ESM C + MoLFormer, gradient boosting",0.9244373960735621,0.5499718971509683
+random (as in the paper),3,"ESM C + Morgan fingerprint, gradient boosting",0.9116578020358471,0.5151529995850289
+random (as in the paper),4,odorant binding rate,0.7873967699978179,0.2563081395797965
+random (as in the paper),4,receptor binding rate,0.8133632071060313,0.35745249067409446
+random (as in the paper),4,odorant + receptor binding rates,0.8741099718308365,0.4383795776416355
+random (as in the paper),4,"ESM C + MoLFormer, gradient boosting",0.920839145254587,0.552846043086178
+random (as in the paper),4,"ESM C + Morgan fingerprint, gradient boosting",0.9147934206066684,0.5336203437460983
+random (as in the paper),5,odorant binding rate,0.7764885980219901,0.2216087310066337
+random (as in the paper),5,receptor binding rate,0.8310195088205231,0.3797927796567903
+random (as in the paper),5,odorant + receptor binding rates,0.8791219870038476,0.42037173759479013
+random (as in the paper),5,"ESM C + MoLFormer, gradient boosting",0.9158599620475739,0.5214894701849552
+random (as in the paper),5,"ESM C + Morgan fingerprint, gradient boosting",0.9106970524853798,0.5206934532183722
+random (as in the paper),1,binding model (paper),0.920386,0.500014
+random (as in the paper),2,binding model (paper),0.90365,0.500473
+random (as in the paper),3,binding model (paper),0.912016,0.503707
+random (as in the paper),4,binding model (paper),0.921638,0.495218
+random (as in the paper),5,binding model (paper),0.895865,0.470691
+unseen receptors,1,odorant binding rate,0.7750156138198288,0.21069669740136132
+unseen receptors,1,receptor binding rate,0.5,0.061191276988174025
+unseen receptors,1,odorant + receptor binding rates,0.7750156138198288,0.21069669740136132
+unseen receptors,1,"ESM C + MoLFormer, gradient boosting",0.8455767605708839,0.30624976417148964
+unseen receptors,1,"ESM C + Morgan fingerprint, gradient boosting",0.8255354392728961,0.25765978891246605
+unseen receptors,2,odorant binding rate,0.8142806275131447,0.22688111563656677
+unseen receptors,2,receptor binding rate,0.5,0.04884080370942813
+unseen receptors,2,odorant + receptor binding rates,0.8142806275131447,0.22688111563656677
+unseen receptors,2,"ESM C + MoLFormer, gradient boosting",0.8424993840695473,0.27124997010459506
+unseen receptors,2,"ESM C + Morgan fingerprint, gradient boosting",0.8219886714505836,0.2553280843376803
+unseen receptors,3,odorant binding rate,0.7531661041347331,0.22993366695737041
+unseen receptors,3,receptor binding rate,0.5,0.05807188863494702
+unseen receptors,3,odorant + receptor binding rates,0.7531661041347331,0.22993366695737041
+unseen receptors,3,"ESM C + MoLFormer, gradient boosting",0.778382082264549,0.21377572952061852
+unseen receptors,3,"ESM C + Morgan fingerprint, gradient boosting",0.7758235106451613,0.18746575832096085
+unseen receptors,4,odorant binding rate,0.7740341899270485,0.2062184846468647
+unseen receptors,4,receptor binding rate,0.5,0.05006151225513391
+unseen receptors,4,odorant + receptor binding rates,0.7740341899270485,0.2062184846468647
+unseen receptors,4,"ESM C + MoLFormer, gradient boosting",0.8222279911007357,0.24120624647953112
+unseen receptors,4,"ESM C + Morgan fingerprint, gradient boosting",0.8011018432414293,0.21638759692234177
+unseen receptors,5,odorant binding rate,0.7156879921259842,0.22533698493986032
+unseen receptors,5,receptor binding rate,0.5,0.06874427131072411
+unseen receptors,5,odorant + receptor binding rates,0.7156879921259842,0.22533698493986032
+unseen receptors,5,"ESM C + MoLFormer, gradient boosting",0.7209643700787401,0.2285368337861137
+unseen receptors,5,"ESM C + Morgan fingerprint, gradient boosting",0.7325608267716535,0.22929741242096363
+unseen odorants,1,odorant binding rate,0.5,0.061117693522906795
+unseen odorants,1,receptor binding rate,0.8314759539937593,0.3986158832809807
+unseen odorants,1,odorant + receptor binding rates,0.8314759539937593,0.3986158832809807
+unseen odorants,1,"ESM C + MoLFormer, gradient boosting",0.8454839399660656,0.43497750232363397
+unseen odorants,1,"ESM C + Morgan fingerprint, gradient boosting",0.8131748665620921,0.40044642071266306
+unseen odorants,2,odorant binding rate,0.5,0.06779100529100529
+unseen odorants,2,receptor binding rate,0.7393148120910086,0.3169803968564823
+unseen odorants,2,odorant + receptor binding rates,0.7393148120910086,0.3169803968564823
+unseen odorants,2,"ESM C + MoLFormer, gradient boosting",0.8439677142425912,0.3610094185541771
+unseen odorants,2,"ESM C + Morgan fingerprint, gradient boosting",0.7737663800901933,0.34834492717984944
+unseen odorants,3,odorant binding rate,0.5,0.052842511503636634
+unseen odorants,3,receptor binding rate,0.8869543800151078,0.4917508661494073
+unseen odorants,3,odorant + receptor binding rates,0.8869543800151078,0.4917508661494073
+unseen odorants,3,"ESM C + MoLFormer, gradient boosting",0.906820018700179,0.5905237324591565
+unseen odorants,3,"ESM C + Morgan fingerprint, gradient boosting",0.9141284078963356,0.578864349231735
+unseen odorants,4,odorant binding rate,0.5,0.04933759707629054
+unseen odorants,4,receptor binding rate,0.8563151841173225,0.4277636132622872
+unseen odorants,4,odorant + receptor binding rates,0.8563151841173225,0.4277636132622872
+unseen odorants,4,"ESM C + MoLFormer, gradient boosting",0.8869742444871589,0.4384313458609056
+unseen odorants,4,"ESM C + Morgan fingerprint, gradient boosting",0.8613744616192357,0.38958675541689836
+unseen odorants,5,odorant binding rate,0.5,0.0515527950310559
+unseen odorants,5,receptor binding rate,0.8097993191643121,0.3373582662501007
+unseen odorants,5,odorant + receptor binding rates,0.8097993191643121,0.3373582662501007
+unseen odorants,5,"ESM C + MoLFormer, gradient boosting",0.8161052855824082,0.38638688514189035
+unseen odorants,5,"ESM C + Morgan fingerprint, gradient boosting",0.8197022885656737,0.4358221547553528

@@ -1,0 +1,4 @@
+method,largest_cluster,adjusted_rand_index,clusters_with_descriptor,acid_cluster_is_sour
+average linkage,679,0.001001611860329928,0,False
+complete linkage,687,0.0,0,False
+"Ward linkage, 20 principal coordinates",159,0.3736227121063708,6,True

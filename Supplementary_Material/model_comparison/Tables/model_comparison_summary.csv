@@ -1,0 +1,17 @@
+split,model,roc_auc_mean,roc_auc_sd,pr_auc_mean,pr_auc_sd
+random (as in the paper),"ESM C + MoLFormer, gradient boosting",0.914,0.009,0.529,0.022
+random (as in the paper),"ESM C + Morgan fingerprint, gradient boosting",0.905,0.012,0.512,0.017
+random (as in the paper),binding model (paper),0.911,0.011,0.494,0.013
+random (as in the paper),odorant + receptor binding rates,0.87,0.007,0.437,0.011
+random (as in the paper),odorant binding rate,0.789,0.014,0.239,0.018
+random (as in the paper),receptor binding rate,0.806,0.017,0.366,0.009
+unseen odorants,"ESM C + MoLFormer, gradient boosting",0.86,0.036,0.442,0.089
+unseen odorants,"ESM C + Morgan fingerprint, gradient boosting",0.836,0.053,0.431,0.089
+unseen odorants,odorant + receptor binding rates,0.825,0.056,0.394,0.07
+unseen odorants,odorant binding rate,0.5,0.0,0.057,0.008
+unseen odorants,receptor binding rate,0.825,0.056,0.394,0.07
+unseen receptors,"ESM C + MoLFormer, gradient boosting",0.802,0.053,0.252,0.037
+unseen receptors,"ESM C + Morgan fingerprint, gradient boosting",0.791,0.038,0.229,0.029
+unseen receptors,odorant + receptor binding rates,0.766,0.036,0.22,0.011
+unseen receptors,odorant binding rate,0.766,0.036,0.22,0.011
+unseen receptors,receptor binding rate,0.5,0.0,0.057,0.008

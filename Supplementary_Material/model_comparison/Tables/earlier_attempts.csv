@@ -1,0 +1,5 @@
+model,test_roc_auc,data,split,source
+"PerceiverCPI, 150 epochs (setting 100)",0.8926236380187884,"older M2OR export, 46,563 pairs (M2OR_original_mol_OR_pairs)",one random 80/10/10 split,PerceiverCPI/M2OR_classification_150epochs_100_newprot_pre/test_scores.csv
+"PerceiverCPI, 150 epochs (setting 150)",0.8878060645116888,"older M2OR export, 46,563 pairs (M2OR_original_mol_OR_pairs)",one random 80/10/10 split,PerceiverCPI/M2OR_classification_150epochs_150_newprot_pre/test_scores.csv
+graph network + protein language model embeddings,0.756396403079307,not recorded,not recorded,micro_olf/Output/eval.txt
+"graph network + protein language model embeddings, seed 42",0.5495622291862104,not recorded,not recorded,micro_olf/Output/42_eval.txt

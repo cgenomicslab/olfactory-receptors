@@ -2,7 +2,7 @@
 
 Each organism is labelled aquatic, terrestrial, host (mammals and birds, not counted) or
 unassigned, by walking up its NCBI lineage until it reaches a listed clade.
-share_aquatic = aquatic / (aquatic + terrestrial). Used by Supplementary_Material/aquatic_origin.
+share_aquatic = aquatic / (aquatic + terrestrial).
 
 Needs data/taxa.sqlite (c00) and results/panel_universe_join.csv (c09).
 Outputs in results/: aquatic_sources.csv, aquatic_sources_panel.csv, aquatic_taxa_seen.csv,
@@ -215,7 +215,7 @@ def main():
     table.to_csv(RESULTS / "aquatic_sources.csv", index=False)
 
     # The full table (one row per COCONUT molecule) is on Zenodo, not in Git. This copy holds
-    # only the panel odorants, so Supplementary_Material/aquatic_origin runs on a fresh clone.
+    # only the panel odorants, so it is there on a fresh clone.
     if PANEL_JOIN.exists():
         keys = pd.read_csv(PANEL_JOIN, usecols=["inchikey"]).inchikey.dropna().unique()
         panel = table[table.inchikey.isin(keys)]

@@ -403,3 +403,14 @@ METHODS_DRAFT.md
 /Downstream_Analysis/ancestral_receptors/results/top_odour_tags.csv
 /Downstream_Analysis/ancestral_receptors/results/trajectory_blanked.csv
 /Downstream_Analysis/ancestral_receptors/results/trajectory_without_measurements.csv
+
+# Supplementary_Material: analyses that are not part of the Supplementary Information.
+/Supplementary_Material/model_errors/
+/Supplementary_Material/default_cut_matrix/
+/Supplementary_Material/class_and_cluster_chemistry/
+/Supplementary_Material/biosynthetic_pathway/
+/Supplementary_Material/barcode_perception/
+/Supplementary_Material/aquatic_origin/
+/Supplementary_Material/m2or_acids_and_aromatics/
+/Supplementary_Material/model_benchmark/
+/Supplementary_Material/supplementary_figures.py
