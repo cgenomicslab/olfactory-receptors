@@ -1,0 +1,7 @@
+node_fig,node_id,OR_class,human_ORs,ligands,retained,gained,lost,pct_carboxylic_acid,pct_aromatic_ring
+0,node_1,root (mixed),433,21,,,,0,62
+1,node_2,Class I,62,21,4,17,17,48,33
+2,node_3,Class II,371,8,7,1,14,0,50
+3,node_4,Class I,55,23,12,11,9,83,9
+4,node_5,Class I,7,21,13,8,8,57,24
+5,node_6,Class II,370,27,7,20,1,0,74

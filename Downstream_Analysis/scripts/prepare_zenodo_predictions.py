@@ -213,9 +213,7 @@ def main() -> None:
     args = parse_args()
     project_root = args.project_root.resolve()
     # <project-root>/release, matching prepare_zenodo_embeddings.py so both halves of
-    # the Zenodo record stage into one directory. It is also the only path .gitignore
-    # covers -- an earlier default of Downstream_Analysis/release put a 34 MB ZIP
-    # somewhere Git would have offered to commit.
+    # the Zenodo record stage into one directory, which .gitignore excludes.
     output_dir = (
         args.output_dir.resolve()
         if args.output_dir is not None

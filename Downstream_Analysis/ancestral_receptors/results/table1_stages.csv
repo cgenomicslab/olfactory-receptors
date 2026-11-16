@@ -1,0 +1,4 @@
+stage,n_receptors,nodes,nodes_fig,encoded,single_detector,combinatorial,pct_combinatorial
+S0,1,node_1,0,21,21,0,0.0
+S1,2,"node_2, node_3","1, 2",27,25,2,7.4
+S2,3,"node_4, node_5, node_6","3, 4, 5",53,36,17,32.1

@@ -1,0 +1,9 @@
+duplication,branch,branch_fig,background,group,n_gained,k,pct_gained,pct_background,odds_ratio,P
+dup1,node_1 -> node_2,0 -> 1,full panel (737),carboxylic_acid,17,10,58.8,10.2,12.61,2e-06
+dup1,node_1 -> node_2,0 -> 1,full panel (737),aromatic_ring,17,5,29.4,30.9,0.93,1.0
+dup1,node_1 -> node_2,0 -> 1,ten-node universe (44),carboxylic_acid,17,10,58.8,25.0,4.29,0.018
+dup1,node_1 -> node_2,0 -> 1,ten-node universe (44),aromatic_ring,17,5,29.4,50.0,0.42,0.17
+dup2,node_3 -> node_6,2 -> 5,full panel (734),carboxylic_acid,20,0,0.0,11.6,0.0,0.15
+dup2,node_3 -> node_6,2 -> 5,full panel (734),aromatic_ring,20,16,80.0,29.6,9.53,6.4e-06
+dup2,node_3 -> node_6,2 -> 5,ten-node universe (41),carboxylic_acid,20,0,0.0,51.2,0.0,2.8e-05
+dup2,node_3 -> node_6,2 -> 5,ten-node universe (41),aromatic_ring,20,16,80.0,26.8,10.91,0.00011
