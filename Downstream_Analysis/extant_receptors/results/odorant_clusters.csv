@@ -1,0 +1,688 @@
+smiles_id,cluster,cluster_tag,theme,color,display_rank
+SML0000,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0001,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0002,5,C5,Fermented / Solvent,#24877f,4
+SML0003,5,C5,Fermented / Solvent,#24877f,4
+SML0004,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0005,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0007,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0008,5,C5,Fermented / Solvent,#24877f,4
+SML0009,5,C5,Fermented / Solvent,#24877f,4
+SML0010,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0011,5,C5,Fermented / Solvent,#24877f,4
+SML0012,0,C3,Floral / Balsamic,#e7cf94,2
+SML0013,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0014,0,C3,Floral / Balsamic,#e7cf94,2
+SML0015,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0016,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0017,0,C3,Floral / Balsamic,#e7cf94,2
+SML0018,0,C3,Floral / Balsamic,#e7cf94,2
+SML0019,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0020,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0021,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0022,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0023,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0024,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0025,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0026,0,C3,Floral / Balsamic,#e7cf94,2
+SML0027,0,C3,Floral / Balsamic,#e7cf94,2
+SML0028,5,C5,Fermented / Solvent,#24877f,4
+SML0029,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0030,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0031,0,C3,Floral / Balsamic,#e7cf94,2
+SML0032,3,C6,Smoky,#003c30,5
+SML0033,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0034,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0035,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0036,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0037,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0038,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0039,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0040,5,C5,Fermented / Solvent,#24877f,4
+SML0041,3,C6,Smoky,#003c30,5
+SML0042,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0043,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0044,3,C6,Smoky,#003c30,5
+SML0045,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0046,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0047,3,C6,Smoky,#003c30,5
+SML0048,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0049,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0050,0,C3,Floral / Balsamic,#e7cf94,2
+SML0051,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0052,0,C3,Floral / Balsamic,#e7cf94,2
+SML0053,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0055,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0056,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0057,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0058,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0059,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0060,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0061,0,C3,Floral / Balsamic,#e7cf94,2
+SML0062,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0063,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0064,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0065,3,C6,Smoky,#003c30,5
+SML0066,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0068,5,C5,Fermented / Solvent,#24877f,4
+SML0069,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0070,3,C6,Smoky,#003c30,5
+SML0071,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0072,5,C5,Fermented / Solvent,#24877f,4
+SML0073,0,C3,Floral / Balsamic,#e7cf94,2
+SML0074,0,C3,Floral / Balsamic,#e7cf94,2
+SML0075,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0076,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0077,0,C3,Floral / Balsamic,#e7cf94,2
+SML0078,5,C5,Fermented / Solvent,#24877f,4
+SML0079,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0080,0,C3,Floral / Balsamic,#e7cf94,2
+SML0081,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0082,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0083,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0084,5,C5,Fermented / Solvent,#24877f,4
+SML0085,3,C6,Smoky,#003c30,5
+SML0086,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0087,3,C6,Smoky,#003c30,5
+SML0088,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0089,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0090,0,C3,Floral / Balsamic,#e7cf94,2
+SML0091,5,C5,Fermented / Solvent,#24877f,4
+SML0092,5,C5,Fermented / Solvent,#24877f,4
+SML0093,5,C5,Fermented / Solvent,#24877f,4
+SML0094,0,C3,Floral / Balsamic,#e7cf94,2
+SML0095,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0096,5,C5,Fermented / Solvent,#24877f,4
+SML0097,5,C5,Fermented / Solvent,#24877f,4
+SML0098,5,C5,Fermented / Solvent,#24877f,4
+SML0099,0,C3,Floral / Balsamic,#e7cf94,2
+SML0100,0,C3,Floral / Balsamic,#e7cf94,2
+SML0101,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0102,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0103,0,C3,Floral / Balsamic,#e7cf94,2
+SML0104,3,C6,Smoky,#003c30,5
+SML0105,3,C6,Smoky,#003c30,5
+SML0106,5,C5,Fermented / Solvent,#24877f,4
+SML0107,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0108,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0109,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0110,0,C3,Floral / Balsamic,#e7cf94,2
+SML0111,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0112,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0113,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0114,0,C3,Floral / Balsamic,#e7cf94,2
+SML0115,5,C5,Fermented / Solvent,#24877f,4
+SML0116,5,C5,Fermented / Solvent,#24877f,4
+SML0117,0,C3,Floral / Balsamic,#e7cf94,2
+SML0118,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0119,0,C3,Floral / Balsamic,#e7cf94,2
+SML0120,0,C3,Floral / Balsamic,#e7cf94,2
+SML0121,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0122,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0123,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0124,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0125,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0126,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0127,3,C6,Smoky,#003c30,5
+SML0128,0,C3,Floral / Balsamic,#e7cf94,2
+SML0130,5,C5,Fermented / Solvent,#24877f,4
+SML0131,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0132,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0133,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0134,3,C6,Smoky,#003c30,5
+SML0135,0,C3,Floral / Balsamic,#e7cf94,2
+SML0136,0,C3,Floral / Balsamic,#e7cf94,2
+SML0137,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0138,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0139,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0140,3,C6,Smoky,#003c30,5
+SML0141,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0142,0,C3,Floral / Balsamic,#e7cf94,2
+SML0143,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0145,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0146,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0147,0,C3,Floral / Balsamic,#e7cf94,2
+SML0148,0,C3,Floral / Balsamic,#e7cf94,2
+SML0149,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0150,0,C3,Floral / Balsamic,#e7cf94,2
+SML0151,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0152,0,C3,Floral / Balsamic,#e7cf94,2
+SML0153,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0156,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0157,5,C5,Fermented / Solvent,#24877f,4
+SML0158,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0159,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0160,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0161,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0162,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0164,0,C3,Floral / Balsamic,#e7cf94,2
+SML0165,5,C5,Fermented / Solvent,#24877f,4
+SML0166,5,C5,Fermented / Solvent,#24877f,4
+SML0168,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0169,0,C3,Floral / Balsamic,#e7cf94,2
+SML0170,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0171,3,C6,Smoky,#003c30,5
+SML0172,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0173,5,C5,Fermented / Solvent,#24877f,4
+SML0174,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0177,0,C3,Floral / Balsamic,#e7cf94,2
+SML0178,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0179,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0180,0,C3,Floral / Balsamic,#e7cf94,2
+SML0181,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0182,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0183,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0184,0,C3,Floral / Balsamic,#e7cf94,2
+SML0186,0,C3,Floral / Balsamic,#e7cf94,2
+SML0187,0,C3,Floral / Balsamic,#e7cf94,2
+SML0188,0,C3,Floral / Balsamic,#e7cf94,2
+SML0189,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0190,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0191,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0192,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0193,0,C3,Floral / Balsamic,#e7cf94,2
+SML0195,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0196,3,C6,Smoky,#003c30,5
+SML0197,5,C5,Fermented / Solvent,#24877f,4
+SML0198,3,C6,Smoky,#003c30,5
+SML0200,3,C6,Smoky,#003c30,5
+SML0201,5,C5,Fermented / Solvent,#24877f,4
+SML0202,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0203,0,C3,Floral / Balsamic,#e7cf94,2
+SML0204,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0205,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0206,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0207,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0208,0,C3,Floral / Balsamic,#e7cf94,2
+SML0209,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0210,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0211,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0212,0,C3,Floral / Balsamic,#e7cf94,2
+SML0213,5,C5,Fermented / Solvent,#24877f,4
+SML0214,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0215,0,C3,Floral / Balsamic,#e7cf94,2
+SML0217,5,C5,Fermented / Solvent,#24877f,4
+SML0218,3,C6,Smoky,#003c30,5
+SML0219,0,C3,Floral / Balsamic,#e7cf94,2
+SML0220,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0221,0,C3,Floral / Balsamic,#e7cf94,2
+SML0222,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0223,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0224,5,C5,Fermented / Solvent,#24877f,4
+SML0225,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0226,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0227,0,C3,Floral / Balsamic,#e7cf94,2
+SML0228,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0229,3,C6,Smoky,#003c30,5
+SML0230,5,C5,Fermented / Solvent,#24877f,4
+SML0232,5,C5,Fermented / Solvent,#24877f,4
+SML0233,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0234,3,C6,Smoky,#003c30,5
+SML0235,3,C6,Smoky,#003c30,5
+SML0236,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0237,3,C6,Smoky,#003c30,5
+SML0239,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0240,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0241,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0242,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0243,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0244,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0245,3,C6,Smoky,#003c30,5
+SML0246,0,C3,Floral / Balsamic,#e7cf94,2
+SML0247,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0248,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0249,3,C6,Smoky,#003c30,5
+SML0250,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0251,5,C5,Fermented / Solvent,#24877f,4
+SML0252,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0253,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0254,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0255,3,C6,Smoky,#003c30,5
+SML0256,3,C6,Smoky,#003c30,5
+SML0257,3,C6,Smoky,#003c30,5
+SML0258,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0259,5,C5,Fermented / Solvent,#24877f,4
+SML0260,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0261,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0262,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0263,0,C3,Floral / Balsamic,#e7cf94,2
+SML0264,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0266,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0268,3,C6,Smoky,#003c30,5
+SML0269,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0270,0,C3,Floral / Balsamic,#e7cf94,2
+SML0271,3,C6,Smoky,#003c30,5
+SML0276,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0277,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0278,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0279,0,C3,Floral / Balsamic,#e7cf94,2
+SML0280,3,C6,Smoky,#003c30,5
+SML0281,3,C6,Smoky,#003c30,5
+SML0282,3,C6,Smoky,#003c30,5
+SML0283,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0284,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0288,3,C6,Smoky,#003c30,5
+SML0289,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0290,5,C5,Fermented / Solvent,#24877f,4
+SML0291,5,C5,Fermented / Solvent,#24877f,4
+SML0292,0,C3,Floral / Balsamic,#e7cf94,2
+SML0293,3,C6,Smoky,#003c30,5
+SML0294,3,C6,Smoky,#003c30,5
+SML0295,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0296,3,C6,Smoky,#003c30,5
+SML0297,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0298,5,C5,Fermented / Solvent,#24877f,4
+SML0299,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0300,3,C6,Smoky,#003c30,5
+SML0301,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0302,0,C3,Floral / Balsamic,#e7cf94,2
+SML0303,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0304,3,C6,Smoky,#003c30,5
+SML0306,0,C3,Floral / Balsamic,#e7cf94,2
+SML0307,0,C3,Floral / Balsamic,#e7cf94,2
+SML0308,3,C6,Smoky,#003c30,5
+SML0310,5,C5,Fermented / Solvent,#24877f,4
+SML0312,5,C5,Fermented / Solvent,#24877f,4
+SML0313,5,C5,Fermented / Solvent,#24877f,4
+SML0314,3,C6,Smoky,#003c30,5
+SML0317,5,C5,Fermented / Solvent,#24877f,4
+SML0318,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0319,5,C5,Fermented / Solvent,#24877f,4
+SML0320,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0321,3,C6,Smoky,#003c30,5
+SML0322,0,C3,Floral / Balsamic,#e7cf94,2
+SML0323,3,C6,Smoky,#003c30,5
+SML0324,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0325,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0326,3,C6,Smoky,#003c30,5
+SML0327,0,C3,Floral / Balsamic,#e7cf94,2
+SML0328,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0329,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0330,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0331,5,C5,Fermented / Solvent,#24877f,4
+SML0333,3,C6,Smoky,#003c30,5
+SML0334,5,C5,Fermented / Solvent,#24877f,4
+SML0335,3,C6,Smoky,#003c30,5
+SML0336,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0337,3,C6,Smoky,#003c30,5
+SML0339,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0340,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0341,0,C3,Floral / Balsamic,#e7cf94,2
+SML0342,0,C3,Floral / Balsamic,#e7cf94,2
+SML0343,3,C6,Smoky,#003c30,5
+SML0344,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0345,3,C6,Smoky,#003c30,5
+SML0346,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0347,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0348,0,C3,Floral / Balsamic,#e7cf94,2
+SML0349,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0350,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0351,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0352,5,C5,Fermented / Solvent,#24877f,4
+SML0353,5,C5,Fermented / Solvent,#24877f,4
+SML0355,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0356,5,C5,Fermented / Solvent,#24877f,4
+SML0357,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0358,5,C5,Fermented / Solvent,#24877f,4
+SML0360,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0362,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0363,0,C3,Floral / Balsamic,#e7cf94,2
+SML0364,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0365,5,C5,Fermented / Solvent,#24877f,4
+SML0366,0,C3,Floral / Balsamic,#e7cf94,2
+SML0367,3,C6,Smoky,#003c30,5
+SML0373,3,C6,Smoky,#003c30,5
+SML0374,3,C6,Smoky,#003c30,5
+SML0375,5,C5,Fermented / Solvent,#24877f,4
+SML0376,3,C6,Smoky,#003c30,5
+SML0380,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0381,0,C3,Floral / Balsamic,#e7cf94,2
+SML0382,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0383,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0384,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0385,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0386,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0387,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0388,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0389,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0390,0,C3,Floral / Balsamic,#e7cf94,2
+SML0391,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0392,0,C3,Floral / Balsamic,#e7cf94,2
+SML0393,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0394,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0395,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0396,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0397,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0398,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0399,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0400,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0401,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0402,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0403,0,C3,Floral / Balsamic,#e7cf94,2
+SML0404,0,C3,Floral / Balsamic,#e7cf94,2
+SML0405,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0406,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0407,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0411,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0412,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0413,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0414,3,C6,Smoky,#003c30,5
+SML0415,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0416,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0417,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0418,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0419,0,C3,Floral / Balsamic,#e7cf94,2
+SML0420,3,C6,Smoky,#003c30,5
+SML0421,3,C6,Smoky,#003c30,5
+SML0422,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0423,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0424,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0425,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0426,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0427,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0428,0,C3,Floral / Balsamic,#e7cf94,2
+SML0429,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0430,3,C6,Smoky,#003c30,5
+SML0431,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0432,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0433,3,C6,Smoky,#003c30,5
+SML0434,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0435,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0436,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0437,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0438,0,C3,Floral / Balsamic,#e7cf94,2
+SML0439,0,C3,Floral / Balsamic,#e7cf94,2
+SML0440,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0441,0,C3,Floral / Balsamic,#e7cf94,2
+SML0442,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0443,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0444,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0445,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0446,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0447,3,C6,Smoky,#003c30,5
+SML0448,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0449,0,C3,Floral / Balsamic,#e7cf94,2
+SML0450,3,C6,Smoky,#003c30,5
+SML0453,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0454,5,C5,Fermented / Solvent,#24877f,4
+SML0455,3,C6,Smoky,#003c30,5
+SML0456,3,C6,Smoky,#003c30,5
+SML0457,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0459,3,C6,Smoky,#003c30,5
+SML0460,3,C6,Smoky,#003c30,5
+SML0461,5,C5,Fermented / Solvent,#24877f,4
+SML0462,5,C5,Fermented / Solvent,#24877f,4
+SML0463,3,C6,Smoky,#003c30,5
+SML0464,5,C5,Fermented / Solvent,#24877f,4
+SML0465,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0466,3,C6,Smoky,#003c30,5
+SML0467,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0468,5,C5,Fermented / Solvent,#24877f,4
+SML0469,3,C6,Smoky,#003c30,5
+SML0470,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0471,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0472,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0473,3,C6,Smoky,#003c30,5
+SML0474,0,C3,Floral / Balsamic,#e7cf94,2
+SML0475,3,C6,Smoky,#003c30,5
+SML0476,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0477,0,C3,Floral / Balsamic,#e7cf94,2
+SML0478,0,C3,Floral / Balsamic,#e7cf94,2
+SML0479,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0480,5,C5,Fermented / Solvent,#24877f,4
+SML0481,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0482,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0483,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0484,5,C5,Fermented / Solvent,#24877f,4
+SML0485,5,C5,Fermented / Solvent,#24877f,4
+SML0486,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0487,0,C3,Floral / Balsamic,#e7cf94,2
+SML0488,5,C5,Fermented / Solvent,#24877f,4
+SML0490,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0491,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0492,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0493,3,C6,Smoky,#003c30,5
+SML0494,3,C6,Smoky,#003c30,5
+SML0495,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0496,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0497,3,C6,Smoky,#003c30,5
+SML0498,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0499,3,C6,Smoky,#003c30,5
+SML0500,0,C3,Floral / Balsamic,#e7cf94,2
+SML0501,3,C6,Smoky,#003c30,5
+SML0502,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0503,5,C5,Fermented / Solvent,#24877f,4
+SML0504,0,C3,Floral / Balsamic,#e7cf94,2
+SML0505,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0506,3,C6,Smoky,#003c30,5
+SML0507,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0508,3,C6,Smoky,#003c30,5
+SML0509,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0512,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0513,0,C3,Floral / Balsamic,#e7cf94,2
+SML0514,3,C6,Smoky,#003c30,5
+SML0515,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0517,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0518,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0520,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0521,5,C5,Fermented / Solvent,#24877f,4
+SML0522,3,C6,Smoky,#003c30,5
+SML0524,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0525,5,C5,Fermented / Solvent,#24877f,4
+SML0526,3,C6,Smoky,#003c30,5
+SML0527,5,C5,Fermented / Solvent,#24877f,4
+SML0528,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0531,3,C6,Smoky,#003c30,5
+SML0532,3,C6,Smoky,#003c30,5
+SML0533,3,C6,Smoky,#003c30,5
+SML0534,3,C6,Smoky,#003c30,5
+SML0535,3,C6,Smoky,#003c30,5
+SML0536,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0537,0,C3,Floral / Balsamic,#e7cf94,2
+SML0538,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0540,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0541,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0542,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0543,3,C6,Smoky,#003c30,5
+SML0545,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0546,3,C6,Smoky,#003c30,5
+SML0547,3,C6,Smoky,#003c30,5
+SML0548,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0549,3,C6,Smoky,#003c30,5
+SML0550,3,C6,Smoky,#003c30,5
+SML0551,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0553,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0554,3,C6,Smoky,#003c30,5
+SML0555,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0556,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0557,0,C3,Floral / Balsamic,#e7cf94,2
+SML0558,3,C6,Smoky,#003c30,5
+SML0559,0,C3,Floral / Balsamic,#e7cf94,2
+SML0560,0,C3,Floral / Balsamic,#e7cf94,2
+SML0561,0,C3,Floral / Balsamic,#e7cf94,2
+SML0562,3,C6,Smoky,#003c30,5
+SML0563,0,C3,Floral / Balsamic,#e7cf94,2
+SML0564,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0565,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0566,5,C5,Fermented / Solvent,#24877f,4
+SML0567,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0568,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0569,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0570,0,C3,Floral / Balsamic,#e7cf94,2
+SML0571,0,C3,Floral / Balsamic,#e7cf94,2
+SML0572,3,C6,Smoky,#003c30,5
+SML0573,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0574,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0575,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0576,0,C3,Floral / Balsamic,#e7cf94,2
+SML0577,0,C3,Floral / Balsamic,#e7cf94,2
+SML0578,0,C3,Floral / Balsamic,#e7cf94,2
+SML0579,0,C3,Floral / Balsamic,#e7cf94,2
+SML0580,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0581,5,C5,Fermented / Solvent,#24877f,4
+SML0582,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0583,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0584,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0585,3,C6,Smoky,#003c30,5
+SML0586,0,C3,Floral / Balsamic,#e7cf94,2
+SML0587,3,C6,Smoky,#003c30,5
+SML0588,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0589,3,C6,Smoky,#003c30,5
+SML0590,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0591,0,C3,Floral / Balsamic,#e7cf94,2
+SML0592,0,C3,Floral / Balsamic,#e7cf94,2
+SML0593,3,C6,Smoky,#003c30,5
+SML0594,5,C5,Fermented / Solvent,#24877f,4
+SML0595,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0596,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0597,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0598,0,C3,Floral / Balsamic,#e7cf94,2
+SML0599,0,C3,Floral / Balsamic,#e7cf94,2
+SML0600,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0601,0,C3,Floral / Balsamic,#e7cf94,2
+SML0602,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0603,0,C3,Floral / Balsamic,#e7cf94,2
+SML0604,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0605,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0606,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0607,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0608,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0609,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0610,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0611,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0612,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0613,0,C3,Floral / Balsamic,#e7cf94,2
+SML0614,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0615,3,C6,Smoky,#003c30,5
+SML0616,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0617,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0618,3,C6,Smoky,#003c30,5
+SML0619,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0620,0,C3,Floral / Balsamic,#e7cf94,2
+SML0621,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0622,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0623,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0624,0,C3,Floral / Balsamic,#e7cf94,2
+SML0625,0,C3,Floral / Balsamic,#e7cf94,2
+SML0626,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0627,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0628,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0629,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0631,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0632,3,C6,Smoky,#003c30,5
+SML0633,5,C5,Fermented / Solvent,#24877f,4
+SML0634,3,C6,Smoky,#003c30,5
+SML0635,0,C3,Floral / Balsamic,#e7cf94,2
+SML0636,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0637,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0638,3,C6,Smoky,#003c30,5
+SML0639,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0640,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0641,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0643,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0644,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0647,3,C6,Smoky,#003c30,5
+SML0648,3,C6,Smoky,#003c30,5
+SML0649,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0651,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0652,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0653,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0654,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0655,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0656,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0657,0,C3,Floral / Balsamic,#e7cf94,2
+SML0658,0,C3,Floral / Balsamic,#e7cf94,2
+SML0659,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0660,0,C3,Floral / Balsamic,#e7cf94,2
+SML0661,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0662,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0663,0,C3,Floral / Balsamic,#e7cf94,2
+SML0664,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0665,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0666,0,C3,Floral / Balsamic,#e7cf94,2
+SML0667,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0668,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0669,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0670,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0671,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0672,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0673,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0674,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0675,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0676,0,C3,Floral / Balsamic,#e7cf94,2
+SML0677,0,C3,Floral / Balsamic,#e7cf94,2
+SML0678,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0679,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0680,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0681,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0682,0,C3,Floral / Balsamic,#e7cf94,2
+SML0683,0,C3,Floral / Balsamic,#e7cf94,2
+SML0684,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0685,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0686,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0687,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0688,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0689,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0690,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0691,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0692,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0693,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0694,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0695,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0696,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0697,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0698,0,C3,Floral / Balsamic,#e7cf94,2
+SML0699,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0700,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0701,0,C3,Floral / Balsamic,#e7cf94,2
+SML0702,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0703,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0704,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0705,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0706,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0707,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0708,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0709,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0710,0,C3,Floral / Balsamic,#e7cf94,2
+SML0711,0,C3,Floral / Balsamic,#e7cf94,2
+SML0712,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0713,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0714,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0715,3,C6,Smoky,#003c30,5
+SML0716,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0717,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0718,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0719,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0720,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0721,0,C3,Floral / Balsamic,#e7cf94,2
+SML0722,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0723,3,C6,Smoky,#003c30,5
+SML0724,3,C6,Smoky,#003c30,5
+SML0725,3,C6,Smoky,#003c30,5
+SML0726,0,C3,Floral / Balsamic,#e7cf94,2
+SML0727,0,C3,Floral / Balsamic,#e7cf94,2
+SML0728,0,C3,Floral / Balsamic,#e7cf94,2
+SML0729,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0730,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0731,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0732,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0733,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0734,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0735,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0736,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0737,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0738,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0739,0,C3,Floral / Balsamic,#e7cf94,2
+SML0740,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0741,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0742,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0744,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0745,5,C5,Fermented / Solvent,#24877f,4
+SML0746,0,C3,Floral / Balsamic,#e7cf94,2
+SML0747,0,C3,Floral / Balsamic,#e7cf94,2
+SML0748,2,C1,Acid / Dairy / Cheese,#543005,0
+SML0749,1,C4,Fruity / Fatty / Aldehydic,#98d7cd,3
+SML0750,4,C2,Roasted / Phenolic / Spice,#ae7121,1
+SML0768,0,C3,Floral / Balsamic,#e7cf94,2
+SML0769,3,C6,Smoky,#003c30,5
+SML0770,0,C3,Floral / Balsamic,#e7cf94,2

@@ -1,0 +1,7 @@
+cluster,subject,n,top descriptors,enriched functional groups,MW,cLogP,TPSA,Fsp3
+C1,Acid / Dairy / Cheese,70,"acidic (13.2, q = 6e-06); sour (11.6, q = 7e-11); cheesy (5.0, q = 2e-05)","carboxylic acid, 63 vs 4% (q = 2e-32)",159,1.8,37,0.8
+C2,Roasted / Phenolic / Spice,100,"hazelnut (4.0, q = 0.03); warm (3.9, q = 0.02); anisic (3.9, q = 0.02)","aromatic ring, 78 vs 25% (q = 7e-23); ether, 34 vs 11% (q = 1e-06)",150,1.9,26,0.29
+C3,Floral / Balsamic,127,"floral (1.7, q = 0.0008)","aromatic ring, 53 vs 28% (q = 2e-06)",170,2.6,20,0.5
+C4,Fruity / Fatty / Aldehydic,214,"cucumber (2.6, q = 0.01); coconut (2.4, q = 0.0005); melon (2.3, q = 0.01)","alcohol, 22 vs 13% (q = 0.007); ester, 30 vs 19% (q = 0.009)",168,3.0,20,0.83
+C5,Fermented / Solvent,68,"solvent (6.4, q = 0.003); alcoholic (5.3, q = 0.03); ethereal (4.5, q = 0.0001)","sulfur, 19 vs 6% (q = 0.003)",130,1.7,20,0.86
+C6,Smoky,108,"smoky (4.0, q = 0.003); medicinal (2.9, q = 0.03); phenolic (2.4, q = 0.02)",none,138,2.0,20,0.59

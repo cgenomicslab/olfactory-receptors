@@ -18,9 +18,8 @@
 # Outputs:
 # For each category, the script exports:
 # - median probability wide matrix
-# Binary calls are deliberately not written here. Apply the analysis-specific
-# threshold in the relevant notebook; figure2_activation_code (section 1) derives the
-# calibrated value (0.915) from the measured pairs.
+# Binary calls are not written here. The notebooks make them with the density fill
+# of calibration.py.
 
 # Usage examples:
 # python Downstream_Analysis/scripts/aggregate_prediction_runs.py --dry-run

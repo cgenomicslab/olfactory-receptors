@@ -1,10 +1,7 @@
-"""The human receptor activation code: the numbers behind Figure 2 and its supplementary notebooks.
+"""The numbers behind Fig. 2, Table 1 and Extended Data Figs. 2-4.
 
-Everything here returns arrays and tables. The figures are drawn by `activation_figures.py`,
-so a notebook reads as: load, compute, draw.
-
-Used by `notebooks/reference_tree/figure2_activation_code.ipynb` and the notebooks in
-`notebooks/reference_tree/supplementary/`.
+Everything here returns arrays and tables; `extant_receptors/e01`-`e05` call it and
+write the tables, and `activation_figures.py` draws them.
 """
 
 import re
@@ -19,7 +16,7 @@ from Bio import SeqIO
 from rdkit import Chem
 from rdkit.Chem import Crippen, Descriptors, Lipinski, rdMolDescriptors
 from scipy.spatial.distance import pdist, squareform
-from scipy.stats import chi2_contingency, hypergeom
+from scipy.stats import chi2_contingency, fisher_exact, hypergeom, mannwhitneyu
 
 from calibration import FillResult, density_fill, fit_calibration_map
 
@@ -27,6 +24,9 @@ from calibration import FillResult, density_fill, fit_calibration_map
 REPO = Path(__file__).resolve().parents[2]
 sys.path.append(str(REPO / "Chemicals"))
 from chemspace import boiling_point, log_vapour_pressure  # noqa: E402
+
+sys.path.append(str(REPO / "scripts"))
+import functional_groups as fg  # noqa: E402
 
 HUMAN_PREFIX = "9606"
 N_CLUSTERS = 6
@@ -459,8 +459,10 @@ def significant_enrichment(enrichment):
 def name_clusters(enrichment, labels, k=N_CLUSTERS):
     """Give every cluster a theme name and a distinct colour from its enriched descriptors.
 
-    Themes are handed out greedily, strongest enrichment first, so no two clusters share a
-    colour. A cluster that matches no theme is named after its top descriptor.
+    A cluster takes the theme that most of its enriched descriptors belong to. Themes are handed
+    out greedily, the cluster with the most descriptors of a theme first and the strongest
+    enrichment first among equals, so no two clusters share a colour. A cluster left without a
+    theme is named after its top descriptor.
 
     Returns
     -------
@@ -476,11 +478,11 @@ def name_clusters(enrichment, labels, k=N_CLUSTERS):
         for theme_index, (keys, _, _) in enumerate(THEME_RULES):
             hits = cluster_rows[cluster_rows.tag.isin(keys)]
             if len(hits):
-                score[(c, theme_index)] = float(hits.obs_exp.max())
+                score[(c, theme_index)] = (len(hits), float(hits.obs_exp.max()))
 
     info = {c: None for c in range(k)}
     used_colours = set()
-    for (c, theme_index), _ in sorted(score.items(), key=lambda item: -item[1]):
+    for (c, theme_index), _ in sorted(score.items(), key=lambda item: item[1], reverse=True):
         _, name, colour = THEME_RULES[theme_index]
         if info[c] is None and colour not in used_colours:
             info[c] = dict(name=name, color=colour, size=int((labels == c).sum()))
@@ -504,19 +506,11 @@ def name_clusters(enrichment, labels, k=N_CLUSTERS):
 # Chemistry
 # ---------------------------------------------------------------------------------------------
 
-# 'aromatic ring' is [a], any aromatic atom, so pyrazines, furans, pyridines and thiophenes
-# count. The benzene-only pattern it replaced missed 50 of the 233 aromatic odorants.
-FUNCTIONAL_GROUPS = {
-    "carboxylic acid": "[CX3](=O)[OX2H1]",
-    "ester": "[CX3](=O)[OX2H0][#6]",
-    "aldehyde": "[CX3H1](=O)[#6]",
-    "ketone": "[#6][CX3](=O)[#6]",
-    "alcohol": "[#6;!$([CX3]=O)][OX2H1]",
-    "ether": "[OD2]([#6])[#6]",
-    "aromatic ring": "[a]",
-    "amine": "[NX3;!$([NX3][CX3]=[OX1])]",
-    "sulfur": "[#16]",
-}
+# The repository-wide panel (scripts/functional_groups.py), restricted to the groups compared
+# between receptor classes and clusters.
+ACTIVATION_GROUPS = ["carboxylic_acid", "ester", "aldehyde", "ketone", "alcohol", "ether",
+                     "aromatic_ring", "amine", "sulfur"]
+FUNCTIONAL_GROUPS = {fg.label(name): fg.FUNCTIONAL_GROUPS[name] for name in ACTIVATION_GROUPS}
 FUNCTIONAL_GROUP_PATTERNS = {name: Chem.MolFromSmarts(smarts) for name, smarts in FUNCTIONAL_GROUPS.items()}
 
 # The cluster descriptor panel, labelled property first so a figure reads without a glossary.
@@ -568,6 +562,12 @@ def odorant_descriptors(odorant_ids, smiles_by_odorant, labels=None):
 
 
 CLASS_SETS = ["Class I only", "shared", "Class II only"]
+
+# Descriptors compared between the two exclusive class sets (Fig. 2c inset).
+CLASS_DESCRIPTORS = [("MolWt", "MW (Da)"), ("LogP", "hydrophobicity (cLogP)"), ("TPSA", "polar surface (TPSA)"),
+                     ("HBD", "H-bond donors"), ("HBA", "H-bond acceptors"), ("AromaticRings", "aromatic rings"),
+                     ("RotBonds", "rotatable bonds"), ("RingCount", "ring count"),
+                     ("FracCSP3", "fraction sp$^3$"), ("Heteroatoms", "heteroatoms")]
 
 
 def class_partition(matrix, receptor_ids, class_of, rate=None):
@@ -637,29 +637,24 @@ def class_set_descriptors(odorant_ids, smiles_by_odorant, groups, rate_I, rate_I
     return pd.DataFrame(records)
 
 
-def receptors_reading(matrix, is_class_I, odorant_mask):
-    """How many Class I and Class II receptors bind at least one odorant of the set."""
-    subset = matrix[:, odorant_mask]
-    return int((subset[is_class_I].sum(1) > 0).sum()), int((subset[~is_class_I].sum(1) > 0).sum())
-
-
-def tag_percentages(members_I, members_II, odorant_ids, tags_by_odorant, min_pct=8.0, test=False):
+def tag_percentages(members_I, members_II, odorant_ids, tags_by_odorant, min_pct=8.0, test=False,
+                    min_carriers=5):
     """Share of each set's tagged odorants carrying each odour descriptor.
 
-    Percentages are over the odorants of the set that carry any descriptor. A descriptor is
-    shown if it reaches `min_pct` in either set. With `test=True` each shown descriptor gets a
-    Fisher test and Benjamini-Hochberg q over the shown ones; that needs two disjoint sets.
+    Percentages are over the odorants of the set that carry any descriptor. Without a test, a
+    descriptor is shown if it reaches `min_pct` in either set. With `test=True` (two disjoint
+    sets) the descriptors tested are those carried by at least `min_carriers` tagged odorants of
+    the two sets combined, a filter that does not depend on the set labels; each gets a Fisher
+    test, with Benjamini-Hochberg q over the tested descriptors.
 
     Returns
     -------
     table : DataFrame
         Every descriptor, sorted by the gap between the two sets.
     shown : DataFrame
-        The descriptors above `min_pct`, in the same order.
+        The descriptors shown or tested, in the same order.
     n_tagged_I, n_tagged_II : int
     """
-    from scipy.stats import fisher_exact
-
     odorant_ids = np.array(odorant_ids)
     tagged_I = [odorant for odorant in odorant_ids[members_I] if odorant in tags_by_odorant]
     tagged_II = [odorant for odorant in odorant_ids[members_II] if odorant in tags_by_odorant]
@@ -675,7 +670,10 @@ def tag_percentages(members_I, members_II, odorant_ids, tags_by_odorant, min_pct
         rows.append(dict(tag=tag, n_I=counts_I[tag], n_II=counts_II[tag], pct_I=pct_I,
                          pct_II=pct_II, gap=pct_I - pct_II))
     table = pd.DataFrame(rows).sort_values("gap", ascending=False, kind="stable").reset_index(drop=True)
-    shown = table[(table.pct_I >= min_pct) | (table.pct_II >= min_pct)].reset_index(drop=True)
+    if test:
+        shown = table[(table.n_I + table.n_II) >= min_carriers].reset_index(drop=True)
+    else:
+        shown = table[(table.pct_I >= min_pct) | (table.pct_II >= min_pct)].reset_index(drop=True)
 
     if test:
         if (members_I & members_II).any():
@@ -695,8 +693,6 @@ def tuning_breadth(matrix, receptor_ids, class_of):
     Orphan receptors (no ligand) are kept. The same statistics are also given with them
     removed, since the orphan share is similar in both classes and pulls them together.
     """
-    from scipy.stats import mannwhitneyu
-
     is_class_I = np.array([class_of[receptor] == "I" for receptor in receptor_ids])
     n_ligands = matrix.sum(1)
     class_I, class_II = n_ligands[is_class_I], n_ligands[~is_class_I]
@@ -712,6 +708,166 @@ def tuning_breadth(matrix, receptor_ids, class_of):
         shift_all=hodges_lehmann(class_I, class_II),
         shift_bound=hodges_lehmann(class_I_bound, class_II_bound),
         class_I_bound=class_I_bound, class_II_bound=class_II_bound)
+
+
+def breadth_test(stats):
+    """The tuning-breadth statistics of `tuning_breadth` as a one-row-per-comparison table."""
+    rows = []
+    for label, suffix in [("all receptors", "all"), ("orphans excluded", "bound")]:
+        shift, low, high = stats[f"shift_{suffix}"]
+        rows.append(dict(comparison=label, mann_whitney_p=stats[f"p_{suffix}"],
+                         cliffs_delta=stats[f"delta_{suffix}"], shift_ligands=shift, shift_low=low, shift_high=high))
+    return pd.DataFrame(rows)
+
+
+def class_group_tests(descriptors):
+    """Share of each class set carrying each functional group.
+
+    Fisher's exact test of Class I only against Class II only, Benjamini-Hochberg over the
+    groups. The shared set is reported for context and not tested.
+
+    Returns
+    -------
+    DataFrame
+        One row per group: % in each class set, p, q.
+    """
+    sets = {g: descriptors[descriptors.group == g] for g in CLASS_SETS}
+    rows = []
+    for group in FUNCTIONAL_GROUPS:
+        carry_I = int(sets["Class I only"][group].sum())
+        carry_II = int(sets["Class II only"][group].sum())
+        n_I, n_II = len(sets["Class I only"]), len(sets["Class II only"])
+        row = {"group": group}
+        row.update({g: 100 * sets[g][group].mean() for g in CLASS_SETS})
+        row["p"] = fisher_exact([[carry_I, n_I - carry_I], [carry_II, n_II - carry_II]])[1]
+        rows.append(row)
+    table = pd.DataFrame(rows)
+    table["q"] = benjamini_hochberg(table["p"].values)
+    return table
+
+
+def class_descriptor_effects(descriptors):
+    """Cliff's delta of each descriptor, Class I only against Class II only.
+
+    Mann-Whitney U for the p value, Benjamini-Hochberg over the descriptors. A positive delta
+    means higher in the Class I only set.
+    """
+    set_I = descriptors[descriptors.group == "Class I only"]
+    set_II = descriptors[descriptors.group == "Class II only"]
+    rows = []
+    for key, label in CLASS_DESCRIPTORS:
+        rows.append(dict(descriptor=key, label=label,
+                         cliffs_delta=cliffs_delta(set_I[key].values, set_II[key].values),
+                         p=mannwhitneyu(set_I[key].values, set_II[key].values).pvalue))
+    table = pd.DataFrame(rows)
+    table["q"] = benjamini_hochberg(table["p"].values)
+    return table
+
+
+def cluster_group_tests(descriptors, display_order):
+    """Share of each cluster carrying each functional group, one cluster against the rest.
+
+    Fisher's exact test per cluster and group, Benjamini-Hochberg over the whole grid.
+    """
+    rows = []
+    for group in FUNCTIONAL_GROUPS:
+        for c in display_order:
+            inside = descriptors.cluster == c
+            carry_in = int(descriptors.loc[inside, group].sum())
+            carry_out = int(descriptors.loc[~inside, group].sum())
+            n_in, n_out = int(inside.sum()), int((~inside).sum())
+            rows.append(dict(group=group, cluster=c, percent=100 * carry_in / n_in,
+                             percent_rest=100 * carry_out / n_out,
+                             p=fisher_exact([[carry_in, n_in - carry_in], [carry_out, n_out - carry_out]])[1]))
+    table = pd.DataFrame(rows)
+    table["q"] = benjamini_hochberg(table["p"].values)
+    return table
+
+
+def cluster_descriptor_effects(descriptors, display_order):
+    """Cliff's delta of each cluster against all other clustered odorants, per descriptor.
+
+    Mann-Whitney U for the p value, Benjamini-Hochberg over the whole grid.
+    """
+    rows = []
+    for key, label in CLUSTER_DESCRIPTORS:
+        for c in display_order:
+            inside = descriptors.loc[descriptors.cluster == c, key].values
+            outside = descriptors.loc[descriptors.cluster != c, key].values
+            rows.append(dict(descriptor=key, label=label, cluster=c, cliffs_delta=cliffs_delta(inside, outside),
+                             p=mannwhitneyu(inside, outside).pvalue))
+    table = pd.DataFrame(rows)
+    table["q"] = benjamini_hochberg(table["p"].values)
+    return table
+
+
+def cluster_pcoa(clustered_ids, clustered_matrix, labels):
+    """Principal coordinates of the Jaccard distances between the clustered odorants.
+
+    Returns
+    -------
+    coordinates : DataFrame
+        smiles_id, cluster, PCo1, PCo2.
+    variance : DataFrame
+        % of the positive eigenvalue mass on PCo1 and PCo2, and the share of the absolute
+        eigenvalue mass that is negative (Jaccard distance is not Euclidean).
+    """
+    points, eigenvalues = pcoa(jaccard_distance_between_columns(clustered_matrix))
+    positive_total = eigenvalues[eigenvalues > 0].sum()
+    coordinates = pd.DataFrame({"smiles_id": clustered_ids, "cluster": labels,
+                                "PCo1": points[:, 0], "PCo2": points[:, 1]})
+    variance = pd.DataFrame([dict(pco1_percent=100 * eigenvalues[0] / positive_total,
+                                  pco2_percent=100 * eigenvalues[1] / positive_total,
+                                  negative_percent=100 * -eigenvalues[eigenvalues < 0].sum()
+                                  / np.abs(eigenvalues).sum())])
+    return coordinates, variance
+
+
+def cluster_table(clustered_ids, labels, info, display_order):
+    """One row per clustered odorant: its cluster, the cluster's tag (C1-C6), theme and colour."""
+    tag_of = {c: f"C{i + 1}" for i, c in enumerate(display_order)}
+    return pd.DataFrame({"smiles_id": clustered_ids, "cluster": labels,
+                         "cluster_tag": [tag_of[c] for c in labels],
+                         "theme": [info[c]["name"] for c in labels],
+                         "color": [info[c]["color"] for c in labels],
+                         "display_rank": [display_order.index(c) for c in labels]})
+
+
+def clusters_from_table(table):
+    """Rebuild `info` and `display_order` (as returned by `name_clusters`) from `cluster_table`."""
+    first = table.drop_duplicates("cluster").sort_values("display_rank")
+    sizes = table.cluster.value_counts()
+    info = {int(row.cluster): dict(name=row.theme, color=row.color, size=int(sizes[row.cluster]))
+            for row in first.itertuples()}
+    return info, [int(c) for c in first.cluster]
+
+
+def table_one(summary, enrichment, group_tests, display_order):
+    """Table 1: per cluster, its three most enriched descriptors, its enriched functional groups
+    (q < 0.05, more common than in the other clusters) and the medians of four descriptors.
+
+    Parameters
+    ----------
+    summary : DataFrame
+        `cluster_summary` (one row per cluster, in display order).
+    enrichment : DataFrame
+        `tag_enrichment` with a `cluster_tag` column.
+    group_tests : DataFrame
+        `cluster_group_tests`.
+    """
+    rows = []
+    for tag, c in zip(summary.cluster, display_order):
+        enriched = significant_enrichment(enrichment[enrichment.cluster == c]).sort_values("obs_exp", ascending=False)
+        top_tags = "; ".join(f"{r.tag} ({r.obs_exp:.1f}, q = {r.fdr:.1g})" for r in enriched.head(3).itertuples())
+        groups = group_tests[(group_tests.cluster == c) & (group_tests.q < 0.05)
+                             & (group_tests.percent > group_tests.percent_rest)].sort_values("q")
+        group_text = "; ".join(f"{g.group}, {g.percent:.0f} vs {g.percent_rest:.0f}% (q = {g.q:.1g})"
+                               for g in groups.itertuples()) or "none"
+        row = summary[summary.cluster == tag].iloc[0]
+        rows.append({"cluster": tag, "subject": row.theme, "n": int(row.n), "top descriptors": top_tags,
+                     "enriched functional groups": group_text, "MW": round(row.MolWt), "cLogP": round(row.LogP, 1),
+                     "TPSA": round(row.TPSA), "Fsp3": round(row.FracCSP3, 2)})
+    return pd.DataFrame(rows)
 
 
 # ---------------------------------------------------------------------------------------------

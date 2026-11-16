@@ -337,21 +337,6 @@ METHODS_DRAFT.md
 /Chemicals/chembl_molecules.ipynb
 /Chemicals/odorant_chemical_space.ipynb
 
-# Loose exploratory notebooks that predate the numbered reference_tree/ and
-# ancestral/ series. They cross-reference each other and nothing else; every
-# result the paper reports was redone in the numbered notebooks.
-/Downstream_Analysis/notebooks/OR_ASR_functional_evolution.ipynb
-/Downstream_Analysis/notebooks/logp_transitions_human_ancestors.ipynb
-/Downstream_Analysis/notebooks/logP_by_groups.png
-/Downstream_Analysis/notebooks/m2or_molecules_per_class.ipynb
-/Downstream_Analysis/notebooks/paris.ipynb
-/Downstream_Analysis/notebooks/stiatistics_on_chemicals.ipynb
-
-# reference_tree/ before the restructure: the old notebooks (their analyses now live in
-# figure2_activation_code.ipynb and supplementary/S1-S6), figures no notebook writes any
-# more, and a table nothing reads.
-/Downstream_Analysis/notebooks/reference_tree/archive/
-
 # An older reference-tree ancestral prediction set, orphaned: nothing in the
 # repository reads it, and the paper's ancestral analysis runs on the 432-node
 # human-tree matrix instead.
@@ -376,12 +361,9 @@ METHODS_DRAFT.md
 # Figure pages: build output, and local archives of retired notebooks and outputs
 /figures/_build/
 /Chemicals/archive/
-/Downstream_Analysis/notebooks/ancestral/archive/
-/Downstream_Analysis/notebooks/reference_tree/archive/
 /PREPRINT_CORRECTIONS.md
 /Supplementary_Tables.xlsx
 /Chemicals/results_section*.txt
-/Downstream_Analysis/notebooks/archive/
 
 /Supplementary_Material/supplementary_tables/Supplementary_Tables.xlsx
 
@@ -395,3 +377,29 @@ METHODS_DRAFT.md
 !/Phylogenetic_Analysis/data/ReferenceTree/robustness/*.iqtree
 /Phylogenetic_Analysis/figures/PF13853.6sp.einsi.gt01.treefile.itol.svg
 /Phylogenetic_Analysis/figures/six_species_tree.png
+
+# Downstream_Analysis: result tables that no other notebook, figure page or
+# supplementary table reads. Their notebook writes them again when it runs.
+/Downstream_Analysis/extant_receptors/results/class_set_odorants.csv
+/Downstream_Analysis/extant_receptors/results/exp_pred_common_pairs.csv
+/Downstream_Analysis/extant_receptors/results/pathway_by_cluster.csv
+/Downstream_Analysis/ancestral_receptors/results/checkpoints.csv
+/Downstream_Analysis/ancestral_receptors/results/clamped_nodes.csv
+/Downstream_Analysis/ancestral_receptors/results/composition_null.csv
+/Downstream_Analysis/ancestral_receptors/results/duplication_branches.csv
+/Downstream_Analysis/ancestral_receptors/results/endpoint_overlay.csv
+/Downstream_Analysis/ancestral_receptors/results/founder_ligands.csv
+/Downstream_Analysis/ancestral_receptors/results/independence_null.csv
+/Downstream_Analysis/ancestral_receptors/results/node_sizes.csv
+/Downstream_Analysis/ancestral_receptors/results/nodes_0_to_2_functional_groups.csv
+/Downstream_Analysis/ancestral_receptors/results/orthogonality_loss_definitions.csv
+/Downstream_Analysis/ancestral_receptors/results/pairwise_jaccard.csv
+/Downstream_Analysis/ancestral_receptors/results/pattern_descriptors.csv
+/Downstream_Analysis/ancestral_receptors/results/pattern_functional_groups.csv
+/Downstream_Analysis/ancestral_receptors/results/side_descriptors.csv
+/Downstream_Analysis/ancestral_receptors/results/side_functional_groups.csv
+/Downstream_Analysis/ancestral_receptors/results/stages.csv
+/Downstream_Analysis/ancestral_receptors/results/threshold_sweep.csv
+/Downstream_Analysis/ancestral_receptors/results/top_odour_tags.csv
+/Downstream_Analysis/ancestral_receptors/results/trajectory_blanked.csv
+/Downstream_Analysis/ancestral_receptors/results/trajectory_without_measurements.csv

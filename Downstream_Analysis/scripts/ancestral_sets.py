@@ -6,7 +6,7 @@ Three reconstructed nodes carry the analysis:
     node_2_ASR -> class1_ancestor
     node_3_ASR -> class2_ancestor
 
-Every notebook under notebooks/ancestral/ starts from the same objects — the
+Every notebook under ancestral_receptors/ starts from the same objects — the
 binarised ASR matrix, the ligand presence table, and the activation-pattern
 partition — so they are built once here rather than copy-pasted per notebook.
 
@@ -24,12 +24,17 @@ distribution. One calibration map, two fills, two cuts — the ASR grid lands ne
 0.8875 and the extant grid near 0.8947, and both are outputs. Carrying one cut
 onto the other matrix would put a chosen number back into the procedure.
 
-Passing an explicit numeric `threshold` to any function here restores the old
-absolute-cut behaviour, which is what `figure3_ancestral_origin` (Part 2) sweeps.
+Functions that take a `threshold` use the density fill when it is None (the default)
+and an absolute probability cut, applied to both matrices alike, when it is a number;
+`04.parent_child_decay` sweeps it.
+
+Node names follow the tree file (`node_1` is the common ancestor of the human
+receptors). The paper numbers nodes from that common ancestor, so `node_k` is printed
+as k - 1; `figure_node` converts.
 
 Usage:
 
-    import sys; sys.path.append("../../scripts")
+    import sys; sys.path.append("../scripts")
     from ancestral_sets import load_ancestral, FG_SMARTS
     anc = load_ancestral()
     anc.node_presence, anc.pattern_sets, anc.density_cut
@@ -48,6 +53,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 REPO = Path(__file__).resolve().parents[2]
+sys.path.append(str(REPO / "scripts"))
+import functional_groups as fg  # noqa: E402
 
 ASR_MATRIX = REPO / "Downstream_Analysis/predictions/aggregated/ASR_Predictions/asr_median_probability_wide.csv"
 REF_MATRIX = REPO / "Downstream_Analysis/predictions/aggregated/Reference_Tree_Predictions/reference_median_probability_wide.csv"
@@ -58,14 +65,28 @@ ASR_TREE = REPO / ("Ancestral_Receptor_Reconstruction/human_tree_asr_hagfish_out
                    "PF13853_9606.7764.mafft.lg.treefile.rooted.withinternalnames")
 CLASSES = REPO / "Phylogenetic_Analysis/data/HumanTree/human433_OR_classes.csv"
 
-# Where the notebooks in notebooks/ancestral/ write their output.
-FIGURES = REPO / "Downstream_Analysis/notebooks/ancestral/Figures"
-TABLES = REPO / "Downstream_Analysis/notebooks/ancestral/Tables"
+# Where the notebooks in ancestral_receptors/ write their output.
+FIGURES = REPO / "Downstream_Analysis/ancestral_receptors/figures"
+TABLES = REPO / "Downstream_Analysis/ancestral_receptors/results"
 
 # The ten internal nodes carried through 05. node_1/2/3 are the three of 01-04;
 # 4 and 5 sit under the class 1 ancestor, and 6/12/21/32/44 are a nested chain
 # descending the class 2 trunk.
 TEN_NODES = [1, 2, 3, 4, 5, 6, 12, 21, 32, 44]
+
+
+def figure_node(node):
+    """The number a node carries in the paper's figures and text.
+
+    The tree file names internal nodes from its root down, and its root (node_0) joins
+    the hagfish outgroup to the human receptors, so the common ancestor of the human
+    repertoire is node_1. The paper counts from that common ancestor instead: node 0 is
+    the common ancestor, 1 and 2 the class I and class II ancestors. A repository node_k
+    is therefore printed as k - 1. Accepts "node_7", "node_7_ASR" or 7.
+    """
+    if isinstance(node, str):
+        node = int(node.removeprefix("node_").removesuffix("_ASR"))
+    return int(node) - 1
 
 # node_1/2/3 in the ASR matrix, in the order used to build activation patterns
 NODE_MAP = {
@@ -87,80 +108,25 @@ PATTERN_LABELS = {
     "101": "class1 + class2, not common",
 }
 
-FG_SMARTS = {
-    "carboxylic_acid": "[CX3](=O)[OX2H1]",
-    "alcohol": "[OX2H][CX4;!$(C=O)]",
-    "aldehyde": "[CX3H1](=O)[#6]",
-    "ketone": "[#6][CX3](=O)[#6]",
-    "ester": "[CX3](=O)[OX2][#6]",
-    "ether": "[OD2]([#6])[#6]",
-    "amine": "[NX3;H2,H1,H0;!$(NC=O)]",
-    "amide": "[NX3][CX3](=O)[#6]",
-    "aromatic_ring": "a1aaaaa1",
-    "phenol": "c[OX2H]",
-    "nitrile": "[CX2]#N",
-    "alkene": "[CX3]=[CX3]",
-}
+# The repository-wide panel (scripts/functional_groups.py), restricted to the groups tracked
+# along the ancestral lineages.
+ANCESTRAL_GROUPS = ["carboxylic_acid", "alcohol", "aldehyde", "ketone", "ester", "ether",
+                    "amine", "amide", "aromatic_ring", "phenol", "nitrile", "alkene"]
+FG_SMARTS = {name: fg.FUNCTIONAL_GROUPS[name] for name in ANCESTRAL_GROUPS}
 
 DESCRIPTORS = ["logP", "TPSA", "MW", "HBD", "HBA"]
 
 
 def save_fig(fig, name: str) -> None:
-    """Write a figure to notebooks/ancestral/Figures as SVG.
-
-    SVG only: it is vector, so it stays sharp at any size and diffs as text
-    rather than as a new binary blob on every re-run.
-    """
+    """Write a figure to ancestral_receptors/figures/<name>.svg."""
     FIGURES.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGURES / f"{name}.svg", format="svg", bbox_inches="tight")
+    fig.savefig(FIGURES / f"{name}.svg", format="svg")
 
 
 def save_table(frame: pd.DataFrame, name: str, index: bool = False) -> None:
-    """Write a table to notebooks/ancestral/Tables as CSV."""
+    """Write a table to ancestral_receptors/results as CSV."""
     TABLES.mkdir(parents=True, exist_ok=True)
     frame.to_csv(TABLES / f"{name}.csv", index=index)
-
-
-def extant_calibration() -> tuple:
-    """Return (threshold, measured_rate) from the reference-tree comparison.
-
-    The threshold is the one figure2_activation_code (section 1) derives: the cut at which the
-    predicted binding proportion equals the measured one on the 23,782
-    experimentally tested cells. The measured rate is that proportion itself.
-
-    Ancestral repertoires are not called at this threshold — see `load_ancestral`
-    — but it is reported for reference, and it sets the size of a rank call.
-    """
-    from Bio import SeqIO
-
-    prob = pd.read_csv(REF_MATRIX, index_col=0)
-    human = [i for i in prob.index if str(i).startswith("9606")]
-    matrix = prob.loc[human]
-
-    sequences = {rec.id: str(rec.seq) for rec in SeqIO.parse(FASTA, "fasta")}
-    seq_to_pid: dict[str, str] = {}
-    for pid in human:
-        seq_to_pid.setdefault(sequences[pid], pid)
-
-    pairs = pd.read_csv(PAIRS, usecols=["Species", "Sequence", "Responsive", "smiles_id"])
-    human_pairs = pairs[pairs["Species"].str.lower().str.contains("homo")].copy()
-    human_pairs["Sequence"] = human_pairs["Sequence"].str.upper().str.strip()
-    human_pairs["pid"] = human_pairs["Sequence"].map(seq_to_pid)
-    measured = (
-        human_pairs[human_pairs["pid"].notna() & human_pairs["smiles_id"].isin(matrix.columns)]
-        .groupby(["pid", "smiles_id"])["Responsive"].max()
-    )
-
-    observed = measured.values.astype(int)
-    predicted = np.array([matrix.at[pid, sid] for pid, sid in measured.index])
-    grid = np.arange(0.50, 0.9990, 0.0001)
-    rates = np.array([(predicted > t).mean() for t in grid])
-    return float(grid[np.abs(rates - observed.mean()).argmin()]), float(observed.mean())
-
-
-def calibrated_threshold() -> float:
-    """The extant threshold alone, for notebooks that only need the number."""
-    return extant_calibration()[0]
 
 
 _DENSITY_CACHE: dict = {}
@@ -234,8 +200,8 @@ def density_grid():
 def _calls(threshold: float | None):
     """Binary calls plus raw probabilities, by density fill or absolute cut.
 
-    `threshold=None` uses the per-matrix density fills; a number restores the old
-    absolute-cut behaviour, applied to both matrices alike, so the sweeps run.
+    `threshold=None` uses the per-matrix density fills; a number is an absolute cut on
+    the median probability, applied to both matrices alike.
     """
     binary, prob, _, _ = density_grid()
     if threshold is None:
@@ -247,10 +213,7 @@ def _calls(threshold: float | None):
 class Ancestral:
     """Everything the ancestral notebooks share."""
 
-    mode: str                         # "density" (default), "rank" or "absolute"
-    top_fraction: float               # rank mode: share of ligands called per node
     per_node_cut: dict[str, float]    # probability each node's cut landed on
-    threshold: float                  # the extant rate-matched cut, for reference only
     smiles_map: pd.DataFrame          # SML_ID -> SMILES
     predictions: pd.DataFrame         # binarised ASR matrix
     pred_active: pd.DataFrame         # long format, active pairs only
@@ -259,43 +222,23 @@ class Ancestral:
     pattern_sets: dict[str, set[str]]  # pattern -> SMILES set
     code_sets: dict[str, set[str]]     # named groupings used across notebooks
     sets: dict[str, set[str]]          # common/class1/class2 + gains/losses
-    density_cut: float = float("nan")  # density mode: the cut that fell out of the fill
-    density: float = float("nan")      # density mode: resulting grid density
+    density_cut: float                 # the cut that fell out of the ASR fill
+    density: float                     # resulting grid density
 
     @property
     def all_smiles(self) -> list[str]:
         return sorted(self.pattern_df["SMILES"].unique())
 
 
-def load_ancestral(
-    mode: str = "density",
-    top_fraction: float | None = None,
-    threshold: float = 0.5,
-) -> Ancestral:
-    """Build the shared ancestral objects.
+def load_ancestral() -> Ancestral:
+    """Build the shared ancestral objects for node_1, node_2 and node_3.
 
-    mode="density" (default) binarises with the shared density fill: the isotonic
-    map from `calibration.py`, fitted once on the 23,782 measured human pairs,
-    gives every cell a calibrated binding probability; their sum is the expected
-    number of true binders; the top that many cells by model score are called. No
-    experimental overlay — see the module docstring. The cut is an output of the
-    procedure, reported as `density_cut`, never chosen.
-
-    mode="absolute" calls a ligand bound when its median probability across the
-    five runs exceeds `threshold`, default 0.5. This was the previous default. It
-    is far more permissive than the extant rate-matched cut: on measured extant
-    pairs a 0.5 cut gives precision 0.27, so roughly three in four positives are
-    false. Kept so the threshold sweeps still run; absolute repertoire sizes under
-    it should not be read as binding counts.
-
-    mode="rank" is the third option: each node's top `top_fraction` of ligands,
-    defaulting to the measured extant binding proportion. That equalises
-    repertoire sizes and removes the reconstruction-confidence gradient.
+    Calls come from the density fill: the isotonic map from `calibration.py`, fitted
+    once on the 23,782 measured human pairs, gives every cell a calibrated binding
+    probability; their sum is the expected number of true binders; the top that many
+    cells by model score are called. No experimental overlay (see the module
+    docstring). The cut is an output of the procedure, reported as `density_cut`.
     """
-    extant_thr, measured_rate = extant_calibration()
-    thr = float(threshold)
-    frac = float(measured_rate if top_fraction is None else top_fraction)
-
     pairs = pd.read_csv(PAIRS, sep=",")
     smiles_map = (
         pairs[["smiles_id", "SMILES"]].drop_duplicates().rename(columns={"smiles_id": "SML_ID"})
@@ -304,31 +247,13 @@ def load_ancestral(
     probabilities = pd.read_csv(ASR_MATRIX)
     ligand_columns = [c for c in probabilities.columns if c.startswith("SML")]
     predictions = probabilities.copy()
-    per_node_cut: dict[str, float] = {}
-    density_cut = float("nan")
-    density = float("nan")
 
-    if mode == "density":
-        binary, _, results, _ = density_grid()
-        asr_fill = results["asr"]          # the ASR matrix's own fill, not the extant one
-        stripped = [str(p).replace("_ASR", "") for p in probabilities["protein_id"]]
-        calls = binary.reindex(stripped)[ligand_columns].fillna(False).astype(int)
-        predictions[ligand_columns] = calls.values
-        density_cut, density = asr_fill.cut, asr_fill.density
-        per_node_cut = {pid: asr_fill.cut for pid in probabilities["protein_id"]}
-    elif mode == "rank":
-        n_call = max(1, int(round(frac * len(ligand_columns))))
-        called = probabilities[ligand_columns].copy()
-        for row in probabilities.index:
-            values = probabilities.loc[row, ligand_columns].astype(float)
-            cut = values.nlargest(n_call).iloc[-1]        # inclusive lower bound
-            per_node_cut[probabilities.at[row, "protein_id"]] = float(cut)
-            called.loc[row] = (values >= cut).astype(int)
-        predictions[ligand_columns] = called.astype(int)
-    elif mode == "absolute":
-        predictions[ligand_columns] = (probabilities[ligand_columns] > thr).astype(int)
-    else:
-        raise ValueError(f"mode must be 'density', 'rank' or 'absolute', got {mode!r}")
+    binary, _, results, _ = density_grid()
+    asr_fill = results["asr"]          # the ASR matrix's own fill, not the extant one
+    stripped = [str(p).replace("_ASR", "") for p in probabilities["protein_id"]]
+    calls = binary.reindex(stripped)[ligand_columns].fillna(False).astype(int)
+    predictions[ligand_columns] = calls.values
+    per_node_cut = {pid: asr_fill.cut for pid in probabilities["protein_id"]}
 
     subset = predictions[predictions["protein_id"].isin(NODE_MAP)].copy()
     long = subset.melt(
@@ -379,12 +304,10 @@ def load_ancestral(
         "common_only": pattern_sets["010"],
     }
 
-    node_cuts = {NODE_MAP.get(k, k): v for k, v in per_node_cut.items() if k in NODE_MAP}
-    if mode == "absolute":
-        node_cuts = {v: thr for v in NODE_MAP.values()}
-    return Ancestral(mode, frac, node_cuts, extant_thr, smiles_map, predictions, pred_active,
+    node_cuts = {NODE_MAP[k]: v for k, v in per_node_cut.items() if k in NODE_MAP}
+    return Ancestral(node_cuts, smiles_map, predictions, pred_active,
                      node_presence, pattern_df, pattern_sets, code_sets, sets,
-                     density_cut, density)
+                     asr_fill.cut, asr_fill.density)
 
 
 def functional_groups(smiles: list[str]) -> pd.DataFrame:
@@ -434,8 +357,8 @@ def decay_table(threshold: float | None = None) -> pd.DataFrame:
     reference-tree matrix; both are placed on the rooted human tree so the two
     can be compared on one axis, and both are binarised the same way.
 
-    `threshold=None` (default) uses the shared density fill. Pass a number for
-    the old absolute cut.
+    `threshold=None` (default) uses the shared density fill; a number is an
+    absolute cut. `node_fig` is the paper's number for ancestors, empty for tips.
     """
     from ete4 import Tree
 
@@ -454,7 +377,9 @@ def decay_table(threshold: float | None = None) -> pd.DataFrame:
                      "kind": "ancestor" if name in ancestral else "extant",
                      "n_ligands": int(binary.loc[name].sum()),
                      "distance": distance[name]})
-    return pd.DataFrame(rows)
+    frame = pd.DataFrame(rows)
+    frame.insert(1, "node_fig", _figure_numbers(frame["name"]))
+    return frame
 
 
 def _asr_repertoires(threshold: float | None = None) -> dict[str, set[str]]:
@@ -486,7 +411,8 @@ def node_topology(nodes: list[int] | None = None,
                   threshold: float | None = None) -> pd.DataFrame:
     """Where each node sits on the tree, what it descends to, and what it binds.
 
-    One row per node: its immediate parent, depth from the root, the OR-class
+    One row per node (tree id and the paper's `node_fig`): its immediate parent, depth
+    from the root, the OR-class
     composition of its descendant human leaves, its repertoire size, and the
     gains and losses relative to its immediate parent. The parent is taken from
     the full ASR matrix, so it need not itself be one of the requested nodes.
@@ -523,6 +449,7 @@ def node_topology(nodes: list[int] | None = None,
 
         rows.append({
             "node": n,
+            "node_fig": figure_node(n),
             "parent": parent,
             "depth": len(ancestors),
             "branch_len": float(node.dist),
@@ -535,7 +462,9 @@ def node_topology(nodes: list[int] | None = None,
             "n_lost": len(parent_bound - bound) if parent_bound is not None else np.nan,
             "ancestors_in_set": ";".join(str(m) for m in nodes if f"node_{m}" in ancestors),
         })
-    return pd.DataFrame(rows)
+    frame = pd.DataFrame(rows)
+    frame.insert(3, "parent_fig", _figure_numbers(frame["parent"]))
+    return frame
 
 
 _TREE_CACHE: dict = {}
@@ -725,10 +654,8 @@ def trajectory(times: Timescale, grid: np.ndarray | None = None,
     which alone account for a large share of the odorants ever gained.
 
     `binary` substitutes a different call matrix for the shared density fill,
-    indexed by tree node name. The default (None) is the no-overlay fill this
-    folder uses everywhere else. `07` passes a grid whose extant rows carry the
-    measured M2OR values, which is what the collaborator's recipe does and what
-    reproduces its published endpoint; see that notebook for why the two differ.
+    indexed by tree node name. The default (None) is the no-overlay fill;
+    `overlay_grid()` gives the one whose extant rows carry the measured M2OR values.
     """
     if binary is None:
         binary, _, _, _ = density_grid()
@@ -792,8 +719,12 @@ def edge_table(threshold: float | None = None) -> pd.DataFrame:
         gained/lost ligands the child adds or drops
         branch_len  the child's branch length, i.e. sequence divergence
 
-    `threshold=None` (default) uses the shared density fill. Pass a number for
-    the old absolute cut — which is what the sweep in 04 does.
+    `parent_fig` and `child_fig` are the paper's node numbers (empty for an extant
+    child). Edges leaving node_0 have no reconstructed parent and are skipped, as are
+    edges whose two repertoires are both empty, where Jaccard is undefined.
+
+    `threshold=None` (default) uses the shared density fill; a number is an absolute
+    cut, which is what the sweep in 04 does.
     """
     from ete4 import Tree
 
@@ -821,4 +752,72 @@ def edge_table(threshold: float | None = None) -> pd.DataFrame:
             "gained": int((c & ~p).sum()), "lost": int((~c & p).sum()),
             "branch_len": float(node.dist),
         })
-    return pd.DataFrame(rows)
+    frame = pd.DataFrame(rows)
+    frame.insert(1, "parent_fig", _figure_numbers(frame["parent"]))
+    frame.insert(3, "child_fig", _figure_numbers(frame["child"]))
+    return frame
+
+
+def _figure_numbers(names) -> pd.Series:
+    """Paper node numbers for a column of tree names.
+
+    Empty for extant receptors and for node_0, the root joining the hagfish outgroup,
+    which the paper does not number.
+    """
+    values = [figure_node(n) if str(n).startswith("node_") and str(n) != "node_0" else None
+              for n in names]
+    return pd.Series(values, dtype="Int64", index=getattr(names, "index", None))
+
+
+def measured_extant(ref_index, ligands) -> pd.Series:
+    """Measured M2OR responses of the human receptors, indexed by (receptor, SML id).
+
+    M2OR rows are joined to receptors by exact amino-acid sequence, not accession:
+    M2OR mutants share their parent's accession and must not fold onto it. A pair
+    measured more than once counts as responsive if any measurement responded.
+    """
+    from Bio import SeqIO
+
+    sequences = {rec.id: str(rec.seq).upper() for rec in SeqIO.parse(FASTA, "fasta")}
+    seq_to_pid: dict[str, str] = {}
+    for pid in ref_index:
+        seq_to_pid.setdefault(sequences[pid], pid)
+
+    pairs = pd.read_csv(PAIRS, usecols=["Species", "Sequence", "Responsive", "smiles_id"])
+    human = pairs[pairs["Species"].str.lower().str.contains("homo")].copy()
+    human["Sequence"] = human["Sequence"].str.upper().str.strip()
+    human["pid"] = human["Sequence"].map(seq_to_pid)
+    keep = human["pid"].notna() & human["smiles_id"].isin(ligands)
+    return human[keep].groupby(["pid", "smiles_id"])["Responsive"].max()
+
+
+def overlay_grid():
+    """The density grid with measured M2OR values written over the extant rows.
+
+    Returns `(binary, extant_fill, measured)`. Ancestral rows are the same as in
+    `density_grid`, since a reconstructed sequence has no measurements; extant rows
+    are filled from their own score distribution with the measured cells held out and
+    then overwritten by the measurement.
+    """
+    from calibration import density_fill, reference_calibration_map
+
+    no_overlay, prob, results, ancestral = density_grid()
+    ligands = list(no_overlay.columns)
+    extant = [i for i in no_overlay.index if i not in ancestral]
+    ref = prob.loc[extant, ligands]
+
+    measured = measured_extant(ref.index, ligands)
+    row_of = {p: i for i, p in enumerate(ref.index)}
+    col_of = {c: j for j, c in enumerate(ligands)}
+    tested = np.zeros(ref.shape, dtype=bool)
+    observed = np.zeros(ref.shape, dtype=float)
+    for (pid, sid), value in measured.items():
+        tested[row_of[pid], col_of[sid]] = True
+        observed[row_of[pid], col_of[sid]] = value
+
+    iso = reference_calibration_map(REF_MATRIX, PAIRS, FASTA)
+    extant_fill = density_fill(ref.values, iso, tested_mask=tested, experimental=observed)
+
+    binary = no_overlay.copy()
+    binary.loc[extant] = extant_fill.matrix.astype(bool)
+    return binary, extant_fill, measured

@@ -1,44 +1,16 @@
-"""Density-calibrated, rank-based binarisation of OR-odorant binding predictions.
+"""Binarisation of the prediction matrices by calibrated density and rank.
 
-One calibration map, defined once here and shared by the extant (reference-tree)
-and ancestral notebooks, so both binarise on identical terms.
+The extant (reference-tree) and ancestral notebooks share one calibration map.
 
-Why not a classification threshold
-----------------------------------
-The rate-matched cut (~0.915) is the operating point at which the predicted
-binding proportion equals the measured one on the tested cells. It is the right
-number to *report* for per-pair classification performance, and it is what the
-confusion matrix and precision/recall in `figure2_activation_code` (section 1) are computed at.
+1. Isotonic regression maps model score to measured binding frequency, fitted on the
+   measured pairs only.
+2. The map gives every untested cell a calibrated probability of binding; their sum is
+   N, the expected number of binders among the untested cells.
+3. The N highest-scoring untested cells are set to 1. The score of the Nth cell is the
+   density cut, an output of the procedure.
+4. Where a measurement exists it is written over the fill.
 
-It is the wrong tool for filling a grid. Recall there is ~0.6, so thresholding
-the full matrix keeps only the cells the model is most confident about and drops
-roughly 40% of real binders. The resulting matrix is systematically under-filled.
-
-What this module does instead
------------------------------
-Separate the two questions. *How many* cells should be on is answered by
-calibration; *which* cells are on is answered by rank.
-
-1. Isotonic regression maps model score -> empirically measured binding
-   frequency, fitted once on the tested cells only.
-2. That map is applied to every untested cell, giving each a calibrated
-   probability of being a real binder.
-3. Their sum is the expected number of true binders among the untested cells
-   (linearity of expectation: E[sum X_i] = sum p_i). No threshold is involved.
-4. The untested cells are ranked by model score and the top N are set to 1.
-   The score of the Nth cell is the density cut. It is an *output* of the
-   procedure, never a chosen input.
-5. Where a measurement exists it is written over the fill. A measured value
-   always beats a predicted one.
-
-Assumption
-----------
-At a fixed model score, tested and untested pairs bind at the same rate. This is
-what licenses transporting the map off the tested cells. It is weaker than
-assuming the tested cells are a random sample of the grid -- which they are not,
-being enriched for well-studied, broadly-tuned receptors -- because it conditions
-on the score, but it is not assumption-free: a pair can be untested precisely
-because nobody expected it to bind, in a way the score does not capture.
+The map assumes that, at a given score, measured and unmeasured pairs bind at the same rate.
 """
 
 from __future__ import annotations
